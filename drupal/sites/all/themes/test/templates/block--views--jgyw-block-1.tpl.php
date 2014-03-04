@@ -46,7 +46,7 @@
 ?>
 
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-    <div class="box1">
+    <div class="box1" style="float:right">
               <div class="title">
                  <span class="more"><a href="node/jgyw">更多>></a></span> 
                  <h1><?php print $block->subject ?></h1>

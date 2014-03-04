@@ -1388,7 +1388,7 @@ overflow:hidden;
   padding-top:0px;
   margin:0px;
 }
-.item-list ul,.item-list ul li{
+#user-login-form .item-list ul,#user-login-form  .item-list ul li{
   float:left;
 }
 #user-login-form .item-list ul li{
@@ -1396,4 +1396,11 @@ overflow:hidden;
 }
 #edit-actions{
    padding-top:10px;
+}
+.content_style{
+   min-height:500px;
+}
+
+#block-system-main .view-content .item-list ul li{
+  padding:2px 3px;
 }

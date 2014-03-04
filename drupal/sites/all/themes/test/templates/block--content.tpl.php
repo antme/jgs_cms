@@ -48,13 +48,10 @@
 
 
   <h2 class="title_h2"><?php print $block->subject; ?></h2>
-  <script>
-       var text = $("title").text();
-	   var text_arry=text.split(" ");
-	   $(".title_h2").text(text_arry[0]);
-  </script>
-
+  
   <div class="content"<?php print $content_attributes; ?>>
+    <div class="content_style">
     <?php print $content; ?>
+     </div>
   </div>
 </div>
