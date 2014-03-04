@@ -79,11 +79,21 @@
  */
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-   <ul>
-      <li>
-	      <span><?php print date('Y-m-d',$node->changed); ?></span>
-	      <span class="span_style width_500"><a href="<?php print $node_url; ?>" title="" target="_blank">[<?php print render($content['field_department'][0]); ?>]<?php print $title; ?></a></span> 
-	  </li>
-   </ul>
-   
+
+
+    <h2<?php print $title_attributes; ?>>
+      <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
+    </h2>
+
+
+  <div class="content clearfix"<?php print $content_attributes; ?>>
+    <?php
+      // We hide the comments and links now so that we can render them later.
+      hide($content['comments']);
+      hide($content['links']);
+      print render($content);
+    ?>
+  </div>
+
+
 </div>

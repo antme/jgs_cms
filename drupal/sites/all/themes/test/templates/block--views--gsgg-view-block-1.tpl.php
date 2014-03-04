@@ -47,7 +47,7 @@
 
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 		<div class="box4" style="margin-top:10px;">
-         <h1><span><a href="node/23">更多>></a></span><?php print $block->subject ?></h1>
+         <h1><span><a href="node/gggs">更多>></a></span><?php print $block->subject ?></h1>
           <div id="demo">
           <div id="demo1">
              <ul>

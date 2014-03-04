@@ -44,17 +44,13 @@
  * @ingroup themeable
  */
 ?>
-
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-    <div class="box1">
-              <div class="title">
-                 <span class="more"><a href="#">更多>></a></span> 
-                 <h1><?php print $block->subject ?></h1>
-			  </div>
-                 <ul>
-				      <div class="content"<?php print $content_attributes; ?>>
-                          <?php print $content ?>
-                      </div>
-                 </ul>
-    </div>
+
+
+  <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
+
+
+  <div class="content"<?php print $content_attributes; ?>>
+    <?php print $content ?>
+  </div>
 </div>

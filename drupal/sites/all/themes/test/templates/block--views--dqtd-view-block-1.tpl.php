@@ -48,7 +48,7 @@
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 	<div class="box5">
 	     
-        <h1><span class="more"><a href="node/24">更多>></a></span><?php print $block->subject ?></h1>
+        <h1><span class="more"><a href="node/dqtd">更多>></a></span><?php print $block->subject ?></h1>
         <div id="" class="demox">
              <ul>
                     <div class="content"<?php print $content_attributes; ?>>

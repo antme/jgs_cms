@@ -1171,12 +1171,15 @@ blockquote:before, blockquote:after, q:before, q:after {
    background:url(../images/new.gif);
 }
 .box1 li a{
-   font-size:12px;
+   font-size:14px;
 }
 .box2 li span.styles{
    float:none;
 }
-.box1 li span.span_style{
+.view-content li span{
+   float:right;
+}
+.view-content li span.span_style{
     display: inline-block;
     font-size: 14px;
     overflow: hidden;
@@ -1192,8 +1195,8 @@ blockquote:before, blockquote:after, q:before, q:after {
     text-indent:5px;
 	float:none;
 }
-.width_200{
-width:250px;
+.view-content .width_200,.view-content .width_500{
+width:70%;
 overflow:hidden;
 white-space:nowrap;
 text-overflow:ellipsis;
@@ -1260,7 +1263,7 @@ overflow:hidden;
   position:absolute;
   left:220px;
   top:47px;
-  z-index:9999;
+  z-index:20;
 }
 .comm_style .menu {
   margin-left:5px;
@@ -1328,4 +1331,15 @@ overflow:hidden;
 }
 .comm_style .menu li a:hover{
   text-decoration:none;
+}
+.node-ztbxx h2,.node-gsgg h2,.node-dqtd h2,.node-gzdt h2,.node-zcfg h2,.node-jgyw h2{
+  text-align:center;
+  font-weight:bold;
+}
+.node-ztbxx .meta,.node-gsgg .meta,.node-dqtd .meta,.node-gzdt .meta,.node-zcfg .meta,.node-jgyw .meta{
+  display:none;
+}
+.block .field-item p{
+   text-align:left;
+   text-indent:2em;
 }

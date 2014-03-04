@@ -82,8 +82,9 @@
 
 
     <h2<?php print $title_attributes; ?>>
-      <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
+      <?php print $title; ?>
     </h2>
+
 
 
   <div class="content clearfix"<?php print $content_attributes; ?>>

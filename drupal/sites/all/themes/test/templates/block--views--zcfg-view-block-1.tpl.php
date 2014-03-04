@@ -47,7 +47,7 @@
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
     <div class="part2">
            <div class="title">
-             <span class="more"><a href="node/21">更多>></a></span> 
+             <span class="more"><a href="node/zcfg">更多>></a></span> 
              <h1><?php print $block->subject ?></h1> 
            </div>
            <div class="nr">

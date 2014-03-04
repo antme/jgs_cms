@@ -824,8 +824,6 @@ ul.links {
   font-size: 0.857em;
 }
 #footer-wrapper a {
-  color: #fcfcfc;
-  color: rgba(255, 255, 255, 0.8);
 }
 #footer-wrapper a:hover,
 #footer-wrapper a:focus {
