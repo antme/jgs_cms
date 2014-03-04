@@ -1343,3 +1343,57 @@ overflow:hidden;
    text-align:left;
    text-indent:2em;
 }
+.title_h2{
+  text-indent:1em;
+  font-weight:bold;
+  padding:3px;
+  background-color;
+}
+#block-user-login{
+  width:313px;
+  height:210px;
+  float:left;
+  border:1px solid #cdcdcd;
+  border-top:none;
+}
+#block-user-login h2{
+  background: url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+  float: left;
+  height: 28px;
+  width: 313px;
+  font-family: 微软雅黑;
+  font-size: 14px;
+  font-weight: bold;
+  height: 28px;
+  line-height: 28px;
+  text-indent:15px;
+}
+#block-user-login  .content{
+  float:left;
+  margin-left:40px;
+}
+#block-user-login .form-item{
+  margin-left:10px;
+}
+.form-item label{
+    height:34px;
+	line-height:34px;
+	width:60px;
+}
+.form-item label,.form-item input{
+  float:left;
+}
+
+#user-login-form  .form-actions {
+  padding-top:0px;
+  margin:0px;
+}
+.item-list ul,.item-list ul li{
+  float:left;
+}
+#user-login-form .item-list ul li{
+  margin:0px 5px;
+}
+#edit-actions{
+   padding-top:10px;
+}

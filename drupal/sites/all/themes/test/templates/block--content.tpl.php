@@ -47,10 +47,14 @@
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
 
-  <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
-
+  <h2 class="title_h2"><?php print $block->subject; ?></h2>
+  <script>
+       var text = $("title").text();
+	   var text_arry=text.split(" ");
+	   $(".title_h2").text(text_arry[0]);
+  </script>
 
   <div class="content"<?php print $content_attributes; ?>>
-    <?php print $content ?>
+    <?php print $content; ?>
   </div>
 </div>
