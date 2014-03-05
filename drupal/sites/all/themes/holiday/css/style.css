@@ -1243,7 +1243,7 @@ input.form-submit:focus {
   margin-left: 2px;
 }
 .form-actions {
-  
+  padding-top: 10px;
 }
 /* Contact Form */
 .contact-form #edit-name {

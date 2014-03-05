@@ -1,6 +1,6 @@
 
-name = test
-description = A flexible, recolorable theme with many regions.
+name = holiday
+description = Holiday template.
 package = Core
 version = VERSION
 core = 7.x
