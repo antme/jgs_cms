@@ -1404,3 +1404,10 @@ overflow:hidden;
 #block-system-main .view-content .item-list ul li{
   padding:2px 3px;
 }
+.span_style_h{
+  padding:5px 0px 10px 0px;
+  display:inline-block;
+  width:100%;
+  text-align:center;
+  color:#909090;
+}

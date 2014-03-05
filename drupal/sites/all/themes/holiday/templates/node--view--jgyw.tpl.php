@@ -81,10 +81,10 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
 
-    <h2 <?php print $title_attributes; ?>>
-      <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
+    <h2<?php print $title_attributes; ?>>
+      <?php print $title; ?>
     </h2>
-
+    <span class="span_style_h"><?php print date('Y-m-d',$node->changed); ?></span>
 
   <div class="content clearfix"<?php print $content_attributes; ?>>
     <?php

@@ -84,7 +84,7 @@
     <h2<?php print $title_attributes; ?>>
       <?php print $title; ?>
     </h2>
-
+    <span class="span_style_h"><?php print date('Y-m-d',$node->changed); ?></span>
 
   <div class="content clearfix"<?php print $content_attributes; ?>>
     <?php

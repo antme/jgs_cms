@@ -85,9 +85,9 @@
 		  <span>
 		  <?php $face=render($content['field_face_view'][0]); ?>
 		  <?php if($face=="笑脸"):?>
-		     <img src='sites/all/themes/test/images/xiao.jpg' />
+		     <img src='sites/all/themes/holiday/images/xiao.jpg' />
 		  <?php elseif($face=="哭脸"): ?>
-		     <img src='sites/all/themes/test/images/ku.jpg' />
+		     <img src='sites/all/themes/holiday/images/ku.jpg' />
 		  <?php endif; ?>
 		  </span>
 	  </li>
