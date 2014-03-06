@@ -104,9 +104,9 @@ function wysiwyg_fckeditor_settings($editor, $config, $theme) {
     'Width' => '100%',
     'Height' => 420,
     'LinkBrowser' => FALSE,
-    'LinkUpload' => FALSE,
-    'ImageBrowser' => FALSE,
-    'ImageUpload' => FALSE,
+    'LinkUpload' => TRUE,
+    'ImageBrowser' => TRUE,
+    'ImageUpload' => TRUE,
     'FlashBrowser' => FALSE,
     'FlashUpload' => FALSE,
     // By default, FCKeditor converts most characters into HTML entities. Since

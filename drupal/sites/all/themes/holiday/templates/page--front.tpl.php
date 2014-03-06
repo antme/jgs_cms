@@ -157,9 +157,13 @@
                <?php print render($page['right']); ?>
 		   </div>
          <?php endif; ?>
-         
-	 
+        
 	 </div>
+	  <?php if ($page['hrefs']): ?>
+		     <div class="content">
+		         <?php print render($page['hrefs']); ?>
+			 </div>
+	     <?php endif; ?>
 	 <?php if ($page['footer']): ?>
       <div id="footer" style="margin-top:10px;">
         <?php print render($page['footer']); ?>
