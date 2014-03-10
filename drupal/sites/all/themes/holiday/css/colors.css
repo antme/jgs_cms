@@ -21,14 +21,7 @@ body.overlay {
   background-color: #ffffff;
   border-bottom: 1px solid #ffffff;
 }
-#page{
-  background:url(../images/bg.jpg) repeat-x;
-}
-#header div.section{
-  background:url(../images/back.jpg) no-repeat;
-  min-height:200px;
-  
-}
+
 #main-menu{
   padding-top:200px;
 }
@@ -46,10 +39,7 @@ a:active {
   background-color: #f6f6f2;
   border-color: #f9f9f9;
 }
-#footer {
-  border-top:2px solid #A81400;
-  background: #eee;
-}
+
 .region-header,
 .region-header a,
 .region-header li a.active,

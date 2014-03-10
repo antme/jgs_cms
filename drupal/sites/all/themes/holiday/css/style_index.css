@@ -154,7 +154,7 @@ a.white:hover {
     margin-left: 10px;
 }
 .box1 .title {
-    background: url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    
     float: left;
     height: 28px;
     width: 378px;
@@ -230,6 +230,42 @@ a.white:hover {
     color: #444444;
     float: right;
 }
+.box4 {
+    background: url("../images/tzbg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #F1D0D0;
+    height: 208px;
+    width: 233px;
+}
+.box4 h1 {
+    font-size: 14px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+    padding-left: 10px;
+    width: 223px;
+}
+.box4 h1 span {
+    float: right;
+    font-size: 12px;
+    font-weight: normal;
+    margin-right: 5px;
+}
+.box4 #demo {
+    float: left;
+    height: 168px;
+    overflow: hidden;
+    width: 233px;
+}
+.box4 ul {
+    margin: 0 0 0 10px;
+}
+.box4 li {
+    float: left;
+    line-height: 24px;
+    padding-left: 5px;
+    width: 215px;
+}
 .part2 {
     border-bottom: 1px solid #DADADA;
     border-left: 1px solid #DADADA;
@@ -240,7 +276,6 @@ a.white:hover {
     width: 703px;
 }
 .part2 .title {
-    background: url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
     height: 28px;
     line-height: 28px;
     width: 703px;
@@ -331,213 +366,6 @@ a.white:hover {
     float: right;
 }
 
-.part6 {
-    border-bottom: 1px solid #DADADA;
-    border-left: 1px solid #DADADA;
-    border-right: 1px solid #DADADA;
-    height: 251px;
-    margin-top: 10px;
-    overflow: hidden;
-    width: 703px;
-}
-.part6 .title {
-    background: url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
-    height: 28px;
-    line-height: 28px;
-    width: 703px;
-}
-.part6 .title h1 {
-    background: url("../images/title.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    color: #FFFFFF;
-    float: left;
-    font-size: 14px;
-    font-weight: bold;
-    height: 28px;
-    line-height: 28px;
-    margin-right: 30px;
-    text-align: center;
-    width: 88px;
-}
-.part6 .title span {
-    float: right;
-    margin-right: 10px;
-}
-.part6 .nr {
-    width: 703px;
-}
-.part6 .nr .jingli1 {
-    border-bottom: 1px dashed #CCCCCC;
-    float: left;
-    padding-bottom: 15px;
-    width: 703px;
-}
-.part6 .nr .jingli1 dl {
-    float: left;
-    margin: 15px 0 0 15px;
-    width: 325px;
-}
-.part6 .nr .jingli1 p {
-    border: 1px solid #CCCCCC;
-    float: left;
-    height: 87px;
-    margin-right: 10px;
-    width: 87px;
-}
-.part6 .nr .jingli1 dd {
-    color: #014FAD;
-    font-weight: bold;
-}
-.part6 .nr .jingli1 dd a:link {
-    color: #014FAD;
-}
-.part6 .nr .jingli1 dd a:visited {
-    color: #014FAD;
-}
-.part6 .nr .jingli1 dd a:hover {
-    color: #B41300;
-}
-.part6 .nr .jingli2 {
-    float: left;
-    width: 703px;
-}
-.part6 .nr .jingli2 ul {
-    float: left;
-    margin-top: 5px;
-    width: 350px;
-}
-.part6 .nr .jingli2 ul li {
-    display: inline;
-    float: left;
-    line-height: 24px;
-    margin-left: 12px;
-    padding-left: 10px;
-    width: 325px;
-}
-.part6 .nr .jingli2 ul li span {
-    color: #444444;
-    float: right;
-}
-.part3 {
-    height: 70px;
-    margin-top: 10px;
-    overflow: hidden;
-    width: 705px;
-}
-.part4 {
-    border-bottom: 1px solid #DADADA;
-    border-left: 1px solid #DADADA;
-    border-right: 1px solid #DADADA;
-    height: 395px;
-    margin-top: 10px;
-    overflow: hidden;
-    width: 703px;
-}
-.part4 .title {
-    background: url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
-    height: 28px;
-    line-height: 28px;
-    width: 703px;
-}
-.part4 .title h1 {
-    float: left;
-    font-size: 14px;
-    font-weight: bold;
-    height: 28px;
-    line-height: 28px;
-    margin-right: 30px;
-    text-align: center;
-    width: 88px;
-}
-.part4 .nr {
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-.part4 .box3 {
-    display: inline;
-    float: left;
-    height: 167px;
-    margin: 0 0 10px 15px;
-    width: 329px;
-}
-.part4 .box3 h2 {
-    background: none repeat scroll 0 0 #FFF4C8;
-    color: #000000;
-    font-weight: bold;
-    height: 23px;
-    line-height: 23px;
-    padding-left: 10px;
-    width: 319px;
-}
-.part4 .box3 ul {
-    margin-top: 5px;
-    width: 329px;
-}
-.part4 .box3 li {
-    color: #982217;
-    display: inline;
-    float: left;
-    line-height: 24px;
-    margin-left: 2px;
-    width: 327px;
-}
-.part4 .box3 li span {
-    color: #444444;
-    float: right;
-}
-.part5 {
-    border-bottom: 1px solid #DADADA;
-    border-left: 1px solid #DADADA;
-    border-right: 1px solid #DADADA;
-    height: 525px;
-    margin-top: 10px;
-    overflow: hidden;
-    width: 703px;
-}
-.part5 .title {
-    background: url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
-    height: 28px;
-    line-height: 28px;
-    width: 703px;
-}
-.part5 .title h1 {
-    background: url("../images/title.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    color: #FFFFFF;
-    float: left;
-    font-size: 14px;
-    font-weight: bold;
-    height: 28px;
-    line-height: 28px;
-    margin-right: 30px;
-    text-align: center;
-    width: 88px;
-}
-.part5 .nr {
-    margin-bottom: 10px;
-    margin-top: 20px;
-}
-.part5 .box3 {
-    display: inline;
-    float: left;
-    height: 150px;
-    margin: 0 0 10px 25px;
-    width: 312px;
-}
-.part5 .box3 h2 {
-    background: none repeat scroll 0 0 #FFF4C8;
-    color: #000000;
-    font-weight: bold;
-    height: 23px;
-    line-height: 23px;
-    padding-left: 10px;
-    width: 302px;
-}
-.part5 .box3 ul {
-    padding: 5px 0 0 5px;
-}
-.part5 .box3 li {
-    color: #982217;
-    line-height: 24px;
-}
 .right {
     float: right;
     width: 235px;
@@ -558,42 +386,7 @@ a.white:hover {
     float: left;
     width: 50px;
 }
-.box4 {
-    background: url("../images/tzbg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
-    border: 1px solid #F1D0D0;
-    height: 208px;
-    width: 233px;
-}
-.box4 h1 {
-    font-size: 14px;
-    font-weight: bold;
-    height: 30px;
-    line-height: 30px;
-    margin-top: 5px;
-    padding-left: 10px;
-    width: 223px;
-}
-.box4 h1 span {
-    float: right;
-    font-size: 12px;
-    font-weight: normal;
-    margin-right: 5px;
-}
-.box4 #demo {
-    float: left;
-    height: 168px;
-    overflow: hidden;
-    width: 233px;
-}
-.box4 ul {
-    margin: 0 0 0 10px;
-}
-.box4 li {
-    float: left;
-    line-height: 24px;
-    padding-left: 5px;
-    width: 215px;
-}
+
 .box5 {
     border: 1px solid #DFDFDF;
     height: 166px;
@@ -602,7 +395,6 @@ a.white:hover {
     border-top:none;
 }
 .box5 h1 {
-    background: url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
     color: #444444;
     font-size: 14px;
     font-weight: bold;
@@ -644,317 +436,7 @@ a.white:hover {
     margin-top: 10px;
     width: 235px;
 }
-.box7 {
-    border: 1px solid #DFDFDF;
-    height: 182px;
-    margin-top: 10px;
-    width: 233px;
-}
-.box7 h1 {
-    background: url("../images/rbg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
-    color: #444444;
-    font-size: 14px;
-    font-weight: bold;
-    height: 27px;
-    line-height: 27px;
-    padding-left: 10px;
-    width: 223px;
-}
-.box7 h1 span {
-    float: right;
-    font-size: 12px;
-    font-weight: normal;
-    margin-right: 5px;
-}
-.box7 .nr {
-    line-height: 22px;
-    margin: 15px auto auto;
-    width: 210px;
-}
-.box7 .nr img {
-    float: left;
-    margin-bottom: -3px;
-    margin-right: 10px;
-}
-.box7 ul {
-    margin-top: 5px;
-    width: 233px;
-}
-.box7 li {
-    display: inline;
-    float: left;
-    line-height: 24px;
-    margin-left: 10px;
-    padding-left: 10px;
-    width: 210px;
-}
-.box8 {
-    border: 1px solid #DFDFDF;
-    height: 207px;
-    margin-top: 10px;
-    width: 233px;
-}
-.box8 h1 {
-    background: url("../images/rbg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
-    color: #444444;
-    font-size: 14px;
-    font-weight: bold;
-    height: 27px;
-    line-height: 27px;
-    padding-left: 10px;
-    width: 223px;
-}
-.box8 h1 span {
-    float: right;
-    font-size: 12px;
-    font-weight: normal;
-    margin-right: 5px;
-}
-.box8 ul {
-    margin-top: 5px;
-    width: 233px;
-}
-.box8 li {
-    display: inline;
-    float: left;
-    line-height: 24px;
-    margin-left: 10px;
-    padding-left: 10px;
-    width: 210px;
-}
-.box9 {
-    border: 1px solid #DFDFDF;
-    height: 182px;
-    margin-top: 10px;
-    width: 233px;
-}
-.box9 h1 {
-    background: url("../images/rbg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
-    color: #444444;
-    font-size: 14px;
-    font-weight: bold;
-    height: 27px;
-    line-height: 27px;
-    padding-left: 10px;
-    width: 223px;
-}
-.box9 h1 span {
-    float: right;
-    font-size: 12px;
-    font-weight: normal;
-    margin-right: 5px;
-}
-.box9 ul {
-    margin-top: 5px;
-    width: 233px;
-}
-.box9 li {
-    display: inline;
-    float: left;
-    line-height: 24px;
-    margin-left: 10px;
-    padding-left: 10px;
-    width: 210px;
-}
-.box10 {
-    border: 1px solid #DFDFDF;
-    height: 185px;
-    margin-top: 10px;
-    width: 233px;
-}
-.box10 h1 {
-    background: url("../images/rbg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
-    color: #444444;
-    font-size: 14px;
-    font-weight: bold;
-    height: 27px;
-    line-height: 27px;
-    padding-left: 10px;
-    width: 223px;
-}
-.box10 p {
-    border-bottom: 1px solid #E7E7E7;
-    color: #780107;
-    margin-top: 5px;
-    padding-left: 10px;
-}
-.box10 ul {
-    margin-top: 8px;
-}
-.box10 li {
-    float: left;
-    line-height: 23px;
-    margin-left: 10px;
-    padding-left: 10px;
-    width: 203px;
-}
-.box11 {
-    border: 1px solid #DFDFDF;
-    height: 263px;
-    margin-top: 10px;
-    width: 233px;
-    border-top:none;
-}
-.box11 h1 {
-    background: url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
-    color: #444444;
-    font-size: 14px;
-    font-weight: bold;
-    height: 28px;
-    line-height: 27px;
-    padding-left: 10px;
-    width: 223px;
-}
-.box11 p {
-    border-bottom: 1px solid #E7E7E7;
-    color: #780107;
-    margin-top: 5px;
-    padding-left: 10px;
-}
-.box11 ul {
-    margin-top: 8px;
-}
-.box11 li {
-    float: left;
-    line-height: 23px;
-    margin-left: 10px;
-    padding-left: 10px;
-    width: 203px;
-}
-.box14 {
-    border: 1px solid #DFDFDF;
-    height: 185px;
-    margin-top: 10px;
-    width: 233px;
-}
-.box14 h1 {
-    background: url("../images/rbg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
-    color: #444444;
-    font-size: 14px;
-    font-weight: bold;
-    height: 27px;
-    line-height: 27px;
-    padding-left: 10px;
-    width: 223px;
-}
-.box14 h1 span {
-    float: right;
-    font-size: 12px;
-    font-weight: normal;
-    margin-right: 5px;
-}
-.box14 ul {
-    margin-top: 5px;
-    width: 233px;
-}
-.box14 li {
-    display: inline;
-    float: left;
-    line-height: 24px;
-    margin-left: 10px;
-    padding-left: 10px;
-    width: 210px;
-}
-.part7 {
-    margin-top: 10px;
-    overflow: hidden;
-    width: 705px;
-}
-.box12 {
-    border-bottom: 1px solid #DADADA;
-    border-left: 1px solid #DADADA;
-    border-right: 1px solid #DADADA;
-    float: left;
-    height: 185px;
-    margin-left: 10px;
-    width: 283px;
-}
-.box12 .title {
-    background: url("../images/titlebg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
-    float: left;
-    height: 28px;
-    width: 283px;
-}
-.box12 .title .more {
-    float: right;
-    line-height: 28px;
-    margin-right: 10px;
-}
-.box12 .title h1 {
-    background: url("../images/title.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    color: #FFFFFF;
-    font-size: 14px;
-    font-weight: bold;
-    height: 28px;
-    line-height: 28px;
-    text-align: center;
-    width: 88px;
-}
-.box12 ul {
-    float: left;
-    height: 160px;
-    margin-top: 8px;
-    width: 283px;
-}
-.box12 ul li {
-    display: inline;
-    float: left;
-    line-height: 24px;
-    margin-left: 8px;
-    padding-left: 10px;
-    width: 262px;
-}
-.box12 li span {
-    color: #444444;
-    float: right;
-}
-.box13 {
-    border-bottom: 1px solid #DADADA;
-    border-left: 1px solid #DADADA;
-    border-right: 1px solid #DADADA;
-    float: left;
-    height: 185px;
-    width: 408px;
-}
-.box13 .title {
-    background: url("../images/titlebg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
-    float: left;
-    height: 28px;
-    width: 408px;
-}
-.box13 .title .more {
-    float: right;
-    line-height: 28px;
-    margin-right: 10px;
-}
-.box13 .title h1 {
-    background: url("../images/title.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    color: #FFFFFF;
-    font-size: 14px;
-    font-weight: bold;
-    height: 28px;
-    line-height: 28px;
-    text-align: center;
-    width: 88px;
-}
-.box13 ul {
-    float: left;
-    height: 160px;
-    margin-top: 8px;
-    width: 408px;
-}
-.box13 ul li {
-    display: inline;
-    float: left;
-    line-height: 24px;
-    margin-left: 8px;
-    padding-left: 10px;
-    width: 385px;
-}
-.box13 li span {
-    color: #444444;
-    float: right;
-}
+
 .partner {
     border: 1px solid #DADADA;
     float: left;
@@ -1424,4 +906,7 @@ overflow:hidden;
 .margin-left a{
   color:#006699;
   text-decoration:underline;
+}
+#footer{
+  margin:5px;
 }

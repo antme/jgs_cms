@@ -460,7 +460,7 @@ h1#site-name {
 #main-menu-links {
   font-size: 0.929em;
   margin: 0;
-  background:url(../images/menu-c.jpg) repeat-x;
+  
   height:34px;
   line-height:33px;
   
@@ -471,7 +471,7 @@ h1#site-name {
   list-style: none;
   padding: 0 1px;
   margin: 0 1px;
-  background:url(../images/menu-s.jpg) no-repeat left 0px;
+  
   
 }
 
