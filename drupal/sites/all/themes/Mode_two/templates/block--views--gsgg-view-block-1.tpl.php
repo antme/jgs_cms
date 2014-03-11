@@ -46,17 +46,15 @@
 ?>
 
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-		<div class="box4" style="margin-top:10px;">
-         <h1><span><a href="/node/gggs">更多>></a></span><?php print $block->subject ?></h1>
-          <div id="demo">
-          <div id="demo1">
-             <ul>
+		<div class="box2">
+		     <div class="title">
+		        <span class="more"><a href="/node/gggs">更多</a></span>
+                <span class="txt"><?php print $block->subject ?></span>
+		     </div>
+             <ul class="ul_style">
                     <div class="content"<?php print $content_attributes; ?>>
                           <?php print $content ?>
-                      </div>
+                    </div>
              </ul>
          </div>
-        
-       </div>
-       </div>
 </div>

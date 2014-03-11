@@ -15,9 +15,8 @@ body,
 #messages div.section,
 #main,
 #triptych,
-#footer-columns,
-#footer {
-  width: 960px;
+#footer-columns {
+  width: 980px;
   margin-left: auto;
   margin-right: auto;
   height:auto;

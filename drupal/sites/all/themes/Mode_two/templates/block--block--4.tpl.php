@@ -1,7 +1,7 @@
 
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 	<div class="partner">
-      <div class="title">友情链接</div>
+        <div class="title"><span class="txt">友情链接<span></div>
         <ul>
           <li class="partner_li">
               <span class="span_style"><img src="sites/all/themes/holiday/images/14.jpg"></span>

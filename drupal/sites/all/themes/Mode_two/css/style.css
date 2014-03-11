@@ -511,8 +511,7 @@ h1#site-name {
 /* ------------------- Main ------------------- */
 
 #main {
-  margin-bottom: 40px;
-  background-color:#fff;
+  
 }
 
 /* ----------------- Featured ----------------- */
@@ -891,16 +890,15 @@ ul.links {
   text-decoration: none;
 }
 #footer {
-  letter-spacing: 0.2px;
-  margin-top: 30px;
-  border-top: 1px solid #555;
-  border-color: rgba(255, 255, 255, 0.15);
+  width:100%;
+  height:auto;
 }
 #footer .region {
-  background: #eee;
+  width:980px;
+  margin:0px auto;
 }
 #footer .block {
-  clear: both;
+  
 }
 #footer ul,
 #footer li {

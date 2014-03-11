@@ -149,7 +149,7 @@
 			   
 			   <!--左边第三区 -->
 			   <?php if ($page['left-t']): ?>
-		       <div class="part1" style="margin-top:10px;">
+		       <div class="part1">
                <?php print render($page['left-t']); ?>
 			   </div>
 			   <?php endif; ?>
@@ -168,13 +168,15 @@
 		         <?php print render($page['hrefs']); ?>
 			 </div>
 	     <?php endif; ?>
-	 <?php if ($page['footer']): ?>
-      <div id="footer" style="margin-top:10px;">
+	 
+	 </div>
+
+  </div>
+  <?php if ($page['footer']): ?>
+      <div id="footer" style="margin-top:20px;">
         <?php print render($page['footer']); ?>
       </div> <!-- /#footer -->
     <?php endif; ?>
-	 </div>
-
-  </div></div> <!-- /.section, /#footer-wrapper -->
+  </div> <!-- /.section, /#footer-wrapper -->
 
 </div></div> <!-- /#page, /#page-wrapper -->

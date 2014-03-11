@@ -48,8 +48,8 @@
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
     <div class="part2">
            <div class="title">
-             <span class="more"><a href="node/gzdt">更多>></a></span> 
-             <h1><?php print $block->subject ?></h1> 
+             <span class="more"><a href="node/gzdt">更多</a></span> 
+             <span class="txt"><?php print $block->subject ?></span> 
            </div>
            <div class="nr">
              <div class="wenzitwo">

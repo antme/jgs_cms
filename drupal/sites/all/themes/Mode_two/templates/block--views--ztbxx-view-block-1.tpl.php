@@ -48,10 +48,10 @@
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
     <div class="box1">
               <div class="title">
-                 <span class="more"><a href="/node/ztb">更多>></a></span> 
-                 <h1><?php print $block->subject ?></h1>
+                 <span class="more"><a href="/node/ztb">更多</a></span> 
+                 <span class="txt"><?php print $block->subject ?></span>
 			  </div>
-                 <ul>
+                 <ul class="ul_style">
 				      <div class="content"<?php print $content_attributes; ?>>
                           <?php print $content ?>
                       </div>

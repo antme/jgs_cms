@@ -47,7 +47,9 @@
 
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 	<div class="box5">
-        <h1><?php print $block->subject ?></h1>
+	    <div class="title">
+        <span class="txt"><?php print $block->subject ?></span>
+		</div>
         <div id="" class="demox">
              <ul>
                     <div class="content"<?php print $content_attributes; ?>>

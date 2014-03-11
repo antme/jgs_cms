@@ -101,9 +101,9 @@ a.white:hover {
     word-spacing: 10px;
 }
 .content {
-    background: none repeat scroll 0 0 #FFFFFF;
     overflow: hidden;
     padding: 10px 5px 0;
+	background-color:#fff;
     
 }
 .left {
@@ -145,38 +145,47 @@ a.white:hover {
     width: 950px;
 }
 .box1 {
-    border-bottom: 1px solid #DADADA;
-    border-left: 1px solid #DADADA;
-    border-right: 1px solid #DADADA;
     float: left;
-    height: 209px;
+    height: 214px;
     width: 378px;
     margin-left: 10px;
+}
+.part2 .title {
+    float: left;
+    height: 24px;
 }
 .box1 .title {
     
     float: left;
-    height: 28px;
+    height: 24px;
     width: 378px;
+}
+.part2 .title .more {
+    float: right;
+    line-height: 28px;
 }
 .box1 .title .more {
     float: right;
     line-height: 28px;
-    margin-right: 10px;
 }
 .box1 .title h1 {
     font-family: 微软雅黑;
     font-size: 14px;
-    font-weight: bold;
-    height: 28px;
-    line-height: 28px;
+    height: 24px;
+    line-height: 24px;
     text-align: center;
     width: 88px;
 }
-.box1 ul {
+.box1 .ul_style {
     float: left;
-    width: 378px;
+    width: 376px;
+	background-color:#fff;
+	min-height:187px;
+	border:1px solid #cdcdcd;
+	border-top:none;
+	overflow:hidden;
 }
+
 .box1 ul li {
     display: inline;
     float: left;
@@ -215,7 +224,6 @@ a.white:hover {
 }
 .box2 ul {
     float: left;
-    height: 160px;
     margin-top: 8px;
     width: 313px;
 }
@@ -231,6 +239,7 @@ a.white:hover {
     float: right;
 }
 .box4 {
+    float:left;
     background: url("../images/tzbg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
     border: 1px solid #F1D0D0;
     height: 208px;
@@ -267,32 +276,13 @@ a.white:hover {
     width: 215px;
 }
 .part2 {
-    border-bottom: 1px solid #DADADA;
-    border-left: 1px solid #DADADA;
-    border-right: 1px solid #DADADA;
-    height: 251px;
     margin-top: 10px;
     overflow: hidden;
     width: 703px;
 }
 .part2 .title {
-    height: 28px;
-    line-height: 28px;
     width: 703px;
-}
-.part2 .title h1 {
-    float: left;
-    font-size: 14px;
-    font-weight: bold;
-    height: 28px;
-    line-height: 28px;
-    margin-right: 30px;
-    text-align: center;
-    width: 88px;
-}
-.part2 .title span {
-    float: right;
-    margin-right: 10px;
+	border-bottom:2px solid #1353A9; 
 }
 .part2 .nr {
     width: 688px;
@@ -322,7 +312,7 @@ a.white:hover {
 .part2 .nr .wenzitwo {
     float: left;
     height: 197px;
-    width: 703px;
+    width: 701px;
 }
 
 .part2 .nr .wenzi h1 {
@@ -368,7 +358,7 @@ a.white:hover {
 
 .right {
     float: right;
-    width: 235px;
+    width: 246px;
 }
 .sousuo {
     height: 30px;
@@ -388,27 +378,12 @@ a.white:hover {
 }
 
 .box5 {
-    border: 1px solid #DFDFDF;
-    height: 166px;
     margin-top: 10px;
     width: 233px;
-    border-top:none;
+	height:161px;
+	border:1px solid #cdcdcd;
 }
-.box5 h1 {
-    color: #444444;
-    font-size: 14px;
-    font-weight: bold;
-    height: 31px;
-    line-height: 27px;
-    padding-left: 10px;
-    width: 223px;
-}
-.box5 h1 span {
-    float: right;
-    font-size: 12px;
-    font-weight: normal;
-    margin-right: 5px;
-}
+
 .box5 ul {
     margin-top: 5px;
     width: 233px;
@@ -438,25 +413,33 @@ a.white:hover {
 }
 
 .partner {
-    border: 1px solid #DADADA;
+    
     float: left;
     margin-top: 10px;
     overflow: hidden;
-    width: 948px;
+    width: 980px;
 }
 .partner .title {
-    background: url("../images/rbg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
     font-size: 14px;
-    font-weight: bold;
-    height: 28px;
-    line-height: 28px;
-    padding-left: 10px;
-    width: 938px;
+    height: 24px;
+    line-height: 24px;
+    width: 975px;
+	border-bottom:2px solid #1353A9;
+}
+.partner .txt{
+    padding-left:10px;
+	padding-right:10px;
+	background-color:#1353A9;
+	color:#fff;
+	height:24px;
+	display:inline-block;
 }
 .partner ul {
-    height: 30px;
+    overflow:hidden;
     margin: auto;
-    width: 948px;
+    width: 973px;
+	border: 1px solid #DADADA;
+	border-top:none;
 }
 .partner li {
     float: left;
@@ -908,7 +891,7 @@ overflow:hidden;
   text-decoration:underline;
 }
 #footer{
-  margin:5px;
+  border-top:2px solid #1353A9;
 }
 body{
   background:url(../images/back.jpg) no-repeat;
@@ -916,24 +899,95 @@ body{
 #header .section{
    
 }
-.part2 .title{
-  background: url(../images/titlebg2.jpg) repeat-x scroll 0 0 rgba(0, 0, 0, 0);
-}
+
 .box1 .title{
-  background: url(../images/titlebg2.jpg) repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+  border-bottom:2px solid #1353A9;
+}
+.box1 .title .more{
+   float:right;
+}
+.box1 .title .more a{
+  padding-right:19px;
+  background:url(../images/more.png) no-repeat right center;
+}
+.box5 .title .more a{
+  padding-right:19px;
+  background:url(../images/more.png) no-repeat right center;
+}
+.box1 .txt{
+  background-color:#1353A9;
+  color:#fff;
+  height:24px;
+  line-height:24px;
+  display:inline-block;
+  padding:0px 10px;
+}
+.box2 .ul_style{
+  border:1px solid #cdcdcd;
+  border-top:none;
+  height:187px;
+}
+.box2 .title{
+  border-bottom:2px solid #1353A9;
+}
+.box2 .title .more{
+   float:right;
+}
+.box2 .title .more a{
+  padding-right:19px;
+  background:url(../images/more.png) no-repeat right center;
+}
+.box2 .txt{
+  background-color:#1353A9;
+  color:#fff;
+  height:24px;
+  line-height:24px;
+  display:inline-block;
+  padding:0px 10px;
 }
 .box5 .title{
-  background: url(..images/titlebg2.jpg) repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+  border-bottom:1px solid #1353A9;
+  color:#000;
+  height:25px;
 }
-.box5 h1{
-  background: url(../images/titlebg2.jpg) repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+.box5 .title .more a{
+  padding-right:19px;
+  background:url(../images/more.png) no-repeat right center;
+}
+.part2 .title .more a{
+  padding-right:19px;
+  background:url(../images/more.png) no-repeat right center;
+}
+
+.box5 .more{
+  float:right;
+  line-height:28px;
+}
+.box5 .txt{
+  float:left;
+  font-size: 14px;
+  font-weight: bold;
+  height: 25px;
+  line-height: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.part2 .txt{
+  float:left;
+  font-size: 14px;
+  height: 25px;
+  line-height: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color:#1353A9;
+  color:#fff;
+}
+.part2 .wenzitwo{
+  border:1px solid #cdcdcd;
+  border-top:none;
 }
 #main-menu-links{
   background:url(../images/menu-c.png) repeat-x;
-}
-#footer {
-  border-top:2px solid #A81400;
-  background: #eee;
 }
 .top{
   width:100%;
@@ -989,4 +1043,7 @@ body{
   height:38px;
   line-height:38px;
   font-size:12px;
+}
+#header .section{
+  background:url(../images/logo.png) no-repeat;
 }
