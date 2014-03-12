@@ -225,11 +225,6 @@ table ul.links li {
 
 /* ------------------ List Styles ------------------ */
 
-.block ol,
-.block ul {
-  margin: 0;
-  padding: 0; /* LTR */
-}
 .contextual-links-wrapper {
   font-size: small !important;
 }
@@ -909,8 +904,7 @@ ul.links {
   display:inline-block;
 }
 #footer li a {
-  padding: 0 3px;
-  padding-right:5px;
+  padding-right:8px;
   display: block;
   border-right: 1px solid #333; /* LTR */
   display:inline-block;

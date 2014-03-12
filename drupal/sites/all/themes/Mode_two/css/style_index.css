@@ -102,7 +102,6 @@ a.white:hover {
 }
 .content {
     overflow: hidden;
-    padding: 5px 5px 0;
 	background-color:#fff;
     
 }
@@ -112,7 +111,7 @@ a.white:hover {
 }
 .right {
     float: right;
-    width: 235px;
+    width: 255px;
 }
 .copy {
     color: #FFFFFF;
@@ -145,7 +144,7 @@ a.white:hover {
     width: 950px;
 }
 .box1 {
-    float: left;
+    float: right;
     height: 214px;
     width: 378px;
     margin-left: 12px;
@@ -176,14 +175,24 @@ a.white:hover {
     text-align: center;
     width: 88px;
 }
-.box1 .ul_style {
+.part2 .ul_style {
     float: left;
-    width: 376px;
+    width: 699px;
 	background-color:#fff;
 	height:187px;
 	border:1px solid #cdcdcd;
 	border-top:none;
 	overflow:hidden;
+}
+
+.box1 .ul_style {
+    float: left;
+    background-color:#fff;
+    height:187px;
+    border:1px solid #cdcdcd;
+    border-top:none;
+    overflow:hidden;
+    width: 376px;
 }
 
 .box1 ul li {
@@ -198,8 +207,7 @@ a.white:hover {
 }
 .box2 {
     float: left;
-    height: 210px;
-    
+    height: 214px;
     width: 315px;
 }
 .box2 .titles {
@@ -223,8 +231,7 @@ a.white:hover {
     width: 88px;
 }
 .box2 ul {
-    float: left;
-    margin-top: 8px;
+    float: left;;
     width: 313px;
 }
 .box2 ul li {
@@ -355,11 +362,6 @@ a.white:hover {
     color: #444444;
     float: right;
 }
-
-.right {
-    float: right;
-    width: 246px;
-}
 .sousuo {
     height: 30px;
     width: 235px;
@@ -392,9 +394,7 @@ a.white:hover {
     display: inline;
     float: left;
     line-height: 24px;
-    margin-left: 10px;
-    padding-left: 10px;
-    width: 225px;
+    width:100%;
 }
 .box6 {
     height: 70px;
@@ -405,7 +405,7 @@ a.white:hover {
     height: 50px;
     margin-top: 10px;
     width: 235px;
-}
+} 
 .lw_box {
     height: 58px;
     margin-top: 10px;
@@ -423,7 +423,7 @@ a.white:hover {
     font-size: 14px;
     height: 24px;
     line-height: 24px;
-    width: 975px;
+    width: 979px;
 	border-bottom:2px solid #1353A9;
 }
 .partner .txt{
@@ -437,7 +437,7 @@ a.white:hover {
 .partner ul {
     overflow:hidden;
     margin: auto;
-    width: 973px;
+    width: 977px;
 	border: 1px solid #DADADA;
 	border-top:none;
 }
@@ -641,9 +641,6 @@ blockquote:before, blockquote:after, q:before, q:after {
 .box2 li span.styles{
    float:none;
 }
-.view-content li span{
-   float:right;
-}
 .view-content li span.span_style{
     display: inline-block;
     font-size: 14px;
@@ -661,7 +658,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 	float:none;
 }
 .view-content .width_200{
-width:70%;
+width:65%;
 height:24px;
 overflow:hidden;
 white-space:nowrap;
@@ -1100,5 +1097,52 @@ body{
 #footer .menu .leaf{
    float:left;
    list-style:none;
-   padding:0px 5px;
+   padding:0px 7px;
+}
+.block{
+	float:left;
+}
+.view-content .span_style{
+	float:left;
+}
+.ul_style{
+	border:1px solid #cdcdcd;
+	border-top:none;
+}
+.part2 .ul_style li{
+	float:left;
+	width:100%;
+}
+.part2 .ul_style li .clearfix li span{
+	float:right;
+}
+.part2 .ul_style li .clearfix li span.span_style{
+    float:left;
+}
+.part2 .ul_style .views-row{
+	display:inline-block;
+}
+.part2 .ul_style{
+	padding:2px;
+}
+#block-block-3{
+	width:980px;
+	text-indent:center;
+}
+.box5 .clearfix ul{
+	width:100%;
+	overflow:hidden;
+}
+.box5 .clearfix ul li{
+	padding-left:0px;
+}
+.box5 .clearfix ul li span{
+    float:right;
+}
+.box5 .clearfix ul li span.span_style{
+    float:left;
+}
+#footer .block{
+	float:none;
+	text-indent:center;
 }
