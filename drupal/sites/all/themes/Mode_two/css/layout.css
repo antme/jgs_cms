@@ -30,9 +30,6 @@ body,
 }
 .with-secondary-menu .region-header {
 }
-.without-secondary-menu .region-header {
-  margin-top: 15px;
-}
 #secondary-menu {
   position: absolute;
   right: 0; /* LTR */

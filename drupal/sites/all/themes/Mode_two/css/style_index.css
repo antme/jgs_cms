@@ -102,7 +102,7 @@ a.white:hover {
 }
 .content {
     overflow: hidden;
-    padding: 10px 5px 0;
+    padding: 5px 5px 0;
 	background-color:#fff;
     
 }
@@ -148,7 +148,7 @@ a.white:hover {
     float: left;
     height: 214px;
     width: 378px;
-    margin-left: 10px;
+    margin-left: 12px;
 }
 .part2 .title {
     float: left;
@@ -180,7 +180,7 @@ a.white:hover {
     float: left;
     width: 376px;
 	background-color:#fff;
-	min-height:187px;
+	height:187px;
 	border:1px solid #cdcdcd;
 	border-top:none;
 	overflow:hidden;
@@ -278,10 +278,10 @@ a.white:hover {
 .part2 {
     margin-top: 10px;
     overflow: hidden;
-    width: 703px;
+    width: 705px;
 }
 .part2 .title {
-    width: 703px;
+    width: 705px;
 	border-bottom:2px solid #1353A9; 
 }
 .part2 .nr {
@@ -312,7 +312,7 @@ a.white:hover {
 .part2 .nr .wenzitwo {
     float: left;
     height: 197px;
-    width: 701px;
+    width: 703px;
 }
 
 .part2 .nr .wenzi h1 {
@@ -379,8 +379,8 @@ a.white:hover {
 
 .box5 {
     margin-top: 10px;
-    width: 233px;
-	height:161px;
+    width: 249px;
+	height:237px;
 	border:1px solid #cdcdcd;
 }
 
@@ -394,7 +394,7 @@ a.white:hover {
     line-height: 24px;
     margin-left: 10px;
     padding-left: 10px;
-    width: 210px;
+    width: 225px;
 }
 .box6 {
     height: 70px;
@@ -660,8 +660,9 @@ blockquote:before, blockquote:after, q:before, q:after {
     text-indent:5px;
 	float:none;
 }
-.view-content .width_200,.view-content .width_500{
+.view-content .width_200{
 width:70%;
+height:24px;
 overflow:hidden;
 white-space:nowrap;
 text-overflow:ellipsis;
@@ -673,6 +674,7 @@ text-overflow: ellipsis;/* IE/Safari */
 
 .width_500{
 width:500px;
+height:24px;
 overflow:hidden;
 white-space:nowrap;
 text-overflow:ellipsis;
@@ -816,27 +818,26 @@ overflow:hidden;
   background-color;
 }
 #block-user-login{
-  width:313px;
+  width:249px;
   height:210px;
-  float:left;
   border:1px solid #cdcdcd;
-  border-top:none;
 }
 #block-user-login h2{
-  background: url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
   float: left;
   height: 28px;
-  width: 313px;
+  width: 249px;
   font-family: 微软雅黑;
   font-size: 14px;
   font-weight: bold;
   height: 28px;
   line-height: 28px;
   text-indent:15px;
+  border-bottom:1px solid #1353A9;
+  color:#1353A9;
 }
 #block-user-login  .content{
   float:left;
-  margin-left:40px;
+  margin-left:21px;
 }
 #block-user-login .form-item{
   margin-left:10px;
@@ -971,6 +972,7 @@ body{
   line-height: 25px;
   padding-left: 10px;
   padding-right: 10px;
+  color:#1353A9;
 }
 .part2 .txt{
   float:left;
@@ -1046,4 +1048,57 @@ body{
 }
 #header .section{
   background:url(../images/logo.png) no-repeat;
+}
+.box11 {
+    border: 1px solid #DFDFDF;
+    height: 263px;
+    margin-top: 10px;
+    width: 233px;
+    border-top:none;
+}
+.box11 h1 {
+    background: url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    color: #444444;
+    font-size: 14px;
+    font-weight: bold;
+    height: 28px;
+    line-height: 27px;
+    padding-left: 10px;
+    width: 223px;
+}
+.box11 p {
+    border-bottom: 1px solid #E7E7E7;
+    color: #780107;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+.box11 ul {
+    margin-top: 8px;
+}
+.box11 li {
+    float: left;
+    line-height: 23px;
+    margin-left: 10px;
+    padding-left: 10px;
+    width: 203px;
+}
+#block-user-login .form-item{
+   width:190px;
+   height:auto;
+   overflow:hidden;
+}
+#block-user-login .item-list{
+   width:190px;
+   height:auto;
+   overflow:hidden;
+}
+#block-user-login .form-actions{
+   width:190px;
+   height:auto;
+   overflow:hidden;
+}
+#footer .menu .leaf{
+   float:left;
+   list-style:none;
+   padding:0px 5px;
 }

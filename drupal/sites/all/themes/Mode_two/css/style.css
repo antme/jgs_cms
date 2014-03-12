@@ -1224,10 +1224,6 @@ input.form-submit:focus {
 .password-suggestions ul li {
   margin-left: 1.2em; /* LTR */
 }
-.form-item {
-  margin-bottom: 1em;
-  margin-top: 2px;
-}
 .form-item label {
   font-size: 0.929em;
 }

@@ -55,6 +55,10 @@
 		  for(var i=0; i<l_div.length;i++){
 		    $(l_div[i]).append("<a href='#' title=''>"+$(s_div[i]).html()+"</a>");
 			$(l_div[i]).find("div").remove();
+			var thref = $(l_div[i]).find("span").find("a").attr("href");
+			$(l_div[i]).attr("href",thref);
+			$(l_div[i]).find("span").remove();
+			$(l_div[i]).find("a").attr("href",$(l_div[i]).attr("href"));
 		  }
 	   });
   </script>
