@@ -141,7 +141,6 @@
     <?php endif; ?>
 
     <div id="content" class="column"><div class="section">
-      
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       

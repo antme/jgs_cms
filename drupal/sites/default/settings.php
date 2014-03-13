@@ -210,14 +210,26 @@
  *   );
  * @endcode
  */
+
+$database = 'seaking';
+$username = 'root';
+$password = '';
+
+if(file_exists(dirname(__FILE__) . '/settings_customize.php')){
+	include dirname(__FILE__) . '/settings_customize.php';
+	$database = $db_name;
+	$password = $db_password;
+}
+
+
 $databases = array (
   'default' => 
   array (
     'default' => 
     array (
-      'database' => 'seaking',
-      'username' => 'root',
-      'password' => '',
+      'database' => $database,
+      'username' => $username,
+      'password' => $password,
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
