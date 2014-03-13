@@ -10,24 +10,11 @@
  */
 ?>
 
-   
-<?php if($view->name=="jgyw"):?>
-     <div class="box1">
-    	<div class="title">
-             <span class="more"><a href="node/<?php print $view->name?>">更多</a></span> 
-             <span class="txt">
-				<?php if ($view->human_name): ?>
-				  	<?php print $view->human_name ?>
-				<?php endif;?>
-			 </span>
-		</div>
-        <ul class="ul_style">
-			<?php foreach ($rows as $id => $row): ?>
-			    <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
-			 <?php endforeach; ?>
-        </ul>
-    </div>
-<?php elseif($view->name=="slide_images_view") : ?>
+<?php 
+$class_name = ""; 		
+$has_more = true;
+?>
+<?php if($view->name=="slide_images_view") : ?>
     <div class="box2 ">
         <div id="demo3" class="slideBox">
             <ul class="items">
@@ -35,103 +22,39 @@
 			         <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
 			     <?php endforeach; ?>
             </ul>
-        </div>
-        
-    </div>
-<?php elseif($view->name=="gsgg_view") : ?>
-    <div class="box2 ">
-    	<div class="title">
-              <span class="more"><a href="node/<?php print $view->name?>">更多</a></span> 
-             <span class="txt">
-				<?php if ($view->human_name): ?>
-				  	<?php print $view->human_name ?>
-				<?php endif;?>
-			 </span>
-		</div>
-        <ul class="ul_style">
-			<?php foreach ($rows as $id => $row): ?>
-			    <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
-			 <?php endforeach; ?>
-        </ul>
-    </div>
-<?php elseif($view->name=="ztbxx_view") : ?>
-    <div class="box1">
-    	<div class="title">
-              <span class="more"><a href="node/<?php print $view->name?>">更多</a></span> 
-             <span class="txt">
-				<?php if ($view->human_name): ?>
-				  	<?php print $view->human_name ?>
-				<?php endif;?>
-			 </span>
-		</div>
-        <ul class="ul_style">
-			<?php foreach ($rows as $id => $row): ?>
-			    <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
-			 <?php endforeach; ?>
-        </ul>
-    </div>
-<?php elseif($view->name=="gzdt_view") : ?>
-    <div class="part2" style="margin-top:10px;">
-    	<div class="title">
-              <span class="more"><a href="node/<?php print $view->name?>">更多</a></span> 
-             <span class="txt">
-				<?php if ($view->human_name): ?>
-				  	<?php print $view->human_name ?>
-				<?php endif;?>
-			 </span>
-		</div>
-        <ul class="ul_style">
-			<?php foreach ($rows as $id => $row): ?>
-			    <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
-			 <?php endforeach; ?>
-        </ul>
-    </div>
- <?php elseif($view->name=="zcfg_view") : ?>
-    <div class="part2" style="margin-top:10px;">
-    	<div class="title">
-              <span class="more"><a href="node/<?php print $view->name?>">更多</a></span> 
-             <span class="txt">
-				<?php if ($view->human_name): ?>
-				  	<?php print $view->human_name ?>
-				<?php endif;?>
-			 </span>
-		</div>
-        <ul class="ul_style">
-			<?php foreach ($rows as $id => $row): ?>
-			    <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
-			 <?php endforeach; ?>
-        </ul>
-    </div>
- <?php elseif($view->name=="cwgz_view") : ?>
-    <div class="box5">
-    	<div class="title">
-    	     
-             <span class="txt">
-				<?php if ($view->human_name): ?>
-				  	<?php print $view->human_name ?>
-				<?php endif;?>
-			 </span>
-		</div>
-        <ul >
-			<?php foreach ($rows as $id => $row): ?>
-			    <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
-			 <?php endforeach; ?>
-        </ul>
-    </div>
-<?php elseif($view->name=="dqtd_view") : ?>
-    <div class="box5">
-    	<div class="title">
-    	     <span class="more"><a href="node/<?php print $view->name?>">更多</a></span>
-             <span class="txt">
-				<?php if ($view->human_name): ?>
-				  	<?php print $view->human_name ?>
-				<?php endif;?>
-			 </span>
-		</div>
-        <ul>
-			<?php foreach ($rows as $id => $row): ?>
-			    <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
-			 <?php endforeach; ?>
-        </ul>
-    </div>
-<?php endif;?>
+       </div>        
+</div>
+<?php else:?>
+	<?php if($view->name=="jgyw" || $view->name=="ztbxx_view"):?>
+		<?php $class_name = "box1";?>
+	<?php elseif($view->name=="gsgg_view") : ?>
+	     <?php $class_name = "box2";?>
+	<?php elseif($view->name=="gzdt_view" || $view->name=="zcfg_view") : ?>
+	     <?php $class_name = "part2";?>
+	 <?php elseif($view->name=="cwgz_view") : ?>	    
+	    <?php $class_name = "box5"; $has_more=false;?>
+	    
+	<?php elseif($view->name=="dqtd_view") : ?>
+		<?php $class_name = "box5";?>
+	   
+	<?php endif;?>
+	
+	<div class="<?php print $class_name;?>">
+	    	<div class="title">
+	    	     <?php if ($has_more): ?>
+	             	<span class="more"><a href="node/<?php print $view->name?>">更多</a></span> 
+	             <?php endif;?>
+	             
+	             <span class="txt">
+					<?php if ($view->human_name): ?>
+					  	<?php print $view->human_name ?>
+					<?php endif;?>
+				 </span>
+			</div>
+	        <ul class="ul_style">
+				<?php foreach ($rows as $id => $row): ?>
+				    <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
+				 <?php endforeach; ?>
+	        </ul>
+	    </div>
+<?php endif?>

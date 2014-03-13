@@ -25,37 +25,5 @@
 
 ?>
 
-<?php if($view->name=="cwgz_view"): ?>
-     <div id="node-<?php print $row->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-	      <ul>
-             <li>
-             <a href="/node/<?php print $row->nid; ?>" title="" target="_blank"><?php print $row->node_title; ?></a>
-		  <span>
-		  <?php if($face=="笑脸"):?>
-		     <img src='sites/all/themes/holiday/images/xiao.jpg' />
-		  <?php elseif($face=="哭脸"): ?>
-		     <img src='sites/all/themes/holiday/images/ku.jpg' />
-		  <?php endif; ?>
-		  </span>
-             </li>
-   	      </ul>
-     </div>
-<?php elseif ($view->name=="dqtd_view"):?>
-    <div id="node-<?php print $row->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-	    <ul>
-            <li><span class="span_style width_200"> <a href="/node/<?php print $row->nid; ?>"  title="" target="_blank"><?php print $row->node_title; ?></a></span> </li>
-   	    </ul>
-     </div>
-<?php elseif ($view->name=="slide_images_view"):?>
-     <div id="node-<?php print $row->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-	    <ul>
-            <li><span class="span_style width_200"> <a href="/node/<?php print $row->nid; ?>"  title="" target="_blank"><?php print $row->node_title; ?></a></span> </li>
-   	    </ul>
-     </div>
-<?php else :?>
-     <div id="node-<?php print $row->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-	    <ul>
-            <li><span><?php print date('Y-m-d',$row->node_created); ?></span><span class="span_style width_200"> <a href="/node/<?php print $row->nid; ?>"  title="" target="_blank"><?php print $row->node_title; ?></a></span> </li>
-   	    </ul>
-     </div>
-<?php endif;?>
+<?php print $output;?>
+

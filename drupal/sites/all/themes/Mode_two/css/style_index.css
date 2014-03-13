@@ -203,7 +203,6 @@ a.white:hover {
 }
 .box1 li span {
     color: #444444;
-    float: right;
 }
 .box2 {
     float: left;
@@ -1145,4 +1144,7 @@ body{
 #footer .block{
 	float:none;
 	text-indent:center;
+}
+#block-user-login{
+	margin-top:10px;
 }
