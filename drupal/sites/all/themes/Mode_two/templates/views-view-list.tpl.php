@@ -11,8 +11,9 @@
 ?>
 
 <?php 
-$class_name = ""; 		
+$class_name = "pages_style"; 		
 $has_more = true;
+$ul_style="ul_style";
 ?>
 <?php if($view->name=="slide_images_view") : ?>
     <div class="box2 ">
@@ -26,17 +27,44 @@ $has_more = true;
 </div>
 <?php else:?>
 	<?php if($view->name=="jgyw" || $view->name=="ztbxx_view"):?>
-		<?php $class_name = "box1";?>
+	
+	    <?php if ($is_front):?>
+	         <?php $class_name = "box1"; $ul_style="ul_style"; ?>
+	    <?php else :?>
+	         <?php $has_more=false; ?>
+	    <?php endif;?>
+		
 	<?php elseif($view->name=="gsgg_view") : ?>
-	     <?php $class_name = "box2";?>
+
+	    <?php if ($is_front):?>
+	         <?php $class_name = "box2"; $ul_style="ul_style"; ?>
+	    <?php else :?>
+	         <?php $has_more=false; ?>
+	    <?php endif;?>
+	    
 	<?php elseif($view->name=="gzdt_view" || $view->name=="zcfg_view") : ?>
-	     <?php $class_name = "part2";?>
+	
+	    <?php if ($is_front):?>
+	         <?php $class_name = "part2"; $ul_style="ul_style"; ?>
+	    <?php else :?>
+	         <?php $has_more=false; ?>
+	    <?php endif;?>
+	    
 	 <?php elseif($view->name=="cwgz_view") : ?>	    
-	    <?php $class_name = "box5"; $has_more=false;?>
+
+	    <?php if ($is_front):?>
+	         <?php $class_name = "box5";$ul_style=""; $has_more=false; ?>
+	    <?php else :?>
+	         <?php $has_more=false; ?>
+	    <?php endif;?>
 	    
 	<?php elseif($view->name=="dqtd_view") : ?>
-		<?php $class_name = "box5";?>
-	   
+
+		<?php if ($is_front):?>
+	         <?php $class_name = "box5";$ul_style=""; ?>
+	    <?php else :?>
+	         <?php $has_more=false; ?>
+	    <?php endif;?>
 	<?php endif;?>
 	
 	<div class="<?php print $class_name;?>">
@@ -51,7 +79,7 @@ $has_more = true;
 					<?php endif;?>
 				 </span>
 			</div>
-	        <ul class="ul_style">
+	        <ul class="<?php print $ul_style;?>">
 				<?php foreach ($rows as $id => $row): ?>
 				    <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
 				 <?php endforeach; ?>

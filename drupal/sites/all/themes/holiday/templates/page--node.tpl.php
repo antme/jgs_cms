@@ -85,6 +85,7 @@
  * @see html.tpl.php
  */
 ?>
+
 <div id="page-wrapper"><div id="page">
 
   <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
@@ -133,13 +134,15 @@
          
 	 
 	 </div>
-	 <?php if ($page['footer']): ?>
+	 
+	 </div>
+
+  </div>
+  <?php if ($page['footer']): ?>
       <div id="footer" style="margin-top:10px;">
         <?php print render($page['footer']); ?>
       </div> <!-- /#footer -->
     <?php endif; ?>
-	 </div>
-
-  </div></div> <!-- /.section, /#footer-wrapper -->
+  </div> <!-- /.section, /#footer-wrapper -->
 
 </div></div> <!-- /#page, /#page-wrapper -->

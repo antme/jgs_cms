@@ -85,8 +85,13 @@
  * @see html.tpl.php
  */
 ?>
-<div id="page-wrapper"><div id="page">
 
+<div id="page-wrapper"><div id="page">
+  <div class="top">
+      <div class="top_content">
+	       <?php print render($page['top']); ?>
+	  </div>
+  </div>
   <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
 
     <?php print render($page['header']); ?>
@@ -122,30 +127,30 @@
       <div class="content">
 	     
            <div class="left">
-		       <!--左边第一区 -->
+		       <!--宸﹁竟绗竴鍖�-->
 		       <?php if ($page['left']): ?>
-		       <div class="part1">
+		       <div class="part1" style="margin-top:10px;">
                <?php print render($page['left']); ?>
 			   </div>
 			   <?php endif; ?>
 			   
-			   <!--服务展示区 -->
+			   <!--鏈嶅姟灞曠ず鍖�-->
 			   <?php if ($page['left-f']): ?>
 		       <div class="part1 comm_style" style="margin-top:10px;">
                <?php print render($page['left-f']); ?>
 			   </div>
 			   <?php endif; ?>
 			   
-			   <!--左边第二区 -->
+			   <!--宸﹁竟绗簩鍖�-->
 			   <?php if ($page['left-s']): ?>
 		       <div class="part1" style="margin-top:10px;">
                <?php print render($page['left-s']); ?>
 			   </div>
 			   <?php endif; ?>
 			   
-			   <!--左边第三区 -->
+			   <!--宸﹁竟绗笁鍖�-->
 			   <?php if ($page['left-t']): ?>
-		       <div class="part1" style="margin-top:10px;">
+		       <div class="part1">
                <?php print render($page['left-t']); ?>
 			   </div>
 			   <?php endif; ?>
@@ -165,12 +170,14 @@
 			 </div>
 	     <?php endif; ?>
 	 <?php if ($page['footer']): ?>
-      <div id="footer" style="margin-top:10px;">
+      <div id="footer" style="margin-top:20px;">
         <?php print render($page['footer']); ?>
       </div> <!-- /#footer -->
     <?php endif; ?>
 	 </div>
-
-  </div></div> <!-- /.section, /#footer-wrapper -->
+     
+  </div>
+  
+  </div> <!-- /.section, /#footer-wrapper -->
 
 </div></div> <!-- /#page, /#page-wrapper -->

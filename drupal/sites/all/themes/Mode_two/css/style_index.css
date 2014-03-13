@@ -19,42 +19,6 @@ display:visible;
     height: 200px;
     width: 960px;
 }
-a:link {
-    color: #222222;
-    text-decoration: none;
-}
-a:visited {
-    color: #222222;
-    text-decoration: none;
-}
-a:hover {
-    color: #B41300;
-    text-decoration: none;
-}
-a.red:link {
-    color: #780107;
-    text-decoration: none;
-}
-a.red:visited {
-    color: #780107;
-    text-decoration: none;
-}
-a.red:hover {
-    color: #000000;
-    text-decoration: none;
-}
-a.white:link {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-a.white:visited {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-a.white:hover {
-    color: #FFFFCC;
-    text-decoration: none;
-}
 .menu {
     width: 960px;
 }
@@ -177,9 +141,9 @@ a.white:hover {
 }
 .part2 .ul_style {
     float: left;
-    width: 699px;
+    width: 693px;
 	background-color:#fff;
-	height:187px;
+	height:188px;
 	border:1px solid #cdcdcd;
 	border-top:none;
 	overflow:hidden;
@@ -188,18 +152,19 @@ a.white:hover {
 .box1 .ul_style {
     float: left;
     background-color:#fff;
-    height:187px;
+    height:177px;
     border:1px solid #cdcdcd;
     border-top:none;
     overflow:hidden;
-    width: 376px;
+    width: 371px;
+    padding:5px 0px 5px 5px; 
 }
 
 .box1 ul li {
     display: inline;
     float: left;
     line-height: 24px;
-    width: 355px;
+    width: 365px;
 }
 .box1 li span {
     color: #444444;
@@ -237,7 +202,6 @@ a.white:hover {
     display: inline;
     float: left;
     line-height: 24px;
-    padding-left: 5px;
     width: 305px;
 }
 .box2 li span {
@@ -608,7 +572,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 }
 .span_style{
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     overflow: hidden;
     vertical-align: middle;
     text-indent:5px;
@@ -631,18 +595,18 @@ blockquote:before, blockquote:after, q:before, q:after {
 }
 .new_gif{
    width:28px;
-   height:14px;
+   height:12px;
    background:url(../images/new.gif);
 }
 .box1 li a{
-   font-size:14px;
+   font-size:12px;
 }
 .box2 li span.styles{
    float:none;
 }
 .view-content li span.span_style{
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     overflow: hidden;
     vertical-align: middle;
     text-indent:5px;
@@ -650,35 +614,13 @@ blockquote:before, blockquote:after, q:before, q:after {
 }
 .part2 .nr .wenzitwo ul li span.span_style{
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     overflow: hidden;
     vertical-align: middle;
     text-indent:5px;
 	float:none;
 }
-.view-content .width_200{
-width:65%;
-height:24px;
-overflow:hidden;
-white-space:nowrap;
-text-overflow:ellipsis;
-text-overflow: ellipsis;/* IE/Safari */
--ms-text-overflow: ellipsis;
--o-text-overflow: ellipsis;/* Opera */
--moz-binding: url("ellipsis.xml#ellipsis");/*FireFox*/
-}
 
-.width_500{
-width:500px;
-height:24px;
-overflow:hidden;
-white-space:nowrap;
-text-overflow:ellipsis;
-text-overflow: ellipsis;/* IE/Safari */
--ms-text-overflow: ellipsis;
--o-text-overflow: ellipsis;/* Opera */
--moz-binding: url("ellipsis.xml#ellipsis");/*FireFox*/
-}
 .fwdt{
 width:705px;
 height:265px;
@@ -742,8 +684,8 @@ overflow:hidden;
   display: inline-block;
   *display: inline;
   padding: 4px 12px;
-  *margin-left: .3em;
-  font-size: 14px;
+  *margin-left: 0.3em;
+  font-size: 12px;
   line-height: 20px;
   color: #333333;
   text-align: center;
@@ -863,6 +805,7 @@ overflow:hidden;
 .content_style{
    min-height:500px;
    background-color:whiteSmoke;
+   margin-left:5px;
 }
 
 #block-system-main .view-content .item-list ul li{
@@ -922,7 +865,9 @@ body{
 .box2 .ul_style{
   border:1px solid #cdcdcd;
   border-top:none;
-  height:187px;
+  width:308px;
+  height:176px;
+  padding:5px 0px 5px 5px;
 }
 .box2 .title{
   border-bottom:2px solid #1353A9;
@@ -962,7 +907,7 @@ body{
 }
 .box5 .txt{
   float:left;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   height: 25px;
   line-height: 25px;
@@ -972,7 +917,7 @@ body{
 }
 .part2 .txt{
   float:left;
-  font-size: 14px;
+  font-size: 12px;
   height: 25px;
   line-height: 25px;
   padding-left: 10px;
@@ -1122,7 +1067,7 @@ body{
 	display:inline-block;
 }
 .part2 .ul_style{
-	padding:2px;
+	padding:5px;
 }
 #block-block-3{
 	width:980px;
@@ -1148,3 +1093,90 @@ body{
 #block-user-login{
 	margin-top:10px;
 }
+.box1 .ul_style .field-content,.box2 .ul_style .field-content,.box5 .field-content{
+	float:left;
+	width:73%;
+	font-size:12px;
+	height:24px;
+	overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    text-overflow: ellipsis;/* IE/Safari */
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;/* Opera */
+    -moz-binding: url("ellipsis.xml#ellipsis");/*FireFox*/
+}
+.part2 .ul_style .field-content{
+	float:left;
+    width:75%;
+    font-size:12px;
+    height:24px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    text-overflow: ellipsis;/* IE/Safari */
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;/* Opera */
+    -moz-binding: url("ellipsis.xml#ellipsis");/*FireFox*/
+}
+
+.box1 .ul_style .date,.box2 .ul_style .date,.part2 .ul_style .date{
+	float:right;
+}
+.box5 .views-row .field-content{
+	float:left;
+}
+.box5 .views-row div{
+    float:right;
+}
+.box5 ul{
+	padding:6px;
+	padding-top:0;
+}
+.box1 .views-row a,.box5 .views-row a,.box2 .views-row a,.part2 .views-row a,#footer li a
+,.pages_style .ul_style .views-row .field-content a{
+	color:#333;
+}
+.pages_style{
+	width:708px;
+	min-height:400px;
+	margin-left:5px;
+}
+.pages_style .title{
+	padding:10px;
+	margin:10px;
+	border-bottom:2px solid #1353A9;
+}
+.pages_style .title .txt{
+	font-size:16px;
+	font-weight:bold;
+}
+.pages_style .ul_style{
+	margin: 10px;
+    padding: 10px;
+    border:0;
+}
+.pages_style .ul_style .views-row .field-content{
+	float:left;
+	width:80%;
+	height:24px;
+	font-size:12px;
+    height:24px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    text-overflow: ellipsis;/* IE/Safari */
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;/* Opera */
+    -moz-binding: url("ellipsis.xml#ellipsis");/*FireFox*/
+}
+.pages_style .ul_style .views-row .date{
+	float:right;
+}
+.content_style .clearfix{
+	padding:5px;
+}
+.content_style .clearfix p{
+	text-align:left;
+}
+.pages_style .more{display:none;}

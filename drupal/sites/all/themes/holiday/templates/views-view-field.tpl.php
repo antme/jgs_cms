@@ -24,10 +24,6 @@
 
 
 ?>
-<div id="node-<?php print $row->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-   
-	 <ul>
-      <li><span><?php print date('Y-m-d',$row->node_created); ?></span><span class="span_style width_200"> <a href="node/<?php print $row->nid; ?>"  title="" target="_blank"><?php print $row->node_title; ?></a></span> </li>
-   	 </ul>
-</div>
+
+<?php print $output;?>
 
