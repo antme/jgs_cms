@@ -45,7 +45,10 @@ Other variables:
 	   	 	        <span><img width="24px" height="24px" src="/sites/all/themes/Mode_two/images/ku.jpg" /></span>
 	   	 	    <?php endif;?>
 	   	 <?php endforeach;?>
-	  	 
+	<?php else:?>		
+		  	 <?php foreach ($items as $id => $item): ?>	 
+		  	 		<?php print $item["#markup"];?>
+		  	 <?php endforeach;?>
 	<?php endif;?>
 	
 	
