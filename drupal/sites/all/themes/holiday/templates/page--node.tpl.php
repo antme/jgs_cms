@@ -132,7 +132,7 @@
 		   </div>
          <?php endif; ?>
          
-	 
+	     <a class="return_top" href="#top"></a>
 	 </div>
 	 
 	 </div>

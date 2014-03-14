@@ -75,7 +75,8 @@ display:visible;
 }
 .right {
     float: right;
-    width: 255px;
+    width: 277px;
+	
 }
 .copy {
     color: #FFFFFF;
@@ -938,7 +939,7 @@ body{
   border-bottom:2px solid #1353A9;
 }
 .top_content{
-  width:960px;
+  width:1000px;
   height:40px;
   margin:0px auto;
   overflow:hidden;
@@ -1045,6 +1046,7 @@ body{
 }
 .block{
 	float:left;
+	
 }
 .view-content .span_style{
 	float:left;
@@ -1180,3 +1182,88 @@ body{
 	text-align:left;
 }
 .pages_style .more{display:none;}
+#node-51 .webform-client-form .form-item,#node-51 .webform-client-form .form-actions{
+	float:left;
+	width:100%;
+}
+#node-51 .webform-client-form .form-item label{
+	width:100px;
+	text-align:right;
+}
+#node-51 .webform-client-form .form-item .form-text{
+	float:left;
+	width:200px;
+}
+#node-51 .form-textarea-wrapper{
+	float:left;
+	width:210px;
+}
+#node-51 .webform-container-inline label{
+	margin-right:0px;
+}
+#node-51 .webform-client-form .form-item .form-textarea,
+#node-51 .webform-client-form .form-item .grippie{
+	float:left;
+    width:400px;
+}
+#node-51 .webform-client-form .form-item .grippie{
+	width:398px;
+}
+
+#node-51 .webform-client-form .form-actions .form-submit{
+	float:left;
+	margin-left:100px;
+}
+#node-51 .form-item, .form-actions{
+	margin-top:0px;
+}
+#block-views-notice-view-block{}
+.box_top{
+	width:980px;
+	height:30px;
+	padding-left:20px;
+	text-indent:20px;
+	background:#fff url(../images/notice.gif) no-repeat 15px 8px;
+	
+}
+.box_top li{
+	line-height:30px;
+	height:30px;
+}
+.box_top li a{
+	color:#000;
+	font-size:12px;
+}
+.content_style h2{
+	text-align:center;
+	font-size:20px;
+	font-weight:bold;
+}
+#block-system-main{width:100%}
+
+#demo1 {
+float: left;
+width:100%;
+margin-top:0px;
+}
+#demo2 {
+float: left;
+width:100%;
+}
+#demo {
+margin-left:10px;
+background: #FFF;
+height:30px;
+overflow:hidden;
+}
+.return_top{
+	width:41px;
+	height:42px;
+	position:absolute;
+	bottom:98px;
+	right:128px;
+	background:url(../images/return_top.png);
+	display:inline-block;
+}
+#main{
+position:relative;

@@ -25,6 +25,36 @@ $ul_style="ul_style";
             </ul>
        </div>        
 </div>
+<?php elseif($view->name=="notice_view") : ?>
+    <div class="box_top">
+         <div id="demo">
+             <div id="demo1">
+                 <ul class="items">
+		    	     <?php foreach ($rows as $id => $row): ?>
+			            <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
+			         <?php endforeach; ?>
+                 </ul>
+             </div>
+             <div id="demo2"></div> 
+         </div>      
+    </div>
+    <script type="text/javascript">
+    var speeds=100;
+    var tab=document.getElementById("demo");
+    var tab1=document.getElementById("demo1");
+    var tab2=document.getElementById("demo2");
+    tab2.innerHTML=tab1.innerHTML;
+    function Marquee(){
+    	if(tab2.offsetHeight-tab.scrollTop<=0)
+    	tab.scrollTop-=tab1.offsetHeight;
+    	else{
+    	tab.scrollTop++;
+    	}
+    	}
+    var MyMar=setInterval(Marquee,speeds);
+    tab.onmouseover=function() {clearInterval(MyMar)};
+    tab.onmouseout=function() {MyMar=setInterval(Marquee,speeds)};
+    </script>
 <?php else:?>
 	<?php if($view->name=="jgyw" || $view->name=="ztbxx_view"):?>
 	

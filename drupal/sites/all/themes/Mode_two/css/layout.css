@@ -8,7 +8,7 @@ body,
 }
 #page-wrapper {
   min-height: 100%;
-  min-width: 960px;
+  min-width: 1000px;
 }
 #header div.section,
 #featured div.section,
@@ -16,7 +16,7 @@ body,
 #main,
 #triptych,
 #footer-columns {
-  width: 980px;
+  width: 1000px;
   margin-left: auto;
   margin-right: auto;
   height:auto;

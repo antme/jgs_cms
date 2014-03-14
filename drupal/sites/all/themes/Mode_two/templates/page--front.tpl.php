@@ -112,11 +112,13 @@
         )); ?>
       </div> <!-- /#main-menu -->
     <?php endif; ?>
-
     
+    <?php if ($page['notice']): ?>
+       <?php print render($page['notice']);?>
+    <?php endif; ?>
 
   </div></div> <!-- /.section, /#header -->
-
+   
   <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
       <?php if ($page['sidebar_first']): ?>
       <div id="sidebar-first" class="column sidebar"><div class="section">
@@ -157,12 +159,11 @@
 			   
 		   </div>
          
-		 <?php if ($page['right']): ?>
            <div class="right">
                <?php print render($page['right']); ?>
+               
 		   </div>
-         <?php endif; ?>
-        
+           <a class="return_top" href="#top"></a>
 	 </div>
 	  <?php if ($page['hrefs']): ?>
 		     <div class="content">
@@ -180,4 +181,4 @@
     <?php endif; ?>
   </div> <!-- /.section, /#footer-wrapper -->
 
-</div></div> <!-- /#page, /#page-wrapper -->
+</div> <!-- /#page, /#page-wrapper -->

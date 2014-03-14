@@ -25,6 +25,7 @@ regions[content] = Content
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
 
+regions[notice] = notice
 regions[footer] = Footer
 regions[left] = 左边一区
 regions[left-s] = 左边二区
