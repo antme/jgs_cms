@@ -56,7 +56,7 @@ $ul_style="ul_style";
     tab.onmouseout=function() {MyMar=setInterval(Marquee,speeds)};
     </script>
 <?php else:?>
-	<?php if($view->name=="jgyw" || $view->name=="ztbxx_view"):?>
+	<?php if($view->name=="jgyw" || $view->name=="ztbxx_view" || $view->name=="zcfg_view"):?>
 	
 	    <?php if ($is_front):?>
 	         <?php $class_name = "box1"; $ul_style="ul_style"; ?>
@@ -64,21 +64,14 @@ $ul_style="ul_style";
 	         <?php $has_more=false; ?>
 	    <?php endif;?>
 		
-	<?php elseif($view->name=="gsgg_view") : ?>
+	<?php elseif($view->name=="gsgg_view" || $view->name=="gzdt_view") : ?>
 
 	    <?php if ($is_front):?>
 	         <?php $class_name = "box2"; $ul_style="ul_style"; ?>
 	    <?php else :?>
 	         <?php $has_more=false; ?>
 	    <?php endif;?>
-	    
-	<?php elseif($view->name=="gzdt_view" || $view->name=="zcfg_view") : ?>
-	
-	    <?php if ($is_front):?>
-	         <?php $class_name = "part2"; $ul_style="ul_style"; ?>
-	    <?php else :?>
-	         <?php $has_more=false; ?>
-	    <?php endif;?>
+
 	    
 	 <?php elseif($view->name=="cwgz_view") : ?>	    
 

@@ -112,6 +112,7 @@ a.white:hover {
 .right {
     float: right;
     width: 277px;
+    margin-top:10px;
 }
 .copy {
     color: #FFFFFF;
@@ -831,10 +832,11 @@ overflow:hidden;
   background-color;
 }
 #block-user-login{
-  width:313px;
-  height:217px;
+  width:265px;
+  height:180px;
   float:left;
   border:1px solid #cdcdcd;
+  padding-top:37px;
 }
 #block-user-login h2{
   background: url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
@@ -850,10 +852,12 @@ overflow:hidden;
 }
 #block-user-login  .content{
   float:left;
-  margin-left:40px;
+  margin-left:20px;
 }
 #block-user-login .form-item{
   margin-left:10px;
+  float:left;
+  width:100%;
 }
 .form-item label{
     height:34px;
@@ -867,6 +871,8 @@ overflow:hidden;
 #user-login-form  .form-actions {
   padding-top:0px;
   margin:0px;
+  float:left;
+  width:100%;
 }
 #user-login-form .item-list ul,#user-login-form  .item-list ul li{
   float:left;
@@ -1087,7 +1093,7 @@ overflow:hidden;
 }
 #block-views-notice-view-block{}
 .box_top{
-    width:980px;
+    width:300px;
     height:30px;
     padding-left:20px;
     text-indent:20px;
@@ -1125,11 +1131,12 @@ height:30px;
 overflow:hidden;
 }
 .return_top{
-    width:41px;
-    height:42px;
-    position:absolute;
+    width:62px;
+    height:60px;
+    position:fixed;
+    _position:absolute;
     bottom:98px;
-    right:128px;
+    right:88px;
     background:url(../images/return_top.png);
     display:inline-block;
 }
@@ -1141,6 +1148,11 @@ position:relative;
 }
 
 
+#block-block-12{height:25px;padding-left:20px; padding-top:2px; padding-bottom:3px; background-color:#fff; float:right;}
+#block-search-form{height:26px; padding:2px 20px;background-color:#fff; float:left; margin:0px;}
+.cloudy{float:right;}
+.now_date{float:left;line-height:29px; color:#000;font-size:13px; margin-right:20px;}
+.region-notice{background-color:#fff; overflow:hidden; width:1000px; height:30px;}
 
 
 

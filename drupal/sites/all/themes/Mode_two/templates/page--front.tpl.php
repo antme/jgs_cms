@@ -152,7 +152,7 @@
 			   
 			   <!--宸﹁竟绗笁鍖�-->
 			   <?php if ($page['left-t']): ?>
-		       <div class="part1">
+		       <div class="part1" style="margin-top:10px;">
                <?php print render($page['left-t']); ?>
 			   </div>
 			   <?php endif; ?>

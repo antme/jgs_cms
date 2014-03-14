@@ -135,7 +135,6 @@
                <?php print render($page['left']); ?>
 			   </div>
 			   <?php endif; ?>
-			   
 			   <!--鏈嶅姟灞曠ず鍖�-->
 			   <?php if ($page['left-f']): ?>
 		       <div class="part1 comm_style" style="margin-top:10px;">
@@ -155,10 +154,8 @@
 		       <div class="part1">
                <?php print render($page['left-t']); ?>
 			   </div>
-			   <?php endif; ?>
-			   
-		   </div>
-         
+			   <?php endif; ?>   
+		   </div>         
            <div class="right">
                <?php print render($page['right']); ?>
                
@@ -170,15 +167,14 @@
 		         <?php print render($page['hrefs']); ?>
 			 </div>
 	     <?php endif; ?>
-	 
 	 </div>
-
   </div>
   <?php if ($page['footer']): ?>
       <div id="footer" style="margin-top:20px;">
         <?php print render($page['footer']); ?>
       </div> <!-- /#footer -->
     <?php endif; ?>
+
   </div> <!-- /.section, /#footer-wrapper -->
 
 </div> <!-- /#page, /#page-wrapper -->
