@@ -51,4 +51,12 @@ Other variables:
 		  	 <?php endforeach;?>
 	<?php endif;?>
 	
+	<?php if ($element["#bundle"] == "xhbz" && $element['#field_name']=="field_download_file"):?>	
+	     <?php $value = $item["#markup"];?>
+	   	 <?php foreach ($items as $id => $item): ?>	   	 
+	   	 	    <a class="download" href="<?php print $value;?>">下载附件</a>
+	   	 <?php endforeach;?>
+
+	<?php endif;?>
+	
 	

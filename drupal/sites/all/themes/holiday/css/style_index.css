@@ -1210,6 +1210,14 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 .quicktabs_main.quicktabs-style-basic{
 	border-top:0;
 }
+.devel-themer-wrapper{
+	display:none;
+}
+.node-xhbz .download{
+	color:#006699;
+	text-decoration:underline;
+}
+
 
 /*第二套皮肤
 #page{
