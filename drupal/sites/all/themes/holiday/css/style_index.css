@@ -64,13 +64,13 @@ a.white:hover {
     width: 1000px;
 }
 .menu .menu-l {
-    background: url("../images/menu-l.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("../images/menu-l.jpg") no-repeat ;
     float: left;
     height: 34px;
     width: 5px;
 }
 .menu .menu-c {
-    background: url("../images/menu-c.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("../images/menu-c.jpg") repeat-x ;
     display: inline;
     float: left;
     height: 34px;
@@ -86,13 +86,13 @@ a.white:hover {
     margin: 0 5px;
 }
 .menu .menu-r {
-    background: url("../images/menu-r.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("../images/menu-r.jpg") no-repeat ;
     float: right;
     height: 34px;
     width: 5px;
 }
 .menu .erji {
-    background: url("../images/menubg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("../images/menubg2.jpg") repeat-x ;
     font-family: Arial;
     height: 31px;
     line-height: 31px;
@@ -201,7 +201,7 @@ a.white:hover {
     background:url(../images/tzbg.jpg) repeat-x ;
 }
 .box2 .titles {
-    background: url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("../images/titlebg2.jpg") repeat-x ;
     float: left;
     height: 28px;
     width: 313px;
@@ -234,7 +234,7 @@ a.white:hover {
     float: right;
 }
 .box4 {
-    background: url("../images/tzbg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("../images/tzbg.jpg") repeat-x ;
     border: 1px solid #F1D0D0;
     height: 208px;
     width: 233px;
@@ -444,7 +444,7 @@ a.white:hover {
     width: 998px;
 }
 .partner .title {
-    background: url("../images/rbg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("../images/rbg.jpg") repeat-x ;
     font-size: 14px;
     font-weight: bold;
     height: 28px;
@@ -839,7 +839,7 @@ overflow:hidden;
   padding-top:37px;
 }
 #block-user-login h2{
-  background: url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+  background: url("../images/titlebg2.jpg") repeat-x ;
   float: left;
   height: 28px;
   width: 313px;
@@ -918,7 +918,7 @@ overflow:hidden;
     border-top:none;
 }
 .box11 h1 {
-    background: url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("../images/titlebg2.jpg") repeat-x ;
     color: #444444;
     font-size: 14px;
     font-weight: bold;
@@ -962,7 +962,7 @@ overflow:hidden;
 }
 .box1 .ul_style .field-content,.box2 .ul_style .field-content,.box5 .field-content{
     float:left;
-    width:70%;
+    width:68%;
     font-size:12px;
     height:24px;
     overflow:hidden;
@@ -1190,14 +1190,14 @@ position:relative;
 }
 #block-search-form{height:26px; padding:2px 5px;background-color:#fff; float:left; margin:0px;}
 .cloudy{float:right;}
-.now_date{float:left;line-height:29px; color:#000;font-size:13px; margin-right:10px;}
+.now_date{float:left;line-height:29px; color:#000;font-size:13px; margin-right:5px;}
 
 .block-quicktabs{
 	width:703px;
 	margin-top:10px;
 }
 ul.quicktabs-tabs.quicktabs-style-basic{
-	background:url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+	background:url("../images/titlebg2.jpg") repeat-x;
 	height:28px;
 	border-left:1px solid #cdcdcd;
 	border-right:1px solid #cdcdcd;
@@ -1220,7 +1220,7 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
   min-height:200px;
 }
 .part2 .title,.box5 .title,.box1 .title,.box5 h1{
-  background: url("../images/titlebg3.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+  background: url("../images/titlebg3.jpg") repeat-x ;
   height:30px;
 }
 #main-menu-links{
@@ -1243,7 +1243,7 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
   min-height:200px;
 }
 .box5 .title,.box1 .title,.box5 h1{
-  background: url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+  background: url("../images/titlebg2.jpg") repeat-x;
   height:30px;
 }
 #main-menu-links{
