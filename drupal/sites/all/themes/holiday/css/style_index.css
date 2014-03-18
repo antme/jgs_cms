@@ -1210,14 +1210,22 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 .quicktabs_main.quicktabs-style-basic{
 	border-top:0;
 }
-.devel-themer-wrapper{
+.node-xhbz .content .devel-themer-wrapper{
 	display:none;
 }
 .node-xhbz .download{
 	color:#006699;
 	text-decoration:underline;
 }
-
+.title_name{
+	float:Left;
+	font-size:12px;
+	padding:0px 2px;
+	color:#006699;
+}
+.ul_style li{
+	overflow:hidden;
+}
 
 /*第二套皮肤
 #page{
