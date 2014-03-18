@@ -61,6 +61,7 @@ jQuery(function($){
         clickBarRadius : 10
     });
 });
+
 </script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>

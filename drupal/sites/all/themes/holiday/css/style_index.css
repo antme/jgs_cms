@@ -270,18 +270,14 @@ a.white:hover {
     width: 215px;
 }
 .part2 {
-    border-bottom: 1px solid #DADADA;
-    border-left: 1px solid #DADADA;
-    border-right: 1px solid #DADADA;
-    height: 251px;
-    margin-top: 10px;
+    height: auto;
     overflow: hidden;
-    width: 703px;
+    width: 681px;
 }
 .part2 .title {
     height: 28px;
     line-height: 28px;
-    width: 693px;
+    width: 681px;
 }
 .part2 .title h1 {
     float: left;
@@ -296,6 +292,10 @@ a.white:hover {
 .part2 .title span {
     float: right;
     margin-right: 10px;
+}
+.part2 .title .more a{
+	color:blue;
+	text-decoration:underline;
 }
 .part2 .nr {
     width: 688px;
@@ -388,10 +388,11 @@ a.white:hover {
 
 .box5 {
     border: 1px solid #DFDFDF;
-    height: 166px;
+    height: 176px;
     margin-top: 10px;
     width: 268px;
     border-top:none;
+    overflow:hidden;
 }
 .box5 h1 {
     color: #444444;
@@ -417,8 +418,7 @@ a.white:hover {
     float: left;
     line-height: 24px;
     margin-left: 10px;
-    padding-left: 10px;
-    width: 210px;
+    width: 250px;
 }
 .box6 {
     height: 70px;
@@ -652,7 +652,7 @@ blockquote:before, blockquote:after, q:before, q:after {
    background:url(../images/new.gif);
 }
 .box1 li a{
-   font-size:14px;
+   font-size:12px;
 }
 .box2 li span.styles{
    float:none;
@@ -975,7 +975,7 @@ overflow:hidden;
 }
 .part2 .ul_style {
     float: left;
-    width: 693px;
+    width: 675px;
     background-color:#fff;
     height:188px;
     overflow:hidden;
@@ -983,10 +983,10 @@ overflow:hidden;
 .box1 .ul_style {
     float: left;
     background-color:#fff;
-    height:177px;
+    height:183px;
     overflow:hidden;
     width: 371px;
-    padding:5px 0px 5px 5px; 
+    padding:0px 0px 5px 5px; 
 }
 .box1 .title,.box2 .title,.part2 .title,.box .title{
 	line-height:29px;
@@ -1093,7 +1093,7 @@ overflow:hidden;
 }
 #block-views-notice-view-block{}
 .box_top{
-    width:300px;
+    width:260px;
     height:30px;
     padding-left:20px;
     text-indent:20px;
@@ -1148,14 +1148,68 @@ position:relative;
 }
 
 
-#block-block-12{height:25px;padding-left:20px; padding-top:2px; padding-bottom:3px; background-color:#fff; float:right;}
-#block-search-form{height:26px; padding:2px 20px;background-color:#fff; float:left; margin:0px;}
-.cloudy{float:right;}
-.now_date{float:left;line-height:29px; color:#000;font-size:13px; margin-right:20px;}
+#block-block-12{height:25px; padding-top:2px; padding-bottom:3px; background-color:#fff; float:right;}
 .region-notice{background-color:#fff; overflow:hidden; width:1000px; height:30px;}
 
 
+#mobile1 a{
+    width:200px;
+}
+.right #block-search-form{
+	padding:2px 0px;
+}
+.content_style .clearfix:after{
+	content:none;
+}
 
+#comments{
+	width:600px;
+	margin-left:10px;
+}
+.form-item a{
+	line-height:34px;
+}
+.comment-form .form-textarea{
+	wdith:400px;
+}
+.form-type-textarea label,.form-type-textarea div{
+	float:left;
+}
+.form-type-textarea div{
+	width:400px;
+}
+.block-crumbs{
+	width:100%;
+	height:30px;
+	margin-top:22px;
+	margin-left:10px;
+}
+.filter-wrapper{
+	width:398px;
+	margin-left:120px;
+}
+#block-search-form{height:26px; padding:2px 5px;background-color:#fff; float:left; margin:0px;}
+.cloudy{float:right;}
+.now_date{float:left;line-height:29px; color:#000;font-size:13px; margin-right:10px;}
+
+.block-quicktabs{
+	width:703px;
+	margin-top:10px;
+}
+ul.quicktabs-tabs.quicktabs-style-basic{
+	background:url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+	height:28px;
+	border-left:1px solid #cdcdcd;
+	border-right:1px solid #cdcdcd;
+}
+ul.quicktabs-tabs.quicktabs-style-basic li{
+	height:23px;
+	display:inline-block;
+	border:0;
+}
+.quicktabs_main.quicktabs-style-basic{
+	border-top:0;
+}
 
 /*第二套皮肤
 #page{
@@ -1188,7 +1242,7 @@ position:relative;
   background:url(/sites/all/themes/holiday/images/back.jpg) no-repeat;
   min-height:200px;
 }
-.part2 .title,.box5 .title,.box1 .title,.box5 h1{
+.box5 .title,.box1 .title,.box5 h1{
   background: url("../images/titlebg2.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
   height:30px;
 }

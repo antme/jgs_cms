@@ -14,6 +14,7 @@
 $class_name = "pages_style"; 		
 $has_more = true;
 $ul_style="ul_style";
+$style_name=""
 ?>
 <?php if($view->name=="slide_images_view") : ?>
     <div class="box2 ">
@@ -56,7 +57,7 @@ $ul_style="ul_style";
     tab.onmouseout=function() {MyMar=setInterval(Marquee,speeds)};
     </script>
 <?php else:?>
-	<?php if($view->name=="jgyw" || $view->name=="ztbxx_view" || $view->name=="zcfg_view"):?>
+	<?php if($view->name=="jgyw" || $view->name=="ztbxx_view"):?>
 	
 	    <?php if ($is_front):?>
 	         <?php $class_name = "box1"; $ul_style="ul_style"; ?>
@@ -64,19 +65,26 @@ $ul_style="ul_style";
 	         <?php $has_more=false; ?>
 	    <?php endif;?>
 		
-	<?php elseif($view->name=="gsgg_view" || $view->name=="gzdt_view") : ?>
+	<?php elseif($view->name=="gsgg_view") : ?>
 
 	    <?php if ($is_front):?>
 	         <?php $class_name = "box2"; $ul_style="ul_style"; ?>
 	    <?php else :?>
 	         <?php $has_more=false; ?>
 	    <?php endif;?>
-
+	    
+	<?php elseif($view->name=="gzdt_view" || $view->name=="zcfg_view") : ?>
+	
+	    <?php if ($is_front):?>
+	         <?php $class_name = "part2"; $ul_style="ul_style"; ?>
+	    <?php else :?>
+	         <?php $has_more=false; ?>
+	    <?php endif;?>
 	    
 	 <?php elseif($view->name=="cwgz_view") : ?>	    
 
 	    <?php if ($is_front):?>
-	         <?php $class_name = "box5";$ul_style=""; $has_more=false; ?>
+	         <?php $class_name = "box5";$ul_style=""; $has_more=false; $style_name="margin-top:0px"; ?>
 	    <?php else :?>
 	         <?php $has_more=false; ?>
 	    <?php endif;?>
@@ -90,7 +98,7 @@ $ul_style="ul_style";
 	    <?php endif;?>
 	<?php endif;?>
 	
-	<div class="<?php print $class_name;?>">
+	<div class="<?php print $class_name;?>" style="<?php print $style_name;?>">
 	    	<div class="title">
 	    	     <?php if ($has_more): ?>
 	             	<span class="more"><a href="node/<?php print $view->name?>">更多</a></span> 

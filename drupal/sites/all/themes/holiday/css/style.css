@@ -1336,7 +1336,6 @@ html.js input.throbbing {
   border-radius: 4px;
 }
 .comment-form .form-type-textarea label {
-  float: none;
 }
 .comment-form .form-item,
 .comment-form .form-radios,
@@ -1358,7 +1357,7 @@ html.js input.throbbing {
   width: auto;
 }
 .no-sidebars .comment-form .form-text {
-  width: 800px;
+  width: 200px;
 }
 .one-sidebar .comment-form .form-text {
   width: 500px;
@@ -1438,7 +1437,7 @@ div.vertical-tabs .vertical-tabs-panes fieldset.vertical-tabs-pane {
   font-size: 1em;
   height: 1.143em;
   margin-right: 5px;
-  width: 9em;
+  width: 13em;
 }
 #search-block-form input.form-submit,
 #search-form input.form-submit {

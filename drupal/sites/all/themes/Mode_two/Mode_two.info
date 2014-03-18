@@ -25,6 +25,8 @@ regions[content] = Content
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
 
+regions[node-content] = 子页面内容
+regions[navigation] = 二级页面导航
 regions[notice] = notice
 regions[footer] = Footer
 regions[left] = 左边一区

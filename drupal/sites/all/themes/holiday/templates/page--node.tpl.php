@@ -108,29 +108,23 @@
         )); ?>
       </div> <!-- /#main-menu -->
     <?php endif; ?>
-
+    <?php print render($page['notice']);?>
     
 
   </div></div> <!-- /.section, /#header -->
 
   <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
-      <?php if ($page['sidebar_first']): ?>
-      <div id="sidebar-first" class="column sidebar"><div class="section">
-        <?php print render($page['sidebar_first']); ?>
-      </div></div> <!-- /.section, /#sidebar-first -->
-      <?php endif; ?>
-	  
       <div class="content">
-	     
            <div class="left">
+               <?php print render($page['navigation']); ?>
 		       <?php print render($page['content']); ?> 
 		   </div>
          
-		 <?php if ($page['right']): ?>
-           <div class="right">
+           <div class="right" style="margin-top:31px;">
+               
+               <?php print render($page['node-content']); ?>
                <?php print render($page['right']); ?>
 		   </div>
-         <?php endif; ?>
          
 	     <a class="return_top" href="#top"></a>
 	 </div>
