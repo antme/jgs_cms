@@ -82,6 +82,9 @@ $display_bottom=false;
 	    <?php else :?>
 	         <?php $has_more=false; ?>
 	    <?php endif;?>
+	 <?php elseif($view->name=="bszn_qy_view" || $view->name=="bszn_jy_view" || $view->name=="bszn_xm_view"  || $view->name=="bszn_all_view") : ?>
+
+	    <?php $ul_style="ul_style";$display_title=false; ?>
 	    
 	<?php elseif($view->name=="node_gggs_view" ) : ?>
 	   <?php $class_name = "box2"; $ul_style="ul_style"; ?>
