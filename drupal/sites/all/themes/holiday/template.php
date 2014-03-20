@@ -1,9 +1,49 @@
 <?php
 
+
+function holiday_theme() {
+	$items = array();
+	$items['user_login'] = array(
+			'render element' => 'form',
+			'path' => drupal_get_path('theme', 'holiday') . '/templates',
+			'template' => 'user-login',
+			'preprocess functions' => array(
+					'holiday_preprocess_user_login'
+			),
+	);
+	$items['user_register_form'] = array(
+			'render element' => 'form',
+			'path' => drupal_get_path('theme', 'holiday') . '/templates',
+			'template' => 'user-register-form',
+			'preprocess functions' => array(
+					'holiday_preprocess_user_register_form'
+			),
+	);
+	$items['user_pass'] = array(
+			'render element' => 'form',
+			'path' => drupal_get_path('theme', 'holiday') . '/templates',
+			'template' => 'user-pass',
+			'preprocess functions' => array(
+					'holiday_preprocess_user_pass'
+			),
+	);
+	return $items;
+}
+
+function holiday_preprocess_user_login(&$vars) {
+	$vars['intro_text'] = t('This is my awesome login form');
+}
+function holiday_preprocess_user_register_form(&$vars) {
+	$vars['intro_text'] = t('This is my super awesome reg form');
+}
+function holiday_preprocess_user_pass(&$vars) {
+	$vars['intro_text'] = t('This is my super awesome request new password form');
+}
+
 /**
  * Add body classes if certain regions have content.
  */
-function bartik_preprocess_html(&$variables) {
+function holiday_preprocess_html(&$variables) {
   if (!empty($variables['page']['featured'])) {
     $variables['classes_array'][] = 'featured';
   }
@@ -29,7 +69,7 @@ function bartik_preprocess_html(&$variables) {
 /**
  * Override or insert variables into the page template for HTML output.
  */
-function bartik_process_html(&$variables) {
+function holiday_process_html(&$variables) {
   // Hook into color.module.
   if (module_exists('color')) {
     _color_html_alter($variables);
@@ -39,7 +79,7 @@ function bartik_process_html(&$variables) {
 /**
  * Override or insert variables into the page template.
  */
-function bartik_process_page(&$variables) {
+function holiday_process_page(&$variables) {
   // Hook into color.module.
   if (module_exists('color')) {
     _color_page_alter($variables);
@@ -76,7 +116,7 @@ function bartik_process_page(&$variables) {
 /**
  * Implements hook_preprocess_maintenance_page().
  */
-function bartik_preprocess_maintenance_page(&$variables) {
+function holiday_preprocess_maintenance_page(&$variables) {
   // By default, site_name is set to Drupal if no db connection is available
   // or during site installation. Setting site_name to an empty string makes
   // the site and update pages look cleaner.
@@ -84,13 +124,13 @@ function bartik_preprocess_maintenance_page(&$variables) {
   if (!$variables['db_is_active']) {
     $variables['site_name'] = '';
   }
-  drupal_add_css(drupal_get_path('theme', 'bartik') . '/css/maintenance-page.css');
+  drupal_add_css(drupal_get_path('theme', 'holiday') . '/css/maintenance-page.css');
 }
 
 /**
  * Override or insert variables into the maintenance page template.
  */
-function bartik_process_maintenance_page(&$variables) {
+function holiday_process_maintenance_page(&$variables) {
   // Always print the site name and slogan, but if they are toggled off, we'll
   // just hide them visually.
   $variables['hide_site_name']   = theme_get_setting('toggle_name') ? FALSE : TRUE;
@@ -108,7 +148,7 @@ function bartik_process_maintenance_page(&$variables) {
 /**
  * Override or insert variables into the node template.
  */
-function bartik_preprocess_node(&$variables) {
+function holiday_preprocess_node(&$variables) {
   if ($variables['view_mode'] == 'full' && node_is_page($variables['node'])) {
     $variables['classes_array'][] = 'node-full';
   }
@@ -117,7 +157,7 @@ function bartik_preprocess_node(&$variables) {
 /**
  * Override or insert variables into the block template.
  */
-function bartik_preprocess_block(&$variables) {
+function holiday_preprocess_block(&$variables) {
   // In the header region visually hide block titles.
   if ($variables['block']->region == 'header') {
     $variables['title_attributes_array']['class'][] = 'element-invisible';
@@ -127,14 +167,14 @@ function bartik_preprocess_block(&$variables) {
 /**
  * Implements theme_menu_tree().
  */
-function bartik_menu_tree($variables) {
+function holiday_menu_tree($variables) {
   return '<ul class="menu clearfix">' . $variables['tree'] . '</ul>';
 }
 
 /**
  * Implements theme_field__field_type().
  */
-function bartik_field__taxonomy_term_reference($variables) {
+function holiday_field__taxonomy_term_reference($variables) {
   $output = '';
 
   // Render the label, if it's not hidden.
