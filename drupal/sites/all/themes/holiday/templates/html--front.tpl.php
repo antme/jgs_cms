@@ -61,7 +61,14 @@ jQuery(function($){
         clickBarRadius : 10
     });
 });
-
+function ass(){
+	  if($(document).scrollTop()>=200){
+  	      $("#main-menu").addClass("main-menu-fix");
+      }else{
+    	  $("#main-menu").removeClass("main-menu-fix");
+      }
+}
+ setInterval("ass()",10);
 </script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>

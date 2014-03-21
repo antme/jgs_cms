@@ -84,6 +84,9 @@
   <h2<?php print $title_attributes; ?>>
       <?php print $title; ?>
   </h2> 
+  <div class="content">
+     <img src="/sites/all/themes/holiday/images/zzjg.jpg" />
+  </div>
   <div class="content clearfix"<?php print $content_attributes; ?>>
     <?php
       // We hide the comments and links now so that we can render them later.
@@ -92,7 +95,6 @@
       print render($content);
     ?>
   </div>
-  
   <?php
     // Remove the "Add new comment" link on the teaser page or if the comment
     // form is being displayed on the same page.

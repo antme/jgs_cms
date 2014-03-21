@@ -884,7 +884,7 @@ overflow:hidden;
    padding-top:10px;
 }
 .content_style{
-   min-height:500px;
+   min-height:200px;
    background-color:whiteSmoke;
 }
 
@@ -1198,7 +1198,7 @@ position:relative;
 	width:398px;
 	margin-left:120px;
 }
-#block-search-form{height:26px; padding:2px 5px;background-color:#fff; float:left; margin:0px;}
+#block-search-form{height:26px; padding:2px 5px;background-color:#fff; float:left; margin:0px;margin-left:42px;}
 .cloudy{float:right;}
 .now_date{float:left;line-height:29px; color:#000;font-size:13px; margin-right:5px;}
 
@@ -1246,6 +1246,49 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 	display:none;
 }
 #node-66{display:none;}
+.top_right{
+	position:absolute;
+	right:0px;
+	top:0px;
+	z-index:99;
+}
+.now_date{
+	color:#fff;
+}
+.now_date a{
+    color:#fff;
+}
+#edit-account,#user-login,#user-pass{
+	padding-top:30px;
+}
+#user-register-form .form-item,#user-login .form-item,#user-pass .form-item{
+	margin-left:225px;
+	height:auto;
+	overflow:hidden;
+}
+#user-register-form .form-item label,#user-login .form-item label,#user-pass .form-item label{
+	width:102px;
+	float:left;
+}
+#user-register-form .form-item input,#user-login .form-item input,#user-pass .form-item input{
+    width:300px;
+    float:left;
+}
+#user-register-form .form-item div,#user-login .form-item div,#user-pass .form-item div{
+    width:400px;
+    float:left;
+}
+#user-register-form #edit-actions,#user-login #edit-actions,#user-pass #edit-actions{
+	margin-left:327px;
+}
+#node-70{
+	display:none;
+}
+
+
+
+
+
 /*第二套皮肤
 #page{
   background:url(../images/bg2.jpg) repeat-x;
@@ -1269,13 +1312,18 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
   background: #eee;
 }
 */
-  
+.main-menu-fix{
+	position:fixed;
+	top:30px;
+	z-index:9999;
+	width:1000px;
+}
 #page{
   background:url(/sites/all/themes/holiday/images/bg.jpg) repeat-x;
 }
-#header div.section{
+#header div.section .classes{
   background:url(/sites/all/themes/holiday/images/back.jpg) no-repeat;
-  min-height:200px;
+  height:200px;
 }
 .box5 .title,.box1 .title,.box5 h1{
   background: url("../images/titlebg2.jpg") repeat-x;

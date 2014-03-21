@@ -92,7 +92,27 @@
       print render($content);
     ?>
   </div>
-  
+  <div class="content">
+
+     <div style="text-indent:2em;">联系电话：02165458224</div>
+     <div style="text-indent:2em;">地址：上海市虹口区唐山路570弄</div>
+     
+     <div id="allmap" style="width:600px;height:500px;margin-left:30px;"></div>
+     <script type="text/javascript"> 
+     var map = new BMap.Map("allmap");
+     var point = new BMap.Point(116.331398,39.897445);
+     map.centerAndZoom(point,12);
+     // 创建地址解析器实例
+     var myGeo = new BMap.Geocoder();
+     // 将地址解析结果显示在地图上,并调整地图视野
+     myGeo.getPoint("上海市虹口区唐山路570弄-1号", function(point){
+       if (point) {
+         map.centerAndZoom(point, 16);
+         map.addOverlay(new BMap.Marker(point));
+       }
+     }, "上海市");
+	 </script>
+  </div>
   <?php
     // Remove the "Add new comment" link on the teaser page or if the comment
     // form is being displayed on the same page.
