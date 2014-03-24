@@ -78,5 +78,13 @@ function ass(){
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
+  <script>
+     var img_title = $(".img_title");
+     var img_href =$(".img_href");
+     for(var i=0;i<img_title.length;i++){
+    	 $(img_href[i]).find("a").attr("title",$(img_title[i]).find("a").text());
+     }
+     $(".img_title").hide();
+  </script>
 </body>
 </html>

@@ -23,7 +23,7 @@ $display_bottom=false;
         <div id="demo3" class="slideBox">
             <ul class="items">
 			     <?php foreach ($rows as $id => $row): ?>
-			         <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
+			         <li title="" class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
 			     <?php endforeach; ?>
             </ul>
        </div>        
