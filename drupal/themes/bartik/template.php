@@ -26,8 +26,7 @@ function bartik_theme() {
 					'bartik_preprocess_user_pass'
 			),
 	);
-	echo 'ssssssssssssssssssssss';
-	print_r($items);
+
 	return $items;
 }
 
