@@ -82,6 +82,8 @@ function ass(){
  setInterval("ass()",10);
 </script>
 </head>
+<?php print_r($variables['holiday_theme_style']);?>
+
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>

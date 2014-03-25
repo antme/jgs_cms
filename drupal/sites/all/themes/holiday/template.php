@@ -74,12 +74,19 @@ function holiday_process_html(&$variables) {
   if (module_exists('color')) {
     _color_html_alter($variables);
   }
+  
+
+  if(theme_get_setting("holiday_theme_style")){
+  	$variables['holiday_theme_style'] = theme_get_setting("holiday_theme_style");
+  }
 }
 
 /**
  * Override or insert variables into the page template.
  */
 function holiday_process_page(&$variables) {
+
+
   // Hook into color.module.
   if (module_exists('color')) {
     _color_page_alter($variables);
