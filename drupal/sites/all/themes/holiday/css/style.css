@@ -426,6 +426,7 @@ h1#site-name {
   border: 1px solid;
   border-color: #ccc;
   border-color: rgba(255, 255, 255, 0.5);
+  *+border-color: #cdcdcd;
   background: #eee;
   background: rgba(255, 255, 255, 0.7);
   margin: 4px 0;
@@ -435,6 +436,7 @@ h1#site-name {
 .region-header #block-user-login input.form-submit:focus {
   background: #fff;
   background: rgba(255, 255, 255, 0.9);
+  *+background: #cdcdcd;
 }
 /* Search block in region header. */
 .region-header #block-search-form {
@@ -1076,6 +1078,7 @@ a.button {
   border-bottom: 1px solid #b4b4b4;
   border-left-color: #d2d2d2;
   border-right-color: #d2d2d2;
+  *+border-color:#cdcdcd;
   color: #3a3a3a;
   cursor: pointer;
   font-size: 0.929em;
@@ -1445,6 +1448,7 @@ div.vertical-tabs .vertical-tabs-panes fieldset.vertical-tabs-pane {
   cursor: pointer;
   text-indent: -9999px;
   border-color: #e4e4e4 #d2d2d2 #b4b4b4;
+  *+border-color: #cdcdcd;
   background: url(../images/search-button.png) no-repeat center top;
   overflow: hidden;
 }

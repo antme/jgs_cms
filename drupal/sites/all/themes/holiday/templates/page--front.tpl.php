@@ -207,8 +207,17 @@
 			   <?php endif; ?>   
 		   </div>         
            <div class="right">
-               <?php print render($page['right']); ?>
-               
+               <?php if($user->uid): ?>   
+                  <div class="box5" style="padding-bottom:10px;margin-bottom:10px;">
+                      <div class="title"><span class="txt">欢迎登陆虹口区建筑业管理中心</span></div>
+                      <ul class="ul_style">
+                          <li><span>用户名：</span><?php print l($user->name,'user/'.$user->uid); ?></li>
+                          <li><span>邮箱：</span><?php print $user->mail; ?></li>
+                          <li class="logout"><?php print l("退出","user/logout"); ?></li>
+                      </ul>
+                  </div>
+               <?php endif; ?>
+               <?php print render($page['right']); ?>               
 		   </div>
            <a class="return_top" href="#top"></a>
 	 </div>
@@ -216,7 +225,7 @@
 		     <div class="content">
 		         <?php print render($page['hrefs']); ?>
 			 </div>
-	     <?php endif; ?>
+	  <?php endif; ?>
 	 </div>
   </div>
   <?php if ($page['footer']): ?>

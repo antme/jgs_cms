@@ -85,7 +85,7 @@
       <?php print $title; ?>
   </h2> 
   <div class="content">
-     <img src="/sites/all/themes/holiday/images/zzjg.jpg" />
+     <img width="673px" src="/sites/all/themes/holiday/images/zzjg.jpg" />
   </div>
   <div class="content clearfix"<?php print $content_attributes; ?>>
     <?php

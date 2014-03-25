@@ -112,7 +112,6 @@ a.white:hover {
 .right {
     float: right;
     width: 277px;
-    margin-top:10px;
 }
 .copy {
     color: #FFFFFF;
@@ -453,9 +452,9 @@ a.white:hover {
     width: 998px;
 }
 .partner ul {
-    height: 30px;
+    height: auto;
     margin: auto;
-    width: 948px;
+    width: 998px;
 }
 .partner li {
     float: left;
@@ -996,7 +995,11 @@ overflow:hidden;
 .box1 .title .txt,.box2 .title .txt,.part2 .title .txt,.box .title .txt{
     float:left;
 }
-.block{float:left;}
+.block{float:left; overflow:hidden;}
+.right .block{*+width:272px}
+ul.quicktabs-tabs.quicktabs-style-basic li{
+	*+float:left;
+}
 #block-views-jgyw-block-1{
 	float:right;
 }
@@ -1231,6 +1234,11 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 	float:Left;
 	font-size:12px;
 	padding:0px 2px;
+	*+width:50px;
+	text-align:center;
+}
+.title_name span{
+	*+float:left;
 }
 .ul_style li{
 	overflow:hidden;
@@ -1285,10 +1293,42 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 	display:none;
 }
 
-
-
-
-
+.main-menu-fix{
+    position:fixed;
+    top:30px;
+    z-index:9999;
+    width:1000px;
+}
+.main-menu-fix2{
+    position:fixed;
+    top:0px;
+    z-index:9999;
+    width:1000px;
+}
+#main-wrapper{
+	z-index:10;
+}
+#user-login-form .item-list{
+	float:left;
+	width:100%;
+}
+#user-register-form #edit-field-user-type-und{
+	width:500px;
+}
+#user-register-form #edit-field-user-type-und .form-item{
+	margin-left:0px;
+	width:140px;
+}
+#edit-field-user-type-und .form-item  input{
+    width:30px;
+    margin-top:5px;
+}
+#edit-field-user-type-und .form-item  label{
+    line-height:24px;
+}
+.logout a{
+	color:#0071B3;
+}
 /*第二套皮肤
 #page{
   background:url(../images/bg2.jpg) repeat-x;
@@ -1312,12 +1352,7 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
   background: #eee;
 }
 */
-.main-menu-fix{
-	position:fixed;
-	top:30px;
-	z-index:9999;
-	width:1000px;
-}
+
 #page{
   background:url(/sites/all/themes/holiday/images/bg.jpg) repeat-x;
 }

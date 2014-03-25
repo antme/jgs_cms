@@ -25,6 +25,7 @@ body,
 }
 #header div.section {
   position: relative;
+  z-index:30;
 }
 .region-header {
   float: right; /* LTR */

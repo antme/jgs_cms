@@ -63,9 +63,20 @@ jQuery(function($){
 });
 function ass(){
 	  if($(document).scrollTop()>=200){
-  	      $("#main-menu").addClass("main-menu-fix");
+		  <?php global $user;?>
+		  <?php if($user ->uid):?>
+			  $("#main-menu").addClass("main-menu-fix");
+		  <?php else: ?>
+		      $("#main-menu").addClass("main-menu-fix2");
+		  <?php endif;?>
+  	     
       }else{
-    	  $("#main-menu").removeClass("main-menu-fix");
+    	  <?php global $user;?>
+		  <?php if($user ->uid):?>
+			  $("#main-menu").removeClass("main-menu-fix");
+		  <?php else: ?>
+		      $("#main-menu").removeClass("main-menu-fix2");
+		  <?php endif;?>
       }
 }
  setInterval("ass()",10);
@@ -75,6 +86,7 @@ function ass(){
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
+
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>

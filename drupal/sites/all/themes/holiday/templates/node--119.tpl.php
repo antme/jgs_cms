@@ -100,7 +100,7 @@
      <div id="allmap" style="width:600px;height:500px;margin-left:30px;"></div>
      <script type="text/javascript"> 
      var map = new BMap.Map("allmap");
-     var point = new BMap.Point(116.331398,39.897445);
+     var point = new BMap.Point(120.331398,39.897445);
      map.centerAndZoom(point,12);
      // 创建地址解析器实例
      var myGeo = new BMap.Geocoder();
