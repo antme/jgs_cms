@@ -1,8 +1,8 @@
 ﻿body{
-font-size:12px;
+    font-size:12px;
 }
 label{
-display:visible;
+    display:visible;
 }
 .warp {
     background: url("../images/bg.jpg") repeat-x scroll center top rgba(0, 0, 0, 0);
@@ -697,7 +697,7 @@ text-overflow: ellipsis;/* IE/Safari */
 -moz-binding: url("ellipsis.xml#ellipsis");/*FireFox*/
 }
 .fwdt{
-width:705px;
+width:708px;
 height:265px;
 background:url(../images/fwdt.jpg);
 z-index:1px;
@@ -861,7 +861,7 @@ overflow:hidden;
 .form-item label{
     height:34px;
 	line-height:34px;
-	width:60px;
+	width:100px;
 }
 .form-item label,.form-item input{
   float:left;
@@ -1017,15 +1017,11 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 	float:right;
 }
 .pages_style{
-    width:708px;
+    width:700px;
     min-height:400px;
-    margin-left:5px;
+    margin:0px 5px;
 }
-.pages_style .title{
-    padding:10px;
-    margin:10px;
-    border-bottom:2px solid #A81400;
-}
+
 .pages_style .title .txt{
     font-size:16px;
     font-weight:bold;
@@ -1061,8 +1057,9 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 .pages_style .more{display:none;}
 .node .webform-client-form .form-item,.node .webform-client-form .form-actions{
     float:left;
-    width:100%;
+    width:435px;
 }
+.node .webform-client-form
 .node .webform-client-form .form-item label{
     width:100px;
     text-align:right;
@@ -1206,15 +1203,10 @@ position:relative;
 .now_date{float:left;line-height:29px; color:#000;font-size:13px; margin-right:5px;}
 
 .block-quicktabs{
-	width:703px;
+	width:708px;
 	margin-top:10px;
 }
-ul.quicktabs-tabs.quicktabs-style-basic{
-	background:url("../images/titlebg2.jpg") repeat-x;
-	height:28px;
-	border-left:1px solid #cdcdcd;
-	border-right:1px solid #cdcdcd;
-}
+
 ul.quicktabs-tabs.quicktabs-style-basic li{
 	height:23px;
 	display:inline-block;
@@ -1266,7 +1258,7 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 .now_date a{
     color:#fff;
 }
-#edit-account,#user-login,#user-pass{
+#user-login,#user-pass{
 	padding-top:30px;
 }
 #user-register-form .form-item,#user-login .form-item,#user-pass .form-item{
@@ -1329,48 +1321,30 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 .logout a{
 	color:#0071B3;
 }
+#webform-client-form-117,#webform-client-form-108{
+	margin-left:150px;
+}
+#webform-client-form-51{
+	margin-left:100px;
+}
+#user-login-form .form-item label{
+	width:60px;
+}
+#main #content{
+	padding-top:30px;
+	clear: both;
+    display: block;
+}
+#edit-field-user-type{
+	padding-top:30px;
+}
+
+
+
+
+
+
 /*第二套皮肤
-#page{
-  background:url(../images/bg2.jpg) repeat-x;
-}
-#header div.section{
-  background:url(../images/logo.jpg) no-repeat;
-  min-height:200px;
-}
-.part2 .title,.box5 .title,.box1 .title,.box5 h1{
-  background: url("../images/titlebg3.jpg") repeat-x ;
-  height:30px;
-}
-#main-menu-links{
-  background:url(../images/menu-c2.jpg) repeat-x;
-}
-#main-menu-links li{
-  background:url(../images/menu-s2.jpg) no-repeat left 0px;
-}
-#footer {
-  border-top:2px solid #053980;
-  background: #eee;
-}
+
 */
 
-#page{
-  background:url(/sites/all/themes/holiday/images/bg.jpg) repeat-x;
-}
-#header div.section .classes{
-  background:url(/sites/all/themes/holiday/images/back.jpg) no-repeat;
-  height:200px;
-}
-.box5 .title,.box1 .title,.box5 h1{
-  background: url("../images/titlebg2.jpg") repeat-x;
-  height:30px;
-}
-#main-menu-links{
-  background:url(/sites/all/themes/holiday/images/menu-c.jpg) repeat-x;
-}
-#main-menu-links li{
-  background:url(/sites/all/themes/holiday/images/menu-s.jpg) no-repeat left 0px;
-}
-#footer {
-  border-top:2px solid #A81400;
-  background: #eee;
-}

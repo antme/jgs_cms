@@ -53,7 +53,7 @@
   <?php print $scripts; ?>
   <script>
 jQuery(function($){
-    $('#demo3').slideBox({
+    $('.slideBox').slideBox({
         duration : 0.3,//滚动持续时间，单位：秒
         easing : 'linear',//swing,linear//滚动特效
         delay : 5,//滚动延迟时间，单位：秒
@@ -61,8 +61,98 @@ jQuery(function($){
         clickBarRadius : 10
     });
 });
+function ass(){
+	  if($(document).scrollTop()>=200){
+		  <?php global $user;?>
+		  <?php if($user ->uid):?>
+			  $("#main-menu").addClass("main-menu-fix");
+		  <?php else: ?>
+		      $("#main-menu").addClass("main-menu-fix2");
+		  <?php endif;?>
+  	     
+      }else{
+    	  <?php global $user;?>
+		  <?php if($user ->uid):?>
+			  $("#main-menu").removeClass("main-menu-fix");
+		  <?php else: ?>
+		      $("#main-menu").removeClass("main-menu-fix2");
+		  <?php endif;?>
+      }
+}
+ setInterval("ass()",10);
 </script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=bbnC2SVxid9SsKkD11vqthL4"></script>
+<?php if(theme_get_setting("holiday_theme_style")=="holiday_spring_festival"):?>
+  <style type="text/css">
+      #page{
+         background:url(/sites/all/themes/holiday/images/bg.jpg) repeat-x;
+      }
+	  #header div.section .classes{
+ 	     background:url(/sites/all/themes/holiday/images/back.jpg) no-repeat;
+         height:200px;
+      }
+	  .box5 .title,.box1 .title,.box5 h1{
+ 	  background: url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
+ 	  height:30px;
+      }
+		#main-menu-links{
+  		background:url(/sites/all/themes/holiday/images/menu-c.jpg) repeat-x;
+		}
+		#main-menu-links li{
+ 		 background:url(/sites/all/themes/holiday/images/menu-s.jpg) no-repeat left 0px;
+		}
+		#footer {
+ 		 border-top:2px solid #A81400;
+  		background: #eee;
+		}
+		ul.quicktabs-tabs.quicktabs-style-basic{
+		background:url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
+		height:28px;
+		border-left:1px solid #cdcdcd;
+		border-right:1px solid #cdcdcd;
+		}
+		.pages_style .title{
+    	padding:10px;
+    	margin:10px;
+    	border-bottom:2px solid #A81400;
+		}
+  </style>
+<?php elseif(theme_get_setting("holiday_theme_style")=="holiday_default"):?>
+      <style type="text/css">
+        #page{
+ 		 background:url(/sites/all/themes/holiday/images/bg2.jpg) repeat-x;
+		}
+		#header div.section .classes{
+ 		 background:url(/sites/all/themes/holiday/images/back2.jpg) no-repeat;
+ 		 height:200px;
+		}
+		.box5 .title,.box1 .title,.box5 h1{
+		background: url("/sites/all/themes/holiday/images/titlebg3.jpg") repeat-x ;
+  		height:30px;
+		}
+		#main-menu-links{
+		  background:url(/sites/all/themes/holiday/images/menu-c2.png);
+		}
+		#main-menu-links li{
+		  background:url(/sites/all/themes/holiday/images/menu-s2.png) no-repeat left 0px;
+		}
+		#footer {
+		  border-top:3px solid #053980;
+		  background: #eee;
+		}
+		ul.quicktabs-tabs.quicktabs-style-basic{
+		background:url("/sites/all/themes/holiday/images/titlebg3.jpg") repeat-x;
+		height:28px;
+		border-left:1px solid #cdcdcd;
+		border-right:1px solid #cdcdcd;
+		}
+		.pages_style .title{
+    	padding:10px;
+    	margin:10px;
+    	border-bottom:2px solid #053980;
+		}
+      </style>
+<?php endif;?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
@@ -71,6 +161,13 @@ jQuery(function($){
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
-  
+  <script>
+     var img_title = $(".img_title");
+     var img_href =$(".img_href");
+     for(var i=0;i<img_title.length;i++){
+    	 $(img_href[i]).find("a").attr("title",$(img_title[i]).find("a").text());
+     }
+     $(".img_title").hide();
+  </script>
 </body>
 </html>

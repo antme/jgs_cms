@@ -86,7 +86,11 @@
  */
 ?>
 <div id="page-wrapper"><div id="page">
-
+   <div class="top">
+      <div class="top_content">
+	       <?php print render($page['top']); ?>
+	  </div>
+  </div>
   <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
 
     <?php if ($logo): ?>
@@ -142,7 +146,7 @@
 
     <div id="content" class="column"><div class="section">
       <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
+      
       
       <?php print render($title_suffix); ?>
       <?php if ($tabs): ?>
