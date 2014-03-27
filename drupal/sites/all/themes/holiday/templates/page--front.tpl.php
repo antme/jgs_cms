@@ -222,14 +222,14 @@
            <a class="return_top" href="#top"></a>
 	 </div>
 	  <?php if ($page['hrefs']): ?>
-		     <div class="content">
+		     <div class="content" style="margin-bottom:10px;">
 		         <?php print render($page['hrefs']); ?>
 			 </div>
 	  <?php endif; ?>
 	 </div>
   </div>
   <?php if ($page['footer']): ?>
-      <div id="footer" style="margin-top:20px;">
+      <div id="footer" style="padding-top:10px;">
         <?php print render($page['footer']); ?>
       </div> <!-- /#footer -->
     <?php endif; ?>

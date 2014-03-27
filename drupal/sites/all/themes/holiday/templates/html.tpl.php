@@ -82,7 +82,94 @@ function ass(){
  setInterval("ass()",10);
 </script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=bbnC2SVxid9SsKkD11vqthL4"></script>
-<?php if(theme_get_setting("holiday_theme_style")=="holiday_spring_festival"):?>
+ <!-- 国庆 -->
+<?php if(theme_get_setting("holiday_theme_style")=="holiday_national"):?>
+  <style type="text/css">
+      #page{
+         background:#ffe98c url(/sites/all/themes/holiday/images/bg3.jpg) repeat-x;
+      }
+	  #header div.section .classes{
+ 	     background:url(/sites/all/themes/holiday/images/back3.jpg) no-repeat;
+         height:200px;
+      }
+	  .box5 .title,.box1 .title,.box5 h1{
+ 	  background: url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
+ 	  height:30px;
+      }
+		#main-menu-links{
+  		background:url(/sites/all/themes/holiday/images/menu-c3.png) repeat-x;
+		}
+		#main-menu-links li{
+ 		 
+		}
+		#footer {
+ 		 border-top:2px solid #A81400;
+  		background: #eee;
+		}
+		ul.quicktabs-tabs.quicktabs-style-basic{
+		background:url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
+		height:28px;
+		border-left:1px solid #cdcdcd;
+		border-right:1px solid #cdcdcd;
+		}
+		.pages_style .title{
+    	padding:10px;
+    	margin:10px;
+    	border-bottom:2px solid #A81400;
+		}
+		.right .box2 {
+    	float: left;
+    	height: 218px;
+    	width: 268px;
+    	margin-top:10px;
+    	background:url(/sites/all/themes/holiday/images/tzbg.jpg) repeat-x ;
+		}
+  </style>
+  <!-- 五一 -->
+<?php elseif(theme_get_setting("holiday_theme_style")=="holiday_labour_day"):?>
+  <style type="text/css">
+      #page{
+         background:url(/sites/all/themes/holiday/images/bg.jpg) repeat-x;
+      }
+	  #header div.section .classes{
+ 	     background:url(/sites/all/themes/holiday/images/back4.jpg) no-repeat;
+         height:200px;
+      }
+	  .box5 .title,.box1 .title,.box5 h1{
+ 	  background: url("/sites/all/themes/holiday/images/titlebg4.jpg") repeat-x;
+ 	  height:30px;
+      }
+		#main-menu-links{
+  		background:url(/sites/all/themes/holiday/images/menu-c.jpg) repeat-x;
+		}
+		#main-menu-links li{
+ 		 background:url(/sites/all/themes/holiday/images/menu-s.jpg) no-repeat left 0px;
+		}
+		#footer {
+ 		 border-top:2px solid #ffc000;
+  		background: #eee;
+		}
+		ul.quicktabs-tabs.quicktabs-style-basic{
+		background:url("/sites/all/themes/holiday/images/titlebg4.jpg") repeat-x;
+		height:28px;
+		border-left:1px solid #cdcdcd;
+		border-right:1px solid #cdcdcd;
+		}
+		.pages_style .title{
+    	padding:10px;
+    	margin:10px;
+    	border-bottom:2px solid #A81400;
+		}
+		.right .box2 {
+    	float: left;
+    	height: 218px;
+    	width: 268px;
+    	margin-top:10px;
+    	background:url(/sites/all/themes/holiday/images/tzbg2.jpg) repeat-x ;
+		}
+  </style>
+<!-- 春节 -->
+<?php elseif(theme_get_setting("holiday_theme_style")=="holiday_spring_festival"):?>
   <style type="text/css">
       #page{
          background:url(/sites/all/themes/holiday/images/bg.jpg) repeat-x;
@@ -116,8 +203,16 @@ function ass(){
     	margin:10px;
     	border-bottom:2px solid #A81400;
 		}
+		.right .box2 {
+    	float: left;
+    	height: 218px;
+    	width: 268px;
+    	margin-top:10px;
+    	background:url(/sites/all/themes/holiday/images/tzbg.jpg) repeat-x ;
+		}
   </style>
-<?php elseif(theme_get_setting("holiday_theme_style")=="holiday_default"):?>
+<!-- 默认皮肤 -->
+<?php elseif(theme_get_setting("holiday_theme_style")=="holiday_default" || theme_get_setting("holiday_theme_style")==NULL):?>
       <style type="text/css">
         #page{
  		 background:url(/sites/all/themes/holiday/images/bg2.jpg) repeat-x;
@@ -150,6 +245,13 @@ function ass(){
     	padding:10px;
     	margin:10px;
     	border-bottom:2px solid #053980;
+		}
+		.right .box2 {
+    	float: left;
+    	height: 218px;
+    	width: 268px;
+    	margin-top:10px;
+    	background:url(/sites/all/themes/holiday/images/tzbg.jpg) repeat-x ;
 		}
       </style>
 <?php endif;?>

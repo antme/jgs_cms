@@ -192,13 +192,6 @@ a.white:hover {
     width: 308px;
     border:1px solid #cdcdcd;
 }
-.right .box2 {
-    float: left;
-    height: 218px;
-    width: 268px;
-    margin-top:10px;
-    background:url(../images/tzbg.jpg) repeat-x ;
-}
 .box2 .titles {
     background: url("../images/titlebg2.jpg") repeat-x ;
     float: left;
