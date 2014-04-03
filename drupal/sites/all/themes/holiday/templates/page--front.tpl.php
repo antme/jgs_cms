@@ -211,9 +211,20 @@
                   <div class="box5" style="padding-bottom:10px;margin-bottom:10px;">
                       <div class="title"><span class="txt">欢迎登陆虹口区建筑业管理中心</span></div>
                       <ul class="ul_style">
-                          <li><span>用户名：</span><?php print l($user->name,'user/'.$user->uid); ?></li>
-                          <li><span>邮箱：</span><?php print $user->mail; ?></li>
-                          <li class="logout"><?php print l("退出","user/logout"); ?></li>
+                          <li class="li_style_p">
+                             <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/user.png" /></span>
+                             <span><?php print l($user->name,'user/'.$user->uid); ?>&nbsp;</span>
+                             <span class="logout"><?php print l("退出","user/logout"); ?></span>
+                          </li>
+                          <li class="li_style_p">
+                             <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/wdxm.png"/></span>
+                             <span><a href="/node/user_project_view">我的项目</a></span>
+                             <span class="user_img margin_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/dbsx.png"/></span>
+                             <span><a href="#">待办事项</a></span>
+                          </li>
+                          <li class="li_style_p">
+                             <span><a href="#" class="info_img">进入信息系统</a></span>
+                          </li>
                       </ul>
                   </div>
                <?php endif; ?>

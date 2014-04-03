@@ -86,13 +86,15 @@
  */
 ?>
 
-<div id="page-wrapper"><div id="page">
+<div id="page-wrapper">
+<div id="page">
   <div class="top">
       <div class="top_content">
 	       <?php print render($page['top']); ?>
 	  </div>
   </div>
-  <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>"><div class="section clearfix">
+  <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>">
+  <div class="section clearfix">
 
     <?php print render($page['header']); ?>
     <?php if ($main_menu): ?>
@@ -117,11 +119,20 @@
 
   </div></div> <!-- /.section, /#header -->
 
-  <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
+  <div id="main-wrapper" class="clearfix">
+  <div id="main" class="clearfix">
       <div class="content">
            <div class="left">
                <?php print render($page['navigation']); ?>
 		       <?php print render($page['content']); ?> 
+		       <script type="text/javascript">
+		           $.each($(".jd_style").find("span"),function(){
+		        	   var widths=$(this).text();
+		        	   widths=parseInt(widths);
+		        	   $(this).css("width",widths);
+		        	   $(this).parent().before("<span class='wcd'>完成度："+widths+"%</span>");
+			       });
+		       </script>
 		   </div>
          
            <div class="right" style="margin-top:31px;">
@@ -143,4 +154,4 @@
     <?php endif; ?>
   </div> <!-- /.section, /#footer-wrapper -->
 
-</div></div> <!-- /#page, /#page-wrapper -->
+</div> <!-- /#page, /#page-wrapper -->

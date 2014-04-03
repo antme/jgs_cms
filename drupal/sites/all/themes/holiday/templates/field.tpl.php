@@ -59,4 +59,3 @@ Other variables:
 
 	<?php endif;?>
 	
-	
