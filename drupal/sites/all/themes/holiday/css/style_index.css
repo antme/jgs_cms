@@ -1438,6 +1438,22 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 .user_infos .display_li_img4{
     background:url(../images/everyday4.png) no-repeat left center;
 }
+.user_infos .display_li_img11{
+    background:url(../images/everyday11.png) no-repeat left center;
+    color:#fff;
+}
+.user_infos .display_li_img22{
+    background:url(../images/everyday22.png) no-repeat left center;
+    color:#fff;
+}
+.user_infos .display_li_img33{
+    background:url(../images/everyday33.png) no-repeat left center;
+    color:#fff;
+}
+.user_infos .display_li_img44{
+    background:url(../images/everyday44.png) no-repeat left center;
+    color:#fff;
+}
 .display_ul_style{
 	border:1px solid #cdcdcd;
 	overflow:hidden;

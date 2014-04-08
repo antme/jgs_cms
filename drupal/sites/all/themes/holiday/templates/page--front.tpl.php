@@ -300,7 +300,15 @@
 	        	    			    $(".display_info_li").click(function(){
 	        	    			    	$(".display_info_div").removeClass("div_action").addClass("div_display");
 	        	    			    	var dd = $(".display_info_div");
+	        	    			    	var in_li=$(".display_info_li");
 	        	    			    	$(dd[$(".display_info_li").index(this)]).addClass("div_action").removeClass("div_display");
+	        	    			    	for(var i=0;i<in_li.length;i++){
+		        	    			    	var x=(i+1)*10+i+1;
+		        	    			    	var y=i+1;
+	        	    			    		$(in_li[i]).removeClass("display_li_img"+x).addClass("display_li_img"+y);
+	        	    			    	}
+	        	    			    	var numc=($(".display_info_li").index(this)+1)*10+($(".display_info_li").index(this)+1);
+	        	    			    	$(this).addClass("display_li_img"+numc).removeClass("display_li_img"+$(".display_info_li").index(this)+1);
 		        	    			});
 	        	    			</script>
                           </li>
