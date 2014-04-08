@@ -125,14 +125,6 @@
            <div class="left">
                <?php print render($page['navigation']); ?>
 		       <?php print render($page['content']); ?> 
-		       <script type="text/javascript">
-		           $.each($(".jd_style").find("span"),function(){
-		        	   var widths=$(this).text();
-		        	   widths=parseInt(widths);
-		        	   $(this).css("width",widths);
-		        	   $(this).parent().before("<span class='wcd'>完成度："+widths+"%</span>");
-			       });
-		       </script>
 		   </div>
          
            <div class="right" style="margin-top:31px;">

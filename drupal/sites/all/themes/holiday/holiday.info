@@ -35,6 +35,7 @@ regions[left-t] = 左边三区
 regions[left-f] = 服务展示区
 regions[right] = 右边展示区
 regions[hrefs] = 友情链接
+regions[user_infos] = 用户信息
 
 settings[shortcut_module_link] = 0
 

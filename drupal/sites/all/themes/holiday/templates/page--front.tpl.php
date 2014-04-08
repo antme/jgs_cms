@@ -208,27 +208,109 @@
 		   </div>         
            <div class="right">
                <?php if($user->uid): ?>   
-                  <div class="box5" style="padding-bottom:10px;margin-bottom:10px;">
+                  <div class="box5" style="padding-bottom:10px;margin-bottom:10px;height:auto;">
                       <div class="title"><span class="txt">欢迎登陆虹口区建筑业管理中心</span></div>
                       <ul class="ul_style">
                           <li class="li_style_p">
                              <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/user.png" /></span>
                              <span><?php print l($user->name,'user/'.$user->uid); ?>&nbsp;</span>
                              <span class="logout"><?php print l("退出","user/logout"); ?></span>
+                              <span><a href="#" class="info_img">进入信息系统</a></span>
                           </li>
-                          <li class="li_style_p">
+                          <li class="li_style_p li_style_b">
                              <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/wdxm.png"/></span>
-                             <span><a href="/node/user_project_view">我的项目</a></span>
-                             <span class="user_img margin_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/dbsx.png"/></span>
+                             <span>我的项目</span>
+                             <a class="infos_right_more" href="#">更多</a>
+                          </li>
+                          <li>
+                              <div class="user_infos">
+	       	        				<ul class="ul_style">
+								    	<li id="project_num1" number="1">	
+								    	    <span class="field-content click_div"><a href="#">建管署二期工程</a></span>	
+											<div class="jd_style"><span class="devel-themer-wrapper" style="width: 21%;"></span></div>
+ 									        <span class="wcd">&nbsp;21%</span>
+ 									        <span class="cursor_click" onclick="create_chart(1,this)"><img alt="" src="sites/all/themes/holiday/images/open_project.png" width="16px" height="16px"></span>
+ 									    </li>
+				 				   		<li id="project_num2" number="2">	
+				 				   		    <span class="field-content click_div"><a href="#" >建管署一期工程</a></span>	
+											<div class="jd_style"><span class="devel-themer-wrapper" style="width: 83%;"></span></div>
+											<span class="wcd">&nbsp;83%</span>
+											<span class="cursor_click" onclick="create_chart(2,this)"><img alt="" src="sites/all/themes/holiday/images/open_project.png" width="16px" height="16px"></span>
+										</li>
+				 	        		</ul>
+	        	    			</div>
+	        	    			<script src="http://code.highcharts.com/highcharts.js"></script>
+  			                    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+  			                    <script src="sites/all/themes/holiday/js/jquery.chart.js"></script>
+                          </li>
+                          <li class="li_style_p li_style_b">
+                             <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/dbsx.png"/></span>
                              <span><a href="#">待办事项</a></span>
                           </li>
-                          <li class="li_style_p">
-                             <span><a href="#" class="info_img">进入信息系统</a></span>
+                          <li>
+                              <div class="user_infos">
+	       	        				<ul class="display_ul_style">
+								    	<li class="display_info_li display_li display_li_img1">待办公文<label style="color: red;display:inline">(8)</label></li>
+				 				   		<li class="display_info_li display_li display_li_img2">待办任务<label style="color: red;display:inline">(8)</label></li>
+										<li class="display_info_li display_li display_li_img3">会议通知<label style="color: red;display:inline">(4)</label></li>
+										<li class="display_info_li display_li display_li_img4">其他事项<label style="color: red;display:inline">(2)</label></li>
+				 	        		</ul>
+				 	        		<div id="li_one" class="user_infos div_display display_info_div">
+	       	        					<ul class="ul_style">
+								    		<li class="views-row views-row-1 views-row-odd views-row-first">	
+								    	 	   <span class="field-content"><a href="#">行政审批公文<label style="color: red;display:inline">(4)</label></a></span>	
+ 									   		</li>
+				 				   			<li class="views-row views-row-2 views-row-even views-row-last">	
+				 				   		    	<span class="field-content"><a href="#">上级公文<label style="color: red;display:inline">(4)</label></a></span>	
+											</li>
+				 	        			</ul>
+	        	    				</div>
+	        	    				<div id="li_two" class="user_infos div_display display_info_div">
+	       	        					<ul class="ul_style">
+								    		<li class="views-row views-row-1 views-row-odd views-row-first">	
+								    	 	   <span class="field-content"><a href="#">审批项目报建<label style="color: red;display:inline">(4)</label></a></span>	
+ 									   		</li>
+				 				   			<li class="views-row views-row-2 views-row-even views-row-last">	
+				 				   		    	<span class="field-content"><a href="#">项目报建审批<label style="color: red;display:inline">(4)</label></a></span>	
+											</li>
+				 	        			</ul>
+	        	    				</div>
+	        	    				<div id="li_three" class="user_infos div_display display_info_div">
+	       	        					<ul class="ul_style">
+								    		<li class="views-row views-row-1 views-row-odd views-row-first">	
+								    	 	   <span class="field-content"><a href="#">项目监督会议<label style="color: red;display:inline">(2)</label></a></span>	
+ 									   		</li>
+				 				   			<li class="views-row views-row-2 views-row-even views-row-last">	
+				 				   		    	<span class="field-content"><a href="#">工作会议<label style="color: red;display:inline">(2)</label></a></span>	
+											</li>
+				 	        			</ul>
+	        	    				</div>
+	        	    				<div id="li_four" class="user_infos div_display display_info_div">
+	       	        					<ul class="ul_style">
+								    		<li class="views-row views-row-1 views-row-odd views-row-first">	
+								    	 	   <span class="field-content"><a href="#">其他事项1<label style="color: red;display:inline">(1)</label></a></span>	
+ 									   		</li>
+				 				   			<li class="views-row views-row-2 views-row-even views-row-last">	
+				 				   		    	<span class="field-content"><a href="#">其他事项2<label style="color: red;display:inline">(1)</label></a></span>	
+											</li>
+				 	        			</ul>
+	        	    				</div>
+	        	    			</div>
+	        	    			<script type="text/javascript">
+	        	    			    $(".display_info_li").click(function(){
+	        	    			    	$(".display_info_div").removeClass("div_action").addClass("div_display");
+	        	    			    	var dd = $(".display_info_div");
+	        	    			    	$(dd[$(".display_info_li").index(this)]).addClass("div_action").removeClass("div_display");
+		        	    			});
+	        	    			</script>
                           </li>
                       </ul>
                   </div>
                <?php endif; ?>
-               <?php print render($page['right']); ?>               
+               <?php print render($page['right']); ?>
+               <div style="padding-bottom:10px;margin-top:10px;height:auto;float:left;">
+                    <a href="/node/yjx" class="wsyjx"></a>
+               </div>               
 		   </div>
            <a class="return_top" href="#top"></a>
 	 </div>
@@ -248,3 +330,11 @@
   </div> <!-- /.section, /#footer-wrapper -->
 
 </div> <!-- /#page, /#page-wrapper -->
+<div id="container"></div>
+<div id="back_div"></div>
+<script>
+   function close_div(){
+	    	$("#container").hide();
+	    	$("#back_div").hide();
+	}
+</script>

@@ -104,9 +104,7 @@ $display_bottom=false;
 	    <?php else :?>
 	         <?php $has_more=false; ?>
 	    <?php endif;?>
-	    
-	<?php elseif($view->name=="user_project_view") : ?>
-	         <?php $has_more=false; ?>
+
 	<?php endif;?>
 	
 	<div class="<?php print $class_name;?>" style="<?php print $style_name;?>">

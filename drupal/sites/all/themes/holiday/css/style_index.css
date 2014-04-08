@@ -1,4 +1,4 @@
-﻿body{
+body{
     font-size:12px;
 }
 label{
@@ -164,7 +164,7 @@ a.white:hover {
     margin-right: 10px;
 }
 .box1 .title h1 {
-    font-family: 微软雅黑;
+    font-family: ΢���ź�;
     font-size: 14px;
     font-weight: bold;
     height: 28px;
@@ -204,7 +204,7 @@ a.white:hover {
     margin-right: 10px;
 }
 .box2 .titles h1 {
-    font-family: 微软雅黑;
+    font-family: ΢���ź�;
     font-size: 14px;
     font-weight: bold;
     height: 28px;
@@ -835,7 +835,7 @@ overflow:hidden;
   float: left;
   height: 28px;
   width: 313px;
-  font-family: 微软雅黑;
+  font-family: ΢���ź�;
   font-size: 14px;
   font-weight: bold;
   height: 28px;
@@ -1229,7 +1229,7 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 }
 .content p span{
 	font-size:14px!important;
-	font-family:"微软雅黑"!important;
+	font-family:"΢���ź�"!important;
 }
 .content p b span{
 	font-size:16pt!important;
@@ -1333,20 +1333,27 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 .user_img img{
 	margin-top:5px;
 }
+.li_style_b{
+	margin-top:20px;
+	border-bottom:1px dashed #cdcdcd;
+}
 .li_style_p span{
 	overflow:hidden;
     vertical-align:middle;
     display:inline-block;
 }
-.view-content li span.wcd{
+.user_infos li span.wcd{
 	float:left;
 	font-size:12px;
+}
+.user_infos li span.wcd label{
+    color:red;
 }
 .margin_img{
 	margin-left:60px;
 }
 .info_img{
-	margin-top:20px;
+	margin-left:20px;
 	width:99px;
 	height:30px;
 	background:url(../images/public-botton.jpg);
@@ -1357,7 +1364,7 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 }
 .jd_style{
 	float:left;
-	width:100px;
+	width:50px;
     height: 5px;
     margin: 7px 0px 5px 5px;
     overflow: hidden;
@@ -1376,7 +1383,7 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
     -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-.view-content li .jd_style span{
+.jd_style span{
 	float:left;
 	height:5px;
 	width:0px;
@@ -1392,3 +1399,93 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 .view-user-project-view .pages_style .ul_style .views-row .field-content{
 	width:72%;
 }
+.user_infos .ul_style li{
+	margin:0px;
+}
+.user_infos .field-content{
+	width:56%;
+}
+.user_infos .jd_style{
+	margin-top:10px;
+}
+.box5 .user_infos ul {
+	width:auto;
+}
+.infos_right_more{
+	float:right;
+	margin-right:10px;
+	margin-top:5px;
+}
+.user_infos .display_li{
+    width:120px!important;
+    height:35px;
+    float:left;
+    font-size:12px;
+    margin:2px;
+    text-indent:32px;
+    line-height:34px;
+    cursor:pointer;
+}
+.user_infos .display_li_img1{
+    background:url(../images/everyday1.png) no-repeat left center;
+}
+.user_infos .display_li_img2{
+    background:url(../images/everyday2.png) no-repeat left center;
+}
+.user_infos .display_li_img3{
+    background:url(../images/everyday3.png) no-repeat left center;
+}
+.user_infos .display_li_img4{
+    background:url(../images/everyday4.png) no-repeat left center;
+}
+.display_ul_style{
+	border:1px solid #cdcdcd;
+	overflow:hidden;
+}
+.display_ul_style li{
+	margin:0px;
+}
+.div_action{
+	overflow:hidden;
+	border:1px solid #cdcdcd;
+	border-top:none;
+}
+.div_action .ul_style{
+	margin:5px 5px;
+}
+.div_display{
+	display:none;
+}
+#container{
+	position:absolute;
+	top:100px;
+	z-index:9999;
+	border:1px solid #cdcdcd;
+	display:none;
+}
+.cursor_click{
+	cursor:pointer;
+}
+.wsyjx{
+	display:inline-block;
+	width:270px;
+	height:46px;
+	background:url(../images/yx.jpg) no-repeat;
+}
+#back_div{
+	background-color:#000; 
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	position:absolute; 
+	z-index:999;
+	filter:alpha(opacity=50); 
+	-moz-opacity:0.5; 
+	opacity:0.5;
+	display:none;
+}
+.highcharts-button{
+	background:url(../images/close.gif)
+}
+
