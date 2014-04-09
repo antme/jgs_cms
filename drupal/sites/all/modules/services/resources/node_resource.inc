@@ -250,6 +250,11 @@ function _node_resource_definition() {
  * @see node_load()
  */
 function _node_resource_retrieve($nid) {
+	
+  $nodeId = _node_retrive_nid($nid);
+  if($nodeId !=null){
+  	$nid = $nodeId;
+  }
   $node = node_load($nid);
 
   if ($node) {
@@ -260,6 +265,21 @@ function _node_resource_retrieve($nid) {
     unset($node->uri);
   }
   return $node;
+}
+
+
+function _node_retrive_nid($misid){
+	$result = db_query ( 'SELECT n.nid FROM node_mis n WHERE n.misId = :misId', array (
+			':misId' => $misid 
+	) );
+	// Fetch next row as a stdClass object.
+	$record = $result->fetchObject ();
+	
+	if($record){
+		return $record->nid;
+	}
+	
+	return null;
 }
 
 /**
@@ -279,6 +299,16 @@ function _node_resource_retrieve($nid) {
  */
 function _node_resource_create($node) {
   global $user;
+  
+  $misId = $node['misId'];
+  $nid = _node_retrive_nid($misId);
+  
+  
+  if($node['deleted']){
+  	return _node_resource_delete($nid);
+  }else  if($nid != null){	
+  	return _node_resource_update($nid, $node); 	
+  }
   // Adds backwards compatability with regression fixed in #1083242
   $node = _services_arg_value($node, 'node');
   if (!isset($node['name'])) {
@@ -323,6 +353,12 @@ function _node_resource_create($node) {
   if ($uri = services_resource_uri(array('node', $nid))) {
     $node['uri'] = $uri;
   }
+  
+  db_insert('node_mis') ->fields(array(
+  		'nid' => $nid,
+  		'misId' => $misId
+  ))->execute();
+  
   return $node;
 }
 
@@ -423,7 +459,12 @@ function _node_resource_update($nid, $node) {
  *   Always returns true.
  */
 function _node_resource_delete($nid) {
+  $nodeId = _node_retrive_nid($nid);
+  if($nodeId !=null){
+	$nid = $nodeId;
+  }
   node_delete($nid);
+  db_delete('node_mis')->condition('nid', $nid)->execute();
   return TRUE;
 }
 
