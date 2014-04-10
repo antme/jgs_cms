@@ -303,7 +303,6 @@ function _node_resource_create($node) {
   $misId = $node['misId'];
   $nid = _node_retrive_nid($misId);
   
-  
   if($node['deleted']){
   	return _node_resource_delete($nid);
   }else  if($nid != null){	
@@ -503,10 +502,24 @@ function _node_resource_index($page, $fields, $parameters, $page_size) {
     ->orderBy('sticky', 'DESC')
     ->orderBy('created', 'DESC');
 
-  services_resource_build_index_query($node_select, $page, $fields, $parameters, $page_size, 'node');
+  $queryParameters = array();
+  foreach($parameters as $key => $value){
+  	 
+  	if($key == "created"){
+  	}else{
+  		$queryParameters[$key] = $value;
+  	}
+  }
+
+  services_resource_build_index_query($node_select, $page, $fields, $queryParameters, $page_size, 'node');
 
   if (!user_access('administer nodes')) {
     $node_select->condition('status', 1);
+  }
+  
+  if($parameters['created']){
+  	
+  	$node_select->condition('created',$parameters['created'], '>=');
   }
 
   $results = services_resource_execute_index_query($node_select);
