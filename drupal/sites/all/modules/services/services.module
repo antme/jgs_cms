@@ -763,6 +763,8 @@ function services_resource_build_index_list($results, $type, $field) {
   // Put together array of matching items to return.
   $items = array();
   foreach ($results as $result) {
+    $node_bo = node_load($result->nid)->body;
+    $result->body = $node_bo['und'][0]['safe_value'];
     if ($uri = services_resource_uri(array($type, $result->{$field}))) {
       $result->uri = $uri;
       if ($type == 'user') {
