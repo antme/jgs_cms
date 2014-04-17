@@ -17,9 +17,13 @@ $ul_style="ul_style";
 $style_name="";
 $display_title=true;
 $display_bottom=false;
+$add_more=false;
 ?>
 <?php if($view->name=="slide_images_view") : ?>
-    <div class="box2 ">
+    <?php if($user->uid): ?>
+   
+    <?php else: ?>
+        <div class="box2 ">
         <div id="demo3" class="slideBox">
             <ul class="items">
 			     <?php foreach ($rows as $id => $row): ?>
@@ -27,7 +31,8 @@ $display_bottom=false;
 			     <?php endforeach; ?>
             </ul>
        </div>        
-</div>	    
+    </div>
+    <?php endif;?>	    
 	    
 <?php elseif($view->name=="notice_view") : ?>
     <div class="box_top">
@@ -75,13 +80,28 @@ $display_bottom=false;
 	         <?php $has_more=false; ?>
 	    <?php endif;?>
 	    
-	<?php elseif($view->name=="gsgg_view") : ?>
+	<?php elseif($view->name=="wshd_view") : ?>
+        <?php if ($is_front):?>
 
+	    <?php else :?>
+	         <?php $has_more=false; $add_more=true;?>
+	    <?php endif;?>
+	
+	<?php elseif($view->name=="gsgg_view") : ?>
 	    <?php if ($is_front):?>
 	         <?php $class_name = "box2"; $ul_style="ul_style"; ?>
 	    <?php else :?>
 	         <?php $has_more=false; ?>
 	    <?php endif;?>
+	    
+	 <?php elseif($view->name=="announcement_view") : ?>
+
+	    <?php if ($is_front):?>
+	         <?php $class_name = "box3"; $ul_style="ul_style"; ?>
+	    <?php else :?>
+	         <?php $has_more=false; ?>
+	    <?php endif;?>
+	    
 	 <?php elseif($view->name=="bszn_qy_view" || $view->name=="bszn_jy_view" || $view->name=="bszn_xm_view"  || $view->name=="bszn_all_view") : ?>
 
 	    <?php $ul_style="ul_style";$display_title=false; ?>
@@ -96,6 +116,7 @@ $display_bottom=false;
 	    <?php else :?>
 	         <?php $has_more=false; ?>
 	    <?php endif;?>
+	 
 	    
 	<?php elseif($view->name=="dqtd_view" || $view->name=="ztbxx_view") : ?>
 
@@ -113,7 +134,9 @@ $display_bottom=false;
 	    	     <?php if ($has_more): ?>
 	             	<span class="more"><a href="node/<?php print $view->name?>">更多</a></span> 
 	             <?php endif;?>
-	             
+	             <?php if ($add_more): ?>
+	             	<span class="more"><a href="add/wshd">添加</a></span> 
+	             <?php endif;?>
 	             <span class="txt">
 					<?php if ($view->human_name): ?>
 					  	<?php print $view->human_name ?>

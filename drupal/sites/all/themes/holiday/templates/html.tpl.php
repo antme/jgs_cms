@@ -92,7 +92,7 @@ function ass(){
  	     background:url(/sites/all/themes/holiday/images/back3.jpg) no-repeat;
          height:200px;
       }
-	  .box5 .title,.box1 .title,.box5 h1{
+	  .box5 .title,.box1 .title,.box5 h1,.box3 .title{
  	  background: url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
  	  height:30px;
       }
@@ -135,7 +135,7 @@ function ass(){
  	     background:url(/sites/all/themes/holiday/images/back4.jpg) no-repeat;
          height:200px;
       }
-	  .box5 .title,.box1 .title,.box5 h1{
+	  .box5 .title,.box1 .title,.box5 h1,.box3 .title{
  	  background: url("/sites/all/themes/holiday/images/titlebg4.jpg") repeat-x;
  	  height:30px;
       }
@@ -178,7 +178,7 @@ function ass(){
  	     background:url(/sites/all/themes/holiday/images/back.jpg) no-repeat;
          height:200px;
       }
-	  .box5 .title,.box1 .title,.box5 h1{
+	  .box5 .title,.box1 .title,.box5 h1,.box3 .title{
  	  background: url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
  	  height:30px;
       }
@@ -221,7 +221,7 @@ function ass(){
  		 background:url(/sites/all/themes/holiday/images/back2.jpg) no-repeat;
  		 height:200px;
 		}
-		.box5 .title,.box1 .title,.box5 h1{
+		.box5 .title,.box1 .title,.box5 h1,.box3 .title{
 		background: url("/sites/all/themes/holiday/images/titlebg3.jpg") repeat-x ;
   		height:30px;
 		}

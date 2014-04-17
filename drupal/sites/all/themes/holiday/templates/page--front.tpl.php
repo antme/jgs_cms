@@ -187,7 +187,8 @@
 			   <?php endif; ?>
 			   <!--鏈嶅姟灞曠ず鍖�-->
 			   <?php if ($page['left-f']): ?>
-		       <div class="part1 comm_style" style="margin-top:10px;">
+		       <div class="part1 comm_style bsdt" style="margin-top:10px;">
+		         <div class="title_bsdt"></div>
                <?php print render($page['left-f']); ?>
 			   </div>
 			   <?php endif; ?>
@@ -202,6 +203,7 @@
 			   <!--宸﹁竟绗笁鍖�-->
 			   <?php if ($page['left-t']): ?>
 		       <div class="part1">
+		       
                <?php print render($page['left-t']); ?>
 			   </div>
 			   <?php endif; ?>   
@@ -217,32 +219,7 @@
                              <span class="logout"><?php print l("退出","user/logout"); ?></span>
                               <span><a href="#" class="info_img">进入信息系统</a></span>
                           </li>
-                          <li class="li_style_p li_style_b">
-                             <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/wdxm.png"/></span>
-                             <span>我的项目</span>
-                             <a class="infos_right_more" href="#">更多</a>
-                          </li>
-                          <li>
-                              <div class="user_infos">
-	       	        				<ul class="ul_style">
-								    	<li id="project_num1" number="1">	
-								    	    <span class="field-content click_div"><a href="#">建管署二期工程</a></span>	
-											<div class="jd_style"><span class="devel-themer-wrapper" style="width: 21%;"></span></div>
- 									        <span class="wcd">&nbsp;21%</span>
- 									        <span class="cursor_click" onclick="create_chart(1,this)"><img alt="" src="sites/all/themes/holiday/images/open_project.png" width="16px" height="16px"></span>
- 									    </li>
-				 				   		<li id="project_num2" number="2">	
-				 				   		    <span class="field-content click_div"><a href="#" >建管署一期工程</a></span>	
-											<div class="jd_style"><span class="devel-themer-wrapper" style="width: 83%;"></span></div>
-											<span class="wcd">&nbsp;83%</span>
-											<span class="cursor_click" onclick="create_chart(2,this)"><img alt="" src="sites/all/themes/holiday/images/open_project.png" width="16px" height="16px"></span>
-										</li>
-				 	        		</ul>
-	        	    			</div>
-	        	    			<script src="http://code.highcharts.com/highcharts.js"></script>
-  			                    <script src="http://code.highcharts.com/modules/exporting.js"></script>
-  			                    <script src="sites/all/themes/holiday/js/jquery.chart.js"></script>
-                          </li>
+                          
                           <li class="li_style_p li_style_b">
                              <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/dbsx.png"/></span>
                              <span><a href="#">待办事项</a></span>
@@ -317,7 +294,7 @@
                <?php endif; ?>
                <?php print render($page['right']); ?>
                <div style="padding-bottom:10px;margin-top:10px;height:auto;float:left;">
-                    <a href="/node/yjx" class="wsyjx"></a>
+                    <a href="/node/add/suggestion" class="wsyjx"></a>
                </div>               
 		   </div>
            <a class="return_top" href="#top"></a>
@@ -338,11 +315,19 @@
   </div> <!-- /.section, /#footer-wrapper -->
 
 </div> <!-- /#page, /#page-wrapper -->
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script src="sites/all/themes/holiday/js/jquery.chart.js"></script>
 <div id="container"></div>
 <div id="back_div"></div>
 <script>
    function close_div(){
-	    	$("#container").hide();
-	    	$("#back_div").hide();
+	    $("#container").hide();
+	    $("#back_div").hide();
+	}
+	function close_divs(){
+		$("#search_project_value").hide();
+		$(".project_info").remove();
+		$(".bsdt").css("height","auto");
 	}
 </script>

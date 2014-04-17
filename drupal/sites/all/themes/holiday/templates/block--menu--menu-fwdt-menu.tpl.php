@@ -53,25 +53,69 @@
 	  $(document).ready(function(){
 	     var int_value = $(".comm_style").find("div").find("div").find(".menu");
 		 $(int_value).parent().hide();
-		 $(int_value[0]).parent().show();
-		 $('.left_menu_style').find('li:first').css("background-color","#e6fafe");
-		 $('.left_menu_style').find('li:first').find("a").addClass("color_red");
+		 $('.left_menu_style').find('li:first').addClass("li_action");
+		 $('.left_menu_style').find('li').find("a").attr("href","##");
+		 $(".comm_style").find(".region-left-f").append("<div class='block block-menu search_project'></div>");
+		 var str="<div class='search_project_div menu'><input class='text_inputs' type='text' value='请输入项目报建编号'/><button class='search_btn'>查询</button></div>"+
+		         "<div id='search_project_value' style='width:540px;height:auto;overflow:hidden;'></div>"
+		 $(".search_project").append(str);
+
+		 
+		 $(".text_inputs").focus(function(){
+			  if($(this).val()=="请输入项目报建编号"){
+				  $(this).attr("value","");
+			  }
+		  });
+		 $(".search_btn").click(function(){
+			 $("#search_project_value").show();
+			 if($(".text_inputs").val()=="001"){
+				 create_chart(2,this);
+				 change_height(15,15,50,50,83);
+				 
+				 
+			 }else if($(".text_inputs").val()=="002"){
+				 create_chart(3,this);
+				 change_height(62,62,240,240,50);
+			 }
+			 
+		 });
+		 function change_height(n,m,x,y,w){
+			 $(".project_info").remove();
+             var stt="<div class='project_info'>"+
+                     "<div class='project_info_name'>"+
+                     "<a href='##'><label>项目名称</label></a>"+
+                     "<div class='bf'><div style='width:"+w+"%'></div></div>"+
+                     "<span class='wc'>完成度"+w+"%</span>"+
+                     "</div>"+
+                     "<label class='project_time_info'>审批总时限："+n+"天，实际用时："+m+"天。<br>相对人办理预计总时间"+x+"天，实际用时："+y+"天</label>"+
+                     "</div>";
+
+             $(".search_project_div").after(stt);
+		     var height=$("#search_project_value").find(".highcharts-container").height()+$(".project_info").height()+153;
+			 $(".bsdt").css("height",height+"px");
+		 }
 	  });
-	  $(".left_menu_style").find("li").mouseover(function(){
-	     $(".left_menu_style").find("li").find("a").removeClass("color_red");
-	     $(".left_menu_style").find("li").css("background-color","transparent");
-	     $(this).css("background-color","#e6fafe");
-		 $(this).find("a").addClass("color_red");
+	  $(".left_menu_style").find("li").click(function(){
+	     $('.left_menu_style').find('li').removeClass("li_action");
+         $(this).addClass("li_action");
+
 		 var int_value = $(".comm_style").find("div").find("div").find(".menu");
 		 var ss_value = $(".left_menu_style").find("li").index(this);
 		 var inss=$(int_value).length;
 		 $(int_value).parent().hide();
 		 if(ss_value>inss){
 		 }else{
-		    $(int_value[ss_value]).parent().show();
+			if(ss_value==0){
+				$(".search_project").show();
+				 var height=$("#search_project_value").find(".highcharts-container").height()+$(".project_info").height()+153;
+				 $(".bsdt").css("height",height+"px");
+			}else{
+				$(int_value[ss_value-1]).parent().show();
+				 $(".bsdt").css("height","auto");
+			}
 		 }
-		 
-	  });;
+	  });
+	  
   </script>
 </div>
 </div>
