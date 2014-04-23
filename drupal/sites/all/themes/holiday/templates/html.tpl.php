@@ -47,6 +47,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
 
 <head profile="<?php print $grddl_profile; ?>">
+  <!-- <base target="_blank"> -->
   <?php print $head; ?> 
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
@@ -62,26 +63,28 @@ jQuery(function($){
     });
 });
 function ass(){
-	  if($(document).scrollTop()>=200){
+	  if($(document).scrollTop()>200){
 		  <?php global $user;?>
 		  <?php if($user ->uid):?>
 			  $("#main-menu").addClass("main-menu-fix");
 		  <?php else: ?>
 		      $("#main-menu").addClass("main-menu-fix2");
 		  <?php endif;?>
+		  $(".return_top").css("display","inline-block");
   	     
-      }else{
+      }else if($(document).scrollTop()<200){
     	  <?php global $user;?>
 		  <?php if($user ->uid):?>
 			  $("#main-menu").removeClass("main-menu-fix");
 		  <?php else: ?>
 		      $("#main-menu").removeClass("main-menu-fix2");
 		  <?php endif;?>
+		  $(".return_top").css("display","none");
       }
 }
  setInterval("ass()",10);
 </script>
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=bbnC2SVxid9SsKkD11vqthL4"></script>
+
  <!-- 国庆 -->
 <?php if(theme_get_setting("holiday_theme_style")=="holiday_national"):?>
   <style type="text/css">
@@ -123,6 +126,11 @@ function ass(){
     	width: 268px;
     	margin-top:10px;
     	background:url(/sites/all/themes/holiday/images/tzbg.jpg) repeat-x ;
+		}
+		.title_bsdt{
+		width:100%;
+		height:24px;
+		background:url(/sites/all/themes/holiday/images/pic5.jpg) no-repeat;
 		}
   </style>
   <!-- 五一 -->
@@ -167,6 +175,11 @@ function ass(){
     	margin-top:10px;
     	background:url(/sites/all/themes/holiday/images/tzbg2.jpg) repeat-x ;
 		}
+		.title_bsdt{
+		width:100%;
+		height:24px;
+		background:url(/sites/all/themes/holiday/images/pic5.jpg) no-repeat;
+		}
   </style>
 <!-- 春节 -->
 <?php elseif(theme_get_setting("holiday_theme_style")=="holiday_spring_festival"):?>
@@ -210,6 +223,11 @@ function ass(){
     	margin-top:10px;
     	background:url(/sites/all/themes/holiday/images/tzbg.jpg) repeat-x ;
 		}
+		.title_bsdt{
+		width:100%;
+		height:24px;
+		background:url(/sites/all/themes/holiday/images/pic5.jpg) no-repeat;
+		}
   </style>
 <!-- 默认皮肤 -->
 <?php elseif(theme_get_setting("holiday_theme_style")=="holiday_default" || theme_get_setting("holiday_theme_style")==NULL):?>
@@ -252,6 +270,11 @@ function ass(){
     	width: 268px;
     	margin-top:10px;
     	background:url(/sites/all/themes/holiday/images/tzbg.jpg) repeat-x ;
+		}
+		.title_bsdt{
+		width:100%;
+		height:24px;
+		background:url(/sites/all/themes/holiday/images/pic6.jpg) no-repeat;
 		}
       </style>
 <?php endif;?>

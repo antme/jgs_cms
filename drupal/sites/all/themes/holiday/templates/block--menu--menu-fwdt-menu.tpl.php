@@ -43,7 +43,7 @@
  *
  * @ingroup themeable
  */
-?>
+?> 
 <div id="<?php print $block_html_id; ?>" class=""<?php print $attributes; ?>>
 <div class="fwdt">
   <div class="left_menu_style">
@@ -63,31 +63,31 @@
 		 
 		 $(".text_inputs").focus(function(){
 			  if($(this).val()=="请输入项目报建编号"){
-				  $(this).attr("value","");
+				  $(this).attr("value","").css("color","#000");
 			  }
 		  });
 		 $(".search_btn").click(function(){
 			 $("#search_project_value").show();
-			 if($(".text_inputs").val()=="001"){
-				 create_chart(2,this);
-				 change_height(15,15,50,50,83);
+			 if($(".text_inputs").val()=="1402HK0033"){
+				 create_chart(2,this,'1402HK0035','','');
+				 change_height(15,15,50,50,83,'上海市第一人民医院北部放射信息综合用房装饰装修项目');
 				 
 				 
-			 }else if($(".text_inputs").val()=="002"){
-				 create_chart(3,this);
-				 change_height(62,62,240,240,50);
+			 }else if($(".text_inputs").val()=="1402HK0035"){
+				 create_chart(3,this,'1402HK0035','','');
+				 change_height(62,62,240,240,50,"上海市第一人民医院北部放射信息综合用房装饰装修项目");
 			 }
 			 
 		 });
-		 function change_height(n,m,x,y,w){
+		 function change_height(n,m,x,y,w,name){
 			 $(".project_info").remove();
              var stt="<div class='project_info'>"+
                      "<div class='project_info_name'>"+
-                     "<a href='##'><label>项目名称</label></a>"+
                      "<div class='bf'><div style='width:"+w+"%'></div></div>"+
                      "<span class='wc'>完成度"+w+"%</span>"+
                      "</div>"+
                      "<label class='project_time_info'>审批总时限："+n+"天，实际用时："+m+"天。<br>相对人办理预计总时间"+x+"天，实际用时："+y+"天</label>"+
+                     "<div class='project_title_name'><a href='##' target='_blank'>"+name+"</a></div>"
                      "</div>";
 
              $(".search_project_div").after(stt);
@@ -104,11 +104,16 @@
 		 var inss=$(int_value).length;
 		 $(int_value).parent().hide();
 		 if(ss_value>inss){
+			 
 		 }else{
 			if(ss_value==0){
 				$(".search_project").show();
 				 var height=$("#search_project_value").find(".highcharts-container").height()+$(".project_info").height()+153;
-				 $(".bsdt").css("height",height+"px");
+				 if($("#search_project_value").is(':hidden')){
+					 $(".bsdt").css("height","auto");
+				 }else{
+					 $(".bsdt").css("height",height+"px");
+				 }
 			}else{
 				$(int_value[ss_value-1]).parent().show();
 				 $(".bsdt").css("height","auto");

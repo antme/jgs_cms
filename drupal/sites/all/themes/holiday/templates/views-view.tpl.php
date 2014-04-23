@@ -40,4 +40,10 @@
       <?php print $rows; ?>
     </div>
    <?php endif; ?>
+   <?php if ($pager): ?>
+    <div class="pager-header">
+      <?php print $pager; ?>
+    </div>
+   <?php endif; ?>
+
 </div><?php /* class view */ ?>

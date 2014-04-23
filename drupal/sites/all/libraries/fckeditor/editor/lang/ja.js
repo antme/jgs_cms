@@ -30,7 +30,7 @@ ToolbarCollapse		: "ツールバーを隠す",
 ToolbarExpand		: "ツールバーを表示",
 
 // Toolbar Items and Context Menu
-Save				: "保存",
+Save				: "提交",
 NewPage				: "新しいページ",
 Preview				: "プレビュー",
 Cut					: "切り取り",

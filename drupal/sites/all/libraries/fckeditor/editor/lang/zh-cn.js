@@ -30,7 +30,7 @@ ToolbarCollapse		: "折叠工具栏",
 ToolbarExpand		: "展开工具栏",
 
 // Toolbar Items and Context Menu
-Save				: "保存",
+Save				: "提交",
 NewPage				: "新建",
 Preview				: "预览",
 Cut					: "剪切",

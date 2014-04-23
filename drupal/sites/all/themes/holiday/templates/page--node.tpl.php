@@ -122,13 +122,95 @@
   <div id="main-wrapper" class="clearfix">
   <div id="main" class="clearfix">
       <div class="content">
-           <div class="left">
+           <div class="left" style="margin-top:10px;border:1px solid #cdcdcd;">
                <?php print render($page['navigation']); ?>
 		       <?php print render($page['content']); ?> 
 		   </div>
          
-           <div class="right" style="margin-top:31px;">
-               
+           <div class="right">
+               <?php if($user->uid): ?>   
+                  <div class="box5" style="padding-bottom:13px;height:auto;">
+                      <div class="title"><span class="txt">欢迎登录虹口区建筑业管理中心</span></div>
+                      <ul class="ul_style">
+                          <li class="li_style_p">
+                             <span class="user_img"><img width="20px" height="20px" src="/sites/all/themes/holiday/images/user.png" /></span>
+                             <span><?php print l($user->name,'user/'.$user->uid); ?>&nbsp;</span>
+                             <span class="logout"><?php print l("退出","user/logout"); ?></span>
+                              <span><a href="#" class="info_img">进入信息系统</a></span>
+                          </li>
+                          
+                          <li class="li_style_p li_style_b">
+                             <span class="user_img"><img width="20px" height="20px" src="/sites/all/themes/holiday/images/dbsx.png"/></span>
+                             <span><a href="#">待办事项</a></span>
+                          </li>
+                          <li>
+                              <div class="user_infos">
+	       	        				<ul class="display_ul_style">
+								    	<li class="display_info_li display_li display_li_img1">待办公文<label style="color: red;display:inline">(8)</label></li>
+				 				   		<li class="display_info_li display_li display_li_img2">待办任务<label style="color: red;display:inline">(8)</label></li>
+										<li class="display_info_li display_li display_li_img3">会议通知<label style="color: red;display:inline">(4)</label></li>
+										<li class="display_info_li display_li display_li_img4">其他事项<label style="color: red;display:inline">(2)</label></li>
+				 	        		</ul>
+				 	        		<div id="li_one" class="user_infos div_display display_info_div">
+	       	        					<ul class="ul_style">
+								    		<li class="views-row views-row-1 views-row-odd views-row-first">	
+								    	 	   <span class="field-content"><a href="#">行政审批公文<label style="color: red;display:inline">(4)</label></a></span>	
+ 									   		</li>
+				 				   			<li class="views-row views-row-2 views-row-even views-row-last">	
+				 				   		    	<span class="field-content"><a href="#">上级公文<label style="color: red;display:inline">(4)</label></a></span>	
+											</li>
+				 	        			</ul>
+	        	    				</div>
+	        	    				<div id="li_two" class="user_infos div_display display_info_div">
+	       	        					<ul class="ul_style">
+								    		<li class="views-row views-row-1 views-row-odd views-row-first">	
+								    	 	   <span class="field-content"><a href="#">审批项目报建<label style="color: red;display:inline">(4)</label></a></span>	
+ 									   		</li>
+				 				   			<li class="views-row views-row-2 views-row-even views-row-last">	
+				 				   		    	<span class="field-content"><a href="#">项目报建审批<label style="color: red;display:inline">(4)</label></a></span>	
+											</li>
+				 	        			</ul>
+	        	    				</div>
+	        	    				<div id="li_three" class="user_infos div_display display_info_div">
+	       	        					<ul class="ul_style">
+								    		<li class="views-row views-row-1 views-row-odd views-row-first">	
+								    	 	   <span class="field-content"><a href="#">项目监督会议<label style="color: red;display:inline">(2)</label></a></span>	
+ 									   		</li>
+				 				   			<li class="views-row views-row-2 views-row-even views-row-last">	
+				 				   		    	<span class="field-content"><a href="#">工作会议<label style="color: red;display:inline">(2)</label></a></span>	
+											</li>
+				 	        			</ul>
+	        	    				</div>
+	        	    				<div id="li_four" class="user_infos div_display display_info_div">
+	       	        					<ul class="ul_style">
+								    		<li class="views-row views-row-1 views-row-odd views-row-first">	
+								    	 	   <span class="field-content"><a href="#">其他事项1<label style="color: red;display:inline">(1)</label></a></span>	
+ 									   		</li>
+				 				   			<li class="views-row views-row-2 views-row-even views-row-last">	
+				 				   		    	<span class="field-content"><a href="#">其他事项2<label style="color: red;display:inline">(1)</label></a></span>	
+											</li>
+				 	        			</ul>
+	        	    				</div>
+	        	    			</div>
+	        	    			<script type="text/javascript">
+	        	    			    $(".display_info_li").click(function(){
+	        	    			    	$(".display_info_div").removeClass("div_action").addClass("div_display");
+	        	    			    	var dd = $(".display_info_div");
+	        	    			    	var in_li=$(".display_info_li");
+	        	    			    	$(dd[$(".display_info_li").index(this)]).addClass("div_action").removeClass("div_display");
+	        	    			    	for(var i=0;i<in_li.length;i++){
+		        	    			    	var x=(i+1)*10+i+1;
+		        	    			    	var y=i+1;
+	        	    			    		$(in_li[i]).removeClass("display_li_img"+x).addClass("display_li_img"+y);
+	        	    			    	}
+	        	    			    	var numc=($(".display_info_li").index(this)+1)*10+($(".display_info_li").index(this)+1);
+	        	    			    	$(this).addClass("display_li_img"+numc).removeClass("display_li_img"+$(".display_info_li").index(this)+1);
+		        	    			});
+	        	    			</script>
+                          </li>
+                      </ul>
+                  </div>
+               <?php endif; ?>
                <?php print render($page['node-content']); ?>
                <?php print render($page['right']); ?>
 		   </div>
@@ -145,5 +227,4 @@
       </div> <!-- /#footer -->
     <?php endif; ?>
   </div> <!-- /.section, /#footer-wrapper -->
-
 </div> <!-- /#page, /#page-wrapper -->

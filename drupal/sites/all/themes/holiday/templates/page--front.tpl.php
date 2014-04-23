@@ -189,7 +189,7 @@
 			   <?php if ($page['left-f']): ?>
 		       <div class="part1 comm_style bsdt" style="margin-top:10px;">
 		         <div class="title_bsdt"></div>
-               <?php print render($page['left-f']); ?>
+                 <?php print render($page['left-f']); ?>
 			   </div>
 			   <?php endif; ?>
 			   
@@ -210,8 +210,8 @@
 		   </div>         
            <div class="right">
                <?php if($user->uid): ?>   
-                  <div class="box5" style="padding-bottom:10px;margin-bottom:10px;height:auto;">
-                      <div class="title"><span class="txt">欢迎登陆虹口区建筑业管理中心</span></div>
+                  <div class="box5" style="padding-bottom:13px;margin-bottom:10px;height:auto;">
+                      <div class="title"><span class="txt">欢迎登录虹口区建筑业管理中心</span></div>
                       <ul class="ul_style">
                           <li class="li_style_p">
                              <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/user.png" /></span>
@@ -293,8 +293,11 @@
                   </div>
                <?php endif; ?>
                <?php print render($page['right']); ?>
-               <div style="padding-bottom:10px;margin-top:10px;height:auto;float:left;">
-                    <a href="/node/add/suggestion" class="wsyjx"></a>
+               <div class="box5" style="margin-top:10px;float:left;height:240px;">
+                   <div class="title">
+						<span class="txt">群众路线教育意见箱</span>
+				   </div>
+				   <a href="/node/add/suggestion" class="wsyjx"></a>
                </div>               
 		   </div>
            <a class="return_top" href="#top"></a>

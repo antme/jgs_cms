@@ -87,13 +87,10 @@ $add_more=false;
 	         <?php $has_more=false; $add_more=true;?>
 	    <?php endif;?>
 	
-	<?php elseif($view->name=="gsgg_view") : ?>
-	    <?php if ($is_front):?>
-	         <?php $class_name = "box2"; $ul_style="ul_style"; ?>
-	    <?php else :?>
-	         <?php $has_more=false; ?>
-	    <?php endif;?>
-	    
+	 <?php elseif($view->name=="gsgg_view" || $view->name=="ztbxx_view" || $view->name=="qualification_view") : ?>
+
+             <?php $class_name = "part3"; $ul_style="ul_style";$display_title=false;$display_bottom=true; ?>
+
 	 <?php elseif($view->name=="announcement_view") : ?>
 
 	    <?php if ($is_front):?>
@@ -103,11 +100,7 @@ $add_more=false;
 	    <?php endif;?>
 	    
 	 <?php elseif($view->name=="bszn_qy_view" || $view->name=="bszn_jy_view" || $view->name=="bszn_xm_view"  || $view->name=="bszn_all_view") : ?>
-
-	    <?php $ul_style="ul_style";$display_title=false; ?>
-	    
-	<?php elseif($view->name=="node_gggs_view" ) : ?>
-	   <?php $class_name = "box2"; $ul_style="ul_style"; ?>
+	    <?php  $ul_style="ul_style";$display_title=false; ?>
 	    
 	 <?php elseif($view->name=="cwgz_view") : ?>	    
 
@@ -118,7 +111,7 @@ $add_more=false;
 	    <?php endif;?>
 	 
 	    
-	<?php elseif($view->name=="dqtd_view" || $view->name=="ztbxx_view") : ?>
+	<?php elseif($view->name=="dqtd_view") : ?>
 
 		<?php if ($is_front):?>
 	         <?php $class_name = "box5";$ul_style="ul_style"; ?>
@@ -148,6 +141,7 @@ $add_more=false;
 				<?php foreach ($rows as $id => $row): ?>
 				    <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
 				 <?php endforeach; ?>
+				 
 	        </ul>
 	        <?php if($display_bottom): ?>
 	        <div class="title">
@@ -157,4 +151,5 @@ $add_more=false;
 			</div>
 			<?php endif;?>
 	    </div>
+	    
 <?php endif?>

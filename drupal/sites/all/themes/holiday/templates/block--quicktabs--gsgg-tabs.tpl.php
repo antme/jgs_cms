@@ -45,9 +45,8 @@
  */
 ?>
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-
-  <div style="float:left;line-height:30px;margin-left:4px;">站内搜索:&nbsp;</div>
-  <div class="content"<?php print $content_attributes; ?> style="float:left;">
+  <div class="titlesd"><span class="txt"><?php print $block->subject ?></h3></span></div>
+  <div class="content"<?php print $content_attributes; ?>>
     <?php print $content ?>
   </div>
 </div>

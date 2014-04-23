@@ -162,3 +162,8 @@ function holiday_field__taxonomy_term_reference($variables) {
 
   return $output;
 }
+
+/**
+ * Implements hook_form_alter().
+*/
+?>

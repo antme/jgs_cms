@@ -45,8 +45,9 @@
  */
 ?>
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-
-
+  <?php if($block_html_id=="block-user-login"):?>
+     <div class="titlesd"><span class="txt"><?php print $block->subject ?></h3></span></div>
+  <?php endif;?>
   <div class="content"<?php print $content_attributes; ?>>
     <?php print $content ?>
   </div>

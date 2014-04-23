@@ -1,14 +1,22 @@
 var current_node=5;
-function create_chart(n,object){
+var ds,dss,dsss,dsd;
+function create_chart(n,object,name,nub,ncolor){
     $("#back_div").css("height",$(document).height()+"px");
 	var width=$(document).width();
 	
+	var arry_titles_op=['审批:1天,实际:1天','预计:10天,实际:10天','审批:13天,实际:13天','预计:48天,实际:48天','审批:1天,实际:1天','预计:10天,实际:10天'];
 	
-	var arry_project_name=[{name:'项目报建',child:''},{name:'设计合同备案',child:''},{name:'施工发包',child:''},{name:'施工合同备案',child:''},{name:'项目报监',child:''},{name:'施工许可',child:'yes'}];
+	var arry_project_name=[{name:'项目报建',child:''},{name:'设计合同备案',child:''},{name:'施工发包',child:''},{name:'施工合同备案',child:''},{name:'项目报监',child:''},{name:'施工许可',child:''}];
 	var arry_title=['审批:1天,实际:1天','预计:10天,实际:10天','审批:1天,实际:1天','预计:10天,实际:10天','审批:6天,实际:6天','预计:10天,实际:10天','审批:1天,实际:1天','预计:10天,实际:10天','审批:1天,审批中','预计:10天'];
 	
-	var arry_project_names=[{name:'项目报建',child:''},{name:'设计发包',child:'yes'},{name:'设计合同备案',child:''},{name:'勘察发包',child:'yes'},{name:'勘察合同备案',child:''},{name:'施工发包',child:'yes'},{name:'施工合同备案',child:''},{name:'监理发包',child:'yes'},{name:'监理合同备案',child:''},{name:'施工图审查',child:''},{name:'项目报监',child:''},{name:'施工许可',child:''}];
+	var arry_project_names=[{name:'项目报建',child:''},{name:'设计发包',child:'0'},{name:'设计合同备案',child:''},{name:'勘察发包',child:'1'},{name:'勘察合同备案',child:''},{name:'施工发包',child:'2'},{name:'施工合同备案',child:''},{name:'监理发包',child:'3'},{name:'监理合同备案',child:''},{name:'施工图审查',child:''},{name:'项目报监',child:''},{name:'施工许可',child:''}];
 	var arry_titles=['审批:1天,实际:1天','预计:10天,实际:10天','审批:13天,实际:13天','预计:48天,实际:48天','审批:1天,实际:1天','预计:10天,实际:10天','审批:13天,实际:13天','预计:48天,实际:48天','审批:1天,审批中','预计:10天','审批:13天,实际:13天','预计:53天,实际53天','审批:1天','预计:10天','审批:13天','预计:48天','审批:1天','预计:10天','审批:20天','预计:10天','审批:1天,实际:1天','预计:10天,实际:10天'];
+	
+	var arry_names=['设计发包流程','勘察发包流程','施工发包流程','监理发包流程'];
+	var arry_fb=[{name:'设计招标登记',child:""},{name:"设计招标文件备案",child:""},{name:"设计招标文件备案",child:""},{name:"设计招投标书面报告<br>中标通知书备案",child:""}];
+	var arry_kc=[{name:'勘察招标登记',child:""},{name:"勘察招标文件备案",child:''},{name:"勘察补充文件备案",child:''},{name:"勘察招投标书面报告<br>中标通知书备案",child:''}];
+	var arry_sg=[{name:'施工招标登记',child:""},{name:"施工招标文件备案",child:''},{name:"施工补充文件备案",child:''},{name:"施工招投标书面报告<br>中标通知书备案",child:''}];
+	var arry_jl=[{name:'监理招标登记',child:""},{name:"监理招标文件备案",child:''},{name:"监理补充文件备案",child:''},{name:"监理招投标书面报告<br>中标通知书备案",child:''}];
 	
 	//弹出层
 	var add=0;
@@ -46,12 +54,13 @@ function create_chart(n,object){
 	                    var leftArrow = ['M', 100, 0, 'L', 0, 0, 'L', 5, 5, 'M', 0, 0, 'L', 5, -5];
 	                        
                         //定义项目流程
-	                    for(var i=0;i<arry_project_name.length;i++){
-	                    	ren.label(arry_project_name[i].name, arry_simple[i].x, arry_simple[i].y).attr({fill: add_color(current_node,i),stroke: 'white','stroke-width': 2,padding: 10,r: 5}).css({color: 'white',}).add().shadow(true);
+	                    
+	                    for(var i=0;i<nub.length;i++){
+	                    	ren.label(nub[i].name, arry_simple[i].x, arry_simple[i].y).attr({fill: ncolor,stroke: 'white','stroke-width': 2,padding: 10,r: 5}).css({color: 'white',}).add().shadow(true);
 	                    }
                         
 	                    //定义箭头
-						for(var i=0;i<arry_project_name.length-1;i++){
+						for(var i=0;i<nub.length-1;i++){
 							if((i+1)%3==0){
 								if(i%3==2){
 									Arrow_down_right=['M', 585, 120+add*100, 'L', 585, 175+add*100, 'L', 580, 170+add*100, 'M', 585, 175+add*100, 'L', 590, 170+add*100];
@@ -71,18 +80,19 @@ function create_chart(n,object){
 							}
 						}
 						//定义说明文字
-						for(var i=0;i<arry_title.length;i++){
-							ren.label(arry_title[i], arry_title_location[i].x,arry_title_location[i].y).css({fontSize: '10px',color: colors[2]}) .add();
+						for(var i=0;i<arry_titles_op.length;i++){
+							ren.label(arry_titles_op[i], arry_title_location[i].x,arry_title_location[i].y).css({fontSize: '10px',color: colors[2]}) .add();
 						}
 	                }
 	            }
 	        },
 	        title: {
-	            text: '简易流程'
+	            text: name
 	        }
 	            
 	    });
-	  break;
+	    $("#container").find(".highcharts-container").find("g").find("rect").attr("width","120");
+	    break;
 	  }
 	
 	case 2:{
@@ -101,7 +111,7 @@ function create_chart(n,object){
 	                        
 	                    //定义项目流程
 	                    for(var i=0;i<arry_project_name.length;i++){
-	                    	if(arry_project_name[i].child=='yes'){
+	                    	if(arry_project_name[i].child!=''){
 	                    		ren.label(arry_project_name[i].name+'(*)', arry_label_location[i].x, arry_label_location[i].y).attr({fill: add_color(current_node,i),stroke: 'white','stroke-width': 2,padding: 10,r: 5}).on('click',function(){create_chart(1,this);}).css({color: 'white',cursor: 'pointer'}).add().shadow(true);
 	                    	}else{
 	                    		ren.label(arry_project_name[i].name, arry_label_location[i].x, arry_label_location[i].y).attr({fill: add_color(current_node,i),stroke: 'white','stroke-width': 2,padding: 10,r: 5}).css({color: 'white',}).add().shadow(true);
@@ -140,11 +150,12 @@ function create_chart(n,object){
 	            }
 	        },
 	        title: {
-	            text: '简易流程'
+	            text: name
 	        }
 	            
 	    });
-	  break;
+	    $(".highcharts-container").find("g").find("rect").attr("width","88");
+	    break;
 	  }
 	
 case 3:{
@@ -165,8 +176,23 @@ case 3:{
 
 	                    //定义项目流程
 	                    for(var i=0;i<arry_project_names.length;i++){
-	                    	if(arry_project_names[i].child=='yes'){
-	                    		ren.label(arry_project_names[i].name+"(*)", arry_label_location[i].x, arry_label_location[i].y).attr({fill: add_color(current_node,i),stroke: 'white','stroke-width': 2,padding: 10,r: 5}).on('click',function(){create_chart(1,this);}).css({color: 'white',cursor:'pointer'}).add().shadow(true);
+	                    	if(arry_project_names[i].child!=''){
+	                    		if(arry_project_names[i].child=='0'){
+	                    			ds = add_color_s(current_node,i);
+	                    			ren.label(arry_project_names[i].name+"(*)", arry_label_location[i].x, arry_label_location[i].y).attr({fill: add_color(current_node,i),stroke: 'white','stroke-width': 2,padding: 10,r: 5}).on('click',function(){create_chart(1,this,arry_names[0],arry_fb,ds);}).css({color: 'white',cursor:'pointer'}).add().shadow(true);
+	                    		}
+	                    		if(arry_project_names[i].child=='1'){
+	                    			dss = add_color_s(current_node,i);
+	                    			ren.label(arry_project_names[i].name+"(*)", arry_label_location[i].x, arry_label_location[i].y).attr({fill: add_color(current_node,i),stroke: 'white','stroke-width': 2,padding: 10,r: 5}).on('click',function(){create_chart(1,this,arry_names[1],arry_kc,dss);}).css({color: 'white',cursor:'pointer'}).add().shadow(true);
+	                    		}
+	                    		if(arry_project_names[i].child=='2'){
+	                    			dsss = add_color_s(current_node,i);
+	                    			ren.label(arry_project_names[i].name+"(*)", arry_label_location[i].x, arry_label_location[i].y).attr({fill: add_color(current_node,i),stroke: 'white','stroke-width': 2,padding: 10,r: 5}).on('click',function(){create_chart(1,this,arry_names[2],arry_sg,dsss);}).css({color: 'white',cursor:'pointer'}).add().shadow(true);
+	                    		}
+	                    		if(arry_project_names[i].child=='3'){
+	                    			dsd = add_color_s(current_node,i);
+	                    			ren.label(arry_project_names[i].name+"(*)", arry_label_location[i].x, arry_label_location[i].y).attr({fill: add_color(current_node,i),stroke: 'white','stroke-width': 2,padding: 10,r: 5}).on('click',function(){create_chart(1,this,arry_names[3],arry_jl,dsd);}).css({color: 'white',cursor:'pointer'}).add().shadow(true);
+	                    		}
 	                    	}else{
 	                    		ren.label(arry_project_names[i].name, arry_label_location[i].x, arry_label_location[i].y).attr({fill: add_color(current_node,i),stroke: 'white','stroke-width': 2,padding: 10,r: 5}).css({color: 'white',}).add().shadow(true);
 	                    	}
@@ -199,16 +225,16 @@ case 3:{
 						for(var i=0;i<arry_titles.length;i++){
 							ren.label(arry_titles[i], arry_title_locations[i].x,arry_title_locations[i].y).css({fontSize: '10px',color: add_color_font(current_node,i)}) .add();
 						}
-						
 	                }
 	            }
 	        },
 	        title: {
-	            text: '复杂流程'
+	            text: name
 	        }
 	            
 	    });
-	  break;
+	    $(".highcharts-container").find("g").find("rect").attr("width","88");
+	    break;
 	  }
 	default:
 	  break;
@@ -217,7 +243,7 @@ case 3:{
 	$(".highcharts-button").find("path").hide();
 	$("#container").find(".highcharts-container").append("<a class='highcharts-buttons' onclick='close_div()'></a>");
 	$("#search_project_value").find(".highcharts-container").append("<a class='highcharts-buttons' onclick='close_divs()'></a>");
-	$(".highcharts-container").find("g").find("rect").attr("width","88");
+	
 	$(".highcharts-tooltip").next("text").hide();
 }
 
@@ -231,6 +257,14 @@ function add_color(n,i){
 		}
 	}
 	if(i>n){
+		return '#bab6b3';
+	}
+}
+
+function add_color_s(n,i){
+	if(i<n){
+		return '#8bbc21';
+	}else if(i>n){
 		return '#bab6b3';
 	}
 }

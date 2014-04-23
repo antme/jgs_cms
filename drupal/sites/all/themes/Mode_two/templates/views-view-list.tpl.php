@@ -116,4 +116,9 @@ $style_name=""
 				 <?php endforeach; ?>
 	        </ul>
 	    </div>
+	    <?php if ($pager): ?>
+    <div class="pager-header">
+      <?php print $pager; ?>
+    </div>
+<?php endif; ?>
 <?php endif?>
