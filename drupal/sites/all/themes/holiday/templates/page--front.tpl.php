@@ -216,7 +216,7 @@
                           <li class="li_style_p">
                              <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/user.png" /></span>
                              <span><?php print l($user->name,'user/'.$user->uid); ?>&nbsp;</span>
-                             <span class="logout"><?php print l("退出","user/logout"); ?></span>
+                             <span class="logout"><?php print l("退出","https://www.hkjgzx.sh.cn/logout?service=http://www.hkjgzx.sh.cn/user/logout"); ?></span>
                               <span><a href="#" class="info_img">进入信息系统</a></span>
                           </li>
                           
@@ -295,7 +295,7 @@
                 <div class="box5" style="padding-bottom:13px;margin-bottom:10px;height:auto;">
                     <div class="title"><span class="txt">用户中心</span></div>
                     <div class="login_info">
-                        <a class="login_a" href="https://www.hkjgzx.sh.cn/login?locale=zh_CN&embed=true&service=www.hkjgzx.sh.cn">登录</a>
+                        <a class="login_a" href="https://www.hkjgzx.sh.cn/login?service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode">登录</a>
                         <a class="login_a" href="">注册</a>
                         <a class="login_a" href="">忘记密码</a>
                     </div>
