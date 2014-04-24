@@ -294,7 +294,9 @@
                <?php else:?>
                 <div class="box5" style="padding-bottom:13px;margin-bottom:10px;height:auto;">
                     <div class="title"><span class="txt">用户登录</span></div>
-                    <iframe id="login" width="268" height='263' scrolling="no" frameborder="0" allowtransparency="true" src="https://www.hkjgzx.sh.cn/login?locale=zh_CN&embed=true"></iframe>
+                    <a href="https://www.hkjgzx.sh.cn/login?locale=zh_CN&embed=true&service=www.hkjgzx.sh.cn">登录</a>
+                    <a href="">注册</a>
+                    <a href="">忘记密码</a>
                 </div>
                <?php endif; ?>
                <?php print render($page['right']); ?>

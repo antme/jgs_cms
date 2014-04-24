@@ -144,12 +144,8 @@ a.white:hover {
     width: 950px;
 }
 .box1 {
-    border-bottom: 1px solid #DADADA;
-    border-left: 1px solid #DADADA;
-    border-right: 1px solid #DADADA;
-    float: left;
     height: 218px;
-    width: 378px;
+    width: 340px;
     margin-left: 10px;
 }
 .box1 .title {
@@ -174,7 +170,7 @@ a.white:hover {
 }
 .box1 ul {
     float: left;
-    width: 378px;
+    width: 340px;
 }
 .box1 ul li {
     display: inline;
@@ -1818,3 +1814,10 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 	padding:10px 0px 4px 0px;
 	text-align:center;
 }
+#quicktabs-jb_xw{
+	flaot:right;
+	width:368px;
+}
+
+
+
