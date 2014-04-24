@@ -45,7 +45,7 @@
  */
 ?>
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <div class="titlesd"><span class="txt"><?php print $block->subject ?></h3></span></div>
+  <div class="titlesd"><span class="txt"><?php print $block->subject ?></span></div>
   <div class="content"<?php print $content_attributes; ?>>
     <?php print $content ?>
   </div>

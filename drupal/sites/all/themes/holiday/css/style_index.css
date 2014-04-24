@@ -1766,13 +1766,6 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 	border-left: 1px solid #aaa;
     border-right: 1px solid #aaa;
 }
-#block-quicktabs-gsgg-tabs .titlesd{
-	background: url("/sites/all/themes/holiday/images/titlebg3.jpg") repeat-x;
-    border-left: 1px solid #CDCDCD;
-    border-right: 1px solid #CDCDCD;
-    height: 28px;
-    width:258px;
-}
 #block-quicktabs-gsgg-tabs .titlesd .txt{
 	float: left;
     font-weight: bold;

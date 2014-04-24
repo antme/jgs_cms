@@ -132,6 +132,13 @@ function ass(){
 		height:24px;
 		background:url(/sites/all/themes/holiday/images/pic5.jpg) no-repeat;
 		}
+		#block-quicktabs-gsgg-tabs .titlesd{
+		background: url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
+    	border-left: 1px solid #CDCDCD;
+    	border-right: 1px solid #CDCDCD;
+    	height: 28px;
+    	width:258px;
+		}
   </style>
   <!-- 五一 -->
 <?php elseif(theme_get_setting("holiday_theme_style")=="holiday_labour_day"):?>
@@ -179,6 +186,13 @@ function ass(){
 		width:100%;
 		height:24px;
 		background:url(/sites/all/themes/holiday/images/pic5.jpg) no-repeat;
+		}
+		#block-quicktabs-gsgg-tabs .titlesd{
+		background: url("/sites/all/themes/holiday/images/titlebg4.jpg") repeat-x;
+    	border-left: 1px solid #CDCDCD;
+    	border-right: 1px solid #CDCDCD;
+    	height: 28px;
+    	width:258px;
 		}
   </style>
 <!-- 春节 -->
@@ -228,6 +242,13 @@ function ass(){
 		height:24px;
 		background:url(/sites/all/themes/holiday/images/pic5.jpg) no-repeat;
 		}
+		#block-quicktabs-gsgg-tabs .titlesd{
+		background: url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
+    	border-left: 1px solid #CDCDCD;
+    	border-right: 1px solid #CDCDCD;
+    	height: 28px;
+    	width:258px;
+		}
   </style>
 <!-- 默认皮肤 -->
 <?php elseif(theme_get_setting("holiday_theme_style")=="holiday_default" || theme_get_setting("holiday_theme_style")==NULL):?>
@@ -275,6 +296,13 @@ function ass(){
 		width:100%;
 		height:24px;
 		background:url(/sites/all/themes/holiday/images/pic6.jpg) no-repeat;
+		}
+		#block-quicktabs-gsgg-tabs .titlesd{
+		background: url("/sites/all/themes/holiday/images/titlebg3.jpg") repeat-x;
+    	border-left: 1px solid #CDCDCD;
+    	border-right: 1px solid #CDCDCD;
+    	height: 28px;
+    	width:258px;
 		}
       </style>
 <?php endif;?>
