@@ -87,7 +87,8 @@
                      "<span class='wc'>完成度"+w+"%</span>"+
                      "</div>"+
                      "<label class='project_time_info'>审批总时限："+n+"天，实际用时："+m+"天。<br>相对人办理预计总时间"+x+"天，实际用时："+y+"天</label>"+
-                     "<div class='project_title_name'><a href='##' target='_blank'>"+name+"</a></div>"
+                     "<div class='project_title_name'><a href='##' target='_blank'>"+name+"</a></div>"+
+                     "<a class='highcharts-buttons' onclick='close_divs()'></a>"+
                      "</div>";
 
              $(".search_project_div").after(stt);

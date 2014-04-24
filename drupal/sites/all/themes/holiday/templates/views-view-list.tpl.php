@@ -68,7 +68,7 @@ $add_more=false;
 	<?php if($view->name=="jgyw" || $view->name=="xw_view"):?>
 	
 	    <?php if ($is_front):?>
-	         <?php $class_name = "box1"; $ul_style="ul_style";$display_title=false; ?>
+	         <?php $class_name = "box1"; $ul_style="ul_style";$display_title=false; $display_bottom=true;?>
 	    <?php else :?>
 	         <?php $has_more=false; ?>
 	    <?php endif;?>
@@ -138,10 +138,9 @@ $add_more=false;
 			</div>
 			<?php endif;?>
 	        <ul class="<?php print $ul_style;?>">
-				<?php foreach ($rows as $id => $row): ?>
+				 <?php foreach ($rows as $id => $row): ?>
 				    <li class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></li>
 				 <?php endforeach; ?>
-				 
 	        </ul>
 	        <?php if($display_bottom): ?>
 	        <div class="title">

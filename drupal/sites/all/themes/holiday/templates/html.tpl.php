@@ -56,7 +56,7 @@
 jQuery(function($){
     $('.slideBox').slideBox({
         duration : 0.3,//滚动持续时间，单位：秒
-        easing : 'linear',//swing,linear//滚动特效
+        easing : 'swing',//swing,linear//滚动特效
         delay : 5,//滚动延迟时间，单位：秒
         hideClickBar : false,//不自动隐藏点选按键
         clickBarRadius : 10
@@ -95,7 +95,7 @@ function ass(){
  	     background:url(/sites/all/themes/holiday/images/back3.jpg) no-repeat;
          height:200px;
       }
-	  .box5 .title,.box1 .title,.box5 h1,.box3 .title{
+	  .box5 .title,.box5 h1,.box3 .title{
  	  background: url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
  	  height:30px;
       }
@@ -150,7 +150,7 @@ function ass(){
  	     background:url(/sites/all/themes/holiday/images/back4.jpg) no-repeat;
          height:200px;
       }
-	  .box5 .title,.box1 .title,.box5 h1,.box3 .title{
+	  .box5 .title,.box5 h1,.box3 .title{
  	  background: url("/sites/all/themes/holiday/images/titlebg4.jpg") repeat-x;
  	  height:30px;
       }
@@ -205,7 +205,7 @@ function ass(){
  	     background:url(/sites/all/themes/holiday/images/back.jpg) no-repeat;
          height:200px;
       }
-	  .box5 .title,.box1 .title,.box5 h1,.box3 .title{
+	  .box5 .title,.box5 h1,.box3 .title{
  	  background: url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
  	  height:30px;
       }
@@ -260,7 +260,7 @@ function ass(){
  		 background:url(/sites/all/themes/holiday/images/back2.jpg) no-repeat;
  		 height:200px;
 		}
-		.box5 .title,.box1 .title,.box5 h1,.box3 .title{
+		.box5 .title,.box5 h1,.box3 .title{
 		background: url("/sites/all/themes/holiday/images/titlebg3.jpg") repeat-x ;
   		height:30px;
 		}

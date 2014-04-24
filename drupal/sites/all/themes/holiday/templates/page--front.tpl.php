@@ -293,10 +293,12 @@
                   </div>
                <?php else:?>
                 <div class="box5" style="padding-bottom:13px;margin-bottom:10px;height:auto;">
-                    <div class="title"><span class="txt">用户登录</span></div>
-                    <a href="https://www.hkjgzx.sh.cn/login?locale=zh_CN&embed=true&service=www.hkjgzx.sh.cn">登录</a>
-                    <a href="">注册</a>
-                    <a href="">忘记密码</a>
+                    <div class="title"><span class="txt">用户中心</span></div>
+                    <div class="login_info">
+                        <a class="login_a" href="https://www.hkjgzx.sh.cn/login?locale=zh_CN&embed=true&service=www.hkjgzx.sh.cn">登录</a>
+                        <a class="login_a" href="">注册</a>
+                        <a class="login_a" href="">忘记密码</a>
+                    </div>
                 </div>
                <?php endif; ?>
                <?php print render($page['right']); ?>

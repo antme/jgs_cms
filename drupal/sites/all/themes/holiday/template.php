@@ -176,5 +176,5 @@ function holiday_form_alter(&$form, &$form_state, $form_id) {
 }
 function holiday_form_id_submit_handler($form, &$form_state) {
 	//redirect to this path
-	$form_state['redirect'] = 'node/137';
+	$form_state['redirect'] = 'node/submitted_successfully';
 }

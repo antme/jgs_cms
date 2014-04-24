@@ -35,9 +35,8 @@ Other variables:
 
 ?>
 
-	<?php if ($element["#bundle"] == "cwgz" && $element['#field_name']=="field_face_view"):?>	 
+	<?php if ($element["#bundle"] == "cwgz" && $element['#field_name']=="field_face_view"):?>	
 	   	 <?php foreach ($items as $id => $item): ?>	   	 
-	   	         
 	   	 	    <?php $value = $item["#markup"];?>	   	 	    
 	   	 	    <?php if ($value == "笑脸"):?>
 	   	 	    	<span><img width="24px" height="24px" src="/sites/all/themes/Mode_two/images/xiao.jpg" /></span>
@@ -45,6 +44,9 @@ Other variables:
 	   	 	        <span><img width="24px" height="24px" src="/sites/all/themes/Mode_two/images/ku.jpg" /></span>
 	   	 	    <?php endif;?>
 	   	 <?php endforeach;?>
+	   	 <script>
+	   	      $(".view-cwgz-view").find(".views-row").find(".field-content").find("a").attr('href','##');
+	   	 </script>
 	<?php else:?>		
 		  	 <?php foreach ($items as $id => $item): ?>	 
 		  	 		<?php print $item["#markup"];?>

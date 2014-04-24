@@ -242,8 +242,6 @@ case 3:{
 	$(".highcharts-button").find("rect").hide();
 	$(".highcharts-button").find("path").hide();
 	$("#container").find(".highcharts-container").append("<a class='highcharts-buttons' onclick='close_div()'></a>");
-	$("#search_project_value").find(".highcharts-container").append("<a class='highcharts-buttons' onclick='close_divs()'></a>");
-	
 	$(".highcharts-tooltip").next("text").hide();
 }
 
@@ -262,7 +260,7 @@ function add_color(n,i){
 }
 
 function add_color_s(n,i){
-	if(i<n){
+	if(i<=n){
 		return '#8bbc21';
 	}else if(i>n){
 		return '#bab6b3';
