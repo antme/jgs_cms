@@ -1880,3 +1880,9 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 	margin-left:30px;
 	margin-top:10px;
 }
+.content_style .clearfix p.rteright{
+	text-align:right;
+}
+.content_style .clearfix .devel-themer-wrapper{
+	display:none;
+}
