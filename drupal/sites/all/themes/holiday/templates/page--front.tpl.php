@@ -295,7 +295,7 @@
                 <div class="box5" style="padding-bottom:13px;margin-bottom:10px;height:auto;">
                     <div class="title"><span class="txt">用户中心</span></div>
                     <div class="login_info">
-                        <a class="login_a" href="https://www.hkjgzx.sh.cn/login?service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode">登录</a>
+                        <a class="login_a" href="https://www.hkjgzx.sh.cn/login?service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode&locale=zh_CN">登录</a>
                         <a class="login_a" href="">注册</a>
                         <a class="login_a" href="">忘记密码</a>
                     </div>
