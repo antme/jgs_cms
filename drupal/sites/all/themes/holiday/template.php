@@ -178,3 +178,22 @@ function holiday_form_id_submit_handler($form, &$form_state) {
 	//redirect to this path
 	$form_state['redirect'] = 'node/submitted_successfully';
 }
+
+
+function getMisUser(){
+	if(strpos($user->session, "USER_TYPE_NAME施工单位") >=0){
+		
+		return "施工单位";
+	}
+	if(strpos($user->session, "USER_TYPE_NAME监理单位") >=0){
+	
+		return "监理单位";
+	}
+	if(strpos($user->session, "USER_TYPE_NAME建设单位") >=0){
+	
+		return "建设单位";
+	}
+	
+	return "内部用户";
+	
+}
