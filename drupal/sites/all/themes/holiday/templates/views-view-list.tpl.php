@@ -87,10 +87,13 @@ $add_more=false;
 	         <?php $has_more=false; $add_more=true;?>
 	    <?php endif;?>
 	
-	 <?php elseif($view->name=="gsgg_view" || $view->name=="ztbxx_view" || $view->name=="qualification_view") : ?>
-
-             <?php $class_name = "part3"; $ul_style="ul_style";$display_title=false;$display_bottom=true; ?>
-
+	 <?php elseif($view->name=="gsgg_view" || $view->name=="ztbxx_view" || $view->name=="qualification_view") : ?>             
+        <?php if ($is_front):?>
+               <?php $class_name = "part3"; $ul_style="ul_style";$display_title=false;$display_bottom=true; ?>
+	    <?php else :?>
+	         <?php $has_more=false; $add_more=true;?>
+	    <?php endif;?>
+	    
 	 <?php elseif($view->name=="announcement_view") : ?>
 
 	    <?php if ($is_front):?>
@@ -145,7 +148,11 @@ $add_more=false;
 	        <?php if($display_bottom): ?>
 	        <div class="title">
 	    	     <?php if ($has_more): ?>
-	             	<span class="more"><a href="node/<?php print $view->name?>">更多</a></span> 
+	    	        <?php if ($is_front):?>
+	             	  <span class="more"><a href="node/<?php print $view->name?>">更多</a></span> 
+	             	<?php else:?>
+	             	   <span class="more"><a href="<?php print $view->name?>">更多</a></span>
+	             	<?php endif;?>
 	             <?php endif;?>
 			</div>
 			<?php endif;?>
