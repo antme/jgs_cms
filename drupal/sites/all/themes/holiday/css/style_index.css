@@ -1385,7 +1385,7 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 
 .main-menu-fix{
     position:fixed;
-    top:30px;
+    top:0px;
     z-index:9999;
     width:1000px;
 }

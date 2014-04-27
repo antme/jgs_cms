@@ -65,11 +65,17 @@ jQuery(function($){
 function ass(){
 	  if($(document).scrollTop()>200){
 		  <?php global $user;?>
-		  <?php if($user ->uid):?>
-			  $("#main-menu").addClass("main-menu-fix");
+		  <?php if($user ->name):?>
+		      $("#main-menu").addClass("main-menu-fix");
 		  <?php else: ?>
 		      $("#main-menu").addClass("main-menu-fix2");
 		  <?php endif;?>
+		  if($(".region-page-top")==null || $(".region-page-top")=="" || $(".region-page-top")=='undefind'){
+			  
+		  }else{
+			  $(".main-menu-fix").css("top","30px");
+		  }
+
 		  $(".return_top").css("display","inline-block");
   	     
       }else if($(document).scrollTop()<200){
