@@ -58,4 +58,3 @@ Other variables:
 	   	 <?php endforeach;?>
 
 	<?php endif;?>
-	

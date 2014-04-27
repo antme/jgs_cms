@@ -20,9 +20,7 @@ $display_bottom=false;
 $add_more=false;
 ?>
 <?php if($view->name=="slide_images_view") : ?>
-    <?php if($user->uid): ?>
-   
-    <?php else: ?>
+
         <div class="box2 ">
         <div id="demo3" class="slideBox">
             <ul class="items">
@@ -32,7 +30,7 @@ $add_more=false;
             </ul>
        </div>        
     </div>
-    <?php endif;?>	    
+    
 	    
 <?php elseif($view->name=="notice_view") : ?>
     <div class="box_top">

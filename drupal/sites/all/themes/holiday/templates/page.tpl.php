@@ -120,7 +120,7 @@
         )); ?>
       </div> <!-- /#main-menu -->
     <?php endif; ?>
-
+    <?php print render($page['notice']);?>
     
 
   </div></div> <!-- /.section, /#header -->
