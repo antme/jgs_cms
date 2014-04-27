@@ -54,7 +54,7 @@
 	     var int_value = $(".comm_style").find("div").find("div").find(".menu");
 		 $(int_value).parent().hide();
 		 $('.left_menu_style').find('li:first').addClass("li_action");
-		 $('.left_menu_style').find('li').find("a").attr("href","##");
+		 $('.left_menu_style').find('li').find("a").removeAttr("href");
 		 $(".comm_style").find(".region-left-f").append("<div class='block block-menu search_project'></div>");
 		 var str="<div class='search_project_div menu'><input class='text_inputs' type='text' value='请输入项目报建编号'/><button class='search_btn'>查询</button></div>"+
 		         "<div id='search_project_value' style='width:540px;height:auto;overflow:hidden;'></div>"
