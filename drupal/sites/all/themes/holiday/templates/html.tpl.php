@@ -65,7 +65,7 @@ jQuery(function($){
 function ass(){
 	  if($(document).scrollTop()>200){
 		  <?php global $user;?>
-		  <?php if($user ->name):?>
+		  <?php if(isset($user ->name)):?>
 		      $("#main-menu").addClass("main-menu-fix");
 		  <?php else: ?>
 		      $("#main-menu").addClass("main-menu-fix2");
