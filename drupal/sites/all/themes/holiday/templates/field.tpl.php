@@ -39,17 +39,12 @@ Other variables:
 	   	 <?php foreach ($items as $id => $item): ?>	   	 
 	   	 	    <?php $value = $item["#markup"];?>	   	 	    
 	   	 	    <?php if ($value == "笑脸"):?>
-	   	 	    	<span><img width="24px" height="24px" src="/sites/all/themes/Mode_two/images/xiao.jpg" /></span>
+	   	 	    	<span><img style='vertical-align:middle' width="24px" height="24px" src="/sites/all/themes/holiday/images/xiao.jpg" /></span>
 	   	 	    <?php else:?>
-	   	 	        <span><img width="24px" height="24px" src="/sites/all/themes/Mode_two/images/ku.jpg" /></span>
+	   	 	        <span><img style='vertical-align:middle' width="24px" height="24px" src="/sites/all/themes/holiday/images/ku.jpg" /></span>
 	   	 	    <?php endif;?>
 	   	 <?php endforeach;?>
-	   	 <script>
-	   	      var strings="<li class='views-row'><img style='vertical-align:middle' width='24px' height='24px' src='/sites/all/themes/Mode_two/images/xiao.jpg' /><span class='span_style' style='color:#aaa'>代表在创卫工作中表现合格</span></li>"+
-	   	                  "<li class='views-row'><img style='vertical-align:middle' width='24px' height='24px' src='/sites/all/themes/Mode_two/images/ku.jpg' /><span class='span_style' style='color:#aaa'>代表在创卫工作中表现不合格</span></li>";
-	   	      $(".view-cwgz-view").find(".views-row").find(".field-content").find("a").attr('href','##');
-	   	      $(".view-cwgz-view").find(".views-row-last").after(strings)
-	   	 </script>
+	
 	<?php else:?>		
 		  	 <?php foreach ($items as $id => $item): ?>	 
 		  	 		<?php print $item["#markup"];?>
