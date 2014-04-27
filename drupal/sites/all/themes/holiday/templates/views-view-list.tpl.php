@@ -88,12 +88,7 @@ $add_more=false;
 	    <?php endif;?>
 	
 	 <?php elseif($view->name=="gsgg_view" || $view->name=="ztbxx_view" || $view->name=="qualification_view") : ?>             
-        <?php if ($is_front):?>
                <?php $class_name = "part3"; $ul_style="ul_style";$display_title=false;$display_bottom=true; ?>
-	    <?php else :?>
-	         <?php $has_more=false; $add_more=true;?>
-	    <?php endif;?>
-	    
 	 <?php elseif($view->name=="announcement_view") : ?>
 
 	    <?php if ($is_front):?>
