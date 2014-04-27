@@ -117,6 +117,13 @@ function holiday_process_maintenance_page(&$variables) {
  * Override or insert variables into the node template.
  */
 function holiday_preprocess_node(&$variables) {
+  global $user;
+
+  if(!$user->uid && ($variables['type'] == 'gsgg' || $variables['type'] == 'qualification' || $variables['type'] == 'ztbxx')){
+  	var_dump($variables);
+  	 
+   	header('Location: https://www.hkjgzx.sh.cn/login?service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode&locale=zh_CN'); 
+  }
   if ($variables['view_mode'] == 'full' && node_is_page($variables['node'])) {
     $variables['classes_array'][] = 'node-full';
   }
