@@ -208,7 +208,6 @@ function getMisUser(){
 
 
 function isJgsUser(){
-	var_dump(getMisUser());
 	if(getMisUser() == "内部用户"){
 		
 		return true;
