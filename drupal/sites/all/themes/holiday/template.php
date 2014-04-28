@@ -185,21 +185,24 @@ function holiday_form_alter(&$form, &$form_state, $form_id) {
 
 
 function getMisUser(){
-	if(strpos($user->session, "USER_TYPE_NAME施工单位") >=0){
+	if (isset ( $user )) {
+		if (strpos ( $user->session, "USER_TYPE_NAME施工单位" ) >= 0) {
+			
+			return "施工单位";
+		}
+		if (strpos ( $user->session, "USER_TYPE_NAME监理单位" ) >= 0) {
+			
+			return "监理单位";
+		}
+		if (strpos ( $user->session, "USER_TYPE_NAME建设单位" ) >= 0) {
+			
+			return "建设单位";
+		}
 		
-		return "施工单位";
+		return "内部用户";
+	} else {
+		return "匿名用户";
 	}
-	if(strpos($user->session, "USER_TYPE_NAME监理单位") >=0){
-	
-		return "监理单位";
-	}
-	if(strpos($user->session, "USER_TYPE_NAME建设单位") >=0){
-	
-		return "建设单位";
-	}
-	
-	return "内部用户";
-	
 }
 
 
