@@ -86,6 +86,17 @@
  */
 ?>
 
+<script type="text/javascript">
+	var userType= '<?php echo getMisUser();?>';
+
+	function checkUserType(){
+			if(userType=="匿名用户"){
+				alert("请先登录");
+				return false;
+			}
+	}
+</script>
+
 <div id="page-wrapper"><div id="page">
   <div class="top">
       <div class="top_content">
