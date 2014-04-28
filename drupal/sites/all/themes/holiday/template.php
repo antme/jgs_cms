@@ -185,6 +185,7 @@ function holiday_form_alter(&$form, &$form_state, $form_id) {
 
 
 function getMisUser(){
+	global $user;
 	if (isset ( $user )) {
 		if (strpos ( $user->session, "USER_TYPE_NAME施工单位" ) >= 0) {
 			
@@ -208,7 +209,7 @@ function getMisUser(){
 
 
 function isJgsUser(){
-	if(getMisUser() == "内部用户"){
+	if(getMisUser() == "内部用户"){		
 		return true;
 	}
 	return false;
