@@ -51,6 +51,11 @@
   </div>
   <script>
 	  $(document).ready(function(){
+
+		 $(".block-menu a").click(function(){
+			return checkUserType();
+		 });
+
 	     var int_value = $(".comm_style").find("div").find("div").find(".menu");
 		 $(int_value).parent().hide();
 		 $('.left_menu_style').find('li:first').addClass("li_action");
