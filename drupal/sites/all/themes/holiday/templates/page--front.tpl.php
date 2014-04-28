@@ -170,11 +170,7 @@
   </div></div> <!-- /.section, /#header -->
    
   <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
-      <?php if ($page['sidebar_first']): ?>
-      <div id="sidebar-first" class="column sidebar"><div class="section">
-        <?php print render($page['sidebar_first']); ?>
-      </div></div> <!-- /.section, /#sidebar-first -->
-      <?php endif; ?>
+
 	  
       <div class="content">
 	     
@@ -182,7 +178,12 @@
 		       <!--宸﹁竟绗竴鍖�-->
 		       <?php if ($page['left']): ?>
 		       <div class="part1" style="margin-top:10px;">
-               <?php print render($page['left']); ?>
+		          <?php if(isJgsUser()):?>
+		             <?php print render($page['left-gg']); ?>
+		          <?php else:?>
+		              <?php print render($page['left-img']); ?>
+		          <?php endif;?>
+                  <?php print render($page['left']); ?>
 			   </div>
 			   <?php endif; ?>
 			   <!--鏈嶅姟灞曠ず鍖�-->
