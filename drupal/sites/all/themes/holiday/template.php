@@ -201,3 +201,10 @@ function getMisUser(){
 	return "内部用户";
 	
 }
+
+
+
+function isJgsUser(){
+	
+	return getMisUser() == "内部用户";
+}
