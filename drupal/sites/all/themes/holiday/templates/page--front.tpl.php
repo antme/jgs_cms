@@ -306,9 +306,9 @@
                       </ul>
                   </div>
                <?php else:?>
-                <div class="box5" style="padding-bottom:13px;margin-bottom:10px;height:auto;">
+                <div class="box5" style="padding-bottom:13px;margin-bottom:10px;height:204px;">
                     <div class="title"><span class="txt">用户中心</span></div>
-                    <iframe src="https://www.hkjgzx.sh.cn/login?embed=true&service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode&locale=zh_CN"></iframe>
+                    <iframe style="border:0" height='180px' border="0" marginwidth="0" marginheight="0" src="https://www.hkjgzx.sh.cn/login?embed=true&service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode&locale=zh_CN"></iframe>
           
                 </div>
                <?php endif; ?>

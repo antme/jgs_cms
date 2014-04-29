@@ -1890,8 +1890,11 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 	display:none;
 }
 .node-jgyw .content p span{
-   font-size:16px;
+    font-size:16px;
 }
 #edit-advanced .form-item label,#edit-advanced .form-item input{
 	float:none;
+}
+.iframes{
+	border:0;
 }
