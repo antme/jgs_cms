@@ -86,6 +86,19 @@
  */
 ?>
 
+<script type="text/javascript">
+	var userType= '<?php echo getMisUser();?>';
+
+	function checkUserType(){
+			if(userType=="匿名用户"){
+				alert("请先登录");
+				return false;
+			}
+	}
+
+
+</script>
+
 <div id="page-wrapper"><div id="page">
   <div class="top">
       <div class="top_content">
@@ -218,7 +231,7 @@
                              <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/user.png" /></span>
                              <span><?php print l($user->name,'user/'.$user->uid); ?>&nbsp;</span>
                              <span class="logout"><?php print l("退出","https://www.hkjgzx.sh.cn/logout?service=http://www.hkjgzx.sh.cn/user/logout"); ?></span>
-                              <span><a href="http://mis.hkjgzx.sh.cn:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
+                             <span><a href="http://mis.hkjgzx.sh.cn:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
                           </li>
                           
                           <li class="li_style_p li_style_b">
@@ -295,11 +308,8 @@
                <?php else:?>
                 <div class="box5" style="padding-bottom:13px;margin-bottom:10px;height:auto;">
                     <div class="title"><span class="txt">用户中心</span></div>
-                    <div class="login_info">
-                        <a class="login_a" href="https://www.hkjgzx.sh.cn/login?service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode&locale=zh_CN">登录</a>
-                        <a class="login_a" href="">注册</a>
-                        <a class="login_a" href="">忘记密码</a>
-                    </div>
+                    <iframe src="https://www.hkjgzx.sh.cn/login?embed=true&service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode&locale=zh_CN"></iframe>
+          
                 </div>
                <?php endif; ?>
                <?php print render($page['right']); ?>
