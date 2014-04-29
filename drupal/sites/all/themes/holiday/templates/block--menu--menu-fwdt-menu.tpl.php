@@ -69,6 +69,7 @@
 			  }
 		  });
 		 $(".search_btn").click(function(){
+			 if(checkUserType()){
 			 $("#search_project_value").show();
 			 if($(".text_inputs").val()=="1402HK0033"){
 				 create_chart(2,this,'1402HK0033','','');
@@ -81,6 +82,8 @@
 			 }else{
 				 alert("请输入正确的项目报建编号！");
 			 }
+            }
+			 
 			 
 		 });
 		 function change_height(n,m,x,y,w,name){

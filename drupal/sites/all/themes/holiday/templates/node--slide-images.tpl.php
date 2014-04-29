@@ -83,20 +83,22 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
    <h2<?php print $title_attributes; ?>>
       <?php print $title; ?>
-    </h2>
-    <div style="width:316px;margin:5px auto;">
-        <img style="margin:auto;clear:both;display: inline;" width="314px" height="220px" src="/sites/default/files/<?php print $node->field_slides_images['und'][0]['filename'];?>">
-    </div>
-       
-  <div class="content clearfix"<?php print $content_attributes; ?>>
+    </h2>   
+    <div class="content clearfix"<?php print $content_attributes; ?>>
     <?php
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
       print render($content);
     ?>
-  </div>
-
+    </div>
+    <div style="width:316px;margin:5px auto;">
+        <img style="margin:auto;clear:both;display: inline;" width="314px" height="220px" src="/sites/default/files/<?php print $node->field_slides_images['und'][0]['filename'];?>">
+    </div>
+    <div style="text-align: right">
+                        发布时间：<?php $date3=date('Y-m-d H:i:s',$node->created); print $date3;?>
+    </div>
+    
   <?php
     // Remove the "Add new comment" link on the teaser page or if the comment
     // form is being displayed on the same page.

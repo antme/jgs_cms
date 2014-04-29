@@ -111,6 +111,9 @@ $add_more=false;
 	         <?php $has_more=false; ?>
 	    <?php endif;?>
 	 
+	 <?php elseif($view->name=="zcfg_fl_view" || $view->name=="zcfg_xz_view" || $view->name=="zcfg_bm_view" || $view->name=="zcfg_df_view" || $view->name=="zcfg_wj_view" ) : ?>	    
+         
+         <?php $class_name = "pages_styles"; $style_name="margin-top:0px"; ?>
 	    
 	<?php elseif($view->name=="dqtd_view") : ?>
 
@@ -147,7 +150,11 @@ $add_more=false;
 	        <div class="title">
 	    	     <?php if ($has_more): ?>
 	    	        <?php if ($is_front):?>
-	             	  <span class="more"><a href="node/<?php print $view->name?>">更多</a></span> 
+	    	           <?php if($view->name=="zcfg_view"):?>
+	    	               <span class="more"><a href="node/zcfgs">更多</a></span>
+	    	           <?php else:?>
+	             	       <span class="more"><a href="node/<?php print $view->name?>">更多</a></span> 
+	             	   <?php endif;?>
 	             	<?php else:?>
 	             	   <span class="more"><a href="<?php print $view->name?>">更多</a></span>
 	             	<?php endif;?>

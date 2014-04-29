@@ -1898,3 +1898,48 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 .iframes{
 	border:0;
 }
+.asss{
+	margin-left:10px;
+}
+#node-223{
+	display:none;
+}
+.pages_styles{
+	width:700px;
+	margin:0px 5px;
+}
+.pages_styles .title {
+	padding: 10px;
+	margin: 10px;
+	border-bottom: 2px solid #053980;
+}
+.pages_styles .title .txt{
+    font-size:16px;
+    font-weight:bold;
+}
+.pages_styles .ul_style{
+    margin: 10px;
+    border:0;
+}
+.pages_styles .ul_style .views-row .field-content{
+    float:left;
+    width:80%;
+    height:24px;
+    font-size:12px;
+    height:24px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    text-overflow: ellipsis;/* IE/Safari */
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;/* Opera */
+    -moz-binding: url("ellipsis.xml#ellipsis");/*FireFox*/
+}
+.pages_styles .ul_style .views-row .date{
+    float:right;
+}
+.pages_styles .more{
+	float:right;
+	display:block;
+	margin-top:10px;
+}

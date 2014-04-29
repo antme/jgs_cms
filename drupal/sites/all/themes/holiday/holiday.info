@@ -38,6 +38,7 @@ regions[left-f] = 服务展示区
 regions[right] = 右边展示区
 regions[hrefs] = 友情链接
 regions[user_infos] = 用户信息
+regions[node_content] = 二级页面内容
 
 settings[shortcut_module_link] = 0
 
