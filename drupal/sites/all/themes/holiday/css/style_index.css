@@ -965,8 +965,7 @@ overflow:hidden;
    padding-top:10px;
 }
 .content_style{
-   min-height:100px;
-   
+   height:auto;
 }
 
 #block-system-main .view-content .item-list ul li{
