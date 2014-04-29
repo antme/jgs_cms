@@ -69,7 +69,7 @@
 		 $(".search_btn").click(function(){
 			 $("#search_project_value").show();
 			 if($(".text_inputs").val()=="1402HK0033"){
-				 create_chart(2,this,'1402HK0035','','');
+				 create_chart(2,this,'1402HK0033','','');
 				 change_height(15,15,50,50,83,'上海市第一人民医院北部放射信息综合用房装饰装修项目');
 				 
 				 
