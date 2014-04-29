@@ -97,11 +97,6 @@
 	}
 
 
-	  $(document).ready(function(){	
-		 $("#quicktabs-container-gsgg_tabs a").click(function(){
-			return checkUserType();
-		 });
-	  });
 </script>
 
 <div id="page-wrapper"><div id="page">
