@@ -119,8 +119,7 @@ function holiday_process_maintenance_page(&$variables) {
 function holiday_preprocess_node(&$variables) {
   global $user;
 
-  if(!$user->uid && ($variables['type'] == 'gsgg' || $variables['type'] == 'qualification' || $variables['type'] == 'ztbxx')){
-  	var_dump($variables);
+  if(!$user->uid && ($variables['type'] == 'gsgg' || $variables['type'] == 'qualification' || $variables['type'] == 'ztbxx' || $variables['type'] == 'bszn')){
   	 
    	header('Location: https://www.hkjgzx.sh.cn/login?service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode&locale=zh_CN'); 
   }
