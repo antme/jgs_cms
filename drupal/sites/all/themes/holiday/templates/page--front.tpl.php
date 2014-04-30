@@ -94,6 +94,9 @@
 				alert("请先登录");
 				return false;
 			}
+
+			return true;
+
 	}
 
 

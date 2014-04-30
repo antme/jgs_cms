@@ -185,17 +185,25 @@ function holiday_form_alter(&$form, &$form_state, $form_id) {
 
 function getMisUser(){
 	global $user;
-	if (isset ( $user -> session )) {
-		if (strpos ( $user->session, "USER_TYPE_NAME施工单位" ) > 0) {	
+	if (isset ( $user)) {
+		
+		$userStr = json_encode($user);
+		
+		
+		if (strpos ( $userStr, "USER_TYPE_NAME施工单位" ) > 0) {	
 			return "施工单位";
 		}
-		if (strpos ( $user->session, "USER_TYPE_NAME监理单位" ) > 0) {
+		if (strpos ( $userStr, "USER_TYPE_NAME监理单位" ) > 0) {
 			
 			return "监理单位";
 		}
-		if (strpos ( $user->session, "USER_TYPE_NAME建设单位" ) > 0) {
+		if (strpos ( $userStr, "USER_TYPE_NAME建设单位" ) > 0) {
 			
 			return "建设单位";
+		}
+		
+		if (strpos ( $userStr, "anonymous user" ) > 0) {				
+			return "匿名用户";
 		}
 		
 		return "内部用户";
@@ -208,8 +216,9 @@ function getMisUser(){
 
 function isJgsUser(){
 	if(getMisUser() == "内部用户"){
-		
 		return true;
 	}
+	
+	
 	return false;
 }
