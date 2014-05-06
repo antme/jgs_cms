@@ -95,9 +95,20 @@
   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=bbnC2SVxid9SsKkD11vqthL4"></script>
   <div class="content">
 
-     <div style="text-indent:2em;">联系电话：021-65461010</div>
+     <div style="text-indent:2em;overflow:hidden;">
+        <ul>
+           <li class="lxwm">办公室：65461010-106</li>
+           <li class="lxwm">质量监督科：65461010-210</li>
+           <li class="lxwm">安全监督科：65461010-227</li>
+           <li class="lxwm">招投标管理科：65461010-207</li>
+           <li class="lxwm">资质资格管理科：65461010-208</li>
+           <li class="lxwm">执法监督科：65461010-110</li>
+           <li class="lxwm">业务受理科：65461010-125</li>
+           <li class="lxwm">总师室：65461010-205</li>
+        </ul>
+     </div>
      <div style="text-indent:2em;">地址：上海市虹口区唐山路570弄</div>
-     
+     <div style="text-indent:2em;">邮编：200082</div>
      <div id="allmap" style="width:600px;height:500px;margin-left:30px;"></div>
      <script type="text/javascript"> 
      var map = new BMap.Map("allmap");

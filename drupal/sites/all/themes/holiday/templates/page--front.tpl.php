@@ -231,14 +231,14 @@
                       <div class="title"><span class="txt">欢迎登录虹口区建筑业管理中心</span></div>
                       <ul class="ul_style">
                           <li class="li_style_p">
-                             <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/user.png" /></span>
+                             <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/user.gif" /></span>
                              <span><?php print l($user->name,'user/'.$user->uid); ?>&nbsp;</span>
                              <span class="logout"><?php print l("退出","https://www.hkjgzx.sh.cn/logout?service=http://www.hkjgzx.sh.cn/user/logout"); ?></span>
                              <span><a href="http://mis.hkjgzx.sh.cn:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
                           </li>
                           
                           <li class="li_style_p li_style_b">
-                             <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/dbsx.png"/></span>
+                             <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/dbsx.gif"/></span>
                              <span><a href="#">待办事项</a></span>
                           </li>
                           <li>
@@ -311,7 +311,7 @@
                <?php else:?>
                 <div class="box5" style="padding-bottom:13px;margin-bottom:10px;height:204px;">
                     <div class="title"><span class="txt">用户中心</span></div>
-                    <iframe style="border:0" height='155px' border="0" border="none" marginwidth="0" marginheight="0" src="https://www.hkjgzx.sh.cn/login?embed=true&service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode&locale=zh_CN"></iframe>
+                    <iframe style="border:0;border:none;overflow-x: hidden" frameborder="no" scrolling="yes" height='160px' border="0" border="none" marginwidth="0" marginheight="0" src="https://www.hkjgzx.sh.cn/login?embed=true&service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode&locale=zh_CN"></iframe>
                     <div style="margin-left:40px;margin-top:-10px;">
                         <a style="cursor:pointer;">注册</a>&nbsp;&nbsp;<a style="cursor:pointer;">忘记密码</a>
                     </div>
@@ -325,7 +325,7 @@
 				   <a href="/node/add/suggestion" class="wsyjx"></a>
                </div>               
 		   </div>
-           <a class="return_top" href="#top"></a>
+           
 	 </div>
 	  <?php if ($page['hrefs']): ?>
 		     <div class="content" style="margin-bottom:10px;">
@@ -341,7 +341,7 @@
     <?php endif; ?>
 
   </div> <!-- /.section, /#footer-wrapper -->
-
+  <a class="return_top" href="#top"></a>
 </div> <!-- /#page, /#page-wrapper -->
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>

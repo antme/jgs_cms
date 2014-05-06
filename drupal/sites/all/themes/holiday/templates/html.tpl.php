@@ -87,7 +87,9 @@ function ass(){
 		  $(".return_top").css("display","none");
       }
 }
- setInterval("ass()",10);
+window.onscroll = function () { 
+      ass();
+}
 </script>
 
  <!-- 国庆 -->
@@ -105,7 +107,7 @@ function ass(){
  	  height:30px;
       }
 		#main-menu-links{
-  		background:url(/sites/all/themes/holiday/images/menu-c3.png) repeat-x;
+  		background:url(/sites/all/themes/holiday/images/menu-c3.gif) repeat-x;
 		}
 		#main-menu-links li{
  		 
@@ -117,6 +119,7 @@ function ass(){
 		ul.quicktabs-tabs.quicktabs-style-basic{
 		background:url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
 		height:28px;
+		*+height:26px;
 		border-left:1px solid #cdcdcd;
 		border-right:1px solid #cdcdcd;
 		}
@@ -143,6 +146,7 @@ function ass(){
     	border-right: 1px solid #CDCDCD;
     	height: 28px;
     	width:258px;
+    	*+width:268px;
 		}
   </style>
   <!-- 五一 -->
@@ -172,6 +176,7 @@ function ass(){
 		ul.quicktabs-tabs.quicktabs-style-basic{
 		background:url("/sites/all/themes/holiday/images/titlebg4.jpg") repeat-x;
 		height:28px;
+		*+height:26px;
 		border-left:1px solid #cdcdcd;
 		border-right:1px solid #cdcdcd;
 		}
@@ -198,6 +203,7 @@ function ass(){
     	border-right: 1px solid #CDCDCD;
     	height: 28px;
     	width:258px;
+    	*+width:268px;
 		}
   </style>
 <!-- 春节 -->
@@ -227,6 +233,7 @@ function ass(){
 		ul.quicktabs-tabs.quicktabs-style-basic{
 		background:url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
 		height:28px;
+		*+height:26px;
 		border-left:1px solid #cdcdcd;
 		border-right:1px solid #cdcdcd;
 		}
@@ -253,6 +260,7 @@ function ass(){
     	border-right: 1px solid #CDCDCD;
     	height: 28px;
     	width:258px;
+    	*+width:268px;
 		}
   </style>
 <!-- 默认皮肤 -->
@@ -270,10 +278,10 @@ function ass(){
   		height:30px;
 		}
 		#main-menu-links{
-		  background:url(/sites/all/themes/holiday/images/menu-c2.png);
+		  background:url(/sites/all/themes/holiday/images/menu-c2.gif);
 		}
 		#main-menu-links li{
-		  background:url(/sites/all/themes/holiday/images/menu-s2.png) no-repeat left 0px;
+		  background:url(/sites/all/themes/holiday/images/menu-s2.gif) no-repeat left 0px;
 		}
 		#footer {
 		  border-top:3px solid #053980;
@@ -282,6 +290,7 @@ function ass(){
 		ul.quicktabs-tabs.quicktabs-style-basic{
 		background:url("/sites/all/themes/holiday/images/titlebg3.jpg") repeat-x;
 		height:28px;
+		*+height:26px;
 		border-left:1px solid #cdcdcd;
 		border-right:1px solid #cdcdcd;
 		}
@@ -308,6 +317,7 @@ function ass(){
     	border-right: 1px solid #CDCDCD;
     	height: 28px;
     	width:258px;
+    	*+width:268px;
 		}
       </style>
 <?php endif;?>

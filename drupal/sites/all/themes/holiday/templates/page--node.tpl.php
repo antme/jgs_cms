@@ -214,8 +214,8 @@
                <?php else:?>
                  <div class="box5" style="padding-bottom:13px;margin-bottom:10px;height:auto;">
                      <div class="title"><span class="txt">用户中心</span></div>
-                     <iframe style="border:0" height='155px' border="0" border="none" marginwidth="0" marginheight="0" src="https://www.hkjgzx.sh.cn/login?embed=true&service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode&locale=zh_CN"></iframe>
-                     <div style="margin-left:40px;margin-top:-10px;">
+                     <iframe style="border:0;border:none;overflow-x: hidden" frameborder="no" scrolling="yes" height='155px' border="0" border="none" marginwidth="0" marginheight="0" src="https://www.hkjgzx.sh.cn/login?embed=true&service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode&locale=zh_CN"></iframe>
+                     <div style="margin-left:40px;margin-top:-5px;">
                          <a style="cursor:pointer;">注册</a>&nbsp;&nbsp;<a style="cursor:pointer;">忘记密码</a>
                      </div>
                  </div>

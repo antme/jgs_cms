@@ -64,26 +64,26 @@
 
 		 
 		 $(".text_inputs").focus(function(){
-			  if($(this).val()=="请输入项目报建编号"){
+			  if($(this).val()=="请输入关键字"){
 				  $(this).attr("value","").css("color","#000");
 			  }
 		  });
 		 $(".search_btn").click(function(){
-			 if(checkUserType()){
-			 $("#search_project_value").show();
-			 if($(".text_inputs").val()=="1402HK0033"){
-				 create_chart(2,this,'1402HK0033','','');
-				 change_height(15,15,50,50,83,'上海市第一人民医院北部放射信息综合用房装饰装修项目');
+			// if(checkUserType()){
+			// $("#search_project_value").show();
+			// if($(".text_inputs").val()=="1402HK0033"){
+			//	 create_chart(2,this,'1402HK0033','','');
+			//	 change_height(15,15,50,50,83,'上海市第一人民医院北部放射信息综合用房装饰装修项目');
+			//	 
 				 
-				 
-			 }else if($(".text_inputs").val()=="1402HK0035"){
-				 create_chart(3,this,'1402HK0035','','');
-				 change_height(62,62,240,240,50,"上海市第一人民医院北部放射信息综合用房装饰装修项目");
-			 }else{
-				 alert("请输入正确的项目报建编号！");
-			 }
-            }
-			 
+			// }else if($(".text_inputs").val()=="1402HK0035"){
+			//	 create_chart(3,this,'1402HK0035','','');
+			//	 change_height(62,62,240,240,50,"上海市第一人民医院北部放射信息综合用房装饰装修项目");
+			// }else{
+			//	 alert("请输入正确的项目报建编号！");
+			// }
+            // }
+			 alert("该功能暂未开放！");
 			 
 		 });
 		 function change_height(n,m,x,y,w,name){
@@ -99,8 +99,8 @@
                      "</div>";
 
              $(".search_project_div").after(stt);
-		     var height=$("#search_project_value").find(".highcharts-container").height()+$(".project_info").height()+153;
-			 $(".bsdt").css("height",height+"px");
+		     //var height=$("#search_project_value").find(".highcharts-container").height()+$(".project_info").height()+153;
+			 //$(".bsdt").css("height",height+"px");
 		 }
 	  });
 	  $(".left_menu_style").find("li").click(function(){
@@ -116,15 +116,15 @@
 		 }else{
 			if(ss_value==0){
 				$(".search_project").show();
-				 var height=$("#search_project_value").find(".highcharts-container").height()+$(".project_info").height()+153;
-				 if($("#search_project_value").is(':hidden')){
-					 $(".bsdt").css("height","auto");
-				 }else{
-					 $(".bsdt").css("height",height+"px");
-				 }
+				 //var height=$("#search_project_value").find(".highcharts-container").height()+$(".project_info").height()+153;
+				 //if($("#search_project_value").is(':hidden')){
+				//	 $(".bsdt").css("height","auto");
+				 //}else{
+				//	 $(".bsdt").css("height",height+"px");
+				// }
 			}else{
 				$(int_value[ss_value-1]).parent().show();
-				 $(".bsdt").css("height","auto");
+				// $(".bsdt").css("height","auto");
 			}
 		 }
 	  });

@@ -107,7 +107,7 @@ a.white:hover {
 }
 .left {
     float: left;
-    width: 707px;
+    width: 708px;
 }
 .right {
     float: right;
@@ -581,7 +581,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 .mg{
 	width:233px;
     height:300px;
-    background:url(../images/mg.png) no-repeat;
+    background:url(../images/mg.gif) no-repeat;
     cursor:pointer;
 }
 .partner_li{
@@ -612,7 +612,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 	position:absolute;
 	top:0px;
 	left:70px;
-	background:url(../images/dl.png);
+	background:url(../images/dl.gif);
 }
 .dl_right{
     width:64px;
@@ -620,7 +620,7 @@ blockquote:before, blockquote:after, q:before, q:after {
     position:absolute;
     top:0px;
     right:70px;
-    background:url(../images/dl.png);
+    background:url(../images/dl.gif);
 }
 
 
@@ -650,7 +650,6 @@ blockquote:before, blockquote:after, q:before, q:after {
     float:left;
 }
 .gywm{
-	background:url(../images/gywm.png);
 	width:600px;
 	height:480px;
 }
@@ -853,7 +852,7 @@ overflow:hidden;
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    background: url("../images/buttons.png") repeat-x scroll 0 0 #FFFFFF;
+    background: url("../images/buttons.gif") repeat-x scroll 0 0 #FFFFFF;
     border-color: #E4E4E4 #D2D2D2 #B4B4B4;
     border-image: none;
     border-radius: 15px;
@@ -967,7 +966,10 @@ overflow:hidden;
 .content_style{
    height:auto;
 }
-
+.item-list{
+	_float:left;
+	_width:100%;
+}
 #block-system-main .view-content .item-list ul li{
   padding:2px 3px;
 }
@@ -1242,7 +1244,7 @@ overflow:hidden;
     _position:absolute;
     bottom:98px;
     right:88px;
-    background:url(../images/return_top.png);
+    background:url(../images/return_top.gif);
     display:none;
     
 }
@@ -1384,12 +1386,14 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 
 .main-menu-fix{
     position:fixed;
+    _position:absolute;
     top:0px;
     z-index:9999;
     width:1000px;
 }
 .main-menu-fix2{
     position:fixed;
+    _position:absolute;
     top:0px;
     z-index:9999;
     width:1000px;
@@ -1539,31 +1543,31 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
     cursor:pointer;
 }
 .user_infos .display_li_img1{
-    background:url(../images/everyday1.png) no-repeat left center;
+    background:url(../images/everyday1.gif) no-repeat left center;
 }
 .user_infos .display_li_img2{
-    background:url(../images/everyday2.png) no-repeat left center;
+    background:url(../images/everyday2.gif) no-repeat left center;
 }
 .user_infos .display_li_img3{
-    background:url(../images/everyday3.png) no-repeat left center;
+    background:url(../images/everyday3.gif) no-repeat left center;
 }
 .user_infos .display_li_img4{
-    background:url(../images/everyday4.png) no-repeat left center;
+    background:url(../images/everyday4.gif) no-repeat left center;
 }
 .user_infos .display_li_img11{
-    background:url(../images/everyday11.png) no-repeat left center;
+    background:url(../images/everyday11.gif) no-repeat left center;
     color:#fff;
 }
 .user_infos .display_li_img22{
-    background:url(../images/everyday22.png) no-repeat left center;
+    background:url(../images/everyday22.gif) no-repeat left center;
     color:#fff;
 }
 .user_infos .display_li_img33{
-    background:url(../images/everyday33.png) no-repeat left center;
+    background:url(../images/everyday33.gif) no-repeat left center;
     color:#fff;
 }
 .user_infos .display_li_img44{
-    background:url(../images/everyday44.png) no-repeat left center;
+    background:url(../images/everyday44.gif) no-repeat left center;
     color:#fff;
 }
 .display_ul_style{
@@ -1941,4 +1945,14 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 	float:right;
 	display:block;
 	margin-top:10px;
+}
+.quicktabs-tabpage .view-content{
+	border:1px solid #aaa;
+	border-top:0;
+	border-top:none;
+}
+.lxwm{
+	width:335px;
+	float:left;
+	padding-bottom:5px;
 }

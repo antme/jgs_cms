@@ -107,12 +107,9 @@
       print render($content);
     ?>
   </div>
-  <?php if($node->nid=='node-223'):?>
       <div style="text-align: right">
                            发布时间：<?php $date3=date('Y-m-d H:i:s',$node->created); print $date3;?>
       </div>
-  <?php else:?>
-  <?php endif;?>
   
     
   <?php
