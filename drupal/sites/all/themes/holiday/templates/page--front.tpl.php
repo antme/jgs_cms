@@ -234,7 +234,7 @@
                              <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/user.gif" /></span>
                              <span><?php print l($user->name,'user/'.$user->uid); ?>&nbsp;</span>
                              <span class="logout"><?php print l("退出","https://www.hkjgzx.sh.cn/logout?service=http://www.hkjgzx.sh.cn/user/logout"); ?></span>
-                             <span><a href="http://mis.hkjgzx.sh.cn:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
+                             <span style="display:none"><a href="http://mis.hkjgzx.sh.cn:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
                           </li>
                           
                           <li class="li_style_p li_style_b">
