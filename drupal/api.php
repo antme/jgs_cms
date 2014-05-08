@@ -4,7 +4,7 @@
 	$timestamp = $_GET ["timestamp"];
 	$nonce = $_GET ["nonce"];
 	
-	$token = TOKEN;
+	$token = "123456_dylan";
 	$tmpArr = array (
 			$token,
 			$timestamp,
@@ -17,6 +17,7 @@
 	if ($tmpStr == $signature) {
 		echo $_GET ["echostr"];
 	} else {
+		
 	}
 
 ?>
