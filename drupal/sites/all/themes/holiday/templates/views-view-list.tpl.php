@@ -201,7 +201,7 @@ $add_more=false;
 	    	        <?php if ($is_front):?>
 	    	           <?php if($view->name=="zcfg_view"):?>
 	    	               <span class="more"><a href="node/zcfgs">更多</a></span>
-	    	           <?php elseif ($view->name=="zxhbz_view"):?>
+	    	           <?php elseif ($view->name=="xhbz_view"):?>
 	    	               <span class="more"><a href="node/xhbzs">更多</a></span>
 	    	           <?php else:?>
 	             	       <span class="more"><a href="node/<?php print $view->name?>">更多</a></span> 
