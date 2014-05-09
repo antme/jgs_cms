@@ -134,17 +134,17 @@
                       <div class="title"><span class="txt">欢迎登录虹口区建筑业管理中心</span></div>
                       <ul class="ul_style">
                           <li class="li_style_p">
-                             <span class="user_img"><img width="20px" height="20px" src="/sites/all/themes/holiday/images/user.png" /></span>
+                             <span class="user_img"><img width="20px" height="20px" src="/sites/all/themes/holiday/images/user.gif" /></span>
                              <span><?php print l($user->name,'user/'.$user->uid); ?>&nbsp;</span>
                              <span class="logout"><?php print l("退出","user/logout"); ?></span>
                               <span style="display:none"><a href="#" class="info_img">进入信息系统</a></span>
                           </li>
                           
-                          <li class="li_style_p li_style_b">
-                             <span class="user_img"><img width="20px" height="20px" src="/sites/all/themes/holiday/images/dbsx.png"/></span>
+                          <li class="li_style_p li_style_b" style="display: none;">
+                             <span class="user_img"><img width="20px" height="20px" src="/sites/all/themes/holiday/images/dbsx.gif"/></span>
                              <span><a href="#">待办事项</a></span>
                           </li>
-                          <li>
+                          <li style="display: none;">
                               <div class="user_infos">
 	       	        				<ul class="display_ul_style">
 								    	<li class="display_info_li display_li display_li_img1">待办公文<label style="color: red;display:inline">(8)</label></li>

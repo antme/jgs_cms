@@ -30,8 +30,40 @@ $add_more=false;
             </ul>
        </div>        
     </div>
-    
-	    
+
+<?php elseif ($view->name=="presence_view"):?>
+<div class="partner">
+	    <div class="title">员工风采</div>
+           <div id="demoed">
+				<div id="indemoed">
+				<div id="demoed1">
+					<?php foreach ($rows as $id => $row): ?>
+			              <?php print $row; ?>
+			        <?php endforeach; ?>
+				</div>
+				<div id="demoed2" style="margin-left: 3px"></div>
+				</div>
+		   </div>
+		    <script type="text/javascript">
+
+				var speed=30;
+				var tabs=document.getElementById("demoed");
+				var tabs1=document.getElementById("demoed1");
+				var tabs2=document.getElementById("demoed2");
+				tabs2.innerHTML=tabs1.innerHTML;
+				
+				function Marquees(){
+				if(tabs2.offsetWidth-tabs.scrollLeft<=0)
+				tabs.scrollLeft=0;
+				else{
+					tabs.scrollLeft++;
+				}
+				}
+				var MyMars=setInterval(Marquees,speed);
+				tabs.onmouseover=function() {clearInterval(MyMars)};
+				tabs.onmouseout=function() {MyMars=setInterval(Marquees,speed)};
+			</script>
+			</div>
 <?php elseif($view->name=="notice_view") : ?>
     <div class="box_top">
          <div id="demo">
@@ -112,9 +144,22 @@ $add_more=false;
 	    <?php endif;?>
 	 
 	 <?php elseif($view->name=="zcfg_fl_view" || $view->name=="zcfg_xz_view" || $view->name=="zcfg_bm_view" || $view->name=="zcfg_df_view" || $view->name=="zcfg_wj_view" ) : ?>	    
-         
-         <?php $class_name = "pages_styles"; $style_name="margin-top:0px"; ?>
-	    
+         <?php if(drupal_get_path_alias()=='node/'+$view->name):?>
+             <?php if(drupal_get_path_alias()!='node/zcfgs'):?>
+                 <?php $has_more=false;?>
+             <?php endif;?>
+	     <?php endif;?>
+	     <?php $class_name = "pages_styles"; $style_name="margin-top:0px"; ?>
+	     
+	<?php elseif($view->name=="xhbz_df_view" || $view->name=="xhbz_qz_view") : ?>	    
+         <?php if(drupal_get_path_alias()=='node/'+$view->name):?>
+             <?php if(drupal_get_path_alias()!='node/xhbzs'):?>
+                 <?php $has_more=false;?>
+             <?php endif;?>
+	     <?php endif;?>
+	     <?php $class_name = "pages_styles"; $style_name="margin-top:0px"; ?>
+	     
+	     
 	<?php elseif($view->name=="dqtd_view") : ?>
 
 		<?php if ($is_front):?>
@@ -156,6 +201,8 @@ $add_more=false;
 	    	        <?php if ($is_front):?>
 	    	           <?php if($view->name=="zcfg_view"):?>
 	    	               <span class="more"><a href="node/zcfgs">更多</a></span>
+	    	           <?php elseif ($view->name=="zxhbz_view"):?>
+	    	               <span class="more"><a href="node/xhbzs">更多</a></span>
 	    	           <?php else:?>
 	             	       <span class="more"><a href="node/<?php print $view->name?>">更多</a></span> 
 	             	   <?php endif;?>

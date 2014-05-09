@@ -37,11 +37,13 @@ Other variables:
 
 	<?php if ($element["#bundle"] == "cwgz" && $element['#field_name']=="field_face_view"):?>	
 	   	 <?php foreach ($items as $id => $item): ?>	   	 
-	   	 	    <?php $value = $item["#markup"];?>	   	 	    
-	   	 	    <?php if ($value == "笑脸"):?>
-	   	 	    	<span><img style='vertical-align:middle' width="24px" height="24px" src="/sites/all/themes/holiday/images/xiao.jpg" /></span>
-	   	 	    <?php else:?>
-	   	 	        <span><img style='vertical-align:middle' width="24px" height="24px" src="/sites/all/themes/holiday/images/ku.jpg" /></span>
+	   	 	    <?php $value = $item["#markup"];?>
+	   	 	    <?php if($is_front):?>	 	 	    
+	   	 	    	<?php if ($value == "笑脸"):?>
+	   	 	    		<span><img style='vertical-align:middle' width="24px" height="24px" src="/sites/all/themes/holiday/images/xiao.gif" /></span>
+	   	 	    	<?php else:?>
+	   	 	      	    <span><img style='vertical-align:middle' width="24px" height="24px" src="/sites/all/themes/holiday/images/ku.gif" /></span>
+	   	 	    	<?php endif;?>
 	   	 	    <?php endif;?>
 	   	 <?php endforeach;?>
 	

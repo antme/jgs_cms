@@ -965,6 +965,7 @@ overflow:hidden;
 }
 .content_style{
    height:auto;
+   font-family: "ËÎÌו";
 }
 .item-list{
 	_float:left;
@@ -1723,6 +1724,7 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 }
 .date{
 	font-size:12px;
+	float:right;
 }
 #block-quicktabs-gsgg-tabs{
 	width:270px!important;
@@ -1955,4 +1957,29 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 	width:335px;
 	float:left;
 	padding-bottom:5px;
+}
+#bgxz{
+	padding-top:10px;
+}
+
+#demoed {
+background: #FFF;
+overflow:hidden;
+width: 996px;
+}
+#demoed img {
+border: 3px solid #F2F2F2;
+}
+#indemoed {
+float: left;
+width: 800%;
+}
+#demoed1 {
+float: left;
+}
+#demoed2 {
+float: left;
+}
+#demoed1 div,#demoed2 div{
+	float:left;
 }

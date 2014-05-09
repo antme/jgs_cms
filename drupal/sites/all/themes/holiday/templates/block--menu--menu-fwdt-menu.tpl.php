@@ -83,7 +83,7 @@
 			//	 alert("请输入正确的项目报建编号！");
 			// }
             // }
-			 alert("该功能暂未开放！");
+			 alert("该功能在开发中，敬请期待！");
 			 
 		 });
 		 function change_height(n,m,x,y,w,name){

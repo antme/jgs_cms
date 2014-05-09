@@ -237,11 +237,11 @@
                              <span style="display:none"><a href="http://mis.hkjgzx.sh.cn:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
                           </li>
                           
-                          <li class="li_style_p li_style_b">
+                          <li class="li_style_p li_style_b" style="display: none;">
                              <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/dbsx.gif"/></span>
                              <span><a href="#">待办事项</a></span>
                           </li>
-                          <li>
+                          <li style="display: none;">
                               <div class="user_infos">
 	       	        				<ul class="display_ul_style">
 								    	<li class="display_info_li display_li display_li_img1">待办公文<label style="color: red;display:inline">(8)</label></li>
@@ -327,6 +327,12 @@
 		   </div>
            
 	 </div>
+	  <?php if ($page['front_img']): ?>
+		     <div class="content" style="margin-bottom:10px;">
+		         <?php print render($page['front_img']); ?>
+			 </div>
+	  <?php endif; ?>
+	 
 	  <?php if ($page['hrefs']): ?>
 		     <div class="content" style="margin-bottom:10px;">
 		         <?php print render($page['hrefs']); ?>

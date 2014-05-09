@@ -106,12 +106,7 @@
       hide($content['links']);
       print render($content);
     ?>
-  </div>
-      <div style="text-align: right">
-                           发布时间：<?php $date3=date('Y-m-d H:i:s',$node->created); print $date3;?>
-      </div>
-  
-    
+  </div> 
   <?php
     // Remove the "Add new comment" link on the teaser page or if the comment
     // form is being displayed on the same page.

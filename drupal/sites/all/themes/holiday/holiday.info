@@ -40,6 +40,8 @@ regions[hrefs] = 友情链接
 regions[user_infos] = 用户信息
 regions[node_content] = 二级页面内容
 
+regions[front_img] = 图片展示
+
 settings[shortcut_module_link] = 0
 
 
