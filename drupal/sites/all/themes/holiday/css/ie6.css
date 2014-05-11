@@ -274,3 +274,68 @@ div.slideBox ul.items li {
     z-index:9999;
     width:1000px;
 }
+#demoed1 div,#demoed2 div{
+	float:left;
+	width:200px;
+	height:133px;
+	border:2px solid #F2F2F2;
+}
+#demoed1,#demoed2{
+	float:left;
+}
+#demoed{
+	width:996px;
+	background: none #FFFFFF;
+    overflow: hidden;
+}
+#indemoed {
+    float: left;
+    width: 800%;
+}
+.pages_styles {
+    margin: 0 5px;
+    width: 700px;
+}
+.pages_styles .title {
+    border-bottom: 2px solid #053980;
+    margin: 10px;
+    padding: 10px;
+}
+
+.pages_styles .more {
+    display: block;
+    float: right;
+    margin-top: 10px;
+}
+
+.pages_styles .title .txt {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pages_styles .ul_style {
+    border: 0 none;
+    margin: 10px;
+}
+
+.ul_style li {
+    overflow: hidden;
+}
+
+.pages_styles .ul_style li span {
+    -moz-binding: url("ellipsis.xml#ellipsis");
+    float: left;
+    font-size: 12px;
+    height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 80%;
+}
+.pages_styles .ul_style li .date {
+    float: right;
+    padding-right:5px;
+}
+.block-views-zcfg-fl-view-block,.region-content{
+	width:708px;
+}
