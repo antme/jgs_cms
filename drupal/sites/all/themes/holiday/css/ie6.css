@@ -339,3 +339,33 @@ div.slideBox ul.items li {
 .block-views-zcfg-fl-view-block,.region-content{
 	width:708px;
 }
+.node-suggestion-form, .node-workers_activist-form, .node-wshd-form {
+    margin-left: 150px;
+}
+.node-suggestion-form .form-item, .node-workers_activist-form .form-item, .node-wshd-form .form-item {
+    float: left;
+    width: 515px;
+}
+
+.node-suggestion-form .form-item .form-text, .node-workers_activist-form .form-item .form-text, .node-wshd-form .form-item .form-text {
+    float: left;
+    width: 200px;
+    margin-left:-50px;
+    height:26px;
+}
+
+.node-suggestion-form .form-item .form-textarea, .node-workers_activist-form .form-item .form-textarea, .node-wshd-form .form-item .form-textarea {
+    height: 100px !important;
+}
+
+#edit-actions {
+    padding-top: 10px;
+}
+.node-suggestion-form .form-actions, .node-workers_activist-form .form-actions, .node-wshd-form .form-actions {
+    float: left;
+    width: 435px;
+}
+
+#edit-actions input {
+    margin-left: -50px;
+}
