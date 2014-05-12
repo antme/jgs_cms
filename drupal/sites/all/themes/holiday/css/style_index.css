@@ -1718,9 +1718,10 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 .type_name{
 	float:left;
 	margin-right:4px;
+	color:#0175fd;
 }
 .box3 li .type_name span{
-	color:#006699;
+	color:#0175fd;
 }
 .date{
 	font-size:12px;
