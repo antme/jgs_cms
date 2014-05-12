@@ -1955,7 +1955,12 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 	border-top:none;
 }
 .lxwm{
-	width:335px;
+	width:300px;
+	float:left;
+	padding-bottom:5px;
+}
+.lxwm2{
+	width:350px;
 	float:left;
 	padding-bottom:5px;
 }

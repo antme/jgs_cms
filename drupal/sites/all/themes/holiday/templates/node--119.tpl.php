@@ -98,16 +98,17 @@
      <div style="text-indent:2em;overflow:hidden;">
         <ul>
            <li class="lxwm">办公室：65461010-106</li>
-           <li class="lxwm">质量监督科：65461010-210</li>
-           <li class="lxwm">安全监督科：65461010-227</li>
-           <li class="lxwm">招投标管理科：65461010-207</li>
-           <li class="lxwm">资质资格管理科：65461010-208</li>
-           <li class="lxwm">执法监督科：65461010-110</li>
+           <li class="lxwm2"><span>质量安全监督科：</span>（质量监督）65461010-210</li>
+           <li class="lxwm">&nbsp;</li>
+           <li class="lxwm2"><span style="filter:alpha(opacity=0); -moz-opacity:0; opacity:0;">质量安全监督科：</span>（安全监督）65461010-227</li>
            <li class="lxwm">业务受理科：65461010-125</li>
+           <li class="lxwm">招投标管理科：65461010-207</li>
+           <li class="lxwm">执法监督科：65461010-110</li>
+           <li class="lxwm">资质资格管理科：65461010-208</li>
            <li class="lxwm">总师室：65461010-205</li>
         </ul>
      </div>
-     <div style="text-indent:2em;">地址：上海市虹口区唐山路570弄</div>
+     <div style="text-indent:2em;">地址：上海市虹口区唐山路570弄1号</div>
      <div style="text-indent:2em;">邮编：200082</div>
      <div id="allmap" style="width:600px;height:500px;margin-left:30px;"></div>
      <script type="text/javascript"> 
