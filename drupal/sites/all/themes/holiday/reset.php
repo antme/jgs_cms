@@ -2,30 +2,39 @@
 $loginName = $_POST ["loginName"];
 $oldPass = $_POST ["oldPass"];
 $newPass = $_POST ["newPass"];
-
+$url = 'http://www.hkjgzx.sh.cn:8080/login/passSync.do'; // 此处必须为完整路径
+$header = "Content-type: application/x-www-form-urlencoded"; // 定义content-type为xml
+$ch = curl_init (); // 初始化curl
 $data = array (
 		'loginName' => $loginName,
 		'oldPass' => $oldPass,
-		'newPass' => $newPass 
+		'newPass' => $newPass
 ); // 定义参数
 
-$data = @http_build_query ( $data ); // 把参数转换成URL数据
+curl_setopt ( $ch, CURLOPT_URL, $url ); // 设置链接
 
-$aContext = array (
-		'http' => array (
-				'method' => 'POST',		
-				'header' => 'Content-type: application/x-www-form-urlencoded',				
-				'content' => $data 
-		) 
-);
+curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, 1 ); // 设置是否返回信息
 
-$cxContext = stream_context_create ( $aContext );
+curl_setopt ( $ch, CURLOPT_HTTPHEADER, $header ); // 设置HTTP头
 
-$sUrl = 'http://www.hkjgzx.sh.cn:8080/login/passSync.do'; // 此处必须为完整路径
+curl_setopt ( $ch, CURLOPT_POST, 1 ); // 设置为POST方式
 
-$d = @file_get_contents ( $sUrl, false, $cxContext );
+curl_setopt ( $ch, CURLOPT_POSTFIELDS, $data ); // POST数据
 
-header("Content-type: application/json");
-echo $d;
+$response = curl_exec ( $ch ); // 接收返回信息
+
+if (curl_errno ( $ch )) { // 出错则显示错误信息
+	
+	print curl_error ( $ch );
+}
+
+curl_close ( $ch ); // 关闭curl链接
+header ( "Content-type: application/json" );
+
+echo $response; // 显示返回信息
+
+
+
+
 
 ?>
