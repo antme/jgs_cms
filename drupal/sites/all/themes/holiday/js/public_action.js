@@ -34,7 +34,7 @@ function subimt_update(){
 	if(oldpw){
 		if(newpw){
 			if(newpw==somepw){
-				var url ='/sites/all/themes/holiday/reset.php';
+				var url ='reset.php';
 				$.ajax({
 					type:'post',
 					url:url,
