@@ -13,10 +13,8 @@ $data = @http_build_query ( $data ); // 把参数转换成URL数据
 
 $aContext = array (
 		'http' => array (
-				'method' => 'GET',
-				
-				'header' => 'Content-type: application/x-www-form-urlencoded',
-				
+				'method' => 'POST',		
+				'header' => 'Content-type: application/x-www-form-urlencoded',				
 				'content' => $data 
 		) 
 );
