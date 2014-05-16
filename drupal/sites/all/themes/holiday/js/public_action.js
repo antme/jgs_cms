@@ -34,38 +34,32 @@ function subimt_update(){
 	if(oldpw){
 		if(newpw){
 			if(newpw==somepw){
-				var url ='http://mis.hkjgzx.sh.cn:8080/login/passSync.do';
+				var url ='/sites/all/themes/holiday/reset.php';
 				$.ajax({
 					type:'post',
 					url:url,
-					dataType: 'jsonp',
-					data:'oldPass='+oldpw+'&newPass='+newpw,
-					success:function(data){
-						console.log(data.success);
-						$("#container").hide();
-					    $("#back_div").hide();
+					data:{
+						"oldPass": oldpw,
+						"newPass": newpw,
+						"loginName" :userName
 					},
-					error: function(jqXHR, textStatus, errorThrown) {
-					    	console.log("xxxxxxxxx");
-					
-					  
-					                var $iframe = $("#cas-iframe");
-					                $iframe.attr("src",url);
-					
-					                $iframe.load(function() {
-					                	console.log($iframe)
-					                });
-					               
-					            
-					
-					     
-					
-					    }
-				    });
-				$.ajaxSetup({					
-					 
-					
-					});
+					success:function(data){
+						var response = eval(data);
+						if(response[0].success==false){
+							alert(response[0].msg);
+						}else{
+							alert(response[0].msg);
+							$("#back_update").hide();
+						    $("#back_div").hide();
+						    $("#oldpw").val("");
+							$("#newpw").val("");
+							$("#somepw").val("");
+						}						
+					},
+					error: function(jqXHR, data) {
+						console.log("网络异常！");
+					}
+				   });
 
 			}else{
 				alert("两次输入的密码不一致！");
