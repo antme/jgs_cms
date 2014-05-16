@@ -21,6 +21,9 @@ function update_password(){
 function closed_all(){
 	$("#back_update").hide();
 	$("#back_div").hide();
+	$("#oldpw").val("");
+	$("#oldpw").val("");
+	$("#oldpw").val("");
 }
 
 function subimt_update(){
@@ -36,7 +39,7 @@ function subimt_update(){
 					dataType: 'jsonp',
 					data:'oldPass='+oldpw+'&newPass='+newpw,
 					success:function(data){
-						console.log(data);
+						console.log(data.success);
 						$("#container").hide();
 					    $("#back_div").hide();
 					}
