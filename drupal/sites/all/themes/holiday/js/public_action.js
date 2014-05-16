@@ -32,11 +32,11 @@ function subimt_update(){
 			if(newpw==somepw){
 				$.ajax({
 					type:'post',
-					url:'http://www.hkjgzx.sh.cn:8080/login/loginForSite.do',
+					url:'http://www.hkjgzx.sh.cn:8080/login/passSync.do',
 					dataType: 'jsonp',
 					data:'oldPass='+oldpw+'&newPass='+newpw,
 					success:function(data){
-						alert("修改成功！");
+						console.log(data);
 						$("#container").hide();
 					    $("#back_div").hide();
 					}
