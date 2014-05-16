@@ -102,6 +102,21 @@
 		     //var height=$("#search_project_value").find(".highcharts-container").height()+$(".project_info").height()+153;
 			 //$(".bsdt").css("height",height+"px");
 		 }
+
+		 $("#block-menu-menu-fwdt-project").find("li").find("a").removeAttr("href");
+		 $("#block-menu-menu-fwdt-project").find("li").find("a").click(function(){alert("该功能在开发中，敬请期待！");});
+		 $("#block-menu-menu-fwdt-user").find("li").find("a").removeAttr("href");
+		 $("#block-menu-menu-fwdt-user").find("li").find("a").click(function(){alert("该功能在开发中，敬请期待！");});
+		 
+		 var li_a = $("#block-menu-menu-cysb").find("li").find("a");
+		 $.each(li_a,function(){
+			 if($(this).text()!="申报表格下载"){
+				 $(this).removeAttr("href");
+				 $(this).click(function(){alert("该功能在开发中，敬请期待！");});
+			 }
+	     });
+		 $("#block-menu-menu-fwdt-user").find("li").find("a").click(function(){alert("该功能在开发中，敬请期待！");});
+		 
 	  });
 	  $(".left_menu_style").find("li").click(function(){
 	     $('.left_menu_style').find('li').removeClass("li_action");

@@ -234,6 +234,7 @@
                              <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/user.gif" /></span>
                              <span><?php print l($user->name,'user/'.$user->uid); ?>&nbsp;</span>
                              <span class="logout"><?php print l("退出","https://www.hkjgzx.sh.cn/logout?service=http://www.hkjgzx.sh.cn/user/logout"); ?></span>
+                             <span><a style="cursor:pointer;" onclick="update_password()" >修改密码</a></span>
                              <span style="display:none"><a href="http://mis.hkjgzx.sh.cn:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
                           </li>
                           
@@ -313,7 +314,7 @@
                     <div class="title"><span class="txt">用户中心</span></div>
                     <iframe style="border:0;border:none;overflow-x: hidden" frameborder="no" scrolling="yes" height='160px' border="0" border="none" marginwidth="0" marginheight="0" src="https://www.hkjgzx.sh.cn/login?embed=true&service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode&locale=zh_CN"></iframe>
                     <div style="margin-left:40px;margin-top:-10px;">
-                        <a style="cursor:pointer;">注册</a>&nbsp;&nbsp;<a style="cursor:pointer;">忘记密码</a>
+                        <a style="cursor:pointer;" onclick="alert('该功能暂未开放，敬请期待！');">注册</a>&nbsp;&nbsp;<a style="cursor:pointer;" onclick="alert('该功能暂未开放，敬请期待！');">忘记密码</a>
                     </div>
                 </div>
                <?php endif; ?>
@@ -354,14 +355,48 @@
 <script src="sites/all/themes/holiday/js/jquery.chart.js"></script>
 <div id="container"></div>
 <div id="back_div"></div>
+<div id="back_update">
+         <ul>
+             <li>
+                 <span class="span_style"><label>原密码：</label></span>
+                 <span class="span_style"><input id="oldpw" type="password" /></span>
+             </li>
+             <li>
+                 <span class="span_style"><label>新密码：</label></span>
+                 <span class="span_style"><input id="newpw" type="password" /></span>
+             </li>
+             <li>
+                 <span class="span_style"><label>确认密码：</label></span>
+                 <span class="span_style"><input id="somepw" type="password" /></span>
+             </li>
+             <li>
+                 <span class="span_style"><label>&nbsp;</label></span>
+                 <span class="span_style"><button onclick="subimt_update()">确定</button></span>
+                 <span class="span_style"><button onclick="closed_all()">取消</button></span>
+             </li>
+         </ul>
+</div>
 <script>
-   function close_div(){
-	    $("#container").hide();
-	    $("#back_div").hide();
-	}
-	function close_divs(){
-		$("#search_project_value").hide();
-		$(".project_info").remove();
-		$(".bsdt").css("height","auto");
-	}
+  
+
+		<?php
+		        $result = db_query('SELECT * FROM {history} where uid=:uid',array(':uid'=>$user->uid));
+		        $list = array();
+		        foreach ($result as $record) {
+		        	$list[] = t('@nid', array(
+		        			'@nid' => $record->nid,
+		        	));
+		        }  
+		?>
+		var arry_nid = <?php echo json_encode($list);?>;
+		var arry_href = $(".box3").find("li").find("span").find("a");
+		for(var i=0;i<arry_href.length;i++){
+			for( var j=0;j<arry_nid.length;j++){
+				var nodes = $(arry_href[i]).attr("href").split('/');
+				if(arry_nid[j]==nodes[2]){
+					$(arry_href[i]).css("color","#aaa");
+				}
+			}
+		}
+		
 </script>

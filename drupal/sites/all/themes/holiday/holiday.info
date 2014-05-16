@@ -13,6 +13,7 @@ stylesheets[all][] = css/colors.css
 stylesheets[print][] = css/print.css
 scripts[] = js/jquery-1.7.1.min.js
 scripts[] = js/jquery.slideBox.min.js
+scripts[] = js/public_action.js
 
 regions[header] = Header
 regions[help] = Help

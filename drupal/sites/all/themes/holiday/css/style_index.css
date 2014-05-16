@@ -1989,3 +1989,35 @@ float: left;
 #demoed1 div,#demoed2 div{
 	float:left;
 }
+#back_update{
+	position:absolute;
+	z-index:99999;
+	left:0px;
+    top:0px;
+    width:400px;
+    height:220px;
+    background-color:#fff;
+    border:2px solid #0000FF;
+    display:none;
+}
+#back_update ul{
+	margin:25px 34px;
+}
+#back_update label{
+	display:inline-block;
+	width:100px;
+	text-align:right;
+}
+#back_update li{
+	padding:5px 0px;
+}
+#back_update button{
+	width:60px;
+	height:29px;
+	text-align:center;
+	line-height:20px;
+}
+
+
+
+

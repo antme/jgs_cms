@@ -159,6 +159,21 @@ $add_more=false;
 	     <?php endif;?>
 	     <?php $class_name = "pages_styles"; $style_name="margin-top:0px"; ?>
 	     
+	<?php elseif($view->name=="wj_gwy_view" || $view->name=="wj_jjw_view" || $view->name=="wj_bw_view" || $view->name=="wj_szf_view" || $view->name=="wj_glbm_view") : ?>	    
+         <?php if(drupal_get_path_alias()=='node/'+$view->name):?>
+             <?php if(drupal_get_path_alias()!='node/zcfg_glwj'):?>
+                 <?php $has_more=false;?>
+             <?php endif;?>
+	     <?php endif;?>
+	     <?php $class_name = "pages_styles"; $style_name="margin-top:0px"; ?>
+	
+	<?php elseif($view->name=="glbm_jgb_view" || $view->name=="glbm_slzx_view" || $view->name=="glbm_scgl_view" || $view->name=="glbm_ajzz_view" ) : ?>	    
+         <?php if(drupal_get_path_alias()=='node/'+$view->name):?>
+             <?php if(drupal_get_path_alias()!='node/zcfg_glbm'):?>
+                 <?php $has_more=false;?>
+             <?php endif;?>
+	     <?php endif;?>
+	     <?php $class_name = "pages_styles"; $style_name="margin-top:0px"; ?>
 	     
 	<?php elseif($view->name=="dqtd_view") : ?>
 
@@ -177,7 +192,13 @@ $add_more=false;
 	    	        <?php if ($is_front):?>
 	             	   <span class="more"><a href="node/<?php print $view->name?>">更多</a></span> 
 	             	<?php else:?>
-	             	   <span class="more"><a href="<?php print $view->name?>">更多</a></span>
+	             	   <?php if($view->name=="zcfg_wj_view"):?>
+	             	       <span class="more"><a href="zcfg_glwj">更多</a></span>
+	             	   <?php elseif($view->name=="wj_glbm_view"):?>
+	             	       <span class="more"><a href="zcfg_glbm">更多</a></span>
+	             	   <?php else:?>
+	             	       <span class="more"><a href="<?php print $view->name?>">更多</a></span>
+	             	   <?php endif;?>
 	             	<?php endif;?>
 	             <?php endif;?>
 	             <?php if ($add_more): ?>
