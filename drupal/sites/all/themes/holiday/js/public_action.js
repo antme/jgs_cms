@@ -1,3 +1,4 @@
+
 function close_div(){
 	    $("#container").hide();
 	    $("#back_div").hide();
@@ -22,8 +23,8 @@ function closed_all(){
 	$("#back_update").hide();
 	$("#back_div").hide();
 	$("#oldpw").val("");
-	$("#oldpw").val("");
-	$("#oldpw").val("");
+	$("#newpw").val("");
+	$("#somepw").val("");
 }
 
 function subimt_update(){
@@ -33,17 +34,39 @@ function subimt_update(){
 	if(oldpw){
 		if(newpw){
 			if(newpw==somepw){
+				var url ='http://mis.hkjgzx.sh.cn:8080/login/passSync.do';
 				$.ajax({
 					type:'post',
-					url:'http://www.hkjgzx.sh.cn:8080/login/passSync.do',
+					url:url,
 					dataType: 'jsonp',
 					data:'oldPass='+oldpw+'&newPass='+newpw,
 					success:function(data){
 						console.log(data.success);
 						$("#container").hide();
 					    $("#back_div").hide();
-					}
+					},
+					error: function(jqXHR, textStatus, errorThrown) {
+					    	console.log("xxxxxxxxx");
+					
+					  
+					                var $iframe = $("#cas-iframe");
+					                $iframe.attr("src",url);
+					
+					                $iframe.load(function() {
+					                	console.log($iframe)
+					                });
+					               
+					            
+					
+					     
+					
+					    }
 				    });
+				$.ajaxSetup({					
+					 
+					
+					});
+
 			}else{
 				alert("两次输入的密码不一致！");
 			}
