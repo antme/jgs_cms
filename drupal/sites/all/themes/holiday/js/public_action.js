@@ -33,10 +33,12 @@ function subimt_update(){
 				$.ajax({
 					type:'post',
 					url:'http://www.hkjgzx.sh.cn:8080/login/passSync.do',
-					dataType: 'jsonp',
+					dataType: 'json',
 					data:'oldPass='+oldpw+'&newPass='+newpw,
 					success:function(data){
-						alert(data);
+						alert("修改成功！");
+						$("#container").hide();
+					    $("#back_div").hide();
 					}
 				    });
 			}else{
