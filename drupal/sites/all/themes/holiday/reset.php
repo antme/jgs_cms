@@ -1,7 +1,8 @@
 <?php
-$loginName = $_POST ["loginName"];
-$oldPass = $_POST ["oldPass"];
-$newPass = $_POST ["newPass"];
+
+$loginName = $_REQUEST ["loginName"];
+$oldPass = $_REQUEST ["oldPass"];
+$newPass = $_REQUEST ["newPass"];
 $url = 'http://www.hkjgzx.sh.cn:8080/login/passSync.do'; // 此处必须为完整路径
 $header = array("Content-type: application/x-www-form-urlencoded"); // 定义content-type为xml
 $ch = curl_init (); // 初始化curl
