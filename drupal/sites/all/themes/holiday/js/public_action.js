@@ -33,7 +33,7 @@ function subimt_update(){
 				$.ajax({
 					type:'post',
 					url:'http://www.hkjgzx.sh.cn:8080/login/passSync.do',
-					dataType: 'json',
+					dataType: 'jsonp',
 					data:'oldPass='+oldpw+'&newPass='+newpw,
 					success:function(data){
 						alert(data);
