@@ -88,7 +88,7 @@
 
 <script type="text/javascript">
 	var userType= '<?php echo getMisUser();?>';
-	var userName ='<?php echo $user->name;?>';
+	var userName ='<?php if(isset($user->name)) {echo $user->name;}else{echo "";}?>';
 	
 	function checkUserType(){
 			if(userType=="匿名用户"){
