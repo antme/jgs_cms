@@ -236,7 +236,7 @@
                              <span><?php print l($user->name,'user/'.$user->uid); ?>&nbsp;</span>
                              <span class="logout"><?php print l("退出","https://www.hkjgzx.sh.cn/logout?service=http://www.hkjgzx.sh.cn/user/logout"); ?></span>
                              <span><a style="cursor:pointer;" onclick="update_password()" >修改密码</a></span>
-                             <span style=""><a href="http://www.hkjgzx.sh.cn:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
+                             <span style="display:none"><a href="http://www.hkjgzx.sh.cn:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
                           </li>
                           
                           <li class="li_style_p li_style_b" style="display: none;">

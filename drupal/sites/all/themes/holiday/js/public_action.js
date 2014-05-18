@@ -57,7 +57,7 @@ function subimt_update(){
 						}						
 					},
 					error: function(jqXHR, data) {
-						console.log("网络异常！");
+						alert("网络异常！");
 					}
 				   });
 

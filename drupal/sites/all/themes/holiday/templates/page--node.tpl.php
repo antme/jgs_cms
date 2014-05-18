@@ -137,6 +137,7 @@
                              <span class="user_img"><img width="20px" height="20px" src="/sites/all/themes/holiday/images/user.gif" /></span>
                              <span><?php print l($user->name,'user/'.$user->uid); ?>&nbsp;</span>
                              <span class="logout"><?php print l("退出","user/logout"); ?></span>
+                             <span><a style="cursor:pointer;" onclick="update_password()" >修改密码</a></span>
                               <span style="display:none"><a href="#" class="info_img">进入信息系统</a></span>
                           </li>
                           
@@ -261,3 +262,25 @@
   </script>
   <?php endif;?>
 </div> <!-- /#page, /#page-wrapper -->
+<div id="back_div"></div>
+<div id="back_update">
+         <ul>
+             <li>
+                 <span class="span_style"><label>原密码：</label></span>
+                 <span class="span_style"><input id="oldpw" name="oldpw" type="password" /></span>
+             </li>
+             <li>
+                 <span class="span_style"><label>新密码：</label></span>
+                 <span class="span_style"><input id="newpw" name="newpw" type="password" /></span>
+             </li>
+             <li>
+                 <span class="span_style"><label>确认密码：</label></span>
+                 <span class="span_style"><input id="somepw" type="password" /></span>
+             </li>
+             <li>
+                 <span class="span_style"><label>&nbsp;</label></span>
+                 <span class="span_style"><button onclick="subimt_update()">确定</button></span>
+                 <span class="span_style"><button onclick="closed_all()">取消</button></span>
+             </li>
+         </ul>
+</div>
