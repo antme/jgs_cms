@@ -85,7 +85,22 @@
  * @see html.tpl.php
  */
 ?>
+<script type="text/javascript">
+	var userType= '<?php echo getMisUser();?>';
+	var userName ='<?php if(isset($user->name)) {echo $user->name;}else{echo "";}?>';
+	
+	function checkUserType(){
+			if(userType=="匿名用户"){
+				alert("请先登录");
+				return false;
+			}
 
+			return true;
+
+	}
+
+
+</script>
 <div id="page-wrapper">
 <div id="page">
   <div class="top">
