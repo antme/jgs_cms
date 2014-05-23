@@ -20,7 +20,7 @@ function find_content_form_node_admin_content_alter(&$form, &$form_state, $form_
   $form['admin']['nodes']['#weight'] = 2;
   $form['admin']['search'] = array(
     '#type' => 'fieldset',
-    '#title' => 'Search by title',
+    '#title' => '根据标题搜索',
     '#access' => TRUE,
     '#weight' => 1,
   );
@@ -32,11 +32,11 @@ function find_content_form_node_admin_content_alter(&$form, &$form_state, $form_
   );
   $form['admin']['search']['submit'] = array(
     '#type' => 'submit',
-    '#value' => 'Search',
+    '#value' => '搜索',
   );
   $form['admin']['search']['clear'] = array(
     '#type' => 'submit',
-    '#value' => 'Clear',
+    '#value' => '清空',
   );
   $form['#submit'][] = '_find_content_submit';
   if (!empty($results_array) && isset($form['admin']['nodes']['#options'])) {
