@@ -187,8 +187,9 @@ function getMisUser(){
 	global $user;
 	if (isset ( $user)) {
 		
-		$userStr = json_encode($user);
-		
+		$array = get_object_vars($user);
+	 
+		$userStr = join($array, ",");
 		
 		if (strpos ( $userStr, "USER_TYPE_NAME施工单位" ) > 0) {	
 			return "施工单位";
@@ -218,7 +219,6 @@ function isJgsUser(){
 	if(getMisUser() == "内部用户"){
 		return true;
 	}
-	
-	
+
 	return false;
 }
