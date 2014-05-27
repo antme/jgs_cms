@@ -186,10 +186,15 @@ function holiday_form_alter(&$form, &$form_state, $form_id) {
 function getMisUser(){
 	global $user;
 	if (isset ( $user)) {
+
+		if($user->uid == 0){
+			return "匿名用户";
+		}
 		
 		$array = get_object_vars($user);
-	 
-		$userStr = join($array, ",");
+		
+		$userStr = implode(",", $array);
+		
 		
 		if (strpos ( $userStr, "USER_TYPE_NAME施工单位" ) > 0) {	
 			return "施工单位";
