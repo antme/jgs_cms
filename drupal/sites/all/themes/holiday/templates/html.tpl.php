@@ -52,6 +52,7 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+  
   <script>
 jQuery(function($){
     $('.slideBox').slideBox({
@@ -76,250 +77,218 @@ function ass(){
 			  $(".main-menu-fix").css("top","30px");
 		  }
 		  $(".return_top").css("display","inline-block");
-  	     
-      }else if($(document).scrollTop()<200){
-    	  <?php global $user;?>
+	     
+  }else if($(document).scrollTop()<200){
+	  <?php global $user;?>
 		  <?php if($user ->uid):?>
 			  $("#main-menu").removeClass("main-menu-fix");
 		  <?php else: ?>
 		      $("#main-menu").removeClass("main-menu-fix2");
 		  <?php endif;?>
 		  $(".return_top").css("display","none");
-      }
+  }
 }
 window.onscroll = function () { 
-      ass();
+  ass();
 }
 </script>
- <!-- 国庆 -->
+ 
+<?php 
+$page_backs="bg3";
+$header_section="back3";
+$box5_title="titlebg2";
+$main_menu_links="menu-c3.gif";
+$footer_border="#A81400";
+$footer_back="#eee";
+$quicktabs_tabs="titlebg2";
+$pages_style="#A81400";
+$box2="tzbg";
+$title_bsdt="pic5";
+$block_quicktabs="titlebg2";
+$main_menu_links_li="";
+?>
+
+<!-- 十一   -->
 <?php if(theme_get_setting("holiday_theme_style")=="holiday_national"):?>
-  <style type="text/css">
-      #page{
-         background:#ffe98c url(/sites/all/themes/holiday/images/bg3.jpg) repeat-x;
-      }
-	  #header div.section .classes{
- 	     background:url(/sites/all/themes/holiday/images/back3.jpg) no-repeat;
-         height:200px;
-      }
-	  .box5 .title,.box5 h1,.box3 .title{
- 	  background: url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
- 	  height:30px;
-      }
-		#main-menu-links{
-  		background:url(/sites/all/themes/holiday/images/menu-c3.gif) repeat-x;
-		}
-		#main-menu-links li{
- 		 
-		}
-		#footer {
- 		 border-top:2px solid #A81400;
-  		background: #eee;
-		}
-		ul.quicktabs-tabs.quicktabs-style-basic{
-		background:url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
-		height:28px;
-		*+height:26px;
-		border-left:1px solid #cdcdcd;
-		border-right:1px solid #cdcdcd;
-		}
-		.pages_style .title{
-    	padding:10px;
-    	margin:10px;
-    	border-bottom:2px solid #A81400;
-		}
-		.right .box2 {
-    	float: left;
-    	height: 218px;
-    	width: 268px;
-    	margin-top:10px;
-    	background:url(/sites/all/themes/holiday/images/tzbg.jpg) repeat-x ;
-		}
-		.title_bsdt{
-		width:100%;
-		height:24px;
-		background:url(/sites/all/themes/holiday/images/pic5.jpg) no-repeat;
-		}
-		#block-quicktabs-gsgg-tabs .titlesd{
-		background: url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
-    	border-left: 1px solid #CDCDCD;
-    	border-right: 1px solid #CDCDCD;
-    	height: 28px;
-    	width:258px;
-    	*+width:268px;
-		}
-  </style>
+
   <!-- 五一 -->
 <?php elseif(theme_get_setting("holiday_theme_style")=="holiday_labour_day"):?>
-  <style type="text/css">
-      #page{
-         background:url(/sites/all/themes/holiday/images/bg.jpg) repeat-x;
-      }
-	  #header div.section .classes{
- 	     background:url(/sites/all/themes/holiday/images/back4.jpg) no-repeat;
-         height:200px;
-      }
-	  .box5 .title,.box5 h1,.box3 .title{
- 	  background: url("/sites/all/themes/holiday/images/titlebg4.jpg") repeat-x;
- 	  height:30px;
-      }
-		#main-menu-links{
-  		background:url(/sites/all/themes/holiday/images/menu-c.jpg) repeat-x;
-		}
-		#main-menu-links li{
- 		 background:url(/sites/all/themes/holiday/images/menu-s.jpg) no-repeat left 0px;
-		}
-		#footer {
- 		 border-top:2px solid #ffc000;
-  		background: #eee;
-		}
-		ul.quicktabs-tabs.quicktabs-style-basic{
-		background:url("/sites/all/themes/holiday/images/titlebg4.jpg") repeat-x;
-		height:28px;
-		*+height:26px;
-		border-left:1px solid #cdcdcd;
-		border-right:1px solid #cdcdcd;
-		}
-		.pages_style .title{
-    	padding:10px;
-    	margin:10px;
-    	border-bottom:2px solid #A81400;
-		}
-		.right .box2 {
-    	float: left;
-    	height: 218px;
-    	width: 268px;
-    	margin-top:10px;
-    	background:url(/sites/all/themes/holiday/images/tzbg2.jpg) repeat-x ;
-		}
-		.title_bsdt{
-		width:100%;
-		height:24px;
-		background:url(/sites/all/themes/holiday/images/pic5.jpg) no-repeat;
-		}
-		#block-quicktabs-gsgg-tabs .titlesd{
-		background: url("/sites/all/themes/holiday/images/titlebg4.jpg") repeat-x;
-    	border-left: 1px solid #CDCDCD;
-    	border-right: 1px solid #CDCDCD;
-    	height: 28px;
-    	width:258px;
-    	*+width:268px;
-		}
-  </style>
+  <?php
+  $page_backs="bg";
+  $header_section="back4";
+  $box5_title="titlebg4";
+  $main_menu_links="menu-c.jpg";
+  $footer_border="#ffc000";
+  $footer_back="#eee";
+  $quicktabs_tabs="titlebg4";
+  $pages_style="#A81400";
+  $box2="tzbg2";
+  $title_bsdt="pic5";
+  $block_quicktabs="titlebg4";
+  $main_menu_links_li="background:url(/sites/all/themes/holiday/images/menu-s.jpg) no-repeat left 0px;";
+  ?>
+  
 <!-- 春节 -->
 <?php elseif(theme_get_setting("holiday_theme_style")=="holiday_spring_festival"):?>
-  <style type="text/css">
-      #page{
-         background:url(/sites/all/themes/holiday/images/bg.jpg) repeat-x;
-      }
-	  #header div.section .classes{
- 	     background:url(/sites/all/themes/holiday/images/back.jpg) no-repeat;
-         height:200px;
-      }
-	  .box5 .title,.box5 h1,.box3 .title{
- 	  background: url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
- 	  height:30px;
-      }
-		#main-menu-links{
-  		background:url(/sites/all/themes/holiday/images/menu-c.jpg) repeat-x;
-		}
-		#main-menu-links li{
- 		 background:url(/sites/all/themes/holiday/images/menu-s.jpg) no-repeat left 0px;
-		}
-		#footer {
- 		 border-top:2px solid #A81400;
-  		background: #eee;
-		}
-		ul.quicktabs-tabs.quicktabs-style-basic{
-		background:url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
-		height:28px;
-		*+height:26px;
-		border-left:1px solid #cdcdcd;
-		border-right:1px solid #cdcdcd;
-		}
-		.pages_style .title{
-    	padding:10px;
-    	margin:10px;
-    	border-bottom:2px solid #A81400;
-		}
-		.right .box2 {
-    	float: left;
-    	height: 218px;
-    	width: 268px;
-    	margin-top:10px;
-    	background:url(/sites/all/themes/holiday/images/tzbg.jpg) repeat-x ;
-		}
-		.title_bsdt{
-		width:100%;
-		height:24px;
-		background:url(/sites/all/themes/holiday/images/pic5.jpg) no-repeat;
-		}
-		#block-quicktabs-gsgg-tabs .titlesd{
-		background: url("/sites/all/themes/holiday/images/titlebg2.jpg") repeat-x;
-    	border-left: 1px solid #CDCDCD;
-    	border-right: 1px solid #CDCDCD;
-    	height: 28px;
-    	width:258px;
-    	*+width:268px;
-		}
-  </style>
+<?php
+  $page_backs="bg";
+  $header_section="back";
+  $box5_title="titlebg2";
+  $main_menu_links="menu-c.jpg";
+  $footer_border="#A81400";
+  $footer_back="#eee";
+  $quicktabs_tabs="titlebg2";
+  $pages_style="#A81400";
+  $box2="tzbg";
+  $title_bsdt="pic5";
+  $block_quicktabs="titlebg2";
+  $main_menu_links_li="background:url(/sites/all/themes/holiday/images/menu-s.jpg) no-repeat left 0px;";
+  ?>
+  
 <!-- 默认皮肤 -->
 <?php elseif(theme_get_setting("holiday_theme_style")=="holiday_default" || theme_get_setting("holiday_theme_style")==NULL):?>
-      <style type="text/css">
+  <?php
+  $page_backs="bg2";
+  $header_section="back2";
+  $box5_title="titlebg3";
+  $main_menu_links="menu-c2.gif";
+  $footer_border="#053980";
+  $footer_back="#eee";
+  $quicktabs_tabs="titlebg3";
+  $pages_style="#053980";
+  $box2="tzbg";
+  $title_bsdt="pic6";
+  $block_quicktabs="titlebg3";
+  $main_menu_links_li="background:url(/sites/all/themes/holiday/images/menu-s2.jpg) no-repeat left 0px;";
+  ?>
+<?php elseif(theme_get_setting("holiday_theme_style")=="holiday_spring"):?>
+     <?php
+  $page_backs="bg_c";
+  $header_section="back_c";
+  $box5_title="titlebg_c";
+  $main_menu_links="menu_s.jpg";
+  $footer_border="#1fd341";
+  $footer_back="#eee";
+  $quicktabs_tabs="titlebg_c";
+  $pages_style="#1fd341";
+  $box2="tzbg";
+  $title_bsdt="pic5";
+  $block_quicktabs="titlebg_c";
+  ?>
+  
+<?php elseif(theme_get_setting("holiday_theme_style")=="holiday_summer"):?>
+     <?php
+  $page_backs="bg_x";
+  $header_section="back_x";
+  $box5_title="titlebg_x";
+  $main_menu_links="menu-c2.gif";
+  $footer_border="#053980";
+  $footer_back="#eee";
+  $quicktabs_tabs="titlebg_x";
+  $pages_style="#053980";
+  $box2="tzbg";
+  $title_bsdt="pic5";
+  $block_quicktabs="titlebg_x";
+  ?>
+  <style type="text/css">
+    .box1 .title .txt, .box2 .title .txt, .part2 .title .txt, .box .title .txt, .box3 .title .txt ,.box5 .title,#block-quicktabs-gsgg-tabs .titlesd,.box3 .title .more a{
+    color: #fff;
+    }
+  </style>
+  
+  
+<?php elseif(theme_get_setting("holiday_theme_style")=="holiday_autumn"):?>
+     <?php
+  $page_backs="bg_q";
+  $header_section="back_q";
+  $box5_title="titlebg_q";
+  $main_menu_links="menu_q.jpg";
+  $footer_border="#f7cc10";
+  $footer_back="#eee";
+  $quicktabs_tabs="titlebg_q";
+  $pages_style="#f7cc10";
+  $box2="tzbg";
+  $title_bsdt="pic5";
+  $block_quicktabs="titlebg_q";
+  ?>
+  
+  
+<?php elseif(theme_get_setting("holiday_theme_style")=="holiday_winter"):?>
+     <?php
+  $page_backs="bg_x";
+  $header_section="back_d";
+  $box5_title="titlebg_d";
+  $main_menu_links="menu-c2.gif";
+  $footer_border="#053980";
+  $footer_back="#eee";
+  $quicktabs_tabs="titlebg_d";
+  $pages_style="#053980";
+  $box2="tzbg";
+  $title_bsdt="pic5";
+  $block_quicktabs="titlebg_d";
+  ?>  
+  <style type="text/css">
+    .box1 .title .txt, .box2 .title .txt, .part2 .title .txt, .box .title .txt, .box3 .title .txt ,.box5 .title,#block-quicktabs-gsgg-tabs .titlesd,.box3 .title .more a{
+    color: #fff;
+    }
+  </style>
+<?php endif;?>
+
+<style type="text/css">
         #page{
- 		 background:url(/sites/all/themes/holiday/images/bg2.jpg) repeat-x;
-		}
-		#header div.section .classes{
- 		 background:url(/sites/all/themes/holiday/images/back2.jpg) no-repeat;
- 		 height:200px;
-		}
-		.box5 .title,.box5 h1,.box3 .title{
-		background: url("/sites/all/themes/holiday/images/titlebg3.jpg") repeat-x ;
-  		height:30px;
-		}
-		#main-menu-links{
-		  background:url(/sites/all/themes/holiday/images/menu-c2.gif);
-		}
-		#main-menu-links li{
-		  background:url(/sites/all/themes/holiday/images/menu-s2.gif) no-repeat left 0px;
-		}
-		#footer {
-		  border-top:3px solid #053980;
-		  background: #eee;
-		}
+          background:url(/sites/all/themes/holiday/images/<?php print $page_backs; ?>.jpg) repeat-x;
+        }
+	    #header div.section .classes{ 
+	      background:url(/sites/all/themes/holiday/images/<?php print $header_section; ?>.jpg) no-repeat;
+	      height:200px;
+	    }
+	    .box5 .title,.box5 h1,.box3 .title{
+	      background: url("/sites/all/themes/holiday/images/<?php print $box5_title; ?>.jpg") repeat-x;
+	      height:30px;
+	    }
+	    #main-menu-links{
+	      background:url(/sites/all/themes/holiday/images/<?php print $main_menu_links; ?>) repeat-x;
+	    }
+	    #main-menu-links li{
+	       <?php print $main_menu_links_li;?>
+	    }
+	    #footer {
+	       border-top:2px solid <?php print $footer_border;?>;
+	       background: <?php print $footer_back;?>;
+	    }
 		ul.quicktabs-tabs.quicktabs-style-basic{
-		background:url("/sites/all/themes/holiday/images/titlebg3.jpg") repeat-x;
-		height:28px;
-		*+height:26px;
-		border-left:1px solid #cdcdcd;
-		border-right:1px solid #cdcdcd;
+		   background:url("/sites/all/themes/holiday/images/<?php print $quicktabs_tabs;?>.jpg") repeat-x;
+		   height:28px;
+		   *+height:26px;
+		   border-left:1px solid #cdcdcd;
+		   border-right:1px solid #cdcdcd;
 		}
-		.pages_style .title{
-    	padding:10px;
-    	margin:10px;
-    	border-bottom:2px solid #053980;
+		.pages_style .title{ 
+		   padding:10px;
+		   margin:10px;
+		   border-bottom:2px solid <?php print $pages_style;?>;
 		}
 		.right .box2 {
-    	float: left;
-    	height: 218px;
-    	width: 268px;
-    	margin-top:10px;
-    	background:url(/sites/all/themes/holiday/images/tzbg.jpg) repeat-x ;
+		   float: left;
+		   height: 218px;
+		   width: 268px;
+		   margin-top:10px;
+		   background:url(/sites/all/themes/holiday/images/<?php print $box2;?>.jpg) repeat-x ;
 		}
 		.title_bsdt{
-		width:100%;
-		height:24px;
-		background:url(/sites/all/themes/holiday/images/pic6.jpg) no-repeat;
+		   width:100%;
+		   height:24px;
+		   background:url(/sites/all/themes/holiday/images/<?php print $title_bsdt;?>.jpg) no-repeat;
 		}
 		#block-quicktabs-gsgg-tabs .titlesd{
-		background: url("/sites/all/themes/holiday/images/titlebg3.jpg") repeat-x;
-    	border-left: 1px solid #CDCDCD;
-    	border-right: 1px solid #CDCDCD;
-    	height: 28px;
-    	width:258px;
-    	*+width:268px;
+		   background: url("/sites/all/themes/holiday/images/<?php print $block_quicktabs;?>.jpg") repeat-x;
+    	   border-left: 1px solid #CDCDCD;
+    	   border-right: 1px solid #CDCDCD;
+    	   height: 28px;
+    	   width:258px;
+    	   *+width:268px;
 		}
-      </style>
-<?php endif;?>
+  </style>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
@@ -328,13 +297,5 @@ window.onscroll = function () {
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
-  <script>
-     var img_title = $(".img_title");
-     var img_href =$(".img_href");
-     for(var i=0;i<img_title.length;i++){
-    	 $(img_href[i]).find("a").attr("title",$(img_title[i]).find("a").text());
-     }
-     $(".img_title").hide();
-  </script>
 </body>
 </html>

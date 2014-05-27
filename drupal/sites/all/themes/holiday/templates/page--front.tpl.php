@@ -140,48 +140,7 @@
        <a href="#" onclick="AddFavorite(window.location,document.title)"> 收藏本站 </a>
     </div>
 	<script>
-	     var date = new Date();
-	     var now = "";
-	     now = date.getFullYear()+"年"; 
-	     now = now + (date.getMonth()+1)+"月"; 
-	     now = now + date.getDate()+"日";
-		 $("#now_date").text(now);
-
-		 function AddFavorite(sURL, sTitle)
-		 {
-		     try
-		     {
-		         window.external.addFavorite(sURL, sTitle);
-		     }
-		     catch (e)
-		     {
-		         try
-		         {
-		             window.sidebar.addPanel(sTitle, sURL, "");
-		         }
-		         catch (e)
-		         {
-		             alert("加入收藏失败，请使用Ctrl+D进行添加");
-		         }
-		     }
-		 }
-		 function SetHome(obj,vrl){
-		     try{
-		             obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
-		     }
-		     catch(e){
-		             if(window.netscape) {
-		                     try {
-		                             netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
-		                     }
-		                     catch (e) {
-		                             alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
-		                     }
-		                     var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
-		                     prefs.setCharPref('browser.startup.homepage',vrl);
-		              }
-		     }
-		 }
+	     
 	</script>
     </div>
   </div></div> <!-- /.section, /#header -->
@@ -233,8 +192,8 @@
                       <ul class="ul_style">
                           <li class="li_style_p">
                              <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/user.gif" /></span>
-                             <span><?php print l($user->name,'user/'.$user->uid); ?>&nbsp;</span>
-                             <span class="logout"><?php print l("退出","https://www.hkjgzx.sh.cn/logout?service=http://www.hkjgzx.sh.cn/user/logout"); ?></span>
+                             <span><?php print $user->name; ?>&nbsp;</span>
+                             <span class="logout"><?php print l("退出","https://www.hkjgzx.sh.cn/logout?service=http://localhost/user/logout"); ?></span>
                              <span><a style="cursor:pointer;" onclick="update_password()" >修改密码</a></span>
                              <span style="display:none"><a href="http://www.hkjgzx.sh.cn:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
                           </li>
@@ -313,7 +272,7 @@
                <?php else:?>
                 <div class="box5" style="padding-bottom:13px;margin-bottom:10px;height:204px;">
                     <div class="title"><span class="txt">用户中心</span></div>
-                    <iframe style="border:0;border:none;overflow-x: hidden" frameborder="no" scrolling="yes" height='160px' border="0" border="none" marginwidth="0" marginheight="0" src="https://www.hkjgzx.sh.cn/login?embed=true&service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode&locale=zh_CN"></iframe>
+                    <iframe style="border:0;border:none;overflow-x: hidden" frameborder="no" scrolling="yes" height='160px' border="0" border="none" marginwidth="0" marginheight="0" src="https://www.hkjgzx.sh.cn/login?embed=true&service=http%3A%2F%2Flocalhost%2Fcas%3Fdestination%3Dnode&locale=zh_CN"></iframe>
                     <div style="margin-left:40px;margin-top:-10px;">
                         <a style="cursor:pointer;" onclick="alert('该功能暂未开放，敬请期待！');">注册</a>&nbsp;&nbsp;<a style="cursor:pointer;" onclick="alert('该功能暂未开放，敬请期待！');">忘记密码</a>
                     </div>

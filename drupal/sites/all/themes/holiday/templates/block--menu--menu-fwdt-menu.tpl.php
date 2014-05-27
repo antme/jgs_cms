@@ -115,7 +115,6 @@
 				 $(this).click(function(){alert("该功能在开发中，敬请期待！");});
 			 }
 	     });
-		 $("#block-menu-menu-fwdt-user").find("li").find("a").click(function(){alert("该功能在开发中，敬请期待！");});
 		 
 	  });
 	  $(".left_menu_style").find("li").click(function(){
