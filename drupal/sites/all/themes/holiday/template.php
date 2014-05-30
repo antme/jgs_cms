@@ -181,7 +181,23 @@ function holiday_form_alter(&$form, &$form_state, $form_id) {
 	}
 }
 
-
+function array_diff_assoc_recursive($array1, $array2) {
+	foreach ($array1 as $key => $value) {
+		if (is_array($value)) {
+			if (!isset($array2[$key]) || !is_array($array2[$key])) {
+				$difference[$key] = $value;
+			} else {
+				$new_diff = array_diff_assoc_recursive($value, $array2[$key]);
+				if ($new_diff != FALSE) {
+					$difference[$key] = $new_diff;
+				}
+			}
+		} elseif (!isset($array2[$key]) || $array2[$key] != $value) {
+			$difference[$key] = $value;
+		}
+	}
+	return !isset($difference) ? 0 : $difference;
+}
 
 function getMisUser(){
 	global $user;
@@ -192,33 +208,47 @@ function getMisUser(){
 		}
 		
 		$array = get_object_vars($user);
-		
-		$userStr = implode(",", $array);
-		
-		
-		if (strpos ( $userStr, "USER_TYPE_NAME施工单位" ) > 0) {	
-			return "施工单位";
+
+		$result = checkIsJgsUser($array);
+		if($result == ""){		
+			return "内部用户";
+		}else{
+			return $result;
 		}
-		if (strpos ( $userStr, "USER_TYPE_NAME监理单位" ) > 0) {
-			
-			return "监理单位";
-		}
-		if (strpos ( $userStr, "USER_TYPE_NAME建设单位" ) > 0) {
-			
-			return "建设单位";
-		}
-		
-		if (strpos ( $userStr, "anonymous user" ) > 0) {				
-			return "匿名用户";
-		}
-		
-		return "内部用户";
 	} else {
 		return "匿名用户";
 	}
 }
 
-
+function checkIsJgsUser($array){
+	$result = "";
+	foreach ($array as $key => $value) {
+			
+		if (is_array($value)) {
+			 $result .=   checkIsJgsUser($value);
+		}else{
+	
+			if (strpos ( $value, "USER_TYPE_NAME施工单位" ) > 0) {
+				$result .= "施工单位";
+			}
+			if (strpos ( $value, "USER_TYPE_NAME监理单位" ) > 0) {
+	
+				$result .= "监理单位";
+			}
+			if (strpos ( $value, "USER_TYPE_NAME建设单位" ) > 0) {
+	
+				$result .= "建设单位";
+			}
+	
+			if (strpos ( $value, "anonymous user" ) > 0) {
+				$result .= "匿名用户";
+			}
+	
+		}
+	}
+	
+	return $result;
+}
 
 function isJgsUser(){
 	if(getMisUser() == "内部用户"){
