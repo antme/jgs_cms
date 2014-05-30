@@ -1149,9 +1149,7 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 .content_style .clearfix{
     padding:5px;
 }
-.content_style .clearfix p{
-    text-align:left;
-}
+
 .pages_style .more{display:none;}
 .node .webform-client-form .form-item,.node .webform-client-form .form-actions{
     float:left;

@@ -135,7 +135,12 @@ caption {
 blockquote {
   background: #f7f7f7;
   border-left: 1px solid #bbb;
-  font-style: italic;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+.node-zcfg-gnwj blockquote {
+  background: none;
+  border-left: none;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
 }
@@ -210,6 +215,9 @@ tr,
 tr.even {
   background: #efefef;
   background: rgba(0, 0, 0, 0.063);
+}
+.content_style .node-zcfg-gnwj div table tr.even {
+  background: none;
 }
 table ul.links {
   margin: 0;
