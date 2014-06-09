@@ -506,15 +506,17 @@ function _node_resource_index($page, $fields, $parameters, $page_size) {
   foreach($parameters as $key => $value){
   	 
   	if($key == "created"){
+  		
   	}else{
   		$queryParameters[$key] = $value;
   	}
   }
+  
 
   services_resource_build_index_query($node_select, $page, $fields, $queryParameters, $page_size, 'node');
 
   if (!user_access('administer nodes')) {
-    $node_select->condition('status', 1);
+    //$node_select->condition('status', 1);
   }
   
   if($parameters['created']){
@@ -522,6 +524,7 @@ function _node_resource_index($page, $fields, $parameters, $page_size) {
   	$node_select->condition('created',$parameters['created'], '>=');
   }
 
+  
   $results = services_resource_execute_index_query($node_select);
 
   return services_resource_build_index_list($results, 'node', 'nid');

@@ -712,7 +712,7 @@ function services_resource_build_index_query($query, $page, $fields, $parameters
   if (!user_access('perform unlimited index queries') && $page_size > $default_limit) {
     $page_size = $default_limit;
   }
-  $query->range($page * $page_size, $page_size);
+  //$query->range($page * $page_size, $page_size);
   if ($fields == '*') {
     $query->fields('t');
   }
@@ -763,7 +763,21 @@ function services_resource_build_index_list($results, $type, $field) {
   // Put together array of matching items to return.
   $items = array();
   foreach ($results as $result) {
-    $node_bo = node_load($result->nid)->body;
+    $node =  node_load($result->nid);
+    $node_bo = $node ->body;
+    
+    $keys = array("field_type_txt","field_project_name","field_project_address","field_lian_xi_ren","field__shou_ji","field__di_zhi");
+    foreach($keys as $key){
+    
+	    if($node -> $key){
+	      $ftt =  $node->$key;
+	      $result->$key = $ftt['und'][0]['value'];
+	    }
+    
+    }
+
+   
+    
     $result->body = $node_bo['und'][0]['safe_value'];
     if ($uri = services_resource_uri(array($type, $result->{$field}))) {
       $result->uri = $uri;
@@ -772,8 +786,8 @@ function services_resource_build_index_list($results, $type, $field) {
       }
     }
     $items[] = $result;
+  
   }
-
   return $items;
 }
 
