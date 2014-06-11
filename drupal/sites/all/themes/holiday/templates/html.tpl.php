@@ -89,7 +89,9 @@ function ass(){
   }
 }
 window.onscroll = function () { 
-  ass();
+  if(screen.width>1000){
+	  ass();
+  } 
 }
 </script>
  

@@ -44,14 +44,16 @@ var date = new Date();
 
 
 
+$(document).ready(function(){
+	//轮播图片Bug修改
+	var img_title = $(".img_title");
+	var img_href =$(".img_href");
+	for(var i=0;i<img_title.length;i++){
+	    $(img_href[i]).find("a").attr("title",$(img_title[i]).find("a").text());
+	}
+	$(".img_title").hide();
+});
 
-//轮播图片Bug修改
-var img_title = $(".img_title");
-var img_href =$(".img_href");
-for(var i=0;i<img_title.length;i++){
-    $(img_href[i]).find("a").attr("title",$(img_title[i]).find("a").text());
-}
-$(".img_title").hide();
 
 
 

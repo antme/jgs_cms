@@ -1,281 +1,323 @@
-var current_node=5;
-var ds,dss,dsss,dsd;
-function create_chart(n,object,name,nub,ncolor){
-    $("#back_div").css("height",$(document).height()+"px");
-	var width=$(document).width();
-	
-	var arry_titles_op=['审批:1天,实际:1天','预计:10天,实际:10天','审批:13天,实际:13天','预计:48天,实际:48天','审批:1天,实际:1天','预计:10天,实际:10天'];
-	
-	var arry_project_name=[{name:'项目报建',child:''},{name:'设计合同备案',child:''},{name:'施工发包',child:''},{name:'施工合同备案',child:''},{name:'项目报监',child:''},{name:'施工许可',child:''}];
-	var arry_title=['审批:1天,实际:1天','预计:10天,实际:10天','审批:1天,实际:1天','预计:10天,实际:10天','审批:6天,实际:6天','预计:10天,实际:10天','审批:1天,实际:1天','预计:10天,实际:10天','审批:1天,审批中','预计:10天'];
-	
-	var arry_project_names=[{name:'项目报建',child:''},{name:'设计发包',child:'0'},{name:'设计合同备案',child:''},{name:'勘察发包',child:'1'},{name:'勘察合同备案',child:''},{name:'施工发包',child:'2'},{name:'施工合同备案',child:''},{name:'监理发包',child:'3'},{name:'监理合同备案',child:''},{name:'施工图审查',child:''},{name:'项目报监',child:''},{name:'施工许可',child:''}];
-	var arry_titles=['审批:1天,实际:1天','预计:10天,实际:10天','审批:13天,实际:13天','预计:48天,实际:48天','审批:1天,实际:1天','预计:10天,实际:10天','审批:13天,实际:13天','预计:48天,实际:48天','审批:1天,审批中','预计:10天','审批:13天,实际:13天','预计:53天,实际53天','审批:1天','预计:10天','审批:13天','预计:48天','审批:1天','预计:10天','审批:20天','预计:10天','审批:1天,实际:1天','预计:10天,实际:10天'];
-	
-	var arry_names=['设计发包流程','勘察发包流程','施工发包流程','监理发包流程'];
-	var arry_fb=[{name:'设计招标登记',child:""},{name:"设计招标文件备案",child:""},{name:"设计招标文件备案",child:""},{name:"设计招投标书面报告<br>中标通知书备案",child:""}];
-	var arry_kc=[{name:'勘察招标登记',child:""},{name:"勘察招标文件备案",child:''},{name:"勘察补充文件备案",child:''},{name:"勘察招投标书面报告<br>中标通知书备案",child:''}];
-	var arry_sg=[{name:'施工招标登记',child:""},{name:"施工招标文件备案",child:''},{name:"施工补充文件备案",child:''},{name:"施工招投标书面报告<br>中标通知书备案",child:''}];
-	var arry_jl=[{name:'监理招标登记',child:""},{name:"监理招标文件备案",child:''},{name:"监理补充文件备案",child:''},{name:"监理招投标书面报告<br>中标通知书备案",child:''}];
-	
-	//弹出层
-	var add=0;
-	var Arrow_down_right;
-    var Arrow_down_left;
-    
-	var arry_simple=[{x:10,y:82},{x:270,y:82},{x:540,y:82},{x:540,y:182},{x:270,y:182},{x:10,y:182},{x:10,y:282},{x:270,y:282},{x:540,y:282},{x:540,y:382},{x:270,y:382},{x:10,y:382}];
-	var arry_Arrow=[{x:150,y:100},{x:410,y:100},{x:0,y:0},{x:410,y:200},{x:150,y:200},{x:0,y:0},{x:150,y:300},{x:410,y:300},{x:0,y:0},{x:410,y:400},{x:150,y:400}];
-	var arry_title_location=[{x:150,y:75},{x:150,y:105},{x:410,y:75},{x:410,y:105},{x:590,y:135},{x:590,y:145},{x:150,y:175},{x:150,y:205},{x:410,y:175},{x:410,y:205}];
-	
-	//查询层
-	var arry_label_location=[{x:0,y:42},{x:180,y:42},{x:360,y:42},{x:360,y:142},{x:180,y:142},{x:0,y:142},{x:0,y:242},{x:180,y:242},{x:360,y:242},{x:360,y:342},{x:180,y:342},{x:0,y:342}];
-	var arry_Arrow_location=[{x:100,y:60},{x:280,y:60},{x:0,y:0},{x:280,y:160},{x:100,y:160},{x:0,y:0},{x:100,y:260},{x:280,y:260},{x:0,y:0},{x:280,y:360},{x:100,y:360},{x:0,y:0},{x:100,y:460},{x:280,y:460}];
-	var arry_title_locations=[{x:90,y:25},{x:90,y:75},{x:270,y:25},{x:270,y:75},{x:410,y:95},{x:410,y:105},{x:270,y:125},{x:270,y:175},{x:90,y:125},{x:90,y:175},{x:45,y:195},{x:45,y:205},{x:90,y:225},{x:90,y:275},{x:270,y:225},{x:270,y:275},{x:410,y:295},{x:410,y:305},{x:270,y:325},{x:270,y:375},{x:90,y:325},{x:90,y:375}];
-	
-	
-    
-	switch(n)
-	{ 
-	case 1:{
-		$("#back_div").show();
-		$("#container").show();
-		width=(width-700)/2;
-		$("#container").css({"width":"700px","height":"300px","left":width+"px","top":$(object).offset().top+"px"});
-	    var chart = new Highcharts.Chart({
-	        chart: {
-	            renderTo: 'container',
-	            events: {
-	                load: function () {
-	                    
-	                    // 定义颜色和左右箭头 
-	                    var ren = this.renderer,
-	                        colors = Highcharts.getOptions().colors;
-	                    var rightArrow = ['M', 0, 0, 'L', 100, 0, 'L', 95, 5, 'M', 100, 0, 'L', 95, -5];
-	                    var leftArrow = ['M', 100, 0, 'L', 0, 0, 'L', 5, 5, 'M', 0, 0, 'L', 5, -5];
-	                        
-                        //定义项目流程
-	                    
-	                    for(var i=0;i<nub.length;i++){
-	                    	ren.label(nub[i].name, arry_simple[i].x, arry_simple[i].y).attr({fill: ncolor,stroke: 'white','stroke-width': 2,padding: 10,r: 5}).css({color: 'white',}).add().shadow(true);
-	                    }
-                        
-	                    //定义箭头
-						for(var i=0;i<nub.length-1;i++){
-							if((i+1)%3==0){
-								if(i%3==2){
-									Arrow_down_right=['M', 585, 120+add*100, 'L', 585, 175+add*100, 'L', 580, 170+add*100, 'M', 585, 175+add*100, 'L', 590, 170+add*100];
-									ren.path(Arrow_down_right).attr({'stroke-width': 2,stroke: add_color(current_node,i)}).add();
-								}else{
-									Arrow_down_left=['M', 55, 120+add*100, 'L', 55, 175+add*100, 'L', 50, 170+add*100, 'M', 55, 175+add*100, 'L', 60, 170+add*100];
-									ren.path(Arrow_down_left).attr({'stroke-width': 2,stroke: add_color(current_node,i)}).add();
-								}
-								
-							}else{
-								if((parseInt(i/3)%2)==0){
-									ren.path(rightArrow).attr({'stroke-width': 2,stroke: add_color(current_node,i)}).translate(arry_Arrow[i].x, arry_Arrow[i].y).add();
-								}else{
-									ren.path(leftArrow).attr({'stroke-width': 2,stroke: add_color(current_node,i)}).translate(arry_Arrow[i].x, arry_Arrow[i].y).add();
-								}
-								
-							}
-						}
-						//定义说明文字
-						for(var i=0;i<arry_titles_op.length;i++){
-							ren.label(arry_titles_op[i], arry_title_location[i].x,arry_title_location[i].y).css({fontSize: '10px',color: colors[2]}) .add();
-						}
-	                }
-	            }
-	        },
-	        title: {
-	            text: name
-	        }
-	            
-	    });
-	    $("#container").find(".highcharts-container").find("g").find("rect").attr("width","120");
-	    break;
-	  }
-	
-	case 2:{
-		$("#search_project_value").css({"width":"540px","height":"300px"});
-	    var chart = new Highcharts.Chart({
-	        chart: {
-	            renderTo: 'search_project_value',
-	            events: {
-	                load: function () {
-	                    
-	                    // 定义颜色和左右箭头
-	                    var ren = this.renderer,
-	                        colors = Highcharts.getOptions().colors,
-	                        rightArrow = ['M', 0, 0, 'L', 70, 0, 'L', 65, 5, 'M', 70, 0, 'L', 65, -5],
-	                        leftArrow = ['M', 70, 0, 'L', 0, 0, 'L', 5, 5, 'M', 0, 0, 'L', 5, -5];
-	                        
-	                    //定义项目流程
-	                    for(var i=0;i<arry_project_name.length;i++){
-	                    	if(arry_project_name[i].child!=''){
-	                    		ren.label(arry_project_name[i].name+'(*)', arry_label_location[i].x, arry_label_location[i].y).attr({fill: add_color(current_node,i),stroke: 'white','stroke-width': 2,padding: 10,r: 5}).on('click',function(){create_chart(1,this);}).css({color: 'white',cursor: 'pointer'}).add().shadow(true);
-	                    	}else{
-	                    		ren.label(arry_project_name[i].name, arry_label_location[i].x, arry_label_location[i].y).attr({fill: add_color(current_node,i),stroke: 'white','stroke-width': 2,padding: 10,r: 5}).css({color: 'white',}).add().shadow(true);
-	                    	}
-	                    }
-	                    
-	                    //定义箭头
-						for(var i=0;i<arry_project_name.length-1;i++){
-							if((i+1)%3==0){
-								add=parseInt(i/3);
-								if(i%3==2){
-									Arrow_down_right=['M', 405, 85+add*100, 'L', 405, 135+add*100, 'L', 400, 130+add*100, 'M', 405, 135+add*100, 'L', 410, 130+add*100];
-									ren.path(Arrow_down_right).attr({'stroke-width': 2,stroke: colors[2]}).add();
-								}else{
-									Arrow_down_left=['M', 40, 85+add*100, 'L', 40, 135+add*100, 'L', 35, 130+add*100, 'M', 40, 135+add*100, 'L', 45, 130+add*100];
-									ren.path(Arrow_down_left).attr({'stroke-width': 2,stroke: colors[2]}).add();
-								}
-								
-							}else{
-								if((parseInt(i/3)%2)==0){
-									ren.path(rightArrow).attr({'stroke-width': 2,stroke: colors[2]}).translate(arry_Arrow_location[i].x, arry_Arrow_location[i].y).add();
-								}else{
-									ren.path(leftArrow).attr({'stroke-width': 2,stroke: colors[2]}).translate(arry_Arrow_location[i].x, arry_Arrow_location[i].y).add();
-								}
-								
-							}
-						}
-	                    
-						
-						//定义说明文字
-						for(var i=0;i<arry_title.length;i++){
-							ren.label(arry_title[i], arry_title_locations[i].x,arry_title_locations[i].y).css({fontSize: '10px',color: colors[2]}) .add();
-						}
-						
-	                }
-	            }
-	        },
-	        title: {
-	            text: name
-	        }
-	            
-	    });
-	    $(".highcharts-container").find("g").find("rect").attr("width","88");
-	    break;
-	  }
-	
-case 3:{
-	$("#search_project_value").css({"width":"540px","height":"450px"});
-	    var chart = new Highcharts.Chart({
-	        chart: {
-	            renderTo: 'search_project_value',
-	            events: {
-	                load: function () {
-	                    
-	                    // 定义颜色和左右箭头
-	                    var ren = this.renderer,
-	                        colors = Highcharts.getOptions().colors,
-	                        rightArrow = ['M', 0, 0, 'L', 70, 0, 'L', 65, 5, 'M', 70, 0, 'L', 65, -5],
-	                        leftArrow = ['M', 70, 0, 'L', 0, 0, 'L', 5, 5, 'M', 0, 0, 'L', 5, -5];
-	                        
-	                    // Headers
+var datas=[//3000W以下的5条记录
+           {   BJBH:'1402HK0026',
+        	   BUILD_UNIT_NAME:'上海市虹口区社会福利院',
+        	   BUILD_UNIT_PROPERTY_ID:'2',
+        	   PROJECT_NAME:'虹口区第一福利院改扩建工程项目',
+        	   BUILD_ADDRESS:'密云路623号',
+        	   TOTAL_INVESTMENT:'2683.9',
+        	   BUILD_PROPERTY_ID:'3',
+        	   PROJECT_TYPE_ID:'10109',
+        	   ywxjfwjz:'是'
+           },
+           {   BJBH:'1402HK0001',
+        	   BUILD_UNIT_NAME:'上海集优机械股份有限公司',
+        	   BUILD_UNIT_PROPERTY_ID:'3',
+        	   PROJECT_NAME:'紧焊所房屋建筑物装修修缮项目',
+        	   BUILD_ADDRESS:'松花江路2747号',
+        	   TOTAL_INVESTMENT:'2200',
+        	   BUILD_PROPERTY_ID:'5',
+        	   PROJECT_TYPE_ID:'90008',
+        	   ywxjfwjz:'是'
+           },
+           {   BJBH:'1302HK0087',
+        	   BUILD_UNIT_NAME:'中国邮政储蓄银行股份有限公司上海分行',
+        	   BUILD_UNIT_PROPERTY_ID:'4',
+        	   PROJECT_NAME:'邮储银行上海分行营运办公用房装修工程',
+        	   BUILD_ADDRESS:'东大名路1080号、1082号',
+        	   TOTAL_INVESTMENT:'2591',
+        	   BUILD_PROPERTY_ID:'5',
+        	   PROJECT_TYPE_ID:'90009',
+        	   ywxjfwjz:'是'
+           },
+           {   BJBH:'1302HK0052',
+        	   BUILD_UNIT_NAME:'上海市公共卫生临床中心',
+        	   BUILD_UNIT_PROPERTY_ID:'2',
+        	   PROJECT_NAME:'上海市公共卫生临床中心市区分部医疗辅助用房修缮项目',
+        	   BUILD_ADDRESS:'水电路56号',
+        	   TOTAL_INVESTMENT:'2021.6784',
+        	   BUILD_PROPERTY_ID:'5',
+        	   PROJECT_TYPE_ID:'90007',
+        	   ywxjfwjz:'是'
+           },
+           {   BJBH:'1302HK0034',
+        	   BUILD_UNIT_NAME:'上海市虹口区教育局',
+        	   BUILD_UNIT_PROPERTY_ID:'1',
+        	   PROJECT_NAME:'上海市第五十二中学加固修缮项目',
+        	   BUILD_ADDRESS:'广灵二路122号',
+        	   TOTAL_INVESTMENT:'2426.16',
+        	   BUILD_PROPERTY_ID:'5',
+        	   PROJECT_TYPE_ID:'100201',
+        	   ywxjfwjz:'是'
+           },
+         //3000W以上的5条记录
+           
+           {   BJBH:'1402HK0032',
+        	   BUILD_UNIT_NAME:'上海市虹口区绿化管理署',
+        	   BUILD_UNIT_PROPERTY_ID:'2',
+        	   PROJECT_NAME:'新建虹湾绿地（一期）项目',
+        	   BUILD_ADDRESS:'规划安汾路以南，规划水电路以东',
+        	   TOTAL_INVESTMENT:'11649.58',
+        	   BUILD_PROPERTY_ID:'1',
+        	   PROJECT_TYPE_ID:'10109',
+        	   ywxjfwjz:'是'
+           },
+           {   BJBH:'1401HK0003',
+        	   BUILD_UNIT_NAME:'上海财经大学',
+        	   BUILD_UNIT_PROPERTY_ID:'2',
+        	   PROJECT_NAME:'上海财经大学新建商学院教学科研中心大楼项目',
+        	   BUILD_ADDRESS:'中山北一路校区内',
+        	   TOTAL_INVESTMENT:'24214',
+        	   BUILD_PROPERTY_ID:'1',
+        	   PROJECT_TYPE_ID:'10105',
+        	   ywxjfwjz:'是'
+           },
+           {   BJBH:'1402HK0025',
+        	   BUILD_UNIT_NAME:'上海一方竞艺企业管理有限公司',
+        	   BUILD_UNIT_PROPERTY_ID:'8',
+        	   PROJECT_NAME:'虹口区提篮桥街道66街坊综合开发项目',
+        	   BUILD_ADDRESS:'东至商丘路、南至东长治路、西至旅顺路、北至西安路',
+        	   TOTAL_INVESTMENT:'340000',
+        	   BUILD_PROPERTY_ID:'1',
+        	   PROJECT_TYPE_ID:'10110',
+        	   ywxjfwjz:'是'
+           },
+           {   BJBH:'1402HK0012',
+        	   BUILD_UNIT_NAME:'上海新琪投资管理有限公司',
+        	   BUILD_UNIT_PROPERTY_ID:'9',
+        	   PROJECT_NAME:'江湾镇街道A06-05地块商办综合开发项目',
+        	   BUILD_ADDRESS:'基地东至凉城路西至江杨家园南至江杨家园北至规划三门路',
+        	   TOTAL_INVESTMENT:'25431',
+        	   BUILD_PROPERTY_ID:'1',
+        	   PROJECT_TYPE_ID:'10110',
+        	   ywxjfwjz:'是'
+           },
+           {   BJBH:'1402HK0008',
+        	   BUILD_UNIT_NAME:'上海市虹口区教育局',
+        	   BUILD_UNIT_PROPERTY_ID:'1',
+        	   PROJECT_NAME:'上海航海人才公共实训基地暨南湖职校（第二分校）改建工程项目',
+        	   BUILD_ADDRESS:'密云路481号',
+        	   TOTAL_INVESTMENT:'20000',
+        	   BUILD_PROPERTY_ID:'2',
+        	   PROJECT_TYPE_ID:'10105',
+        	   ywxjfwjz:'是'
+           }
+];
 
-	                    //定义项目流程
-	                    for(var i=0;i<arry_project_names.length;i++){
-	                    	if(arry_project_names[i].child!=''){
-	                    		if(arry_project_names[i].child=='0'){
-	                    			ds = add_color_s(current_node,i);
-	                    			ren.label(arry_project_names[i].name+"(*)", arry_label_location[i].x, arry_label_location[i].y).attr({fill: add_color(current_node,i),stroke: 'white','stroke-width': 2,padding: 10,r: 5}).on('click',function(){create_chart(1,this,arry_names[0],arry_fb,ds);}).css({color: 'white',cursor:'pointer'}).add().shadow(true);
-	                    		}
-	                    		if(arry_project_names[i].child=='1'){
-	                    			dss = add_color_s(current_node,i);
-	                    			ren.label(arry_project_names[i].name+"(*)", arry_label_location[i].x, arry_label_location[i].y).attr({fill: add_color(current_node,i),stroke: 'white','stroke-width': 2,padding: 10,r: 5}).on('click',function(){create_chart(1,this,arry_names[1],arry_kc,dss);}).css({color: 'white',cursor:'pointer'}).add().shadow(true);
-	                    		}
-	                    		if(arry_project_names[i].child=='2'){
-	                    			dsss = add_color_s(current_node,i);
-	                    			ren.label(arry_project_names[i].name+"(*)", arry_label_location[i].x, arry_label_location[i].y).attr({fill: add_color(current_node,i),stroke: 'white','stroke-width': 2,padding: 10,r: 5}).on('click',function(){create_chart(1,this,arry_names[2],arry_sg,dsss);}).css({color: 'white',cursor:'pointer'}).add().shadow(true);
-	                    		}
-	                    		if(arry_project_names[i].child=='3'){
-	                    			dsd = add_color_s(current_node,i);
-	                    			ren.label(arry_project_names[i].name+"(*)", arry_label_location[i].x, arry_label_location[i].y).attr({fill: add_color(current_node,i),stroke: 'white','stroke-width': 2,padding: 10,r: 5}).on('click',function(){create_chart(1,this,arry_names[3],arry_jl,dsd);}).css({color: 'white',cursor:'pointer'}).add().shadow(true);
-	                    		}
-	                    	}else{
-	                    		ren.label(arry_project_names[i].name, arry_label_location[i].x, arry_label_location[i].y).attr({fill: add_color(current_node,i),stroke: 'white','stroke-width': 2,padding: 10,r: 5}).css({color: 'white',}).add().shadow(true);
-	                    	}
-	                    }
-	                    
-	                  //定义箭头
-						for(var i=0;i<arry_project_names.length-1;i++){
-							if((i+1)%3==0){
-								add=parseInt(i/3);
-								if(i%2==0){
-									Arrow_down_right=['M', 405, 85+add*100, 'L', 405, 135+add*100, 'L', 400, 130+add*100, 'M', 405, 135+add*100, 'L', 410, 130+add*100];
-									ren.path(Arrow_down_right).attr({'stroke-width': 2,stroke: add_color(current_node,i)}).add();
-								}else{
-									Arrow_down_left=['M', 40, 85+add*100, 'L', 40, 135+add*100, 'L', 35, 130+add*100, 'M', 40, 135+add*100, 'L', 45, 130+add*100];
-									ren.path(Arrow_down_left).attr({'stroke-width': 2,stroke: add_color(current_node,i)}).add();
-								}
-								
-								
-							}else{
-								if((parseInt(i/3)%2)==0){
-									ren.path(rightArrow).attr({'stroke-width': 2,stroke: add_color(current_node,i)}).translate(arry_Arrow_location[i].x, arry_Arrow_location[i].y).add();
-								}else{
-									ren.path(leftArrow).attr({'stroke-width': 2,stroke: add_color(current_node,i)}).translate(arry_Arrow_location[i].x, arry_Arrow_location[i].y).add();
-								}
-								
-							}
-						}
-					
-						//定义说明文字
-						for(var i=0;i<arry_titles.length;i++){
-							ren.label(arry_titles[i], arry_title_locations[i].x,arry_title_locations[i].y).css({fontSize: '10px',color: add_color_font(current_node,i)}) .add();
-						}
-	                }
-	            }
-	        },
-	        title: {
-	            text: name
-	        }
-	            
-	    });
-	    $(".highcharts-container").find("g").find("rect").attr("width","88");
-	    break;
-	  }
-	default:
-	  break;
-	}
-	$(".highcharts-button").find("rect").hide();
-	$(".highcharts-button").find("path").hide();
-	$("#container").find(".highcharts-container").append("<a class='highcharts-buttons' onclick='close_div()'></a>");
-	$(".highcharts-tooltip").next("text").hide();
-}
 
-function add_color(n,i){
-	if(i<=n){
-		if(i<n){
-			return '#8bbc21';
-		}else{
-			
-			return '#f28f43';
+var sj_judge={
+		TOTAL_INVESTMENT:'3000',
+		PROJECT_TYPE_one:'11'
+};
+var kc_judge={
+		       TOTAL_INVESTMENT:'3000',
+		       PROJECT_TYPE_one:'08',
+		       PROJECT_TYPE_two:'09',
+		       PROJECT_TYPE_three:'1002',
+		       PROJECT_TYPE_four:'11',
+		       PROJECT_TYPE_five:'060001',
+		       BUILD_PROPERTY_one:'3',
+		       BUILD_PROPERTY_two:'1',
+		       BUILD_PROPERTY_three:'N'
+		     };
+var sg_judge={
+		TOTAL_INVESTMENT:'200'
+};
+var jl_judge={
+		TOTAL_INVESTMENT:'3000',
+		BUILD_UNIT_NAME:'教育局'
+};
+
+var st_judge={
+		BUILD_PROPERTY_one:'1',
+		BUILD_PROPERTY_two:'2',
+		BUILD_PROPERTY_three:'3',
+		BUILD_PROPERTY_four:'5',
+		PROJECT_TYPE_one:'01',
+		PROJECT_TYPE_two:'09',
+		PROJECT_TYPE_three:'10',
+		PROJECT_TYPE_four:'1003',
+		PROJECT_TYPE_five:'100202',
+		ywxjfwjz:'是',
+};
+
+//流程显示入口     报建编号判断
+function show_project(pro_number){
+	var num=false;
+	var project_data;
+	for(var i=0;i<datas.length;i++){
+		if(pro_number==datas[i].BJBH){
+			num=true;
+			project_data=datas[i];
 		}
 	}
-	if(i>n){
-		return '#bab6b3';
+	if(num){
+		loading_projec_data(project_data);
+		display_div();
+	}else{
+		alert('请输入正确的报建编号');
 	}
+	
 }
 
-function add_color_s(n,i){
-	if(i<=n){
-		return '#8bbc21';
-	}else if(i>n){
-		return '#bab6b3';
-	}
+//流程显示
+function display_div(){
+	$("#container").show();
+	$("#back_div").show();
+	var marginheight=$(".search_project").offset().top-200;
+	var marginLeft=(screen.width-$("#container").width())/2;
+	var slHeight=document.body.scrollHeight;
+	$("#container").css("left",marginLeft+"px");
+	$("#container").css("top",marginheight+"px");
+	$("#back_div").css("height",slHeight+"px");
 }
 
-function add_color_font(n,i){
-	if(i<(2*n)){
-		return '#8bbc21';
+//数据加载
+function loading_projec_data(data){
+	$(".project_info").find("#project_info_name").text(data.PROJECT_NAME);
+	$(".project_info").find("#project_info_number").text(data.BJBH);
+	$(".project_info").find("#project_info_address").text(data.BUILD_ADDRESS);
+	$(".project_info").find("#project_info_unit").text(data.BUILD_UNIT_NAME);
+	process_judge(data);
+}
+
+//流程判断开始
+function process_judge(data){
+	sj_process_judge(data);
+	kc_process_judge(data);
+	sg_process_judge(data);
+	jl_process_judge(data);
+	st_process_judge(data);
+}
+
+//设计发包判断
+function sj_process_judge(data){
+	var total_investment=parseInt(data.TOTAL_INVESTMENT);
+	var length = data.PROJECT_TYPE_ID.length;
+	
+	if(length<6){
+		var PROJECT_TYPE_ID='0' + data.PROJECT_TYPE_ID.substring(0,1);
+	}else{
+		var PROJECT_TYPE_ID=data.PROJECT_TYPE_ID.substring(0,2);
 	}
-	if(i>=(2*n)){
-		if((2*n)==i || (2*n+1)==i){
-			return '#f28f43';
+	if(parseInt(sj_judge.TOTAL_INVESTMENT)>total_investment || PROJECT_TYPE_ID==sj_judge.PROJECT_TYPE_one){
+		$(".sjfb").addClass("project_fbx");
+		$(".sjba").addClass("project_fbx");
+	}else{
+		$(".sjfb").addClass("project_bx");
+		$(".sjba").addClass("project_bx");
+	}
+}
+//勘擦发包判断
+function kc_process_judge(data){
+	var total_investment=parseInt(data.TOTAL_INVESTMENT);
+	var length = data.PROJECT_TYPE_ID.length;
+	var BUILD_PROPERTY_ID = data.BUILD_PROPERTY_ID;
+	if(length<6){
+		var PROJECT_TYPE_ID='0' + data.PROJECT_TYPE_ID.substring(0,1);
+	}else{
+		var PROJECT_TYPE_ID=data.PROJECT_TYPE_ID.substring(0,2);
+		var PROJECT_TYPE_IDs=data.PROJECT_TYPE_ID.substring(0,4);
+	}
+	
+	if(parseInt(kc_judge.TOTAL_INVESTMENT)>total_investment || PROJECT_TYPE_ID==kc_judge.PROJECT_TYPE_one || PROJECT_TYPE_ID==kc_judge.PROJECT_TYPE_two || PROJECT_TYPE_ID==kc_judge.PROJECT_TYPE_four || PROJECT_TYPE_ID==kc_judge.PROJECT_TYPE_five || BUILD_PROPERTY_ID==kc_judge.BUILD_PROPERTY_one || BUILD_PROPERTY_ID==kc_judge.BUILD_PROPERTY_two || BUILD_PROPERTY_ID==kc_judge.BUILD_PROPERTY_three){
+		$(".kcfb").addClass("project_fbx");
+		$(".kcba").addClass("project_fbx");
+	}else if(PROJECT_TYPE_IDs== kc_judge.PROJECT_TYPE_three){
+		$(".kcfb").addClass("project_fbx");
+		$(".kcba").addClass("project_fbx");
+	}else{
+		$(".kcfb").addClass("project_bx");
+		$(".kcba").addClass("project_bx");
+	}
+}
+//施工发包判断
+function sg_process_judge(data){
+	var total_investment=parseInt(data.TOTAL_INVESTMENT);
+	if(parseInt(sg_judge.TOTAL_INVESTMENT)>total_investment){
+		$(".sgfb").addClass("project_fbx");
+		$(".sgba").addClass("project_fbx");
+	}else{
+		$(".sgfb").addClass("project_bx");
+		$(".sgba").addClass("project_bx");
+	}
+}
+//监理发包判断
+function jl_process_judge(data){
+	var total_investment=parseInt(data.TOTAL_INVESTMENT);
+	if(data.BUILD_UNIT_PROPERTY_ID.indexOf(jl_judge.BUILD_UNIT_PROPERTY_ID)){
+		$(".jlfb").addClass("project_bx");
+		$(".jlba").addClass("project_bx");
+	}else{
+		if(parseInt(jl_judge.TOTAL_INVESTMENT)>total_investment){
+			$(".jlfb").addClass("project_fbx");
+			$(".jlba").addClass("project_fbx");
 		}else{
-			return '#bab6b3';
+			$(".jlfb").addClass("project_bx");
+			$(".jlba").addClass("project_bx");
 		}
 	}
+	
 }
+
+//审图判断
+function st_process_judge(data){
+	if(length<6){
+		var PROJECT_TYPE_ID='0' + data.PROJECT_TYPE_ID.substring(0,1);
+	}else{
+		var PROJECT_TYPE_ID=data.PROJECT_TYPE_ID.substring(0,2);
+		var PROJECT_TYPE_IDs=data.PROJECT_TYPE_ID.substring(0,4);
+	}
+	
+	if(data.BUILD_PROPERTY_ID==st_judge.BUILD_PROPERTY_one || data.BUILD_PROPERTY_ID==st_judge.BUILD_PROPERTY_two || data.BUILD_PROPERTY_ID==st_judge.BUILD_PROPERTY_three){
+		if(PROJECT_TYPE_ID==st_judge.PROJECT_TYPE_one || data.ywxjfwjz==st_judge.ywxjfwjz ){
+			$(".sg").addClass("project_bx");
+		}else{
+			$(".sg").addClass("project_fbx");
+		}
+	}else if(data.BUILD_PROPERTY_ID==st_judge.BUILD_PROPERTY_four){
+		if(PROJECT_TYPE_ID==st_judge.PROJECT_TYPE_two && data.ywxjfwjz==st_judge.ywxjfwjz){
+			$(".sg").addClass("project_bx");
+		}else if(PROJECT_TYPE_ID==st_judge.PROJECT_TYPE_three && PROJECT_TYPE_ID!=st_judge.PROJECT_TYPE_four && data.PROJECT_TYPE_ID!=st_judge.PROJECT_TYPE_five){
+			$(".sg").addClass("project_bx");
+		}
+		else if(PROJECT_TYPE_ID==st_judge.PROJECT_TYPE_three && data.ywxjfwjz==st_judge.ywxjfwjz){
+			$(".sg").addClass("project_bx");
+		}else{
+			$(".sg").addClass("project_fbx");
+		}
+	}else{
+		$(".sg").addClass("project_fbx");
+	}
+}
+
+
+function show_process(){
+	$(".lc-two").show();
+	$(".lc-three").show();
+	$(".cfb_li").addClass("right_img");
+	var marginLeft=(screen.width-$("#container").width())/2;
+	$("#container").css("left",marginLeft+"px");
+}
+
+function closed_process(){
+	$("#container").hide();
+ 	$("#back_div").hide();
+ 	$(".lc-two").hide();
+	$(".lc-three").hide();
+	$(".list_info").hide();
+	$(".cfb_li").removeClass("right_img");
+	$(".project_process").find(".lc-two").find("li").find("div").removeClass("project_bx").removeClass("project_fbx");
+	$(".project_process").find(".lc-three").find("li").find("div").removeClass("project_bx").removeClass("project_fbx");
+}
+$(document).ready(function(){
+	$(".lc-two").find("li").click(function(){
+		$(".list_info").show();
+		var marginLeft=(screen.width-$("#container").width())/2;
+		$("#container").css("left",marginLeft+"px");
+	});
+	$(".lc-three").find("li").click(function(){
+		$(".list_info").show();
+		var marginLeft=(screen.width-$("#container").width())/2;
+		$("#container").css("left",marginLeft+"px");
+	});
+});

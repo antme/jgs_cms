@@ -51,58 +51,31 @@
   </div>
   <script>
 	  $(document).ready(function(){
-
-
+         var datas;
 	     var int_value = $(".comm_style").find("div").find("div").find(".menu");
 		 $(int_value).parent().hide();
 		 $('.left_menu_style').find('li:first').addClass("li_action");
 		 $('.left_menu_style').find('li').find("a").removeAttr("href");
 		 $(".comm_style").find(".region-left-f").append("<div class='block block-menu search_project'></div>");
-		 var str="<div class='search_project_div menu'><input class='text_inputs' type='text' value='请输入项目报建编号'/><button class='search_btn'>查询</button></div>"+
-		         "<div id='search_project_value' style='width:540px;height:auto;overflow:hidden;'></div>"
+		 var str="<div class='search_project_div menu'><input class='text_inputs' type='text' value='请输入项目报建编号'/><button class='search_btn'>查询</button></div>";
 		 $(".search_project").append(str);
 
 		 
-		 $(".text_inputs").focus(function(){
-			  if($(this).val()=="请输入关键字"){
+		 $(".text_inputs").click(function(){
+			  if($(this).val()=="请输入项目报建编号"){
 				  $(this).attr("value","").css("color","#000");
 			  }
 		  });
 		 $(".search_btn").click(function(){
-			// if(checkUserType()){
-			// $("#search_project_value").show();
-			// if($(".text_inputs").val()=="1402HK0033"){
-			//	 create_chart(2,this,'1402HK0033','','');
-			//	 change_height(15,15,50,50,83,'上海市第一人民医院北部放射信息综合用房装饰装修项目');
-			//	 
-				 
-			// }else if($(".text_inputs").val()=="1402HK0035"){
-			//	 create_chart(3,this,'1402HK0035','','');
-			//	 change_height(62,62,240,240,50,"上海市第一人民医院北部放射信息综合用房装饰装修项目");
-			// }else{
-			//	 alert("请输入正确的项目报建编号！");
-			// }
-            // }
 			 alert("该功能在开发中，敬请期待！");
-			 
+			 //if(checkUserType()){
+			 //	show_project($(".text_inputs").val());
+             //}			 
 		 });
-		 function change_height(n,m,x,y,w,name){
-			 $(".project_info").remove();
-             var stt="<div class='project_info'>"+
-                     "<div class='project_info_name'>"+
-                     "<div class='bf'><div style='width:"+w+"%'></div></div>"+
-                     "<span class='wc'>完成度"+w+"%</span>"+
-                     "</div>"+
-                     "<label class='project_time_info'>审批总时限："+n+"天，实际用时："+m+"天。<br>相对人办理预计总时间"+x+"天，实际用时："+y+"天</label>"+
-                     "<div class='project_title_name'><a href='##' target='_blank'>"+name+"</a></div>"+
-                     "<a class='highcharts-buttons' onclick='close_divs()'></a>"+
-                     "</div>";
 
-             $(".search_project_div").after(stt);
-		     //var height=$("#search_project_value").find(".highcharts-container").height()+$(".project_info").height()+153;
-			 //$(".bsdt").css("height",height+"px");
-		 }
-
+		//关闭流程显示
+		 
+         
 		 $("#block-menu-menu-fwdt-project").find("li").find("a").removeAttr("href");
 		 $("#block-menu-menu-fwdt-project").find("li").find("a").click(function(){alert("该功能在开发中，敬请期待！");});
 		 $("#block-menu-menu-fwdt-user").find("li").find("a").removeAttr("href");
@@ -130,15 +103,8 @@
 		 }else{
 			if(ss_value==0){
 				$(".search_project").show();
-				 //var height=$("#search_project_value").find(".highcharts-container").height()+$(".project_info").height()+153;
-				 //if($("#search_project_value").is(':hidden')){
-				//	 $(".bsdt").css("height","auto");
-				 //}else{
-				//	 $(".bsdt").css("height",height+"px");
-				// }
 			}else{
 				$(int_value[ss_value-1]).parent().show();
-				// $(".bsdt").css("height","auto");
 			}
 		 }
 	  });
