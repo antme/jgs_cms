@@ -64,10 +64,9 @@ Other variables:
 	<?php if ($element["#bundle"] == "dqtd" && $element['#field_name']=="field_attachment"):?>	
 	     <?php $value = $item["#markup"];?>
 	   	 <?php foreach ($items as $id => $item): ?>	
-	   	    	 
 	   	    	<?php if($value):?>
-	   	 	     <div id="FlashFile"> 
-					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="/sites/all/themes/holiday/images/swflash.cab#version=6,0,29,0" width="500" height="330">
+	   	 	     <div id="FlashFile" > 
+					<object width="500px" height="330px" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="/sites/all/themes/holiday/images/swflash.cab#version=6,0,29,0" data="/sites/all/themes/holiday/images/flvplayer.swf?file=<?php print $value;?>" >
 						<param name="movie" value="/sites/all/themes/holiday/js/flvplayer.swf" /> 
 						<param name="quality" value="high" />
 						<param name="allowFullScreen" value="true" />

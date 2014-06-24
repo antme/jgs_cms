@@ -2156,4 +2156,5 @@ float: left;
 	*margin-left:0px;
 }
 .container-inline div, .container-inline label{display:inline-block;}
-#FlashFile{width:500px;height:330px;margin:10px auto;}
+#FlashFile{float:left;width:500px;height:330px;margin:10px auto;}
+#FlashFile object{margin:0px 0px 0px 90px;}
