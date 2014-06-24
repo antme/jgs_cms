@@ -60,3 +60,22 @@ Other variables:
 	   	 <?php endforeach;?>
 
 	<?php endif;?>
+	
+	<?php if ($element["#bundle"] == "dqtd" && $element['#field_name']=="field_attachment"):?>	
+	     <?php $value = $item["#markup"];?>
+	   	 <?php foreach ($items as $id => $item): ?>	
+	   	    	 
+	   	    	<?php if($value):?>
+	   	 	     <div id="FlashFile"> 
+					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="/sites/all/themes/holiday/images/swflash.cab#version=6,0,29,0" width="500" height="330">
+						<param name="movie" value="/sites/all/themes/holiday/js/flvplayer.swf" /> 
+						<param name="quality" value="high" />
+						<param name="allowFullScreen" value="true" />
+						<param name="FlashVars" value="vcastr_file=test.flv" />
+						<embed src="/sites/all/themes/holiday/images/flvplayer.swf?file=<?php print $value;?>" allowfullscreen="true" flashvars="vcastr_file=test.flv" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="500" height="330"></embed>
+					</object>
+				</div>
+				<?php endif;?>
+	   	 <?php endforeach;?>
+
+	<?php endif;?>

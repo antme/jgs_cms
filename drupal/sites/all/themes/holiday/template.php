@@ -172,14 +172,16 @@ function holiday_field__taxonomy_term_reference($variables) {
 /**
  * Implements hook_form_alter().
 */
-function holiday_form_alter(&$form, &$form_state, $form_id) {
-	if($form_id == 'workers_activist_node_form' || $form_id == 'suggestion_node_form'  || $form_id =='search_block_form') {
+function holiday_form_alter(&$form, $form_state, $form_id) {
+	if($form_id == 'workers_activist_node_form' || $form_id == 'suggestion_node_form') {
 		//add function to complete to at the end of array
+		//print $form_id;
 		$form_state['redirect'] = 'node/submitted_successfully';
 	}else{
 		$form_state['redirect'] = '';
 	}
 }
+
 
 function array_diff_assoc_recursive($array1, $array2) {
 	foreach ($array1 as $key => $value) {

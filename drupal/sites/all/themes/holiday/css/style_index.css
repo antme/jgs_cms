@@ -2149,3 +2149,11 @@ float: left;
 	margin:none;
 	padding:none;
 }
+.form-type-textfield .form-text{
+	*margin-left:-50px;
+}
+.form-item-captcha-response .form-text{
+	*margin-left:0px;
+}
+.container-inline div, .container-inline label{display:inline-block;}
+#FlashFile{width:500px;height:330px;margin:10px auto;}
