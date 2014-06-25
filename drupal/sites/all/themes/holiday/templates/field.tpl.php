@@ -65,15 +65,16 @@ Other variables:
 	     <?php $value = $item["#markup"];?>
 	   	 <?php foreach ($items as $id => $item): ?>	
 	   	    	<?php if($value):?>
-	   	 	     <div id="FlashFile" > 
-					<object width="500px" height="330px" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="/sites/all/themes/holiday/images/swflash.cab#version=6,0,29,0" data="/sites/all/themes/holiday/images/flvplayer.swf?file=<?php print $value;?>" >
-						<param name="movie" value="/sites/all/themes/holiday/js/flvplayer.swf" /> 
+	   	 	     <div id="FlashFile"> 
+					<object width="500px" height="330px" style="z-index:9999" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" data="/sites/all/themes/holiday/images/flvplayer.swf?file=<?php print $value;?>" >
+						<param name="movie" value="/sites/all/themes/holiday/images/flvplayer.swf?file=<?php print $value;?>" /> 
 						<param name="quality" value="high" />
 						<param name="allowFullScreen" value="true" />
-						<param name="FlashVars" value="vcastr_file=test.flv" />
+						<param name="FlashVars" value="vcastr_file=<?php print $value;?>" />
 						<embed src="/sites/all/themes/holiday/images/flvplayer.swf?file=<?php print $value;?>" allowfullscreen="true" flashvars="vcastr_file=test.flv" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="500" height="330"></embed>
 					</object>
 				</div>
+				
 				<?php endif;?>
 	   	 <?php endforeach;?>
 

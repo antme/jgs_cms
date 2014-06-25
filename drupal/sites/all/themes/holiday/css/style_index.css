@@ -2155,6 +2155,15 @@ float: left;
 .form-item-captcha-response .form-text{
 	*margin-left:0px;
 }
+#edit-captcha{display:none;}
 .container-inline div, .container-inline label{display:inline-block;}
 #FlashFile{float:left;width:500px;height:330px;margin:10px auto;}
 #FlashFile object{margin:0px 0px 0px 90px;}
+#search-form input#edit-keys, #block-search-form .form-item-search-block-form input{height:14px;}
+#search-block-form  #edit-actions{float:left; padding:0px;}
+#search-block-form .form-item-search-block-form{float:left;}
+#edit-captcha--2{display:none;}
+#search-form input#edit-submit{float:left;}
+#edit-basic .form-type-textfield{float:left;}
+#edit-basic {width:100%; overflow:hidden;}
+#edit-basic .form-item label{line-height:27px;}
