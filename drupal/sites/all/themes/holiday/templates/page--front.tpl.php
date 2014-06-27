@@ -135,13 +135,6 @@
     <?php endif; ?>
     <div class="top_right">
         <div id="now_date" class="now_date"></div>
-	<div class="now_date">
-	   <a href="#" onclick="SetHome(this,window.location)" > 设为首页 </a>
-       <a href="#" onclick="AddFavorite(window.location,document.title)"> 收藏本站 </a>
-    </div>
-	<script>
-	     
-	</script>
     </div>
   </div></div> <!-- /.section, /#header -->
    
@@ -193,9 +186,9 @@
                           <li class="li_style_p">
                              <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/user.gif" /></span>
                              <span><?php print $user->name; ?>&nbsp;</span>
-                             <span class="logout"><?php print l("退出","https://www.hkjgzx.sh.cn/logout?service=http://www.hkjgzx.sh.cn/user/logout"); ?></span>
+                             <span class="logout"><?php print l("退出","https://localhost/logout?service=http://localhost/user/logout"); ?></span>
                              <span><a style="cursor:pointer;" onclick="update_password()" >修改密码</a></span>
-                             <span style="display:none"><a href="http://www.hkjgzx.sh.cn:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
+                             <span><a href="http://localhost:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
                           </li>
                           
                           <li class="li_style_p li_style_b" style="display: none;">
@@ -272,7 +265,7 @@
                <?php else:?>
                 <div class="box5" style="padding-bottom:13px;margin-bottom:10px;height:204px;">
                     <div class="title"><span class="txt">用户中心</span></div>
-                    <iframe style="border:0;border:none;overflow-x: hidden" frameborder="no" scrolling="yes" height='160px' border="0" border="none" marginwidth="0" marginheight="0" src="https://www.hkjgzx.sh.cn/login?embed=true&service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode&locale=zh_CN"></iframe>
+                    <iframe style="border:0;border:none;overflow-x: hidden" frameborder="no" scrolling="yes" height='160px' border="0" border="none" marginwidth="0" marginheight="0" src="https://localhost/login?embed=true&service=http%3A%2F%2Flocalhost%2Fcas%3Fdestination%3Dnode&locale=zh_CN"></iframe>
                     <div style="margin-left:40px;margin-top:-10px;">
                         <a style="cursor:pointer;" onclick="alert('该功能暂未开放，敬请期待！');">注册</a>&nbsp;&nbsp;<a style="cursor:pointer;" onclick="alert('该功能暂未开放，敬请期待！');">忘记密码</a>
                     </div>
@@ -397,7 +390,6 @@
          </ul>
 </div>
 <script>
-  
 
 		<?php
 		        $result = db_query('SELECT * FROM {history} where uid=:uid',array(':uid'=>$user->uid));
