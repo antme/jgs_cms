@@ -143,7 +143,7 @@ $add_more=false;
 	         <?php $has_more=false; ?>
 	    <?php endif;?>
 	 
-	 <?php elseif($view->name=="zcfg_fl_view" || $view->name=="zcfg_xz_view" || $view->name=="zcfg_bm_view" || $view->name=="zcfg_df_view" || $view->name=="zcfg_wj_view" ) : ?>	    
+	 <?php elseif($view->name=="zcfg_fl_view" || $view->name=="zcfg_xz_view" || $view->name=="zcfg_bm_view" || $view->name=="zcfg_df_view" || $view->name=="zcfg_wj_view" || $view->name=="jjws_view") : ?>	    
          <?php if(drupal_get_path_alias()=='node/'+$view->name):?>
              <?php if(drupal_get_path_alias()!='node/zcfgs'):?>
                  <?php $has_more=false;?>
