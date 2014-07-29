@@ -1599,6 +1599,18 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 	margin:0px auto;
 	background-color:#fff;
 }
+#list_info{
+	z-index:99999;
+	border:1px solid #aaa;
+	display:none;
+	height:auto;
+	width:auto;
+	margin:0px auto;
+	background-color:#fff;
+	border:3px solid #cdcdcd;
+	overflow:hidden;
+	width:370px;
+}
 .cursor_click{
 	cursor:pointer;
 }
@@ -2068,14 +2080,20 @@ float: left;
 	overflow:hidden;
 	margin:5px auto;
 }
+.project_process ul{overflow:hidden;}
 .project_process li{
 	padding:5px;
 	float:left;
+	overflow:hidden;
 }
-.project_process ul.lc,.project_process ul.lc-two,.project_process ul.lc-three{
-	 width:150px;
+.project_process ul.lc,.project_process ul.lc-two{
+	 width:160px;
 	 height:auto;
 	 padding-right:20px;
+}
+.project_process ul.lc-three,.project_process ul.zjd{
+	 width:150px;
+	 height:auto;
 }
 .project_process ul.lc-two,.project_process ul.lc-three{
 	margin-top:99px;
@@ -2083,6 +2101,7 @@ float: left;
 .lc-two{
    display:none;
 }
+.project_process ul.zjd{display:none;}
 .lc-three{
    display:none;
 }
@@ -2105,18 +2124,23 @@ float: left;
 }
 .cfb_li{cursor:pointer;}
 .list_info{
-	width:280px;
+	width:210px;
 	overflow:hidden;
 	display:none;
+	padding:5px;
+	border:1px solid #cdcdcd;
 }
 .list_info_left{
 	float:left;
-	width:180px;
+	width:120px;
 	overflow:hidden;
 	display:inline-block;
+	cursor:pointer;
 }
 .list_info_right{
 	float:right;
+	width:80px;
+	text-align:right;
 }
 .lc-two li,.lc-three li{
 	cursor:pointer;
@@ -2167,3 +2191,5 @@ float: left;
 #edit-basic .form-type-textfield{float:left;}
 #edit-basic {width:100%; overflow:hidden;}
 #edit-basic .form-item label{line-height:27px;}
+.bj,.cfb,.sg,.jl,.xk{cursor:pointer;}
+.zjd li div{cursor:pointer;}

@@ -67,10 +67,10 @@
 			  }
 		  });
 		 $(".search_btn").click(function(){
-			 alert("该功能在开发中，敬请期待！");
-			 //if(checkUserType()){
-			 //	show_project($(".text_inputs").val());
-             //}			 
+			 //alert("该功能在开发中，敬请期待！");
+			 if(checkUserType()){
+			 	show_project($(".text_inputs").val());
+             }			 
 		 });
 
 		//关闭流程显示

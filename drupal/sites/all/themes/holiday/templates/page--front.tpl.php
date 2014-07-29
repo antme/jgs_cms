@@ -313,17 +313,18 @@
           <li><span>报建编号:</span><span id="project_info_number"></span></li>
           <li><span>项目地址:</span><span id="project_info_address"></span></li>
           <li><span>建设单位:</span><span id="project_info_unit"></span></li>
+          <li><span>总投资:</span><span id="total_Investment"></span></li>
        </ul>  
     </div>
     <div class="project_process">
        <ul>
            <li>
                <ul class="lc">
-          			<li><div class="bj project_wc">项目报建</div></li>
+          			<li><div class="bj">项目报建</div></li>
           			<li><div class="down_img"></div></li>
      	  			<li class="cfb_li"><div class="cfb project_bx" onclick="show_process()">承发包(*)</div></li>
      	  			<li><div class="down_img"></div></li>
-     	  			<li><div class="sg">施工图审查</div></li>
+     	  			<li><div class="sg ">施工图审查</div></li>
      	  			<li><div class="down_img"></div></li>
      	  			<li><div class="jl project_bx">项目报监</div></li>
      	  			<li><div class="down_img"></div></li>
@@ -332,37 +333,43 @@
            </li>
            <li>
                <ul class="lc-two">
-          			<li class="right_img"><div class="sjfb ">设计发包(*)</div></li>
-     	  			<li class="right_img"><div class="kcfb ">勘察发包(*)</div></li>
-     	  			<li class="right_img"><div class="sgfb ">施工发包(*)</div></li>
-     	  			<li class="right_img"><div class="jlfb ">监理发包(*)</div></li>
+          			<li class="right_img"><div class="sjfb">设计发包(*)</div> 
+          			<ul class="zjd">
+          			
+       		        </ul>
+       		        </li>
+     	  			<li class="right_img"><div class="kcfb">勘察发包(*)</div></li>
+     	  			<li class="right_img"><div class="sgfb">施工发包(*)</div></li>
+     	  			<li class="right_img"><div class="jlfb">监理发包(*)</div></li>
      	  			
        		   </ul>
            </li>
            <li>
                <ul class="lc-three">
-          			<li><div class="sjba ">设计合同备案(*)</div></li>
-     	  			<li><div class="kcba ">勘察合同备案(*)</div></li>
-     	  			<li><div class="sgba ">施工合同备案(*)</div></li>
-     	  			<li><div class="jlba ">监理合同备案(*)</div></li>
+          			<li><div class="sjba">设计合同备案(*)</div></li>
+     	  			<li><div class="kcba">勘察合同备案(*)</div></li>
+     	  			<li><div class="sgba">施工合同备案(*)</div></li>
+     	  			<li><div class="jlba">监理合同备案(*)</div></li>
        		   </ul>
            </li>
+           
            <li>
      	  	   <ul class="list_info">
      	  			<li style="border-bottom:1px solid #cdcdcd">
      	  			    <span class="list_info_left">名称</span>
      	  			    <span class="list_info_right">时间</span>
      	  			</li>
-     	  			<li>
-     	  			    <span class="list_info_left"><a href="#">设计发包01</a></span>
-     	  			    <span class="list_info_right">2014-02-03</span>
-     	  			</li>
-     	  			<li>
-     	  			    <span class="list_info_left"><a href="#">设计发包02</a></span>
-     	  			    <span class="list_info_right">2014-03-21</span>
-     	  			</li>
+     	  			
      	       </ul>
      	  </li>
+     	  <li>
+              
+           </li>
+     	   <li>
+     	       <ul id="list_info">
+     	           
+     	       </ul>
+     	   </li>
        </ul>  
     </div>
 </div>
