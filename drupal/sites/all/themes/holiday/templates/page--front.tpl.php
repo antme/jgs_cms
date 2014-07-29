@@ -333,15 +333,10 @@
            </li>
            <li>
                <ul class="lc-two">
-          			<li class="right_img"><div class="sjfb">设计发包(*)</div> 
-          			<ul class="zjd">
-          			
-       		        </ul>
-       		        </li>
+          			<li class="right_img"><div class="sjfb">设计发包(*)</div></li>
      	  			<li class="right_img"><div class="kcfb">勘察发包(*)</div></li>
      	  			<li class="right_img"><div class="sgfb">施工发包(*)</div></li>
      	  			<li class="right_img"><div class="jlfb">监理发包(*)</div></li>
-     	  			
        		   </ul>
            </li>
            <li>
@@ -359,14 +354,15 @@
      	  			    <span class="list_info_left">名称</span>
      	  			    <span class="list_info_right">时间</span>
      	  			</li>
-     	  			
      	       </ul>
      	  </li>
      	  <li>
-              
+              <ul class="zjd">
+          			
+       		  </ul>
            </li>
      	   <li>
-     	       <ul id="list_info">
+     	       <ul id="list_info" style="width:370px;border:3px solid #cdcdcd;">
      	           
      	       </ul>
      	   </li>
