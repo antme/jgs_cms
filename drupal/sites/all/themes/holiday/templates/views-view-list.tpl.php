@@ -95,8 +95,7 @@ $add_more=false;
     tab.onmouseout=function() {MyMar=setInterval(Marquee,speeds)};
     </script>
 <?php else:?>
-	<?php if($view->name=="jgyw" || $view->name=="xw_view"):?>
-	
+	<?php if($view->name=="jgyw" || $view->name=="xw_view" || $view->name=="real_time_working_view"):?>
 	    <?php if ($is_front):?>
 	         <?php $class_name = "box1"; $ul_style="ul_style";$display_title=false; $display_bottom=true;?>
 	    <?php else :?>
