@@ -244,7 +244,6 @@ a.white:hover {
     margin-right: 10px;
 }
 .box3 .title h1 {
-    font-family: ΢���ź�;
     font-size: 14px;
     font-weight: bold;
     height: 28px;
@@ -263,6 +262,80 @@ a.white:hover {
 }
 .box3 li span {
     color: #444444;
+}
+.box13 {
+    float: left;
+    margin-top:10px;
+    height: 155px;
+    width: 320px;
+    border-top:none;
+    margin-left:21px;
+    border-top:none;
+}
+.box13 .ul_style li span{
+	float:left;
+}
+.box13 .ul_style li span.date{
+	float:right;
+}
+.box13 .ul_style li span.field-content{
+	float:left;
+    width:68%;
+    font-size:12px;
+    height:24px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    text-overflow: ellipsis;/* IE/Safari */
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;/* Opera */
+    -moz-binding: url("ellipsis.xml#ellipsis");/*FireFox*/
+}
+.box13 .title {
+    float: left;
+    height: 28px;
+    line-height:28px;
+    width: 320px;
+    border-bottom:2px solid #006699;
+    font-weight:bold;
+}
+.box13 .title .more {
+    float: right;
+    line-height: 28px;
+    margin-right: 10px;
+}
+.box13 .title h1 {
+    font-size: 14px;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    width: 88px;
+}
+.box13 .ul_style{
+	margin:5px;
+}
+.box13 ul li {
+    display: inline;
+    float: left;
+    line-height: 24px;
+    width: 100%;
+}
+.box13 li span {
+    color: #444444;
+}
+.box13 .title .more a 
+{
+color: #0000FF;
+text-decoration: underline;
+}
+
+.titles_top{
+	background: url("/sites/all/themes/holiday/images/titlebg3.jpg") repeat-x;
+	height: 30px;
+	line-height:28px;
+	font-weight:bold;
+	text-indent:5px;
 }
 .box4 {
     background: url("../images/tzbg.jpg") repeat-x ;
@@ -1734,6 +1807,10 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 	color:#0175fd;
 	float:left;
 }
+.box13 li .type_name span{
+	color:#0175fd;
+	float:left;
+}
 .date{
 	font-size:12px;
 	float:right;
@@ -1752,6 +1829,7 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
     height: 188px;
     overflow: hidden;
     width: 248px;
+    margin-left:8px;
 }
 
 .part3 .ul_style .field-content {
@@ -2203,3 +2281,14 @@ float: left;
 .bj,.cfb,.sg,.jl,.xk{cursor:pointer;}
 .zjd li div{cursor:pointer;}
 .form-item-choice{overflow:hidden;}
+.nbgg{
+	width:708px;
+	border:1px solid #cdcdcd;
+}
+.nbgg .context{
+	width:708px;
+	overflwo:hidden;
+}
+.nbgg .block-views{
+	width:344px;
+}

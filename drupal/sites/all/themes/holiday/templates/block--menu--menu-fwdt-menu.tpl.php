@@ -69,7 +69,8 @@
 		 $(".search_btn").click(function(){
 			 //alert("该功能在开发中，敬请期待！");
 			 if(checkUserType()){
-			 	show_project($(".text_inputs").val());
+				var str=$(".text_inputs").val();
+			 	show_project(str);
              }			 
 		 });
 
@@ -93,11 +94,10 @@
 	  $(".left_menu_style").find("li").click(function(){
 	     $('.left_menu_style').find('li').removeClass("li_action");
          $(this).addClass("li_action");
-
 		 var int_value = $(".comm_style").find("div").find("div").find(".menu");
 		 var ss_value = $(".left_menu_style").find("li").index(this);
 		 var inss=$(int_value).length;
-		 $(int_value).parent().hide();
+		 $(int_value).parent().css('display','none');
 		 if(ss_value>inss){
 			 
 		 }else{

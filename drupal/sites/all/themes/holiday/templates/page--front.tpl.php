@@ -146,16 +146,21 @@
            <div class="left">
 		       <!--宸﹁竟绗竴鍖�-->
 		       <?php if ($page['left']): ?>
+		       <?php if(isJgsUser()):?>
+			   	  <div class="part1 nbgg" style="margin-top:10px;">
+			   	      <div class="titles_top">内部公告</div>
+		         	  <div class="context">
+		                  <?php print render($page['left-gg']); ?>
+		          	  </div>
+			      </div>
+			   <?php endif;?>
 		       <div class="part1" style="margin-top:10px;">
-		          <?php if(isJgsUser()):?>
-		             <?php print render($page['left-gg']); ?>
-		          <?php else:?>
-		              <?php print render($page['left-img']); ?>
-		          <?php endif;?>
+		          <?php print render($page['left-img']); ?>
                   <?php print render($page['left']); ?>
 			   </div>
 			   <?php endif; ?>
 			   <!--鏈嶅姟灞曠ず鍖�-->
+			   
 			   <?php if ($page['left-f']): ?>
 		       <div class="part1 comm_style bsdt" style="margin-top:10px;">
 		         <div class="title_bsdt"></div>
@@ -417,4 +422,12 @@
 		//          document.getElementById('shows').style.display='block';
 		//    },3000);
 		//};
+		var obj = $(".ul_style").find("li").find("span").find("a");
+		for(var i=0;i<obj.length;i++){
+			$(obj[i]).attr('title',$(obj[i]).text());
+		}
+		var box5=$(".box5").find("ul").find("li").find("span").find("a");
+		for(var i=0;i<box5.length;i++){
+			$(box5[i]).attr('title',$(box5[i]).text());
+		}
 </script>

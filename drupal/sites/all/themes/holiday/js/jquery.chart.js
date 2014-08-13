@@ -707,9 +707,7 @@ function display_div(){
 	$("#container").show();
 	$("#back_div").show();
 	var marginheight=$(".search_project").offset().top-200;
-	var marginLeft=(screen.width-$("#container").width())/2;
 	var slHeight=document.body.scrollHeight;
-	$("#container").css("left",marginLeft+"px");
 	$("#container").css("top",marginheight+"px");
 	$("#back_div").css("height",slHeight+"px");
 }
@@ -757,7 +755,6 @@ function BJ_judge(data){
 		$(".lc-two").hide();
 		$(".lc-three").hide();
 		$(".zjd").hide();
-		left_margin();
 	});
 }
 
@@ -768,7 +765,6 @@ function load_sl_data(data){
 		$("#list_info").append(str);
 	}
 	$("#list_info").show();
-	left_margin();
 }
 
 
@@ -808,18 +804,23 @@ function load_sj_data(data){
 				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>设计补充文件备案</div></li>";
 		$(".zjd").append(str);
 	}
-	
+	var str="<li><div class='down_img'></div></li>"+
+	"<li><div class='project_wc' >开标</div></li>"+"<li><div class='down_img'></div></li>"+
+	"<li><div class='project_wc' >评标</div></li>"+"<li><div class='down_img'></div></li>"+
+	"<li><div class='project_wc' >中标书面材料提交</div></li>";
+	$(".zjd").append(str);
 	if(data.smtz_active){
 		var jlp=JSON.stringify(data.smtz_list);
 		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>设计招投标书面报告<br>中标通知书备案</div></li>";
+				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>中标通知书备案</div></li>";
 		$(".zjd").append(str);
 	}else{
 		var jlp=JSON.stringify(data.smtz_list);
 		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>设计招投标书面报告<br>中标通知书备案</div></li>";
+				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>中标通知书备案</div></li>";
 		$(".zjd").append(str);
 	}
+	
 	$("#container").css("left","0px");
 }
 
@@ -860,19 +861,22 @@ function load_sg_data(data){
 				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>施工补充文件备案</div></li>";
 		$(".zjd").append(str);
 	}
-	
+	var str="<li><div class='down_img'></div></li>"+
+	"<li><div class='project_wc' >开标</div></li>"+"<li><div class='down_img'></div></li>"+
+	"<li><div class='project_wc' >评标</div></li>"+"<li><div class='down_img'></div></li>"+
+	"<li><div class='project_wc' >中标书面材料提交</div></li>";
+	$(".zjd").append(str);
 	if(data.smtz_active){
 		var jlp=JSON.stringify(data.smtz_list);
 		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>施工招投标书面报告<br>中标通知书备案</div></li>";
+				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>中标通知书备案</div></li>";
 		$(".zjd").append(str);
 	}else{
 		var jlp=JSON.stringify(data.smtz_list);
 		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>施工招投标书面报告<br>中标通知书备案</div></li>";
+				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>中标通知书备案</div></li>";
 		$(".zjd").append(str);
 	}
-	left_margin();
 	$("#container").css("left","0px");
 }
 
@@ -913,19 +917,22 @@ function load_kc_data(data){
 				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>勘察补充文件备案</div></li>";
 		$(".zjd").append(str);
 	}
-	
+	var str="<li><div class='down_img'></div></li>"+
+	"<li><div class='project_wc' >开标</div></li>"+"<li><div class='down_img'></div></li>"+
+	"<li><div class='project_wc' >评标</div></li>"+"<li><div class='down_img'></div></li>"+
+	"<li><div class='project_wc' >中标书面材料提交</div></li>";
+	$(".zjd").append(str);
 	if(data.smtz_active){
 		var jlp=JSON.stringify(data.smtz_list);
 		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>勘察招投标书面报告<br>中标通知书备案</div></li>";
+				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>中标通知书备案</div></li>";
 		$(".zjd").append(str);
 	}else{
 		var jlp=JSON.stringify(data.smtz_list);
 		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>勘察招投标书面报告<br>中标通知书备案</div></li>";
+				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>中标通知书备案</div></li>";
 		$(".zjd").append(str);
 	}
-	left_margin();
 	$("#container").css("left","0px");
 }
 
@@ -966,26 +973,27 @@ function load_jl_data(data){
 				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>监理补充文件备案</div></li>";
 		$(".zjd").append(str);
 	}
-	
+	var str="<li><div class='down_img'></div></li>"+
+	"<li><div class='project_wc' >开标</div></li>"+"<li><div class='down_img'></div></li>"+
+	"<li><div class='project_wc' >评标</div></li>"+"<li><div class='down_img'></div></li>"+
+	"<li><div class='project_wc' >中标书面材料提交</div></li>";
+	$(".zjd").append(str);
 	if(data.smtz_active){
 		var jlp=JSON.stringify(data.smtz_list);
 		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>监理招投标书面报告<br>中标通知书备案</div></li>";
+				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>中标通知书备案</div></li>";
 		$(".zjd").append(str);
 	}else{
 		var jlp=JSON.stringify(data.smtz_list);
 		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>监理招投标书面报告<br>中标通知书备案</div></li>";
+				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>中标通知书备案</div></li>";
 		$(".zjd").append(str);
 	}
-	left_margin();
-	$("#container").css("left","0px");
 }
 
 function add_fb_data(data,process){
 	$(".list_info").find(".adddata").remove();
 	$(".zjd").hide();
-	console.log(process);
 	for(var i=0;i<data.children.length;i++){
 		if(process=="sjba" || process=="jlba" || process=="sgba" || process=="kcba"){
 			var da_sl=JSON.stringify(data.children[i].child);
@@ -1011,7 +1019,6 @@ function add_fb_data(data,process){
 	}
 	$(".list_info").show();
 	$("#list_info").hide();
-	left_margin();
 }
 
 //设计发包判断
@@ -1169,7 +1176,6 @@ function xmbj_process_judge(data){
     		$(".lc-two").hide();
     		$(".lc-three").hide();
     		$(".zjd").hide();
-    		left_margin();
     	});
     }else{
     	$(".jl").addClass("project_fbx");
@@ -1191,7 +1197,6 @@ function sgxk_process_judge(data){
     		$(".lc-two").hide();
     		$(".lc-three").hide();
     		$(".zjd").hide();
-    		left_margin();
     	});
     }else{
     	$(".xk").addClass("project_fbx");
@@ -1210,13 +1215,8 @@ function show_process(){
 	$(".list_info").hide();
 	$("#list_info").find("li").remove();
 	$("#list_info").hide();
-	left_margin();
 }
 
-function left_margin(){
-	var marginLeft=(screen.width-$("#container").width())/2;
-	$("#container").css("left",marginLeft+"px");
-}
 
 function closed_process(){
 	$("#container").hide();

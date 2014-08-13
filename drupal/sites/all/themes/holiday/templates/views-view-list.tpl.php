@@ -18,6 +18,7 @@ $style_name="";
 $display_title=true;
 $display_bottom=false;
 $add_more=false;
+$nbgg=false;
 ?>
 <?php if($view->name=="slide_images_view") : ?>
 
@@ -123,10 +124,10 @@ $add_more=false;
 	         <?php $has_more=false; $add_more=true;?>
 	    <?php endif;?>
 	    
-	 <?php elseif($view->name=="announcement_view") : ?>
+	 <?php elseif($view->name=="announcement_view" || $view->name=="huiyijiyao_view" || $view->name=="toupiao_view" || $view->name=="zhengqiuyijian_view" || $view->name=="tongzhi_view") : ?>
 
 	    <?php if ($is_front):?>
-	         <?php $class_name = "box3"; $ul_style="ul_style"; ?>
+	         <?php $class_name = "box13"; $ul_style="ul_style";?>
 	    <?php else :?>
 	         <?php $has_more=false; ?>
 	    <?php endif;?>
@@ -189,7 +190,11 @@ $add_more=false;
 	    	<div class="title">
 	    	     <?php if ($has_more): ?>
 	    	        <?php if ($is_front):?>
-	             	   <span class="more"><a href="node/<?php print $view->name?>">更多</a></span> 
+	    	           <?php if($nbgg):?>
+	    	           <?php else: ?>
+	    	               <span class="more"><a href="node/<?php print $view->name?>">更多</a></span>
+	    	           <?php endif;?>
+	             	    
 	             	<?php else:?>
 	             	   <?php if($view->name=="zcfg_wj_view"):?>
 	             	       <span class="more"><a href="zcfg_glwj">更多</a></span>
