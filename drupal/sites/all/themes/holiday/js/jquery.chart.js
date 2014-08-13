@@ -291,7 +291,7 @@ var datas=[
         	   		]
         	   },
         	   KC_FB:{
-        		   need:true,
+        		   need:false,
         		   complete:true,
                    children:[
                 	     {
@@ -603,45 +603,10 @@ var datas=[
            	           ]
         	   },
         	   SG_ba:{
-        		   need:true,
+        		   need:false,
         	       complete:false,
         	       children:[
-           			      { 
-						      child_name:'施工备案01',
-							  child_time:'2014-07-01',
-							  child:[
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      },
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      },
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      }
-							  ]
-           			    	},
-           			    	{ 
-						      child_name:'施工备案02',
-							  child_time:'2014-07-01',
-							  child:[
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      },
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      },
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      }
-							  ]
-           			    	}							
+           			     			
            	           ]
         	   },
         	   SGT:{
@@ -649,7 +614,7 @@ var datas=[
         	       complete:true,
         	   },
         	   XMBJ:{
-        		   need:false,
+        		   need:true,
         	       complete:false,
         	       child:[
            			      {
