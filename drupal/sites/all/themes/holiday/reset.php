@@ -3,7 +3,7 @@
 $loginName = $_REQUEST ["loginName"];
 $oldPass = $_REQUEST ["oldPass"];
 $newPass = $_REQUEST ["newPass"];
-$url = 'http://mis.hkjgzx.sh.cn:8080/login/passSync.do'; // 此处必须为完整路径
+$url = 'http://www.hkjgzx.sh.cn:8080/login/passSync.do'; // 此处必须为完整路径
 //$header = array("Content-type: application/x-www-form-urlencoded"); // 定义content-type为xml
 $ch = curl_init (); // 初始化curl
 $data = array (
