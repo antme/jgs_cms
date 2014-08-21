@@ -303,10 +303,16 @@ function _node_resource_create($node) {
   $misId = $node['misId'];
   $nid = _node_retrive_nid($misId);
   
+
   if($node['deleted']){
   	return _node_resource_delete($nid);
-  }else  if($nid != null){	
-  	return _node_resource_update($nid, $node); 	
+  }else  if($nid != null){	  	
+  	$old_node = node_load($nid);
+  	if (!empty($old_node->nid)) {
+  		return _node_resource_update($nid, $node); 		
+  	}else{
+  		db_delete('node_mis')->condition('nid', $nid)->execute();
+  	}
   }
   // Adds backwards compatability with regression fixed in #1083242
   $node = _services_arg_value($node, 'node');
