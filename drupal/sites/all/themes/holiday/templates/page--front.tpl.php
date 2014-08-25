@@ -193,7 +193,7 @@
                              <span><?php print $user->name; ?>&nbsp;</span>
                              <span class="logout"><?php print l("退出","https://www.hkjgzx.sh.cn/logout?service=http://www.hkjgzx.sh.cn/user/logout"); ?></span>
                              <span><a style="cursor:pointer;" onclick="update_password()" >修改密码</a></span>
-                             <span id="shows"><a href="http://mis.hkjgzx.sh.cn:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
+                             <span id="shows"><a href="http://www.hkjgzx.sh.cn:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
                           </li>
                           <li class="li_style_p li_style_b" style="display: none;">
                              <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/dbsx.gif"/></span>
@@ -398,36 +398,4 @@
 </div>
 <script>
 
-		<?php
-		        $result = db_query('SELECT * FROM {history} where uid=:uid',array(':uid'=>$user->uid));
-		        $list = array();
-		        foreach ($result as $record) {
-		        	$list[] = t('@nid', array(
-		        			'@nid' => $record->nid,
-		        	));
-		        }  
-		?>
-		var arry_nid = <?php echo json_encode($list);?>;
-		var arry_href = $(".box3").find("li").find("span").find("a");
-		for(var i=0;i<arry_href.length;i++){
-			for( var j=0;j<arry_nid.length;j++){
-				var nodes = $(arry_href[i]).attr("href").split('/');
-				if(arry_nid[j]==nodes[2]){
-					$(arry_href[i]).css("color","#aaa");
-				}
-			}
-		}
-		//window.onload = function(){
-		//     window.setInterval(function(){
-		//          document.getElementById('shows').style.display='block';
-		//    },3000);
-		//};
-		var obj = $(".ul_style").find("li").find("span").find("a");
-		for(var i=0;i<obj.length;i++){
-			$(obj[i]).attr('title',$(obj[i]).text());
-		}
-		var box5=$(".box5").find("ul").find("li").find("span").find("a");
-		for(var i=0;i<box5.length;i++){
-			$(box5[i]).attr('title',$(box5[i]).text());
-		}
 </script>

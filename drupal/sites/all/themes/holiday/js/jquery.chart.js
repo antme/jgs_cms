@@ -1,669 +1,28 @@
-var datas=[
-           {
-        	   BJBH:'1302HK0025',                             //报建编号
-        	   PROJECT_NAME:'国家指南针计划专项青少年基地改建及修缮项目',    //项目名称
-        	   BUILD_UNIT_NAME:'上海市虹口区教育局',                 //建设单位
-        	   BUILD_ADDRESS:'运光路40号',                       //建设地点
-        	   total_Investment:'8,193.80',                   //总投资
-        	   BJ_Action:{
-        		   complete:true,                             //报建是否完成
-        		   BJ_children:[
-        		        		   {
-        		    				   name:'退回',
-        		        			   time:'2014-07-03',
-        		        			   results:'资料不全'  
-        		    			   },
-        		    			   {
-        		    				   name:'受理',
-        		        			   time:'2014-07-03',
-        		        			   results:''  
-        		    			   }
-        		        	   ]
-        	   },                                
-        	   SJ_FB:{
-        		   need:true,                               //是否需要做
-        		   complete:true,                           //是否完成
-                   children:[                               //分包数据
-                	    {
-                		   child_name:'设计发包01',
-                		   child_time:'2014-07-01',
-                		   zbdj_active:true,
-                		   zbdj_list:[
-                			   {
-                				   name:'受理',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                		   ],
-                		   sjba_active:false,
-                		   sjba_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                		   ],
-                		   bcba_active:false,
-                		   bcba_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                			    	  name:'退回',
-                			    	  time:'2014-07-03',
-                			    	  results:'资料不全'  
-                			   },
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                	      ],
-                	      smtz_active:false,
-                	      smtz_list:[
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-03',
-               			    	  results:'资料不全'  
-               			      },
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-03',
-               			    	  results:'资料不全'  
-               			      },
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-03',
-               			    	  results:'资料不全'  
-               			      },
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-04',
-               			    	  results:''  
-               			      }
-               	           ]
-                	   },
-                	   {
-                		   child_name:'设计发包01',
-                		   child_time:'2014-07-01',
-                		   zbdj_active:true,
-                		   zbdj_list:[
-                			   {
-                				   name:'受理',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                		   ],
-                		   sjba_active:false,
-                		   sjba_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                		   ],
-                		   bcba_active:false,
-                		   bcba_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                			    	  name:'退回',
-                			    	  time:'2014-07-03',
-                			    	  results:'资料不全'  
-                			   },
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                	      ],
-                	      smtz_active:false,
-                	      smtz_list:[
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-03',
-               			    	  results:'资料不全'  
-               			      },
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-03',
-               			    	  results:'资料不全'  
-               			      },
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-03',
-               			    	  results:'资料不全'  
-               			      },
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-04',
-               			    	  results:''  
-               			      }
-               	           ]
-                	   },
-                	   {
-                		   child_name:'设计发包02',
-                		   child_time:'2014-07-02',
-                		   zbdj_active:true,
-                		   zbdj_list:[
-                			   {
-                				   name:'受理',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                		   ],
-                		   sjba_active:false,
-                		   sjba_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                		   ],
-                		   bcba_active:false,
-                		   bcba_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                			    	  name:'退回',
-                			    	  time:'2014-07-03',
-                			    	  results:'资料不全'  
-                			   },
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                	      ],
-                	      smtz_active:false,
-                	      smtz_list:[
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-03',
-               			    	  results:'资料不全'  
-               			      },
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-03',
-               			    	  results:'资料不全'  
-               			      },
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-03',
-               			    	  results:'资料不全'  
-               			      },
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-04',
-               			    	  results:''  
-               			      }
-               	           ]
-                	   },
-                	   {
-                		   child_name:'设计发包03',
-                		   child_time:'2014-07-03',
-                		   zbdj_active:true,
-                		   zbdj_list:[
-                			   {
-                				   name:'受理',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                		   ],
-                		   sjba_active:false,
-                		   sjba_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                		   ],
-                		   bcba_active:false,
-                		   bcba_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                			    	  name:'退回',
-                			    	  time:'2014-07-03',
-                			    	  results:'资料不全'  
-                			   },
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                	      ],
-                	      smtz_active:false,
-                	      smtz_list:[
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-03',
-               			    	  results:'资料不全'  
-               			      },
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-03',
-               			    	  results:'资料不全'  
-               			      },
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-03',
-               			    	  results:'资料不全'  
-               			      },
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-04',
-               			    	  results:''  
-               			      }
-               	           ]
-                	   }
-        	   		]
-        	   },
-        	   KC_FB:{
-        		   need:false,
-        		   complete:true,
-                   children:[
-                	     {
-                		   child_name:'勘察发包01',
-                		   child_time:'2014-07-01',
-                		   zbdj_active:true,
-                		   zbdj_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                				   name:'受理',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                		   ],
-                		   sjba_active:false,
-                		   sjba_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                				   name:'受理',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                		   ],
-                		   bcba_active:false,
-                		   bcba_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                				   name:'受理',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                	      ],
-                	      smtz_active:false,
-                	      smtz_list:[
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-03',
-               			    	  results:'资料不全'  
-               			      },
-               			      {
-               			    	  name:'受理',
-               			    	  time:'2014-07-04',
-               			    	  results:''  
-               			      }
-               	           ]
-                	   }
-        	   		]
-        	   },
-        	   JL_FB:{
-        		   need:true,
-        		   complete:true,
-                   children:[
-                	    {
-                		   child_name:'监理发包01',
-                		   child_time:'2014-07-01',
-                		   zbdj_active:true,
-                		   zbdj_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                				   name:'受理',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                		   ],
-                		   sjba_active:false,
-                		   sjba_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                				   name:'受理',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                		   ],
-                		   bcba_active:false,
-                		   bcba_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                				   name:'受理',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                	      ],
-                	      smtz_active:false,
-                	      smtz_list:[
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-03',
-               			    	  results:'资料不全'  
-               			      },
-               			      {
-               			    	  name:'受理',
-               			    	  time:'2014-07-04',
-               			    	  results:''  
-               			      }
-               	           ]
-                	   }
-        	   		]
-        	   },
-        	   SG_FB:{
-        		   need:true,
-        		   complete:true,
-                   children:[
-                	     {
-                		   child_name:'施工发包01',
-                		   child_time:'2014-07-01',
-                		   zbdj_active:true,
-                		   zbdj_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                				   name:'受理',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                		   ],
-                		   sjba_active:false,
-                		   sjba_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                				   name:'受理',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                		   ],
-                		   bcba_active:false,
-                		   bcba_list:[
-                			   {
-                				   name:'退回',
-                    			   time:'2014-07-03',
-                    			   results:'资料不全'  
-                			   },
-                			   {
-                				   name:'受理',
-                    			   time:'2014-07-04',
-                    			   results:''  
-                			   }
-                	      ],
-                	      smtz_active:false,
-                	      smtz_list:[
-               			      {
-               			    	  name:'退回',
-               			    	  time:'2014-07-03',
-               			    	  results:'资料不全'  
-               			      },
-               			      {
-               			    	  name:'受理',
-               			    	  time:'2014-07-04',
-               			    	  results:''  
-               			      }
-               	           ]
-                	   }
-        	   		]
-        	   },
-        	   SJ_ba:{
-        		   need:false,
-        	       complete:true,
-        	       children:[
-           			      { 
-						      child_name:'设计备案01',
-							  child_time:'2014-07-01',
-							  child:[
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      },
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      },
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      }
-							  ]
-           			    	},
-           			    	{ 
-						      child_name:'设计备案02',
-							  child_time:'2014-07-01',
-							  child:[
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      },
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      },
-								  { name:'受理',
-									time:'2014-07-03',
-									results:''
-							      }
-							  ]
-           			    	}							
-           	           ]
-        	   },
-        	   KC_ba:{
-        		   need:false,
-        	       complete:true,
-        	       children:[
-           			      { 
-						      child_name:'勘察备案01',
-							  child_time:'2014-07-01',
-							  child:[
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      },
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      },
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      }
-							  ]
-           			    	},
-           			    	{ 
-						      child_name:'勘察备案02',
-							  child_time:'2014-07-01',
-							  child:[
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      },
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      },
-								  { name:'受理',
-									time:'2014-07-03',
-									results:''
-							      }
-							  ]
-           			    	}							
-           	           ]
-        	   },
-        	   JL_ba:{
-        		   need:true,
-        	       complete:false,
-        	       children:[
-           			      { 
-						      child_name:'监理备案01',
-							  child_time:'2014-07-01',
-							  child:[
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      },
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      },
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      }
-							  ]
-           			    	},
-           			    	{ 
-						      child_name:'监理备案02',
-							  child_time:'2014-07-01',
-							  child:[
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      },
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      },
-								  { name:'退回',
-									time:'2014-07-03',
-									results:'资料不全'
-							      }
-							  ]
-           			    	}							
-           	           ]
-        	   },
-        	   SG_ba:{
-        		   need:false,
-        	       complete:false,
-        	       children:[
-           			     			
-           	           ]
-        	   },
-        	   SGT:{
-        		   need:false,
-        	       complete:true,
-        	   },
-        	   XMBJ:{
-        		   need:true,
-        	       complete:false,
-        	       child:[
-           			      {
-           			    	  name:'退回',
-           			    	  time:'2014-07-03',
-           			    	  results:'资料不全'  
-           			      },
-           			      {
-           			    	  name:'退回',
-           			    	  time:'2014-07-04',
-           			    	  results:'资料不全'  
-           			      }
-           	           ]
-        	   },
-        	   SGXK:{
-        		   need:true,
-        	       complete:false,
-        	       child:[
-           			      {
-           			    	  name:'退回',
-           			    	  time:'2014-07-03',
-           			    	  results:'资料不全'  
-           			      },
-           			      {
-           			    	  name:'退回',
-           			    	  time:'2014-07-04',
-           			    	  results:'资料不全'  
-           			      }
-           	           ]
-        	   }
-           }
-];
-
+var pro_number;
 //流程显示入口     报建编号判断
-function show_project(pro_number){
-	var num=false;
-	var project_data;
-	for(var i=0;i<datas.length;i++){
-		if(pro_number==datas[i].BJBH){
-			num=true;
-			project_data=datas[i];
+function show_project(){
+	var url ='/sites/all/themes/holiday/project_info.php';
+	$.ajax({
+		type:'post',
+		url:url,
+		data:{
+			"bjbh": pro_number,
+		},
+		success:function(data){
+			if(data){
+				var proData=data;
+				proData = JSON.parse(proData);
+				loading_projec_data(proData);
+				display_div();
+			}else{
+				alert("请输入正确的报建编号！");
+			}
+							
+		},
+		error: function(jqXHR, data) {
+			alert("网络异常！");
 		}
-	}
-	if(num){
-		loading_projec_data(project_data); 
-		display_div();
-	}else{
-		alert('请输入正确的报建编号');
-	}
+	   });
 	
 }
 
@@ -679,28 +38,21 @@ function display_div(){
 
 //项目信息加载
 function loading_projec_data(data){
-	$(".project_info").find("#project_info_name").text(data.PROJECT_NAME);
-	$(".project_info").find("#project_info_number").text(data.BJBH);
-	$(".project_info").find("#project_info_address").text(data.BUILD_ADDRESS);
-	$(".project_info").find("#project_info_unit").text(data.BUILD_UNIT_NAME);
-	$(".project_info").find("#total_Investment").text(data.total_Investment+"万元");
+	$(".project_info").find("#project_info_name").text(data.projectName);
+	$(".project_info").find("#project_info_number").text(data.bjbh);
+	$(".project_info").find("#project_info_address").text(data.buildAddress);
+	$(".project_info").find("#project_info_unit").text(data.buildUnitName);
+	$(".project_info").find("#total_Investment").text(data.totalInvestment+"万元");
 	process_judge(data);
 }
 																						
 //流程判断开始
 function process_judge(data){
-	BJ_judge(data.BJ_Action);
-	sj_process_judge(data.SJ_FB);
-	kc_process_judge(data.KC_FB);
-	sg_process_judge(data.SG_FB);
-	jl_process_judge(data.JL_FB);
-	st_process_judge(data.SGT);
-	xmbj_process_judge(data.XMBJ);
-	sgxk_process_judge(data.SGXK);
-	sjba_process_judge(data.SJ_ba);
-	kcba_process_judge(data.KC_ba);
-	jlba_process_judge(data.JL_ba);
-	sgba_process_judge(data.SG_ba);
+	BJ_judge(data.bjAction);
+	st_process_judge(data.sgt);
+	xmbj_process_judge(data.xmbj);
+	sgxk_process_judge(data.sgxk);
+	
 }
 
 function BJ_judge(data){
@@ -711,8 +63,8 @@ function BJ_judge(data){
 	}
 	$(".bj").click(function(){
 		$("#list_info").find("li").remove();
-		for(var i=0;i<data.BJ_children.length;i++){
-			var str="<li>受理操作："+data.BJ_children[i].name+"&nbsp;&nbsp;&nbsp;&nbsp;原因：<label style='width:65px;display:inline-block;'>"+data.BJ_children[i].results+"</label>&nbsp;&nbsp;&nbsp;&nbsp;时间："+data.BJ_children[i].time+"</li>";
+		for(var i=0;i<data.child.length;i++){
+			var str="<li>受理操作："+data.child[i].name+"&nbsp;&nbsp;&nbsp;&nbsp;原因：<label style='width:65px;display:inline-block;'>"+data.child[i].results+"</label>&nbsp;&nbsp;&nbsp;&nbsp;时间："+data.child[i].time+"</li>";
 			$("#list_info").append(str);
 		}
 		$("#list_info").show();
@@ -724,6 +76,94 @@ function BJ_judge(data){
 }
 
 function load_sl_data(data){
+	if(data){
+		var url ='/sites/all/themes/holiday/project_node.php';
+		$.ajax({
+			type:'post',
+			url:url,
+			data:{
+				"bizCode": data.bizCode,
+				"bidMethod": data.bidMethod,
+				"childId": data.childId
+			},
+			success:function(data){
+				if(data){
+					$("#list_info").find("li").remove();
+					var proData=JSON.parse(data);
+					for(var i=0;i<proData[0].child.length;i++){
+						var str="<li>受理操作："+proData[0].child[i].name+"&nbsp;&nbsp;&nbsp;&nbsp;原因：<label style='width:65px;display:inline-block;'>"+proData[0].child[i].results+"</label>&nbsp;&nbsp;&nbsp;&nbsp;时间："+proData[0].child[i].time+"</li>";
+						$("#list_info").append(str);
+					}
+					$("#list_info").show();
+				}			
+			},
+			error: function(jqXHR, data) {
+				alert("网络异常！");
+			}
+		});
+	}
+}
+
+
+//加载发包节点数据
+function load_node_data(data){
+	console.log(data);
+	$(".zjd").find("li").remove();
+	$(".zjd").show();
+	if(data){
+		var url ='/sites/all/themes/holiday/project_node.php';
+		$.ajax({
+			type:'post',
+			url:url,
+			data:{
+				"bizCode": data.bizCode,
+				"bidMethod": data.bidMethod,
+				"childId": data.childId
+			},
+			success:function(data){
+				if(data){
+					var proData=JSON.parse(data);
+					node_info=proData;
+					var completeclass;
+					var str
+					for(var i=0;i<proData.length;i++){
+						if(proData[i].need){
+							completeclass="project_bx";
+						}else{
+							completeclass="project_fbx";
+						}
+						if(proData[i].complete){
+							completeclass="project_wc";
+						}
+						if(i<proData.length-1){
+							str="<li><div class='"+completeclass+"' onclick='showNodeCZ(this)' >"+proData[i].childName+"</div></li><li><div class='down_img'></div></li>";
+						}else{
+							str="<li><div class='"+completeclass+"' onclick='showNodeCZ(this)' >"+proData[i].childName+"</div></li>";
+						}
+						$(".zjd").append(str);
+					}
+				}			
+			},
+			error: function(jqXHR, data) {
+				alert("网络异常！");
+			}
+		});
+	}
+}
+
+
+//加载发包节点受理操作
+var node_info;
+function showNodeCZ(obj){
+	var texts=$(obj).text();
+	for(var i=0;i<node_info.length;i++){
+		if(texts==node_info[i].childName){
+			showNode(node_info[i].child);
+		}
+	}
+}
+
+function showNode(data){
 	$("#list_info").find("li").remove();
 	for(var i=0;i<data.length;i++){
 		var str="<li>受理操作："+data[i].name+"&nbsp;&nbsp;&nbsp;&nbsp;原因：<label style='width:65px;display:inline-block;'>"+data[i].results+"</label>&nbsp;&nbsp;&nbsp;&nbsp;时间："+data[i].time+"</li>";
@@ -733,253 +173,19 @@ function load_sl_data(data){
 }
 
 
-function load_sj_data(data){
-	$(".zjd").show();
-	$(".zjd").find("li").remove();
-	if(data.zbdj_active){
-		var jlp=JSON.stringify(data.zbdj_list);
-		var str="<li><div class='sjdj project_wc' onclick='load_sl_data("+jlp+")'>设计招标登记</div></li>";
-		$(".zjd").append(str);
-	}else{
-		var jlp=JSON.stringify(data.zbdj_list);
-		var str="<li><div class='sjdj project_bx' onclick='load_sl_data("+jlp+")'>设计招标登记</div></li>";
-		$(".zjd").append(str);
-	}
-	
-	if(data.sjba_active){
-		var jlp=JSON.stringify(data.sjba_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>设计招标文件备案</div></li>";
-		$(".zjd").append(str);
-	}else{
-		var jlp=JSON.stringify(data.sjba_list);
-		var str="<li><div class='down_img'></div></li>"+
-		        "<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>设计招标文件备案</div></li>";
-		$(".zjd").append(str);
-	}
-	
-	if(data.bcba_active){
-		var jlp=JSON.stringify(data.bcba_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>设计补充文件备案</div></li>";
-		$(".zjd").append(str);
-	}else{
-		var jlp=JSON.stringify(data.bcba_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>设计补充文件备案</div></li>";
-		$(".zjd").append(str);
-	}
-	var str="<li><div class='down_img'></div></li>"+
-	"<li><div class='project_wc' >开标</div></li>"+"<li><div class='down_img'></div></li>"+
-	"<li><div class='project_wc' >评标</div></li>"+"<li><div class='down_img'></div></li>"+
-	"<li><div class='project_wc' >中标书面材料提交</div></li>";
-	$(".zjd").append(str);
-	if(data.smtz_active){
-		var jlp=JSON.stringify(data.smtz_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>中标通知书备案</div></li>";
-		$(".zjd").append(str);
-	}else{
-		var jlp=JSON.stringify(data.smtz_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>中标通知书备案</div></li>";
-		$(".zjd").append(str);
-	}
-	
-	$("#container").css("left","0px");
-}
-
-
-function load_sg_data(data){
-	$(".zjd").find("li").remove();
-	$(".zjd").show();
-	if(data.zbdj_active){
-		var jlp=JSON.stringify(data.zbdj_list);
-		var str="<li><div class='sjdj project_wc' onclick='load_sl_data("+jlp+")'>施工招标登记</div></li>";
-		$(".zjd").append(str);
-	}else{
-		var jlp=JSON.stringify(data.zbdj_list);
-		var str="<li><div class='sjdj project_bx' onclick='load_sl_data("+jlp+")'>施工招标登记</div></li>";
-		$(".zjd").append(str);
-	}
-	
-	if(data.sjba_active){
-		var jlp=JSON.stringify(data.sjba_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>施工招标文件备案</div></li>";
-		$(".zjd").append(str);
-	}else{
-		var jlp=JSON.stringify(data.sjba_list);
-		var str="<li><div class='down_img'></div></li>"+
-		        "<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>施工招标文件备案</div></li>";
-		$(".zjd").append(str);
-	}
-	
-	if(data.bcba_active){
-		var jlp=JSON.stringify(data.bcba_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>施工补充文件备案</div></li>";
-		$(".zjd").append(str);
-	}else{
-		var jlp=JSON.stringify(data.bcba_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>施工补充文件备案</div></li>";
-		$(".zjd").append(str);
-	}
-	var str="<li><div class='down_img'></div></li>"+
-	"<li><div class='project_wc' >开标</div></li>"+"<li><div class='down_img'></div></li>"+
-	"<li><div class='project_wc' >评标</div></li>"+"<li><div class='down_img'></div></li>"+
-	"<li><div class='project_wc' >中标书面材料提交</div></li>";
-	$(".zjd").append(str);
-	if(data.smtz_active){
-		var jlp=JSON.stringify(data.smtz_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>中标通知书备案</div></li>";
-		$(".zjd").append(str);
-	}else{
-		var jlp=JSON.stringify(data.smtz_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>中标通知书备案</div></li>";
-		$(".zjd").append(str);
-	}
-	$("#container").css("left","0px");
-}
-
-
-function load_kc_data(data){
-	$(".zjd").find("li").remove();
-	$(".zjd").show();
-	if(data.zbdj_active){
-		var jlp=JSON.stringify(data.zbdj_list);
-		var str="<li><div class='sjdj project_wc' onclick='load_sl_data("+jlp+")'>勘察招标登记</div></li>";
-		$(".zjd").append(str);
-	}else{
-		var jlp=JSON.stringify(data.zbdj_list);
-		var str="<li><div class='sjdj project_bx' onclick='load_sl_data("+jlp+")'>勘察招标登记</div></li>";
-		$(".zjd").append(str);
-	}
-	
-	if(data.sjba_active){
-		var jlp=JSON.stringify(data.sjba_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>勘察招标文件备案</div></li>";
-		$(".zjd").append(str);
-	}else{
-		var jlp=JSON.stringify(data.sjba_list);
-		var str="<li><div class='down_img'></div></li>"+
-		        "<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>勘察招标文件备案</div></li>";
-		$(".zjd").append(str);
-	}
-	
-	if(data.bcba_active){
-		var jlp=JSON.stringify(data.bcba_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>勘察补充文件备案</div></li>";
-		$(".zjd").append(str);
-	}else{
-		var jlp=JSON.stringify(data.bcba_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>勘察补充文件备案</div></li>";
-		$(".zjd").append(str);
-	}
-	var str="<li><div class='down_img'></div></li>"+
-	"<li><div class='project_wc' >开标</div></li>"+"<li><div class='down_img'></div></li>"+
-	"<li><div class='project_wc' >评标</div></li>"+"<li><div class='down_img'></div></li>"+
-	"<li><div class='project_wc' >中标书面材料提交</div></li>";
-	$(".zjd").append(str);
-	if(data.smtz_active){
-		var jlp=JSON.stringify(data.smtz_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>中标通知书备案</div></li>";
-		$(".zjd").append(str);
-	}else{
-		var jlp=JSON.stringify(data.smtz_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>中标通知书备案</div></li>";
-		$(".zjd").append(str);
-	}
-	$("#container").css("left","0px");
-}
-
-
-function load_jl_data(data){
-	$(".zjd").find("li").remove();
-	$(".zjd").show();
-	if(data.zbdj_active){
-		var jlp=JSON.stringify(data.zbdj_list);
-		var str="<li><div class='sjdj project_wc' onclick='load_sl_data("+jlp+")'>监理招标登记</div></li>";
-		$(".zjd").append(str);
-	}else{
-		var jlp=JSON.stringify(data.zbdj_list);
-		var str="<li><div class='sjdj project_bx' onclick='load_sl_data("+jlp+")'>监理招标登记</div></li>";
-		$(".zjd").append(str);
-	}
-	
-	if(data.sjba_active){
-		var jlp=JSON.stringify(data.sjba_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>监理招标文件备案</div></li>";
-		$(".zjd").append(str);
-	}else{
-		var jlp=JSON.stringify(data.sjba_list);
-		var str="<li><div class='down_img'></div></li>"+
-		        "<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>监理招标文件备案</div></li>";
-		$(".zjd").append(str);
-	}
-	
-	if(data.bcba_active){
-		var jlp=JSON.stringify(data.bcba_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>监理补充文件备案</div></li>";
-		$(".zjd").append(str);
-	}else{
-		var jlp=JSON.stringify(data.bcba_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>监理补充文件备案</div></li>";
-		$(".zjd").append(str);
-	}
-	var str="<li><div class='down_img'></div></li>"+
-	"<li><div class='project_wc' >开标</div></li>"+"<li><div class='down_img'></div></li>"+
-	"<li><div class='project_wc' >评标</div></li>"+"<li><div class='down_img'></div></li>"+
-	"<li><div class='project_wc' >中标书面材料提交</div></li>";
-	$(".zjd").append(str);
-	if(data.smtz_active){
-		var jlp=JSON.stringify(data.smtz_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_wc' onclick='load_sl_data("+jlp+")'>中标通知书备案</div></li>";
-		$(".zjd").append(str);
-	}else{
-		var jlp=JSON.stringify(data.smtz_list);
-		var str="<li><div class='down_img'></div></li>"+
-				"<li><div class='project_bx' onclick='load_sl_data("+jlp+")'>中标通知书备案</div></li>";
-		$(".zjd").append(str);
-	}
-}
-
-function add_fb_data(data,process){
+//判断承发包一级节点是否完成
+function add_fb_data(data){
 	$(".list_info").find(".adddata").remove();
 	$(".zjd").hide();
 	for(var i=0;i<data.children.length;i++){
-		if(process=="sjba" || process=="jlba" || process=="sgba" || process=="kcba"){
-			var da_sl=JSON.stringify(data.children[i].child);
-			var str="<li class='adddata'><span class='list_info_left' onclick='load_sl_data("+da_sl+")'><a>"+data.children[i].child_name+"</a></span><span class='list_info_right'>"+data.children[i].child_time+"</span></li>";
-		}
-		if(process=="sjfb"){
+		if(data.type=="SJ_BA" || data.type=="JL_BA" || data.type=="KC_BA" || data.type=="SG_BA"){
 			var da_sl=JSON.stringify(data.children[i]);
-			var str="<li class='adddata'><span class='list_info_left' onclick='load_sj_data("+da_sl+")'><a>"+data.children[i].child_name+"</a></span><span class='list_info_right'>"+data.children[i].child_time+"</span></li>";
-		}
-		if(process=="kcfb"){
+			var str="<li class='adddata' bidMethod='"+data.bidMethod+"'><span class='list_info_left' onclick='load_sl_data("+da_sl+")'><a>"+data.children[i].childName+"</a></span><span class='list_info_right'>"+data.children[i].childTime+"</span></li>";
+		}else{
 			var da_sl=JSON.stringify(data.children[i]);
-			var str="<li class='adddata'><span class='list_info_left' onclick='load_kc_data("+da_sl+")'><a>"+data.children[i].child_name+"</a></span><span class='list_info_right'>"+data.children[i].child_time+"</span></li>";
+			var str="<li class='adddata' bidMethod='"+data.bidMethod+"'><span class='list_info_left' onclick='load_node_data("+da_sl+")'><a>"+data.children[i].childName+"</a></span><span class='list_info_right'>"+data.children[i].childTime+"</span></li>";
 		}
-		if(process=="sgfb"){
-			var da_sl=JSON.stringify(data.children[i]);
-			var str="<li class='adddata'><span class='list_info_left' onclick='load_sg_data("+da_sl+")'><a>"+data.children[i].child_name+"</a></span><span class='list_info_right'>"+data.children[i].child_time+"</span></li>";
-		}
-		if(process=="jlfb"){
-			var da_sl=JSON.stringify(data.children[i]);
-			var str="<li class='adddata'><span class='list_info_left' onclick='load_jl_data("+da_sl+")'><a>"+data.children[i].child_name+"</a></span><span class='list_info_right'>"+data.children[i].child_time+"</span></li>";
-		}
+		
 		$(".list_info").append(str);
 	}
 	$(".list_info").show();
@@ -998,7 +204,7 @@ function sj_process_judge(data){
 	}
 	$(".sjfb").click(function(){
 		if(data.children.lengt!=0){
-			add_fb_data(data,"sjfb");
+			add_fb_data(data);
 		}
 	});
 }
@@ -1017,7 +223,7 @@ function kc_process_judge(data){
 	}
 	$(".kcfb").click(function(){
 		if(data.children.lengt!=0){
-			add_fb_data(data,"kcfb");
+			add_fb_data(data);
 		}
 	});
 }
@@ -1035,7 +241,7 @@ function sg_process_judge(data){
 	}
 	$(".sgfb").click(function(){
 		if(data.children.lengt!=0){
-			add_fb_data(data,"sgfb");
+			add_fb_data(data);
 		}
 	});
 }
@@ -1052,7 +258,7 @@ function jl_process_judge(data){
 		$(".jlfb").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
 	$(".jlfb").click(function(){
-		add_fb_data(data,"jlfb");
+		add_fb_data(data);
 	});
 }
 
@@ -1068,7 +274,7 @@ function sjba_process_judge(data){
 		$(".sjba").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
 	$(".sjba").click(function(){
-		add_fb_data(data,"sjba");
+		add_fb_data(data);
 	});
 }
 
@@ -1083,7 +289,7 @@ function kcba_process_judge(data){
 		$(".kcba").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
 	$(".kcba").click(function(){
-		add_fb_data(data,"kcba");
+		add_fb_data(data);
 	});
 }
 
@@ -1098,7 +304,7 @@ function jlba_process_judge(data){
 		$(".jlba").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
 	$(".jlba").click(function(){
-		add_fb_data(data,"jlba");
+		add_fb_data(data);
 	});
 }
 
@@ -1113,7 +319,7 @@ function sgba_process_judge(data){
 		$(".sgba").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
 	$(".sgba").click(function(){
-		add_fb_data(data,"sgba");
+		add_fb_data(data);
 	});
 }
 
@@ -1128,6 +334,11 @@ function st_process_judge(data){
     if(data.complete){
     	$(".sg").addClass("project_wc_f").removeClass("project_bx").removeClass("project_fbx");
     }
+    $("#list_info").hide();
+	$(".list_info").hide();
+	$(".lc-two").hide();
+	$(".lc-three").hide();
+	$(".zjd").hide();
 }
 
 //项目报监判断
@@ -1136,7 +347,12 @@ function xmbj_process_judge(data){
     	$(".jl").addClass("project_bx");
     	var sl_data=data.child;
     	$(".jl").click(function(){
-    		load_sl_data(sl_data);
+    		$("#list_info").find("li").remove();
+    		for(var i=0;i<data.child.length;i++){
+    			var str="<li>受理操作："+data.child[i].name+"&nbsp;&nbsp;&nbsp;&nbsp;原因：<label style='width:65px;display:inline-block;'>"+data.child[i].results+"</label>&nbsp;&nbsp;&nbsp;&nbsp;时间："+data.child[i].time+"</li>";
+    			$("#list_info").append(str);
+    		}
+    		$("#list_info").show();
     		$(".list_info").hide();
     		$(".lc-two").hide();
     		$(".lc-three").hide();
@@ -1146,7 +362,7 @@ function xmbj_process_judge(data){
     	$(".jl").addClass("project_fbx");
     }
     if(data.complete){
-    	$(".jl").addClass("project_wc_f").removeClass("project_bx").removeClass("project_fbx");
+    	$(".jl").addClass("project_wc").removeClass("project_bx").removeClass("project_fbx");
     }
     
 }
@@ -1157,7 +373,12 @@ function sgxk_process_judge(data){
     	$(".xk").addClass("project_bx");
     	var sl_data=data.child;
     	$(".xk").click(function(){
-    		load_sl_data(sl_data);
+    		$("#list_info").find("li").remove();
+    		for(var i=0;i<data.child.length;i++){
+    			var str="<li>受理操作："+data.child[i].name+"&nbsp;&nbsp;&nbsp;&nbsp;原因：<label style='width:65px;display:inline-block;'>"+data.child[i].results+"</label>&nbsp;&nbsp;&nbsp;&nbsp;时间："+data.child[i].time+"</li>";
+    			$("#list_info").append(str);
+    		}
+    		$("#list_info").show();
     		$(".list_info").hide();
     		$(".lc-two").hide();
     		$(".lc-three").hide();
@@ -1167,11 +388,12 @@ function sgxk_process_judge(data){
     	$(".xk").addClass("project_fbx");
     }
     if(data.complete){
-    	$(".xk").addClass("project_wc_f").removeClass("project_bx").removeClass("project_fbx");
+    	$(".xk").addClass("project_wc").removeClass("project_bx").removeClass("project_fbx");
     }
 }
 
 
+//承发包信息
 function show_process(){
 	$(".lc-two").show();
 	$(".lc-three").show();
@@ -1180,6 +402,62 @@ function show_process(){
 	$(".list_info").hide();
 	$("#list_info").find("li").remove();
 	$("#list_info").hide();
+	
+	var url ='/sites/all/themes/holiday/project_cfb.php';
+	$.ajax({
+		type:'post',
+		url:url,
+		data:{
+			"bjbh": pro_number,
+		},
+		success:function(data){
+			var proData=data;
+			proData = JSON.parse(proData);
+			if(proData){
+				for(var i=0;i<proData.length;i++){
+					if(proData[i].type=="SJ_FB"){
+						sj_process_judge(proData[i]);
+					}
+					if(proData[i].type=="KC_FB"){
+						kc_process_judge(proData[i]);
+					}
+					if(proData[i].type=="JL_FB"){
+						jl_process_judge(proData[i]);
+					}
+					if(proData[i].type=="SG_FB"){
+						sg_process_judge(proData[i]);
+					}
+					if(proData[i].type=="SJ_BA"){
+						sjba_process_judge(proData[i])
+					}
+					if(proData[i].type=="KC_BA"){
+						kcba_process_judge(proData[i])
+					}
+					if(proData[i].type=="JL_BA"){
+						jlba_process_judge(proData[i])
+					}
+					if(proData[i].type=="SG_BA"){
+						sgba_process_judge(proData[i])
+					}
+				}
+			}else{
+				alert("请输入正确的报建编号！");
+			}
+							
+		},
+		error: function(jqXHR, data) {
+			alert("网络异常！");
+		}
+	   });
+	//sj_process_judge(data.SJ_FB);
+	//kc_process_judge(data.KC_FB);
+	//sg_process_judge(data.SG_FB);
+	//jl_process_judge(data.JL_FB);
+	
+	//sjba_process_judge(data.SJ_ba);
+	//kcba_process_judge(data.KC_ba);
+	//jlba_process_judge(data.JL_ba);
+	//sgba_process_judge(data.SG_ba);
 }
 
 

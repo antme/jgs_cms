@@ -69,26 +69,13 @@
 		 $(".search_btn").click(function(){
 			 //alert("该功能在开发中，敬请期待！");
 			 if(checkUserType()){
-				var str=$(".text_inputs").val();
+				pro_number=$(".text_inputs").val();
 			 	show_project(str);
              }			 
 		 });
 
 		//关闭流程显示
-		 
-         
-		 $("#block-menu-menu-fwdt-project").find("li").find("a").removeAttr("href");
-		 $("#block-menu-menu-fwdt-project").find("li").find("a").click(function(){alert("该功能在开发中，敬请期待！");});
-		 $("#block-menu-menu-fwdt-user").find("li").find("a").removeAttr("href");
-		 $("#block-menu-menu-fwdt-user").find("li").find("a").click(function(){alert("该功能在开发中，敬请期待！");});
-		 
-		 var li_a = $("#block-menu-menu-cysb").find("li").find("a");
-		 $.each(li_a,function(){
-			 if($(this).text()!="申报表格下载"){
-				 $(this).removeAttr("href");
-				 $(this).click(function(){alert("该功能在开发中，敬请期待！");});
-			 }
-	     });
+
 		 
 	  });
 	  $(".left_menu_style").find("li").click(function(){

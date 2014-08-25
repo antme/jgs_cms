@@ -11,10 +11,11 @@ stylesheets[all][] = css/style_index.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/colors.css
 stylesheets[print][] = css/print.css
-scripts[] = js/jquery-1.7.1.min.js
+scripts[] = js/jquery-1.9.1.min.js
 scripts[] = js/jquery.slideBox.min.js
 scripts[] = js/public_action.js
 scripts[] = js/jquery.chart.js
+scripts[] = js/json2.js
 
 regions[header] = Header
 regions[help] = Help

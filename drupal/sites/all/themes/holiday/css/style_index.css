@@ -1138,6 +1138,9 @@ overflow:hidden;
     -o-text-overflow: ellipsis;/* Opera */
     -moz-binding: url("ellipsis.xml#ellipsis");/*FireFox*/
 }
+.box1 .ul_style .field-content p span{
+	float:left;
+}
 .box3 .ul_style .field-content{
 	float:left;
     width:58%;
@@ -1693,6 +1696,9 @@ ul.quicktabs-tabs.quicktabs-style-basic li{
 	overflow:hidden;
 	width:370px;
 }
+#list_info li{
+	font-size:12px;
+} 
 .cursor_click{
 	cursor:pointer;
 }
