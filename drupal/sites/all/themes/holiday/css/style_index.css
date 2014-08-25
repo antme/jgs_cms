@@ -2178,6 +2178,7 @@ float: left;
 	padding:5px;
 	float:left;
 	overflow:hidden;
+	font-size:12px;
 }
 .project_process ul.lc,.project_process ul.lc-two{
 	 width:160px;
