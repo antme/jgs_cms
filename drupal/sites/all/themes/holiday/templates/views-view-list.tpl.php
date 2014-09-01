@@ -175,6 +175,14 @@ $nbgg=false;
 	     <?php endif;?>
 	     <?php $class_name = "pages_styles"; $style_name="margin-top:0px"; ?>
 	     
+	<?php elseif($view->name=="program_files_view" || $view->name=="management_system_view" || $view->name=="quality_manual_view" ) : ?>	    
+         <?php if(drupal_get_path_alias()=='node/'+$view->name):?>
+             <?php if(drupal_get_path_alias()!='node/quality_system'):?>
+                 <?php $has_more=false;?>
+             <?php endif;?>
+	     <?php endif;?>
+	     <?php $class_name = "pages_styles"; $style_name="margin-top:0px"; ?>
+	     
 	<?php elseif($view->name=="dqtd_view") : ?>
 
 		<?php if ($is_front):?>

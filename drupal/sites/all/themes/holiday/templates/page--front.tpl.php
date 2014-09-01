@@ -193,13 +193,13 @@
                              <span><?php print $user->name; ?>&nbsp;</span>
                              <span class="logout"><?php print l("退出","https://www.hkjgzx.sh.cn/logout?service=http://www.hkjgzx.sh.cn/user/logout"); ?></span>
                              <span><a style="cursor:pointer;" onclick="update_password()" >修改密码</a></span>
-                             <span id="shows"><a href="http://mis.hkjgzx.sh.cn:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
+                             <span id="shows"><a href="http://101.231.79.178:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
                           </li>
                           <li class="li_style_p li_style_b" style="display: none;">
                              <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/dbsx.gif"/></span>
                              <span><a href="#">待办事项</a></span>
                           </li>
-                          <li style="display: none;">
+                          <li>
                               <div class="user_infos">
 	       	        				<ul class="display_ul_style">
 								    	<li class="display_info_li display_li display_li_img1">待办公文<label style="color: red;display:inline">(8)</label></li>
@@ -271,6 +271,7 @@
                     <div class="title"><span class="txt">用户中心</span></div>
                     <iframe style="border:0;border:none;overflow-x: hidden" frameborder="no" scrolling="yes" height='160px' border="0" border="none" marginwidth="0" marginheight="0" src="https://www.hkjgzx.sh.cn/login?embed=true&service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode&locale=zh_CN"></iframe>
                     <div style="margin-left:40px;margin-top:-10px;">
+                        <a href="http://101.231.79.178:8080/login/loginForSite.do" class="info_img">进入信息系统</a>
                         <a style="cursor:pointer;" onclick="alert('该功能暂未开放，敬请期待！');">注册</a>&nbsp;&nbsp;<a style="cursor:pointer;" onclick="alert('该功能暂未开放，敬请期待！');">忘记密码</a>
                     </div>
                 </div>

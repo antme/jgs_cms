@@ -107,7 +107,6 @@ function load_sl_data(data){
 
 //加载发包节点数据
 function load_node_data(data){
-	console.log(data);
 	$(".zjd").find("li").remove();
 	$(".zjd").show();
 	if(data){
@@ -177,16 +176,18 @@ function showNode(data){
 function add_fb_data(data){
 	$(".list_info").find(".adddata").remove();
 	$(".zjd").hide();
-	for(var i=0;i<data.children.length;i++){
-		if(data.type=="SJ_BA" || data.type=="JL_BA" || data.type=="KC_BA" || data.type=="SG_BA"){
-			var da_sl=JSON.stringify(data.children[i]);
-			var str="<li class='adddata' bidMethod='"+data.bidMethod+"'><span class='list_info_left' onclick='load_sl_data("+da_sl+")'><a>"+data.children[i].childName+"</a></span><span class='list_info_right'>"+data.children[i].childTime+"</span></li>";
-		}else{
-			var da_sl=JSON.stringify(data.children[i]);
-			var str="<li class='adddata' bidMethod='"+data.bidMethod+"'><span class='list_info_left' onclick='load_node_data("+da_sl+")'><a>"+data.children[i].childName+"</a></span><span class='list_info_right'>"+data.children[i].childTime+"</span></li>";
+	if(data && data.children.length!=0){
+		for(var i=0;i<data.children.length;i++){
+			if(data.type=="SJ_BA" || data.type=="JL_BA" || data.type=="KC_BA" || data.type=="SG_BA"){
+				var da_sl=JSON.stringify(data.children[i]);
+				var str="<li class='adddata' bidMethod='"+data.bidMethod+"'><span class='list_info_left' onclick='load_sl_data("+da_sl+")'><a>"+data.children[i].childName+"</a></span><span class='list_info_right'>"+data.children[i].childTime+"</span></li>";
+			}else{
+				var da_sl=JSON.stringify(data.children[i]);
+				var str="<li class='adddata' bidMethod='"+data.bidMethod+"'><span class='list_info_left' onclick='load_node_data("+da_sl+")'><a>"+data.children[i].childName+"</a></span><span class='list_info_right'>"+data.children[i].childTime+"</span></li>";
+			}
+			
+			$(".list_info").append(str);
 		}
-		
-		$(".list_info").append(str);
 	}
 	$(".list_info").show();
 	$("#list_info").hide();
@@ -231,18 +232,19 @@ function kc_process_judge(data){
 
 //施工发包判断
 function sg_process_judge(data){
+	var datas=null;
 	if(data.need){
 		$(".sgfb").addClass("project_bx");
-	}else{
-		$(".sgfb").addClass("project_fbx");
 	}
 	if(data.complete){
 		$(".sgfb").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
+	if(data.children.length!=0){
+		datas=data;
+	}
+	
 	$(".sgfb").click(function(){
-		if(data.children.lengt!=0){
-			add_fb_data(data);
-		}
+		add_fb_data(datas);
 	});
 }
 
@@ -449,15 +451,6 @@ function show_process(){
 			alert("网络异常！");
 		}
 	   });
-	//sj_process_judge(data.SJ_FB);
-	//kc_process_judge(data.KC_FB);
-	//sg_process_judge(data.SG_FB);
-	//jl_process_judge(data.JL_FB);
-	
-	//sjba_process_judge(data.SJ_ba);
-	//kcba_process_judge(data.KC_ba);
-	//jlba_process_judge(data.JL_ba);
-	//sgba_process_judge(data.SG_ba);
 }
 
 
