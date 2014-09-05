@@ -61,6 +61,9 @@ function BJ_judge(data){
 	}else{
 		$(".bj").addClass("project_bx");
 	}
+	if(data.child.length>0){
+		$(".bj").addClass("project_wc").removeClass("project_bx");
+	}
 	$(".bj").click(function(){
 		$("#list_info").find("li").remove();
 		for(var i=0;i<data.child.length;i++){
@@ -91,7 +94,7 @@ function load_sl_data(data){
 					$("#list_info").find("li").remove();
 					var proData=JSON.parse(data);
 					for(var i=0;i<proData[0].child.length;i++){
-						var str="<li>受理操作："+proData[0].child[i].name+"&nbsp;&nbsp;&nbsp;&nbsp;原因：<label style='width:65px;display:inline-block;'>"+proData[0].child[i].results+"</label>&nbsp;&nbsp;&nbsp;&nbsp;时间："+proData[0].child[i].time+"</li>";
+						var str="<li><span>受理操作："+proData[0].child[i].name+"&nbsp;&nbsp;&nbsp;&nbsp;原因：</span><span><label style='width:65px;display:inline-block;'>"+proData[0].child[i].results+"</label></span><span>&nbsp;&nbsp;&nbsp;&nbsp;时间："+proData[0].child[i].time+"</span></li>";
 						$("#list_info").append(str);
 					}
 					$("#list_info").show();
@@ -132,6 +135,9 @@ function load_node_data(data){
 							completeclass="project_fbx";
 						}
 						if(proData[i].complete){
+							completeclass="project_wc";
+						}
+						if(proData[i].children.length>0){
 							completeclass="project_wc";
 						}
 						if(i<proData.length-1){
@@ -185,7 +191,6 @@ function add_fb_data(data){
 				var da_sl=JSON.stringify(data.children[i]);
 				var str="<li class='adddata' bidMethod='"+data.bidMethod+"'><span class='list_info_left' onclick='load_node_data("+da_sl+")'><a>"+data.children[i].childName+"</a></span><span class='list_info_right'>"+data.children[i].childTime+"</span></li>";
 			}
-			
 			$(".list_info").append(str);
 		}
 	}
@@ -201,6 +206,9 @@ function sj_process_judge(data){
 		$(".sjfb").addClass("project_fbx");
 	}
 	if(data.complete){
+		$(".sjfb").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
+	}
+	if(data.children.length>0){
 		$(".sjfb").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
 	$(".sjfb").click(function(){
@@ -219,6 +227,9 @@ function kc_process_judge(data){
 	}else{
 		$(".kcfb").addClass("project_fbx");
 	}
+	if(data.children.length>0){
+		$(".kcfb").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
+	}
 	if(data.complete){
 		$(".kcfb").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
@@ -229,22 +240,25 @@ function kc_process_judge(data){
 	});
 }
 
-
+var SD_data={children:[]};
 //施工发包判断
 function sg_process_judge(data){
-	var datas=null;
 	if(data.need){
 		$(".sgfb").addClass("project_bx");
 	}
 	if(data.complete){
 		$(".sgfb").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
-	if(data.children.length!=0){
-		datas=data;
+	if(data.children.length>0){
+		$(".sgfb").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
-	
+	if(data.children.length!=0){
+		for(var i=0;i<data.children.length;i++){
+			SD_data.children.push(data.children[i]);
+		}
+	}
 	$(".sgfb").click(function(){
-		add_fb_data(datas);
+		add_fb_data(SD_data);
 	});
 }
 
@@ -259,20 +273,27 @@ function jl_process_judge(data){
 	if(data.complete){
 		$(".jlfb").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
+	if(data.children.length>0){
+		$(".jlfb").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
+	}
 	$(".jlfb").click(function(){
 		add_fb_data(data);
 	});
 }
 
-
+ 
 //设计备案判断
 function sjba_process_judge(data){
+	
 	if(data.need){
 		$(".sjba").addClass("project_bx");
 	}else{
 		$(".sjba").addClass("project_fbx");
 	}
 	if(data.complete){
+		$(".sjba").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
+	}
+	if(data.children.length>0){
 		$(".sjba").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
 	$(".sjba").click(function(){
@@ -290,6 +311,9 @@ function kcba_process_judge(data){
 	if(data.complete){
 		$(".kcba").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
+	if(data.children.length>0){
+		$(".kcba").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
+	}
 	$(".kcba").click(function(){
 		add_fb_data(data);
 	});
@@ -305,6 +329,9 @@ function jlba_process_judge(data){
 	if(data.complete){
 		$(".jlba").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
+	if(data.children.length>0){
+		$(".jlba").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
+	}
 	$(".jlba").click(function(){
 		add_fb_data(data);
 	});
@@ -318,6 +345,9 @@ function sgba_process_judge(data){
 		$(".sgba").addClass("project_fbx");
 	}
 	if(data.complete){
+		$(".sgba").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
+	}
+	if(data.children.length>0){
 		$(".sgba").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
 	$(".sgba").click(function(){
@@ -430,16 +460,16 @@ function show_process(){
 						sg_process_judge(proData[i]);
 					}
 					if(proData[i].type=="SJ_BA"){
-						sjba_process_judge(proData[i])
+						sjba_process_judge(proData[i]);
 					}
 					if(proData[i].type=="KC_BA"){
-						kcba_process_judge(proData[i])
+						kcba_process_judge(proData[i]);
 					}
 					if(proData[i].type=="JL_BA"){
-						jlba_process_judge(proData[i])
+						jlba_process_judge(proData[i]);
 					}
 					if(proData[i].type=="SG_BA"){
-						sgba_process_judge(proData[i])
+						sgba_process_judge(proData[i]);
 					}
 				}
 			}else{

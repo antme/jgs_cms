@@ -86,6 +86,34 @@ function closed_all(){
 	$("#somepw").val("");
 }
 
+function load_Task(){
+	var url ='/sites/all/themes/holiday/task.php';
+	$(".display_ul_style").find("li").remove();
+	$.ajax({
+		type:'post',
+		url:url,
+		data:{
+			"loginName" :userName
+		},
+		success:function(data){
+			var response = eval(data);
+			if(response && response.length>0){
+				for(var i=0;i<response.length;i++){
+					var j=i+1;
+					var str="<li class='display_info_li display_li display_li_img"+j+"'>"+response[i].name+"<label style='color: red;display:inline'>("+response[i].count+")</label></li>";
+					$(".display_ul_style").append(str);
+				}
+			}else{
+				console.log("222");
+			}
+		},
+		error: function(jqXHR, data) {
+			alert("网络异常！");
+		}
+  	 });
+}
+
+
 function subimt_update(){
 	var oldpw = $("#oldpw").val();
 	var newpw = $("#newpw").val();

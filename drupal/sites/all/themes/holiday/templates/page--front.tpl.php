@@ -193,7 +193,7 @@
                              <span><?php print $user->name; ?>&nbsp;</span>
                              <span class="logout"><?php print l("退出","https://www.hkjgzx.sh.cn/logout?service=http://www.hkjgzx.sh.cn/user/logout"); ?></span>
                              <span><a style="cursor:pointer;" onclick="update_password()" >修改密码</a></span>
-                             <span id="shows"><a href="http://101.231.79.178:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
+                             <span id="shows"><a href="http://mis.hkjgzx.sh.cn:8080/login/loginForSite.do" class="info_img">进入信息系统</a></span>
                           </li>
                           <li class="li_style_p li_style_b" style="display: none;">
                              <span class="user_img"><img width="20px" height="20px" src="sites/all/themes/holiday/images/dbsx.gif"/></span>
@@ -207,61 +207,9 @@
 										<li class="display_info_li display_li display_li_img3">会议通知<label style="color: red;display:inline">(4)</label></li>
 										<li class="display_info_li display_li display_li_img4">其他事项<label style="color: red;display:inline">(2)</label></li>
 				 	        		</ul>
-				 	        		<div id="li_one" class="user_infos div_display display_info_div">
-	       	        					<ul class="ul_style">
-								    		<li class="views-row views-row-1 views-row-odd views-row-first">	
-								    	 	   <span class="field-content"><a href="#">行政审批公文<label style="color: red;display:inline">(4)</label></a></span>	
- 									   		</li>
-				 				   			<li class="views-row views-row-2 views-row-even views-row-last">	
-				 				   		    	<span class="field-content"><a href="#">上级公文<label style="color: red;display:inline">(4)</label></a></span>	
-											</li>
-				 	        			</ul>
-	        	    				</div>
-	        	    				<div id="li_two" class="user_infos div_display display_info_div">
-	       	        					<ul class="ul_style">
-								    		<li class="views-row views-row-1 views-row-odd views-row-first">	
-								    	 	   <span class="field-content"><a href="#">审批项目报建<label style="color: red;display:inline">(4)</label></a></span>	
- 									   		</li>
-				 				   			<li class="views-row views-row-2 views-row-even views-row-last">	
-				 				   		    	<span class="field-content"><a href="#">项目报建审批<label style="color: red;display:inline">(4)</label></a></span>	
-											</li>
-				 	        			</ul>
-	        	    				</div>
-	        	    				<div id="li_three" class="user_infos div_display display_info_div">
-	       	        					<ul class="ul_style">
-								    		<li class="views-row views-row-1 views-row-odd views-row-first">	
-								    	 	   <span class="field-content"><a href="#">项目监督会议<label style="color: red;display:inline">(2)</label></a></span>	
- 									   		</li>
-				 				   			<li class="views-row views-row-2 views-row-even views-row-last">	
-				 				   		    	<span class="field-content"><a href="#">工作会议<label style="color: red;display:inline">(2)</label></a></span>	
-											</li>
-				 	        			</ul>
-	        	    				</div>
-	        	    				<div id="li_four" class="user_infos div_display display_info_div">
-	       	        					<ul class="ul_style">
-								    		<li class="views-row views-row-1 views-row-odd views-row-first">	
-								    	 	   <span class="field-content"><a href="#">其他事项1<label style="color: red;display:inline">(1)</label></a></span>	
- 									   		</li>
-				 				   			<li class="views-row views-row-2 views-row-even views-row-last">	
-				 				   		    	<span class="field-content"><a href="#">其他事项2<label style="color: red;display:inline">(1)</label></a></span>	
-											</li>
-				 	        			</ul>
-	        	    				</div>
 	        	    			</div>
 	        	    			<script type="text/javascript">
-	        	    			    $(".display_info_li").click(function(){
-	        	    			    	$(".display_info_div").removeClass("div_action").addClass("div_display");
-	        	    			    	var dd = $(".display_info_div");
-	        	    			    	var in_li=$(".display_info_li");
-	        	    			    	$(dd[$(".display_info_li").index(this)]).addClass("div_action").removeClass("div_display");
-	        	    			    	for(var i=0;i<in_li.length;i++){
-		        	    			    	var x=(i+1)*10+i+1;
-		        	    			    	var y=i+1;
-	        	    			    		$(in_li[i]).removeClass("display_li_img"+x).addClass("display_li_img"+y);
-	        	    			    	}
-	        	    			    	var numc=($(".display_info_li").index(this)+1)*10+($(".display_info_li").index(this)+1);
-	        	    			    	$(this).addClass("display_li_img"+numc).removeClass("display_li_img"+$(".display_info_li").index(this)+1);
-		        	    			});
+	        	    				load_Task();
 	        	    			</script>
                           </li>
                       </ul>
@@ -271,8 +219,8 @@
                     <div class="title"><span class="txt">用户中心</span></div>
                     <iframe style="border:0;border:none;overflow-x: hidden" frameborder="no" scrolling="yes" height='160px' border="0" border="none" marginwidth="0" marginheight="0" src="https://www.hkjgzx.sh.cn/login?embed=true&service=http%3A%2F%2Fwww.hkjgzx.sh.cn%2Fcas%3Fdestination%3Dnode&locale=zh_CN"></iframe>
                     <div style="margin-left:40px;margin-top:-10px;">
-                        <a href="http://101.231.79.178:8080/login/loginForSite.do" class="info_img">进入信息系统</a>
-                        <a style="cursor:pointer;" onclick="alert('该功能暂未开放，敬请期待！');">注册</a>&nbsp;&nbsp;<a style="cursor:pointer;" onclick="alert('该功能暂未开放，敬请期待！');">忘记密码</a>
+                        <a href="http://mis.hkjgzx.sh.cn:8080/netZbdl/login.do">招标代理</a>&nbsp;&nbsp;
+                        <a style="cursor:pointer;" href="http://mis.hkjgzx.sh.cn:8080/site/reg.do" >注册</a>&nbsp;&nbsp;<a style="cursor:pointer;display:none;" onclick="alert('该功能暂未开放，敬请期待！');">忘记密码</a>
                     </div>
                 </div>
                <?php endif; ?>
