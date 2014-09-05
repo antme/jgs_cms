@@ -263,10 +263,10 @@
     <div class="closed_div" onclick="closed_process()"></div>
     <div class="project_info">
        <ul>
-          <li><span>项目名称:</span><span id="project_info_name"></span></li>
-          <li><span>报建编号:</span><span id="project_info_number"></span></li>
-          <li><span>项目地址:</span><span id="project_info_address"></span></li>
-          <li><span>建设单位:</span><span id="project_info_unit"></span></li>
+          <li><span>项目名称:</span><span id="project_info_name"></span><span style="float:right;color:red;">红色背景节点为必须做</span></li>
+          <li><span>报建编号:</span><span id="project_info_number"></span><span style="float:right;color:#cdcdcd;">灰色背景节点为非须做</span></li>
+          <li><span>项目地址:</span><span id="project_info_address"></span><span style="float:right;color:green;">绿色背景节点为已完成或为进行中</span></li>
+          <li><span>建设单位:</span><span id="project_info_unit"></span><span style="float:right;color:blue;">蓝色背景节点为非建管中心审批</span></li>
           <li><span>总投资:</span><span id="total_Investment"></span></li>
        </ul>  
     </div>
@@ -276,7 +276,7 @@
                <ul class="lc">
           			<li><div class="bj">项目报建</div></li>
           			<li><div class="down_img"></div></li>
-     	  			<li class="cfb_li"><div class="cfb project_bx" onclick="show_process()">承发包(*)</div></li>
+     	  			<li class="cfb_li"><div class="cfb project_bx" onclick="show_pp()">承发包(*)</div></li>
      	  			<li><div class="down_img"></div></li>
      	  			<li><div class="sg ">施工图审查</div></li>
      	  			<li><div class="down_img"></div></li>

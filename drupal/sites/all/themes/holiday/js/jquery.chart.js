@@ -52,7 +52,7 @@ function process_judge(data){
 	st_process_judge(data.sgt);
 	xmbj_process_judge(data.xmbj);
 	sgxk_process_judge(data.sgxk);
-	
+	show_process();
 }
 
 function BJ_judge(data){
@@ -137,7 +137,7 @@ function load_node_data(data){
 						if(proData[i].complete){
 							completeclass="project_wc";
 						}
-						if(proData[i].children.length>0){
+						if(proData[i].child.length>0){
 							completeclass="project_wc";
 						}
 						if(i<proData.length-1){
@@ -273,7 +273,7 @@ function jl_process_judge(data){
 	if(data.complete){
 		$(".jlfb").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
-	if(data.children.length>0){
+	if(data.children.length!=0){
 		$(".jlfb").addClass("project_wc").removeClass("project_fbx").removeClass("project_bx");
 	}
 	$(".jlfb").click(function(){
@@ -424,7 +424,15 @@ function sgxk_process_judge(data){
     }
 }
 
-
+function show_pp(){
+	$(".lc-two").show();
+	$(".lc-three").show();
+	$(".cfb_li").addClass("right_img");
+	$(".list_info").find(".adddata").remove();
+	$(".list_info").hide();
+	$("#list_info").find("li").remove();
+	$("#list_info").hide();
+}
 //承发包信息
 function show_process(){
 	$(".lc-two").show();
@@ -470,6 +478,9 @@ function show_process(){
 					}
 					if(proData[i].type=="SG_BA"){
 						sgba_process_judge(proData[i]);
+					}
+					if(proData[i].complete || proData[i].children.length>0){
+						$(".cfb").addClass("project_wc").removeClass("project_bx");
 					}
 				}
 			}else{

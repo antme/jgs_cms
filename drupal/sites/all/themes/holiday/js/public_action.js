@@ -100,11 +100,11 @@ function load_Task(){
 			if(response && response.length>0){
 				for(var i=0;i<response.length;i++){
 					var j=i+1;
-					var str="<li class='display_info_li display_li display_li_img"+j+"'>"+response[i].name+"<label style='color: red;display:inline'>("+response[i].count+")</label></li>";
+					var str="<li class='display_info_li display_li display_li_img"+j+"'><a href='http://mis.hkjgzx.sh.cn:8080/login/loginForSite.do'>"+response[i].name+"<label style='color: red;display:inline'>("+response[i].count+")</label></a></li>";
 					$(".display_ul_style").append(str);
 				}
 			}else{
-				console.log("222");
+				
 			}
 		},
 		error: function(jqXHR, data) {
