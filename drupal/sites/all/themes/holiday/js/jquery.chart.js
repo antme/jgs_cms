@@ -23,7 +23,6 @@ function show_project(){
 			alert("网络异常！");
 		}
 	   });
-	
 }
 
 //流程显示

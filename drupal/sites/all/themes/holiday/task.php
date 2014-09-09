@@ -1,7 +1,7 @@
 <?php
 
 $loginName = $_REQUEST ["loginName"];
-$url = 'http://www.hkjgzx.sh.cn:8080/webInterface/getTaskList.do'; // 此处必须为完整路径
+$url = 'http://mis.hkjgzx.sh.cn:8080/webInterface/getTaskList.do'; // 此处必须为完整路径
 //$header = array("Content-type: application/x-www-form-urlencoded"); // 定义content-type为xml
 $ch = curl_init (); // 初始化curl
 $data = array (

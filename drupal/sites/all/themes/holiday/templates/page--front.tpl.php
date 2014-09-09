@@ -209,7 +209,8 @@
 				 	        		</ul>
 	        	    			</div>
 	        	    			<script type="text/javascript">
-	        	    				load_Task();
+	        	    			    var userNames='<?php print $user->name; ?>';
+	        	    				load_Task(userNames);
 	        	    			</script>
                           </li>
                       </ul>

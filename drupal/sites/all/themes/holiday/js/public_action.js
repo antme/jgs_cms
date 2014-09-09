@@ -86,14 +86,14 @@ function closed_all(){
 	$("#somepw").val("");
 }
 
-function load_Task(){
+function load_Task(userNames){
 	var url ='/sites/all/themes/holiday/task.php';
 	$(".display_ul_style").find("li").remove();
 	$.ajax({
 		type:'post',
 		url:url,
 		data:{
-			"loginName" :userName
+			"loginName" :userNames
 		},
 		success:function(data){
 			var response = eval(data);
@@ -103,8 +103,6 @@ function load_Task(){
 					var str="<li class='display_info_li display_li display_li_img"+j+"'><a href='http://mis.hkjgzx.sh.cn:8080/login/loginForSite.do'>"+response[i].name+"<label style='color: red;display:inline'>("+response[i].count+")</label></a></li>";
 					$(".display_ul_style").append(str);
 				}
-			}else{
-				
 			}
 		},
 		error: function(jqXHR, data) {
