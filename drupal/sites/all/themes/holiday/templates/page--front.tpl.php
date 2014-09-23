@@ -279,7 +279,7 @@
           			<li><div class="down_img"></div></li>
      	  			<li class="cfb_li"><div class="cfb project_bx" onclick="show_pp()">承发包(*)</div></li>
      	  			<li><div class="down_img"></div></li>
-     	  			<li><div class="sg ">施工图审查</div></li>
+     	  			<li><div class="sg project_wc_f">施工图审查</div></li>
      	  			<li><div class="down_img"></div></li>
      	  			<li><div class="jl project_bx">项目报监</div></li>
      	  			<li><div class="down_img"></div></li>

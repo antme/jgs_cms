@@ -357,14 +357,14 @@ function sgba_process_judge(data){
 
 //审图判断
 function st_process_judge(data){
-    if(data.need){
-    	$(".sg").addClass("project_bx");
-    }else{
-    	$(".sg").addClass("project_fbx");
-    }
-    if(data.complete){
-    	$(".sg").addClass("project_wc_f").removeClass("project_bx").removeClass("project_fbx");
-    }
+    //if(data.need){
+    //	$(".sg").addClass("project_bx");
+    //}else{
+   // 	$(".sg").addClass("project_fbx");
+   // }
+   // if(data.complete){
+   // 	$(".sg").addClass("project_wc_f").removeClass("project_bx").removeClass("project_fbx");
+   // }
     $("#list_info").hide();
 	$(".list_info").hide();
 	$(".lc-two").hide();
@@ -503,4 +503,5 @@ function closed_process(){
 	$(".cfb_li").removeClass("right_img");
 	$(".project_process").find(".lc-two").find("li").find("div").removeClass("project_bx").removeClass("project_fbx");
 	$(".project_process").find(".lc-three").find("li").find("div").removeClass("project_bx").removeClass("project_fbx");
+	SD_data.children.length=0;
 }
