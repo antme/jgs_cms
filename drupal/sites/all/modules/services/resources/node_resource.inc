@@ -303,6 +303,18 @@ function _node_resource_create($node) {
   $misId = $node['misId'];
   $nid = _node_retrive_nid($misId);
   
+	if (! is_array ( $node ['body'] )) {
+		
+		$node ['body'] = array (
+				"und" => array (
+						0 => array (
+								"summary" => "",
+								"value" => $node ['body'],
+								"format" => "full_html" 
+						) 
+				) 
+		);
+	}
 
   if($node['deleted']){
   	return _node_resource_delete($nid);
